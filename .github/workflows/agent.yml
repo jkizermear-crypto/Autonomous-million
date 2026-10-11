@@ -1,0 +1,17 @@
+
+name: Autonomous Million Agent
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 */6 * * *"
+
+jobs:
+  agent:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run first agent test
+        run: |
+          echo "Autonomous Million is running!"
+          echo "Current time: $(date -u)"
+          echo "Next step: Connect an AI model."
