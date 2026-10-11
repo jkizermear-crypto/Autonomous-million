@@ -6,12 +6,45 @@ on:
   schedule:
     - cron: "0 */6 * * *"
 
+permissions:
+  contents: read
+
 jobs:
   agent:
     runs-on: ubuntu-latest
     steps:
-      - name: Run first agent test
+      - name: Ask Gemini to research opportunities
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
-          echo "Autonomous Million is running!"
-          echo "Current time: $(date -u)"
-          echo "Next step: Connect an AI model."
+          python - <<'PY'
+          import os, json, urllib.request
+
+          key = os.environ["GEMINI_API_KEY"]
+          url = (
+              "https://generativelanguage.googleapis.com/"
+              "v1beta/models/gemini-2.5-flash:generateContent"
+          )
+          prompt = (
+              "You are a research agent for the Autonomous "
+              "Million Challenge. Identify three realistic, "
+              "lawful, zero-upfront-cost online earning "
+              "opportunities suitable for automation. "
+              "Do not invent payouts or claim verification. "
+              "Do not take external actions. Explain "
+              "requirements, risks, and next steps."
+          )
+          payload = json.dumps({
+              "contents": [{"parts": [{"text": prompt}]}]
+          }).encode()
+          req = urllib.request.Request(
+              url, data=payload,
+              headers={
+                  "Content-Type": "application/json",
+                  "x-goog-api-key": key
+              }
+          )
+          with urllib.request.urlopen(req, timeout=60) as r:
+              result = json.load(r)
+          print(result["candidates"][0]["content"]["parts"][0]["text"])
+          PY
