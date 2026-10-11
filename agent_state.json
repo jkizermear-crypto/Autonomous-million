@@ -338,5 +338,65 @@
       "reason": "Reward-like language and amount found; payer and payout still unverified",
       "checked_at": "2026-10-11T23:47:15.389198+00:00"
     }
-  ]
+  ],
+  "experiments": [
+    {
+      "opportunity_url": "https://github.com/claude-builders-bounty/claude-builders-bounty/issues/4",
+      "created_at": "2026-10-11T23:51:11.234049+00:00",
+      "verdict": "investigate",
+      "status": "planned_not_executed",
+      "plan": {
+        "reason": "The issue requests creating a CLI tool or GitHub Action that reviews PRs using Claude Code, but lacks sufficient specification on implementation details and verification setup.",
+        "payer_evidence": "Mention of Opire platform in the issue description and claim instructions.",
+        "reward_evidence": "Title states $150 bounty powered by Opire.",
+        "eligibility": "Open to developers willing to create the requested Claude Code agent and submit a PR.",
+        "safe_test": "Perform read-only analysis of the repository structure and locally draft the requested agent and workflow YAML.",
+        "success_metric": "Successfully implementing the CLI or GitHub Action with the specified Markdown output format.",
+        "stop_condition": "If instructions require depositing funds, executing untrusted code, or unauthorized credential sharing.",
+        "human_dependencies": "Review and merge of the PR by the repository maintainers.",
+        "risk": "Low risk if restricted to local drafting and read-only analysis, but requires care to avoid executing untrusted code."
+      },
+      "verified_payment": false,
+      "verified_profit_usd": 0
+    },
+    {
+      "opportunity_url": "https://github.com/weilixiong/TentOfTrials/issues/5",
+      "created_at": "2026-10-11T23:51:11.234049+00:00",
+      "verdict": "investigate",
+      "status": "planned_not_executed",
+      "plan": {
+        "reason": "The issue requests adding independent log parser fixtures and tests in Python, but mentions an external bounty and specific build scripts that require verification before proceeding.",
+        "payer_evidence": "None",
+        "reward_evidence": "Mention of $25 bounty in issue text without verification.",
+        "eligibility": "Issue is open and requests standard Python testing improvements.",
+        "safe_test": "Perform read-only code analysis of tools/log_aggregator.py and draft independent log parser fixtures locally.",
+        "success_metric": "Successfully drafted independent fixtures and passing local tests without altering production behavior.",
+        "stop_condition": "Encountering unclear build requirements or requests to execute untrusted scripts.",
+        "human_dependencies": "Clarification on build script requirements and PR submission process.",
+        "risk": "Low risk assuming local analysis and drafting without executing unverified build scripts."
+      },
+      "verified_payment": false,
+      "verified_profit_usd": 0
+    },
+    {
+      "opportunity_url": "https://github.com/Senthemodder/aquarium-of-gullibles/issues/5",
+      "created_at": "2026-10-11T23:51:11.234049+00:00",
+      "verdict": "investigate",
+      "status": "planned_not_executed",
+      "plan": {
+        "reason": "The issue describes a TypeScript compilation error in src/types/state.ts and requests a refactor of a generic type, but there is no verified cryptographic escrow or payer evidence provided.",
+        "payer_evidence": "None",
+        "reward_evidence": "Unverified claim of USDC bounty in the issue description",
+        "eligibility": "Requires refactoring TypeScript types and passing build/test scripts",
+        "safe_test": "Perform read-only static analysis of src/types/state.ts and test/verify.js locally without executing arbitrary code",
+        "success_metric": "Clean build and passing tests locally",
+        "stop_condition": "If execution of untrusted code or financial transactions is required",
+        "human_dependencies": "Code review and merge by repository maintainers",
+        "risk": "Low if restricted to read-only analysis; medium if executing build scripts from untrusted repositories"
+      },
+      "verified_payment": false,
+      "verified_profit_usd": 0
+    }
+  ],
+  "public_submissions": []
 }
