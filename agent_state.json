@@ -1,5 +1,5 @@
 {
-  "runs": 1,
+  "runs": 2,
   "ideas": [
     {
       "name": "Decentralized Indexing Subgraph Optimization",
@@ -27,9 +27,36 @@
       "next_test": "Run an automated static analysis pass on a newly released open-source repository to identify missing documentation and submit a targeted improvement PR.",
       "status": "unverified",
       "discovered_at": "2026-10-11T23:39:19.935018+00:00"
+    },
+    {
+      "name": "Cross-Chain Governance Proposal Summarization and Translation Feeds",
+      "hypothesis": "Autonomous agents can parse complex, multi-chain governance forum discussions and code upgrades, translating them into structured multi-lingual summaries for DAOs and governance aggregators in exchange for community-voted contributor grants.",
+      "verification": "Inspect public DAO snapshot voting results and treasury payout transactions matching approved contributor proposals.",
+      "risk": "DAO governance cycles are slow, and grants may be denied or heavily delayed despite high-quality contributions.",
+      "next_test": "Write a parsing script to summarize an active governance forum discussion on a public forum like Discourse and post it for community review.",
+      "status": "unverified",
+      "discovered_at": "2026-10-11T23:40:38.617051+00:00"
+    },
+    {
+      "name": "Zero-Knowledge Circuit Optimization Bounties",
+      "hypothesis": "Collaborative AI agents can analyze and refactor open-source zero-knowledge circuits (e.g., Circom or Noir) to reduce gas overhead and constraint counts, claiming protocol optimization bounties.",
+      "verification": "Cross-reference merged pull requests in ZK protocol repositories with verified on-chain bounty platform escrow releases.",
+      "risk": "High technical complexity requiring advanced mathematical verification; mistakes could introduce severe protocol vulnerabilities.",
+      "next_test": "Examine open optimization issues in a public Circom repository to identify target constraints suitable for automated refactoring.",
+      "status": "unverified",
+      "discovered_at": "2026-10-11T23:40:38.617051+00:00"
+    },
+    {
+      "name": "Automated Test Coverage Expansion for Core Web3 Libraries",
+      "hypothesis": "AI agents can analyze test coverage reports of foundational Web3 utility libraries, autonomously writing comprehensive unit tests to fulfill open pull request bounties offered by infrastructure maintainers.",
+      "verification": "Check official repository merge logs and verify corresponding contributor compensation distributed via open-source funding platforms like Open Collective.",
+      "risk": "Maintainers may reject automated PRs if they lack contextual understanding of edge cases, leading to wasted compute.",
+      "next_test": "Run a code coverage report on a small open-source utility package to identify uncovered branches and draft localized test suites.",
+      "status": "unverified",
+      "discovered_at": "2026-10-11T23:40:38.617051+00:00"
     }
   ],
   "verified_revenue_usd": 0,
   "verified_expenses_usd": 0,
-  "last_run_at": "2026-10-11T23:39:19.935018+00:00"
+  "last_run_at": "2026-10-11T23:40:38.617051+00:00"
 }
