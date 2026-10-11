@@ -398,5 +398,68 @@
       "verified_profit_usd": 0
     }
   ],
-  "public_submissions": []
+  "public_submissions": [],
+  "execution_checks": [
+    {
+      "opportunity_url": "https://github.com/claude-builders-bounty/claude-builders-bounty/issues/4",
+      "checked_at": "2026-10-11T23:55:33.024634+00:00",
+      "status": "checked_no_execution",
+      "files_inspected": [],
+      "findings": [
+        "Read-only metadata and source inspection completed; no bounty or payout verified."
+      ],
+      "payment_verified": false,
+      "issue_open": true,
+      "repo_files_seen": 2,
+      "tree_truncated": false,
+      "candidate_source_files": 0
+    },
+    {
+      "opportunity_url": "https://github.com/weilixiong/TentOfTrials/issues/5",
+      "checked_at": "2026-10-11T23:55:33.024634+00:00",
+      "status": "checked_no_execution",
+      "files_inspected": [
+        {
+          "path": "build.py",
+          "bytes": 24560,
+          "python_syntax": "valid"
+        },
+        {
+          "path": "docs/openapi/v3.yaml",
+          "bytes": 71228
+        },
+        {
+          "path": "frontend/src/ai/chat.ts",
+          "bytes": 23134
+        }
+      ],
+      "findings": [
+        "Read-only metadata and source inspection completed; no bounty or payout verified."
+      ],
+      "payment_verified": false,
+      "issue_open": true,
+      "repo_files_seen": 178,
+      "tree_truncated": false,
+      "candidate_source_files": 34
+    },
+    {
+      "opportunity_url": "https://github.com/Senthemodder/aquarium-of-gullibles/issues/5",
+      "checked_at": "2026-10-11T23:55:33.024634+00:00",
+      "status": "checked_no_execution",
+      "files_inspected": [
+        {
+          "path": "src/types/state.ts",
+          "bytes": 529
+        }
+      ],
+      "findings": [
+        "Read-only metadata and source inspection completed; no bounty or payout verified."
+      ],
+      "payment_verified": false,
+      "issue_open": true,
+      "repo_files_seen": 7,
+      "tree_truncated": false,
+      "candidate_source_files": 1
+    }
+  ]
 }
