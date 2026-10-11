@@ -1,4 +1,3 @@
-
 name: Autonomous Million Agent
 
 on:
@@ -7,44 +6,117 @@ on:
     - cron: "0 */6 * * *"
 
 permissions:
-  contents: read
+  contents: write
+
+concurrency:
+  group: autonomous-million-state
+  cancel-in-progress: false
 
 jobs:
   agent:
     runs-on: ubuntu-latest
     steps:
-      - name: Ask Gemini to research opportunities
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Research and remember
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
           python - <<'PY'
-          import os, json, urllib.request
+          import datetime, json, os, pathlib, urllib.request, urllib.error
 
-          key = os.environ["GEMINI_API_KEY"]
-          url = (
-              "https://generativelanguage.googleapis.com/"
-              "v1beta/models/gemini-3.5-flash-lite:generateContent"
-              )
+          state_path = pathlib.Path('agent_state.json')
+          reports_dir = pathlib.Path('reports')
+          reports_dir.mkdir(exist_ok=True)
+          state = json.loads(state_path.read_text()) if state_path.exists() else {
+              'runs': 0, 'ideas': [], 'verified_revenue_usd': 0,
+              'verified_expenses_usd': 0
+          }
+          old_names = {x['name'].strip().lower() for x in state['ideas']}
           prompt = (
-              "You are a research agent for the Autonomous "
-              "Million Challenge. Identify three realistic, "
-              "lawful, zero-upfront-cost online earning "
-              "opportunities suitable for automation. "
-              "Do not invent payouts or claim verification. "
-              "Do not take external actions. Explain "
-              "requirements, risks, and next steps."
+              'You are AutonomousMillion, a research and experiment-planning agent. '
+              'Goal: investigate whether AI-agent collaboration can generate lawful, '
+              'verified net profit with zero upfront cost over 180 days. '
+              'The $1M goal is aspirational, not a prediction. '
+              'Do not propose direct-to-consumer sales. Focus on permissionless '
+              'crypto-related opportunities, open-source bounties, and machine-to-machine '
+              'services where lawful. Do not claim an opportunity is verified without '
+              'independent evidence. Do not recommend depositing funds, giving wallet '
+              'permissions, trading with leverage, or sharing private keys. '
+              'Do not invent sources, payments, or tests performed. '
+              'You cannot browse or execute transactions in this step. '
+              'Return a JSON object with keys: summary (string), ideas (array of up '
+              'to 3 objects, each with name, hypothesis, verification, risk, next_test '
+              'as strings). Prefer ideas not already considered. '
+              'Existing state: ' + json.dumps(state, ensure_ascii=False)[:20000]
           )
           payload = json.dumps({
-              "contents": [{"parts": [{"text": prompt}]}]
+              'contents': [{'parts': [{'text': prompt}]}],
+              'generationConfig': {'responseMimeType': 'application/json'}
           }).encode()
-          req = urllib.request.Request(
-              url, data=payload,
-              headers={
-                  "Content-Type": "application/json",
-                  "x-goog-api-key": key
-              }
-          )
-          with urllib.request.urlopen(req, timeout=60) as r:
-              result = json.load(r)
-          print(result["candidates"][0]["content"]["parts"][0]["text"])
+          url = ('https://generativelanguage.googleapis.com/'
+                 'v1beta/models/gemini-3.5-flash-lite:generateContent')
+          req = urllib.request.Request(url, data=payload, headers={
+              'Content-Type': 'application/json',
+              'x-goog-api-key': os.environ['GEMINI_API_KEY']
+          })
+          try:
+              with urllib.request.urlopen(req, timeout=90) as response:
+                  raw = json.load(response)
+          except urllib.error.HTTPError as exc:
+              print('Gemini API returned HTTP', exc.code)
+              print(exc.read().decode('utf-8', 'replace')[:1500])
+              raise
+          answer = json.loads(raw['candidates'][0]['content']['parts'][0]['text'])
+          if not isinstance(answer, dict) or not isinstance(answer.get('ideas'), list):
+              raise ValueError('Gemini response did not match expected JSON structure')
+          now = datetime.datetime.now(datetime.timezone.utc).isoformat()
+          new_ideas = []
+          for idea in answer['ideas'][:3]:
+              if not isinstance(idea, dict):
+                  continue
+              name = str(idea.get('name', '')).strip()
+              if not name or name.lower() in old_names:
+                  continue
+              entry = {k: str(idea.get(k, ''))[:2000] for k in
+                       ('name', 'hypothesis', 'verification', 'risk', 'next_test')}
+              entry['status'] = 'unverified'
+              entry['discovered_at'] = now
+              state['ideas'].append(entry)
+              new_ideas.append(entry)
+              old_names.add(name.lower())
+          state['runs'] += 1
+          state['last_run_at'] = now
+          state_path.write_text(json.dumps(state, indent=2, ensure_ascii=False) + '\n')
+          run_id = os.environ.get('GITHUB_RUN_ID', 'local')
+          report = [f'# AutonomousMillion research run {run_id}', '',
+                    f'Date: {now}', '', '## Summary',
+                    str(answer.get('summary', '')), '',
+                    '## Newly recorded ideas (not verified earnings)', '']
+          for idea in new_ideas:
+              report.extend([f"### {idea['name']}",
+                             f"Hypothesis: {idea['hypothesis']}",
+                             f"Verification needed: {idea['verification']}",
+                             f"Risks: {idea['risk']}",
+                             f"Proposed safe next test: {idea['next_test']}", ''])
+          if not new_ideas:
+              report.append('No new unique ideas this run.')
+          report.extend(['', '## Verified financial totals',
+                         f"Revenue: ${state['verified_revenue_usd']}",
+                         f"Expenses: ${state['verified_expenses_usd']}",
+                         'No transactions are performed by this workflow.'])
+          report_path = reports_dir / f'run-{run_id}.md'
+          report_path.write_text('\n'.join(report) + '\n')
+          print(f"Saved {len(new_ideas)} new ideas. Total stored: {len(state['ideas'])}.")
+          print(f'Report: {report_path}')
           PY
+      - name: Save memory and report to GitHub
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add agent_state.json reports/
+          if ! git diff --cached --quiet; then
+            git commit -m "Agent: save research and memory"
+            git push
+          fi
