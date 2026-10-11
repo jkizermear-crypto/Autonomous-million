@@ -1,0 +1,91 @@
+name: AutonomousMillion Opportunity Triage
+
+on:
+  workflow_dispatch:
+  workflow_run:
+    workflows: ["Autonomous Million Agent"]
+    types: [completed]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: autonomous-million-state
+  cancel-in-progress: false
+
+jobs:
+  triage:
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: true
+      - name: Evaluate saved opportunities
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python - <<'PY'
+          import datetime, json, os, pathlib, re, urllib.request, urllib.error
+
+          path = pathlib.Path('agent_state.json')
+          if not path.exists():
+              raise SystemExit('agent_state.json missing; run the research agent first')
+          state = json.loads(path.read_text())
+          opportunities = state.get('opportunities', [])
+          results = []
+          for opportunity in opportunities:
+              url = opportunity.get('url', '')
+              match = re.fullmatch(r'https://github\.com/([^/]+)/([^/]+)/issues/(\d+)', url)
+              if not match:
+                  results.append({'url': url, 'status': 'rejected', 'reason': 'Not a GitHub issue URL'})
+                  continue
+              owner, repo, number = match.groups()
+              api = f'https://api.github.com/repos/{owner}/{repo}/issues/{number}'
+              req = urllib.request.Request(api, headers={
+                  'Accept': 'application/vnd.github+json',
+                  'Authorization': 'Bearer ' + os.environ['GH_TOKEN'],
+                  'User-Agent': 'AutonomousMillion-Triage'})
+              try:
+                  with urllib.request.urlopen(req, timeout=20) as response:
+                      issue = json.load(response)
+              except (urllib.error.HTTPError, urllib.error.URLError) as exc:
+                  results.append({'url': url, 'status': 'needs_review', 'reason': f'Could not recheck issue: {type(exc).__name__}'})
+                  continue
+              title = issue.get('title') or ''
+              body = (issue.get('body') or '')[:12000]
+              text = title + '\n' + body
+              if issue.get('state') != 'open' or 'pull_request' in issue:
+                  status, reason = 'rejected', 'Issue closed or is a pull request'
+              elif re.search(r'dependency dashboard|renovate|contest|sweepstakes|lottery|prediction market|weekly close', text, re.I):
+                  status, reason = 'rejected', 'Automated maintenance or contest, not a suitable work bounty'
+              elif re.search(r'\b(?:bounty|reward|payment|paid|prize)\b', text, re.I) and re.search(r'(?:\$\s?\d+|\b\d+(?:\.\d+)?\s*(?:USDC|USDT|USD|ETH|SOL)\b)', text, re.I):
+                  status, reason = 'needs_review', 'Reward-like language and amount found; payer and payout still unverified'
+              else:
+                  status, reason = 'rejected', 'No explicit reward amount found in issue text'
+              results.append({'url': url, 'title': title[:180], 'status': status, 'reason': reason,
+                              'checked_at': datetime.datetime.now(datetime.timezone.utc).isoformat()})
+          state['triage'] = results
+          path.write_text(json.dumps(state, indent=2, ensure_ascii=False) + '\n')
+          report = pathlib.Path('reports/triage-latest.md')
+          report.parent.mkdir(exist_ok=True)
+          lines = ['# AutonomousMillion opportunity triage', '',
+                   'Automated screening only. No bounty, payer, eligibility, or payout has been verified.', '',
+                   f'Total screened: {len(results)}',
+                   f'Needs manual or additional independent verification: {sum(x["status"] == "needs_review" for x in results)}',
+                   f'Rejected: {sum(x["status"] == "rejected" for x in results)}', '']
+          for result in results:
+              lines.extend([f'- **{result["status"]}** — {result["url"]}: {result["reason"]}'])
+          report.write_text('\n'.join(lines) + '\n')
+          print(f'Screened {len(results)}; {sum(x["status"] == "needs_review" for x in results)} need further verification.')
+          PY
+      - name: Commit screening results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add agent_state.json reports/triage-latest.md
+          if ! git diff --cached --quiet; then
+            git commit -m "Agent: screen opportunity candidates"
+            git push
+          fi
