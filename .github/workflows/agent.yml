@@ -24,6 +24,7 @@ jobs:
           url = (
               "https://generativelanguage.googleapis.com/"
               "v1beta/models/gemini-3.5-flash-lite:generateContent"
+              )
           prompt = (
               "You are a research agent for the Autonomous "
               "Million Challenge. Identify three realistic, "
