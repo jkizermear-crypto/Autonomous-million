@@ -1,5 +1,5 @@
 {
-  "runs": 2,
+  "runs": 3,
   "ideas": [
     {
       "name": "Decentralized Indexing Subgraph Optimization",
@@ -58,5 +58,199 @@
   ],
   "verified_revenue_usd": 0,
   "verified_expenses_usd": 0,
-  "last_run_at": "2026-10-11T23:40:38.617051+00:00"
+  "last_run_at": "2026-10-11T23:43:42.676248+00:00",
+  "opportunities": [
+    {
+      "url": "https://github.com/tadanobutubutu/screeps/issues/5",
+      "title": "Dependency Dashboard",
+      "repository": "tadanobutubutu/screeps",
+      "description_excerpt": "This issue lists Renovate updates and detected dependencies. Read the [Dependency Dashboard](https://docs.renovatebot.com/key-concepts/dashboard/) docs to learn more.<br>[View this repository on the Mend.io Web Portal](https://developer.mend.io/github/tadanobutubutu/screeps).\n\n## Repository Problems\n\nThese problems occurred while renovating this repository. [View logs](https://developer.mend.io//github/tadanobutubutu/screeps).\n\n - ⚠️ WARN: Package lookup failures\n\n## Rate-Limited\n\nThe following updates are currently rate-limited. To force their creation now, click on a checkbox below.\n\n - [ ] <!-- unlimit-branch=renovate/python-3.x -->chore(deps): update dependency python to 3.15\n\n\n---\n\n> [!WARNING]\n> Renovate failed to look up the following dependencies: `Failed to look up github-tags package linear-bots/gitstream-github-action: no-result`.\n> \n> Files affected: `.github/workflows/gitstream.yml`\n\n---\n\n\n## Open\n\nThe following updates have all been created. To force a retry/rebase of any, click on a checkbox below.\n\n - [ ] <!-- rebase-branch=renovate/actions-checkout-7.x -->[chore(deps): update actions/checkout action to v7](../pull/253722)\n - [ ] <!-- rebase-branch=renovate/actions-github-script-9.x -->[chore(deps): update actions/github-script action to v9](../pull/253723)\n - [ ] <!-- rebase-branch=renovate/actions-setup-node-7.x -->[chore(deps): update actions/setup-node action to v7](../pull/253724)\n - [ ] <!-- rebase-branch=renovate/actions-setup-python-7.x -->[chore(deps): update actions/setup-python action to v7](../pull/253725)\n - [ ] <!-- rebase-branch=renovate/node-24.x -->[chore(deps): update dependency node to v24](../pull/258208)\n - [ ] <!-- rebase-all-open-prs -->**Click on this checkbox to rebase all open PRs at once**\n\n## PR Closed (Blocked)\n\nThe following",
+      "updated_at": "2026-10-11T20:34:39Z",
+      "labels": [
+        "bug",
+        "documentation",
+        "duplicate",
+        "enhancement",
+        "help wanted",
+        "good first issue",
+        "invalid",
+        "workflow-health",
+        "automated",
+        "bot",
+        "dependencies",
+        "ci",
+        "feature",
+        "javascript",
+        "github-actions",
+        "major",
+        "test",
+        "in-progress",
+        "stale",
+        "needs-review",
+        "security",
+        "config",
+        "renovate",
+        "sonarcloud",
+        "codecov",
+        "quality-report",
+        "chore",
+        "needs-triage",
+        "ai-solve",
+        "bounty"
+      ],
+      "discovered_at": "2026-10-11T23:43:42.676248+00:00",
+      "status": "unverified"
+    },
+    {
+      "url": "https://github.com/relayhop/sn-monetization-runtime/issues/1277",
+      "title": "[radar] SN open bounty 2026-10-11T20:11",
+      "repository": "relayhop/sn-monetization-runtime",
+      "description_excerpt": "New SN OPEN_BOUNTY detected:\n\n```\n1593178\tStacker_Stocks\t2\t559\t10000\t23\t9.3\t9274\t28416\trecent@Stacker_Stocks|top@Stacker_Stocks\tOPEN_BOUNTY,SIGNAL\tStacker Stocks Weekly Close Contest 🟩 or 🟥- Week #14\n```",
+      "updated_at": "2026-10-11T20:33:35Z",
+      "labels": [
+        "radar",
+        "sn",
+        "bounty"
+      ],
+      "discovered_at": "2026-10-11T23:43:42.676248+00:00",
+      "status": "unverified"
+    },
+    {
+      "url": "https://github.com/relayhop/sn-monetization-runtime/issues/1275",
+      "title": "[radar] SN open bounty 2026-10-11T15:34",
+      "repository": "relayhop/sn-monetization-runtime",
+      "description_excerpt": "New SN OPEN_BOUNTY detected:\n\n```\n1593178\tStacker_Stocks\t2\t515\t10000\t19\t4.7\t9274\t28409\trecent@Stacker_Stocks|top@Stacker_Stocks\tOPEN_BOUNTY,SIGNAL,SELF_POST_OPP\tStacker Stocks Weekly Close Contest 🟩 or 🟥- Week #14\n```",
+      "updated_at": "2026-10-11T19:46:06Z",
+      "labels": [
+        "radar",
+        "sn",
+        "bounty"
+      ],
+      "discovered_at": "2026-10-11T23:43:42.676248+00:00",
+      "status": "unverified"
+    },
+    {
+      "url": "https://github.com/SPLURT-Station/S.P.L.U.R.T-tg/issues/1306",
+      "title": "[BOUNTY] Suggestion #1277",
+      "repository": "SPLURT-Station/S.P.L.U.R.T-tg",
+      "description_excerpt": "### About the Bounty\n\n## Original issue text:\n\n**Suggestion:**\nSmoker trait/nicotine addiction still needs a small rework. The lack of cigs shouldn't knock you down for 10 seconds and giving you an urge to smoke so often as it is implemented right now. Smoking even as RP element feels bad right now because of addiction's consequences\n\n**Reason:**\n[BOUNTY] i think this might already be a bounty but if it isn't then yeah\n\n**Results:**\n14x <:In_help:1056296636348899408>\n0x <:In_harm:1056296637909192794>\n\n\n### Suggestion Reference\n\n**Suggested by:** kickpaw\nhttps://discord.com/channels/908082639704064051/1404686278351655055/1558876818080014548\n\n### Contact Information\n\nContact `mos_ley` in discord for payment information.\n\nContact `kickpaw` in discord for information about the requirements.\n\n### Payment Details\n\nPayment methods:\n- PayPal\n- Cryptocurrency\n\n",
+      "updated_at": "2026-10-11T19:44:01Z",
+      "labels": [
+        "bounty"
+      ],
+      "discovered_at": "2026-10-11T23:43:42.676248+00:00",
+      "status": "unverified"
+    },
+    {
+      "url": "https://github.com/SPLURT-Station/S.P.L.U.R.T-tg/issues/1305",
+      "title": "[BOUNTY] Suggestion #1278",
+      "repository": "SPLURT-Station/S.P.L.U.R.T-tg",
+      "description_excerpt": "### About the Bounty\n\n## Original issue text:\n\n**Suggestion:**\n<The Oviparity quirk needs some work because right now:\n1. you gain eggs from oral, vaginal and anal sex, despite of your pregnancy settings in character visuals.\n2. you have to lay eggs one at a time and each one takes ten seconds with a one second cool down after to do so! You can carry more then a hundred eggs in you so that's more then 18 mins to get them all out.\n\nSo my suggested changes:\n1. oviparity is effected by some of the pregnancy settings in character visuals (main ones being pregnancy: oral/anal insemination and pregnancy: chance [so you can reduce how many eggs you get from one load of cum]).\n2. either a lay a clutch in bulk option or reduce the laying time to like two seconds. >\n\n**Reason:**\n[BOUNTY] okay\n\n**Results:**\n9x <:In_help:1056296636348899408>\n0x <:In_harm:1056296637909192794>\n\n\n### Suggestion Reference\n\n**Suggested by:** hiddentitan\nhttps://discord.com/channels/908082639704064051/1404686278351655055/1558876346711670788\n\n### Contact Information\n\nContact `mos_ley` in discord for payment information.\n\nContact `hiddentitan` in discord for information about the requirements.\n\n### Payment Details\n\nPayment methods:\n- PayPal\n- Cryptocurrency\n\n",
+      "updated_at": "2026-10-11T19:43:54Z",
+      "labels": [
+        "bounty"
+      ],
+      "discovered_at": "2026-10-11T23:43:42.676248+00:00",
+      "status": "unverified"
+    },
+    {
+      "url": "https://github.com/Element-Ventures-Canada-Ltd/openchokepoint/issues/3",
+      "title": "[Priority] Open call: digital-thread and critical-items register schema for rocket turbopump supply chains",
+      "repository": "Element-Ventures-Canada-Ltd/openchokepoint",
+      "description_excerpt": "**Track:** Schema · **Priority:** High · **Bounty:** Yes, amount to be posted before assignment (see [BOUNTIES.md](https://github.com/Element-Ventures-Canada-Ltd/openchokepoint/blob/main/BOUNTIES.md)) · **Window:** open now, programme runs to 31 March 2027\n\nExtends seed-backlog item #7 (Component, Lot, MaterialClass).\n\n## Why this matters\n\nCanada is building its first domestic launch supply chains. For rocket turbopumps, the binding constraint is not the design. It is the **evidence chain** that proves each part was made, treated, cleaned and inspected the way it must be. A pump geometry without that pedigree cannot be licensed, insured or flown.\n\nToday there is no open, shared grammar for that evidence chain. Every programme rebuilds it in spreadsheets. That makes the chain hard to inspect, hard to transfer between suppliers, and fragile when people move on.\n\nThis issue invites engineers, quality specialists, data modellers and students to design that grammar in the open. The result will be the reference schema that Canadian and allied programmes can adopt without lock-in.\n\n## Problem\n\nOpenChokepoint v0.1 can say *who* supplies *what capability*. It cannot yet say:\n\n1. **Which physical part** a record refers to (part number, revision, serial).\n2. **Which material lot** it came from, and through which processing steps.\n3. **Which evidence** each step produced (a build record, a heat-treatment record, a cleaning certificate, an inspection result) and whether that evidence exists.\n4. **Which items are critical**: loss of the item would delay a programme by more than 30 days, and whether a qualified alternate exists.\n\n## Proposal scope\n\nPropose new types and links in `schema/openchokepoint.yaml`. The proposal includes two examples: a synthetic one, and one real-world examp",
+      "updated_at": "2026-10-11T19:24:26Z",
+      "labels": [
+        "schema",
+        "bounty",
+        "priority: high",
+        "bounty:major"
+      ],
+      "discovered_at": "2026-10-11T23:43:42.676248+00:00",
+      "status": "unverified"
+    },
+    {
+      "url": "https://github.com/tari-project/wxtm-bridge-frontend/issues/103",
+      "title": "Mitigate risks due to \"next\" known CVEs version and current versions range",
+      "repository": "tari-project/wxtm-bridge-frontend",
+      "description_excerpt": "## Bounty: Mitigate Next.js CVE Risk by Pinning Version\n\n**Tier:** S — 15,000 XTM\n\n### Description\n\nThe `wxtm-bridge-frontend` currently depends on `\"next\": \"^16.1.1\"`, which allows npm/yarn to resolve any semver-compatible version in the 16.x range, including versions with known CVEs. Pin Next.js to exactly `16.1.7` (the latest patched release) and remove the `^` caret to prevent unintended resolution to vulnerable versions. Update `eslint-config-next` to match.\n\n### Acceptance Criteria\n\n- [ ] `package.json` specifies `\"next\": \"16.1.7\"` (exact, no caret)\n- [ ] `eslint-config-next` version is updated to `\"16.1.7\"` (exact, no caret) to match\n- [ ] `package-lock.json` / `yarn.lock` is regenerated with the pinned versions\n- [ ] The app builds successfully (`npm run build` or `yarn build` passes with no new errors)\n- [ ] Wrap/unwrap flow verified working end-to-end via TU with the updated bridge frontend (screenshot or recording)\n\n### Context\n\n- Original issue: https://github.com/tari-project/wxtm-bridge-frontend/issues/103\n- Current versions: `\"next\": \"^16.1.1\"`, `\"eslint-config-next\": \"^16.1.1\"`\n- Next.js changelog: https://github.com/vercel/next.js/releases\n- The frontend depends on private `@aspect` npm packages (api & contracts). To test locally you either need an npm token for the private registry, or build the public `api` and `contracts` repos locally and link them as dependencies\n- Full integration testing requires running the bridge frontend as a tapplet inside Tari Universe (TU)\n\n### How It Works\n\n1. Comment on this issue to signal intent (courtesy, not a lock)\n2. Fork the repo and do the work\n3. Submit a PR that references the issue with a closing keyword (e.g. `Fixes #103`) so GitHub links your PR to the bounty automatically\n4. Bounties are competitive. Multipl",
+      "updated_at": "2026-10-11T18:49:58Z",
+      "labels": [
+        "bounty",
+        "bounty-S"
+      ],
+      "discovered_at": "2026-10-11T23:43:42.676248+00:00",
+      "status": "unverified"
+    },
+    {
+      "url": "https://github.com/tari-project/universe/issues/3299",
+      "title": "CPU mining capped at 64 threads on Windows machines with 64+ logical cores",
+      "repository": "tari-project/universe",
+      "description_excerpt": "## Bounty: Fix CPU mining 64-thread cap on Windows (64+ logical cores)\n\n**Tier:** M — 60,000 XTM\n\n### Description\n\nCPU mining tops out at 64 threads on Windows machines that have more than 64 logical cores. A user with 128 threads reported that only 64 were ever used, no matter what thread count they selected. The goal of this bounty is simple to state and hard to prove: **make Tari Universe actually use more than 64 threads on a Windows machine that has more than 64 logical cores.**\n\nWindows splits machines with more than 64 logical processors into \"processor groups\" of at most 64 each, and a process that isn't group-aware only gets scheduled onto one group. On top of that, Rust's `std::thread::available_parallelism()` (which we use to count cores) undercounts past 64 on Windows for the same reason. The correct fix must count cores across all processor groups **and** ensure the miner threads actually run across them — however that is best achieved.\n\n### Acceptance Criteria\n\n- [ ] On a Windows machine with **more than 64 logical cores**, CPU mining uses **more than 64 threads** — up to the count the user selects, bounded by the machine's real logical core count\n- [ ] Core count is determined accurately across all processor groups (not capped at 64 the way `available_parallelism()` is)\n- [ ] No regression on machines with ≤64 cores, and no regression on macOS or Linux\n- [ ] **The PR includes proof of a working result on real hardware:**\n  - [ ] A screenshot proving the test machine's spec (Task Manager → Performance, or CPU-Z) showing **more than 64 logical cores**\n  - [ ] Screenshots and/or xmrig log excerpts showing **more than 64 threads in active use** after the fix, on that machine\n\n### Development Requirements\n\nThis bounty **cannot be developed or verified blind.**",
+      "updated_at": "2026-10-11T18:48:10Z",
+      "labels": [
+        "bug",
+        "in the wild",
+        "bounty",
+        "bounty-M"
+      ],
+      "discovered_at": "2026-10-11T23:43:42.676248+00:00",
+      "status": "unverified"
+    },
+    {
+      "url": "https://github.com/claude-builders-bounty/claude-builders-bounty/issues/4",
+      "title": "[BOUNTY $150] AGENT: Claude Code sub-agent that reviews a PR and posts a structured comment",
+      "repository": "claude-builders-bounty/claude-builders-bounty",
+      "description_excerpt": "## 💰 Bounty: $150 — powered by [Opire](https://opire.dev)\n\n## Description\nCreate a Claude Code agent that takes a PR diff as input, analyzes it,\nand returns a structured Markdown review comment.\n\n## Acceptance Criteria\n- [ ] Works via CLI: `claude-review --pr https://github.com/owner/repo/pull/123`\n- [ ] OR via GitHub Action (include the workflow YAML)\n- [ ] Structured Markdown output with:\n  - Summary of changes (2–3 sentences)\n  - Identified risks (list)\n  - Improvement suggestions (list)\n  - Confidence score: Low / Medium / High\n- [ ] Tested on at least 2 real GitHub PRs (include outputs in the PR)\n- [ ] README with setup and usage instructions\n\n## How to Claim\n1. Comment `/opire try` in this issue\n2. Submit a PR with the agent + sample outputs\n3. Payment is released automatically on merge ✅",
+      "updated_at": "2026-10-11T18:32:06Z",
+      "labels": [
+        "bounty",
+        "agent"
+      ],
+      "discovered_at": "2026-10-11T23:43:42.676248+00:00",
+      "status": "unverified"
+    },
+    {
+      "url": "https://github.com/bwipp/postscriptbarcode/issues/82",
+      "title": "Ultracode improvements",
+      "repository": "bwipp/postscriptbarcode",
+      "description_excerpt": "- [ ] Optimised high level encoding\n- [ ] Symbol Control Regions\n- [x] Structured append\n",
+      "updated_at": "2026-10-11T18:09:31Z",
+      "labels": [
+        "enhancement",
+        "bounty",
+        "on-hold"
+      ],
+      "discovered_at": "2026-10-11T23:43:42.676248+00:00",
+      "status": "unverified"
+    },
+    {
+      "url": "https://github.com/weilixiong/TentOfTrials/issues/5",
+      "title": "[$25 BOUNTY] [Python] Add independent log parser fixtures",
+      "repository": "weilixiong/TentOfTrials",
+      "description_excerpt": "**Bounty:** $25 (LT)\n\n**Area:** `tools/log_aggregator.py` and parser fixture tests\n\n**Current state:** The legacy log aggregator notes that parser tests can false-pass because the test data was generated by the same parser logic. This leaves JSON, text, and nginx log parsing vulnerable to regressions when real archived log formats drift.\n\n**What's needed:** Add independent parser fixtures based on hand-written representative log lines and cover the main parser paths without relying on parser-generated samples. Keep the change focused on parser validation and do not change production parsing behavior unless a fixture exposes a clear bug.\n\n**Acceptance criteria:**\n- Add independent fixtures for JSON, plain text, and nginx-style log lines.\n- Add focused tests or a validation script that verifies parser output for timestamp, level, service/format, and key fields.\n- Include at least one malformed/unsupported line case that should not crash parsing.\n- Existing log aggregation CLI behavior remains compatible.\n- PR description explains the fixture source/intent and validation performed.\n\n**Required validation:**\n- Run `python3 build.py`\n- Include the generated diagnostic `.logd` artifact from `diagnostic/build-XXX.logd` in the PR; also include `diagnostic/build-XXX.json` if present\n- Use `.github/pull_request_template.md` for your submission",
+      "updated_at": "2026-10-11T16:13:58Z",
+      "labels": [
+        "help wanted",
+        "good first issue",
+        "bounty",
+        "language:python"
+      ],
+      "discovered_at": "2026-10-11T23:43:42.676248+00:00",
+      "status": "unverified"
+    },
+    {
+      "url": "https://github.com/Senthemodder/aquarium-of-gullibles/issues/5",
+      "title": "[Bounty: $700] Deep Recursive Generic Type Solver Fails Invariant Fuzzing in src/types/state.ts",
+      "repository": "Senthemodder/aquarium-of-gullibles",
+      "description_excerpt": "### Bounty:  USDC (Escrow Locked)\n\n### Description\nWhen compiling src/types/state.ts, the TypeScript compiler throws:\n`\nError TS2589: Type instantiation is excessively deep and possibly infinite.\n`\n\n### Requirements\n- Refactor DeepInfiniteResolve<T> to achieve complete bidirectional state unwrapping across cyclic StateGraphNode topologies without triggering compiler recursion depth limits.\n- \npm run build must complete cleanly with exit code 0.\n- All tests in \test/verify.js must pass.\n\n**Payout Settlement:** Release upon PR merge.",
+      "updated_at": "2026-10-11T15:58:52Z",
+      "labels": [
+        "help wanted",
+        "bounty",
+        "algorithm"
+      ],
+      "discovered_at": "2026-10-11T23:43:42.676248+00:00",
+      "status": "unverified"
+    }
+  ]
 }
