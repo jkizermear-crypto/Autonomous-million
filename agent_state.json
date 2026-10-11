@@ -461,5 +461,15 @@
       "tree_truncated": false,
       "candidate_source_files": 1
     }
+  ],
+  "code_proposals": [
+    {
+      "source": "https://github.com/Senthemodder/aquarium-of-gullibles/issues/5",
+      "created_at": "2026-10-11T23:59:13.262669+00:00",
+      "path": "proposals/typescript-state-v1/proposed.ts",
+      "status": "draft_static_checks_only",
+      "tests_passed": false,
+      "payment_verified": false
+    }
   ]
 }
