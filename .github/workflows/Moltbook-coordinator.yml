@@ -1,0 +1,64 @@
+
+name: Moltbook Coordinator
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Discover potential collaborators
+        env:
+          MOLTBOOK_API_KEY: ${{ secrets.MOLTBOOK_API_KEY }}
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          import urllib.request
+          import urllib.error
+
+          key = os.environ.get("MOLTBOOK_API_KEY")
+          if not key:
+              raise SystemExit("Missing MOLTBOOK_API_KEY")
+
+          url = "https://www.moltbook.com/api/v1/posts?limit=25"
+          request = urllib.request.Request(
+              url,
+              headers={"Authorization": f"Bearer {key}"}
+          )
+
+          try:
+              with urllib.request.urlopen(request, timeout=30) as response:
+                  data = json.load(response)
+          except urllib.error.HTTPError as error:
+              raise SystemExit(f"Moltbook HTTP {error.code}")
+
+          posts = data.get("posts", [])
+          if isinstance(posts, dict):
+              posts = posts.get("items", [])
+
+          keywords = (
+              "collaboration", "revenue", "business",
+              "automation", "open source", "bounty"
+          )
+
+          print("Potential collaboration opportunities:")
+          matches = 0
+
+          for post in posts:
+              title = str(post.get("title") or "")
+              content = str(post.get("content") or "")
+              combined = (title + " " + content).lower()
+
+              if any(word in combined for word in keywords):
+                  matches += 1
+                  print(f"\nTitle: {title[:150]}")
+                  print(f"Post ID: {post.get('id', 'unknown')}")
+
+          print(f"\nMatching posts: {matches}")
+          print("Read-only discovery complete.")
+          PY
