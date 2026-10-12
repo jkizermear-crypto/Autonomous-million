@@ -2,9 +2,9 @@
 
 Automated screening only. No payout is verified. Safety-review candidates are NOT approved.
 
-Total: 12
-Potential candidates: 1
-Safety blocked/review: 4
+Total: 24
+Potential candidates: 2
+Safety blocked/review: 12
 
 - **rejected** — https://github.com/tadanobutubutu/screeps/issues/5: Maintenance automation or contest
 - **rejected** — https://github.com/relayhop/sn-monetization-runtime/issues/1277: Maintenance automation or contest
@@ -18,3 +18,15 @@ Safety blocked/review: 4
 - **rejected** — https://github.com/bwipp/postscriptbarcode/issues/82: No explicit monetary reward found
 - **needs_review** — https://github.com/weilixiong/TentOfTrials/issues/5: Possible reward; payout and eligibility unverified
 - **rejected_safety_audit** — https://github.com/Senthemodder/aquarium-of-gullibles/issues/5: Previously blacklisted; do not reconsider
+- **needs_review** — https://github.com/Senthemodder/aquarium-of-gullibles/issues/2: Possible reward; payout and eligibility unverified
+- **safety_review** — https://github.com/NSPG13/agent-bounties/issues/1387: Potential credential, wallet, or payment demand
+- **rejected** — https://github.com/Saidur-droid/MergeEarn/issues/69: No explicit monetary reward found
+- **safety_review** — https://github.com/claude-builders-bounty/claude-builders-bounty/issues/1: Potential credential, wallet, or payment demand
+- **rejected** — https://github.com/humanaios-ui/operations/issues/588: No explicit monetary reward found
+- **safety_review** — https://github.com/oguzpoyrazyasin/poyraz/issues/1: Possible upfront payment requirement
+- **safety_review** — https://github.com/scottonchain/microcredit-agent-testbed/issues/17: Possible upfront payment requirement
+- **rejected** — https://github.com/IstiN/flutter_agent_harness/issues/1556: No explicit monetary reward found
+- **safety_review** — https://github.com/NSPG13/agent-bounties/issues/1219: Potential credential, wallet, or payment demand
+- **safety_review** — https://github.com/NSPG13/agent-bounties/issues/1220: Potential credential, wallet, or payment demand
+- **safety_review** — https://github.com/NSPG13/agent-bounties/issues/1349: Potential credential, wallet, or payment demand
+- **safety_review** — https://github.com/NSPG13/agent-bounties/issues/1350: Potential credential, wallet, or payment demand
