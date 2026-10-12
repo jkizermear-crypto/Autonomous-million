@@ -1,6 +1,6 @@
 # Payment evidence audit
 
-UTC: 2026-10-12T00:37:19.559987+00:00
+UTC: 2026-10-12T09:36:23.804422+00:00
 
 No listing was classified as payment-verified. Claims, maintainer comments, and scores are not independent payout proof.
 
@@ -42,7 +42,7 @@ No listing was classified as payment-verified. Claims, maintainer comments, and 
   Maintainer confirmation: False; verified payment: false
 - maintainer_claim_only: https://github.com/scottonchain/microcredit-agent-testbed/issues/17
   Maintainer confirmation: True; verified payment: false
-- insufficient_independent_payment_evidence: https://github.com/IstiN/flutter_agent_harness/issues/1556
+- issue_not_open: https://github.com/IstiN/flutter_agent_harness/issues/1556
   Maintainer confirmation: False; verified payment: false
 - insufficient_independent_payment_evidence: https://github.com/NSPG13/agent-bounties/issues/1219
   Maintainer confirmation: False; verified payment: false
