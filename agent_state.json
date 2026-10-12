@@ -1,5 +1,5 @@
 {
-  "runs": 3,
+  "runs": 4,
   "ideas": [
     {
       "name": "Decentralized Indexing Subgraph Optimization",
@@ -58,7 +58,7 @@
   ],
   "verified_revenue_usd": 0,
   "verified_expenses_usd": 0,
-  "last_run_at": "2026-10-11T23:43:42.676248+00:00",
+  "last_run_at": "2026-10-12T00:27:36.086227+00:00",
   "opportunities": [
     {
       "url": "https://github.com/tadanobutubutu/screeps/issues/5",
@@ -251,6 +251,283 @@
       ],
       "discovered_at": "2026-10-11T23:43:42.676248+00:00",
       "status": "rejected_safety_audit"
+    },
+    {
+      "url": "https://github.com/Senthemodder/aquarium-of-gullibles/issues/2",
+      "title": "[Bounty: $850] Bedrock Physics: 1-Tick Kinematic Ghost Teleportation and Swept AABB Dropout",
+      "repository": "Senthemodder/aquarium-of-gullibles",
+      "description_excerpt": "### Bounty:  USDC (Escrow Locked)\n\n### Description\nIn high-speed kinematic entity projection (> 1.5 blocks/tick), server AABB bounding box calculations desync from client-interpolated hitboxes.\n\n### Requirements\n- Implement swept AABB continuous collision detection (CCD).\n- Derive all 8 spatial bounding vertices following Bedrock coordinate space (+X East, +Y Up, +Z South).\n- All tests in \test/verify.js must pass.\n\n**Payout Settlement:** Release upon PR merge.",
+      "updated_at": "2026-10-11T15:58:47Z",
+      "labels": [
+        "bounty",
+        "algorithm"
+      ],
+      "discovered_at": "2026-10-12T00:27:36.086227+00:00",
+      "status": "unverified",
+      "screening_evidence": {
+        "reward_amount_stated": true,
+        "acceptance_criteria_stated": true,
+        "submission_method_stated": true,
+        "payment_mechanism_stated": true
+      },
+      "screening_score": 4,
+      "screening_flags": [],
+      "payment_verified": false
+    },
+    {
+      "url": "https://github.com/NSPG13/agent-bounties/issues/1387",
+      "title": "Generate qualifying GMV for 6 USDC prize — Highest externally funded canonical GMV — week 20260831",
+      "repository": "NSPG13/agent-bounties",
+      "description_excerpt": "> **Closed to new work.** The scoring window ended **September 7, 2026 at 00:00 UTC**. The later proof deadline does not extend that window. Follow [the canonical record #1221](https://github.com/NSPG13/agent-bounties/issues/1221) for existing proof, review and recovery rights. Hosted verification remains unavailable while the required historical snapshot and attestations are missing. Do not fund new work or pay for a proof for this closed scoring window.\n>\n> **Archived duplicate:** the saved text below describes an earlier state; it is not a current readiness statement. Existing submissions, comments and payment history are preserved.\n\n<!-- agent-bounties/github-discovery-archive-v1:start -->\n<!-- agent-bounties/github-discovery-archive-v1 {\"discovery_id\":\"eip155:8453:agent-bounties/open-competition-v2-beta3:0xdc1bbcbcb149b07262565c8b9caa1ae5e2058f76\"} -->\n## Canonical bounty discovery\n\nCreate and fund useful marketplace demand that settles canonically inside the exact scoring window. Produce the highest eligible externally funded GMV score without counting excluded wallets or contracts.\n\n- **Current work state:** `ready_to_earn`\n- **Current payment state:** `escrowed`\n- **Current competition state:** `proof`\n- **Solver reward:** 6.00 USDC\n- **Entry/claim bond:** 0.00 USDC\n- **Funding:** 6.04 / 6.04 USDC\n- **Verifier:** forward-canonical-gmv-attribution-metric-v2 (`sp1_plonk`; ready: `true`)\n- **Accepted entries:** 0\n- **Proof Deadline:** `2026-11-22T17:17:21+00:00`\n- **Allowlisted skills:** `skill:research`, `skill:browser`\n\n### Replayable acceptance criteria\n\n- Use the same Base wallet for qualifying child-bounty funding and the competition entry.\n- Have a different eligible wallet complete the useful child bounty.\n- Reach confirmed canonical child settlement between",
+      "updated_at": "2026-10-11T15:50:41Z",
+      "labels": [
+        "bounty",
+        "payments",
+        "verifier",
+        "funded-live",
+        "open-competition",
+        "skill:browser",
+        "skill:research"
+      ],
+      "discovered_at": "2026-10-12T00:27:36.086227+00:00",
+      "status": "unverified",
+      "screening_evidence": {
+        "reward_amount_stated": true,
+        "acceptance_criteria_stated": true,
+        "submission_method_stated": false,
+        "payment_mechanism_stated": true
+      },
+      "screening_score": 3,
+      "screening_flags": [],
+      "payment_verified": false
+    },
+    {
+      "url": "https://github.com/Saidur-droid/MergeEarn/issues/69",
+      "title": "Add current judge-flow screenshots to README",
+      "repository": "Saidur-droid/MergeEarn",
+      "description_excerpt": "## Goal\nMake the current no-login proof flow understandable from the repository before a judge opens the live app.\n\n## Acceptance criteria\n- Add current screenshots for the public proof board, verified funding/merge/payout evidence, and sponsor/contributor entry points.\n- Do not include secrets, wallet recovery material, OAuth tokens, private addresses, or sensitive browser output.\n- Screenshots must match the currently deployed product.\n- Keep README concise and link to the live app and judge proof dossier.\n- No product/security logic changes.\n\n## Community sponsorship\nEligible for a **5 NIM community-sponsored bounty** once MergeEarn verifies sponsor funding.\n\nVerified board: https://github.com/Saidur-droid/MergeEarn/issues/33",
+      "updated_at": "2026-10-11T22:33:57Z",
+      "labels": [
+        "help wanted",
+        "good first issue",
+        "bounty-waiting"
+      ],
+      "discovered_at": "2026-10-12T00:27:36.086227+00:00",
+      "status": "unverified",
+      "screening_evidence": {
+        "reward_amount_stated": false,
+        "acceptance_criteria_stated": true,
+        "submission_method_stated": true,
+        "payment_mechanism_stated": true
+      },
+      "screening_score": 3,
+      "screening_flags": [],
+      "payment_verified": false
+    },
+    {
+      "url": "https://github.com/claude-builders-bounty/claude-builders-bounty/issues/1",
+      "title": "[BOUNTY $50] SKILL: Generate a structured CHANGELOG from git history",
+      "repository": "claude-builders-bounty/claude-builders-bounty",
+      "description_excerpt": "## 💰 Bounty: $50 — powered by [Opire](https://opire.dev)\n\n## Description\nCreate a Claude Code skill (`SKILL.md`) or a bash script that automatically generates\na structured `CHANGELOG.md` from a project's git history.\n\n## Acceptance Criteria\n- [ ] Works via `/generate-changelog` command or `bash changelog.sh`\n- [ ] Fetches commits since the last git tag\n- [ ] Auto-categorizes into: `Added` / `Fixed` / `Changed` / `Removed`\n- [ ] Outputs a properly formatted `CHANGELOG.md`\n- [ ] Tested on a real GitHub repo (include a sample output in the PR)\n- [ ] README with setup instructions in 3 steps or fewer\n\n## How to Claim\n1. Comment `/opire try` in this issue\n2. Submit a PR with your solution\n3. Payment is released automatically on merge ✅\n\n## Accepted Stack\nBash, Python, or native Claude Code `SKILL.md`.",
+      "updated_at": "2026-10-12T00:20:25Z",
+      "labels": [
+        "bounty",
+        "skill",
+        "good first issue"
+      ],
+      "discovered_at": "2026-10-12T00:27:36.086227+00:00",
+      "status": "unverified",
+      "screening_evidence": {
+        "reward_amount_stated": true,
+        "acceptance_criteria_stated": true,
+        "submission_method_stated": true,
+        "payment_mechanism_stated": false
+      },
+      "screening_score": 3,
+      "screening_flags": [],
+      "payment_verified": false
+    },
+    {
+      "url": "https://github.com/humanaios-ui/operations/issues/588",
+      "title": "HumanAIOS Resource System — commit Miner + Manager + PII + Activity Graph as repository project",
+      "repository": "humanaios-ui/operations",
+      "description_excerpt": "## Decision\n\nCommit **HumanAIOS Resource System** as a repository project that extends the merged Resource Miner rather than replacing it.\n\nThe project boundary is:\n\n```\ndiscover\n→ verify eligibility/currentness\n→ interrogate only material evidence gaps\n→ warrant\n→ human authorization\n→ produce resource-specific execution artifact\n→ activity tracking\n→ acquisition\n→ resource management\n→ allocation/conversion\n→ outcome observation\n→ evidence update / portfolio replay\n```\n\n## Why this is warranted now\n\nTwo live specimens crossed complementary parts of the loop:\n\n1. **RM-002 employment resource**\n   - live external requirements were treated as the specification;\n   - existing evidence was mapped against those requirements;\n   - missing evidence triggered targeted human interrogation rather than generic onboarding;\n   - material new evidence caused re-ranking/rescan;\n   - a submission-facing artifact was generated from the requirement/evidence map;\n   - the artifact is preserved as a resource-linked historical record;\n   - preparation, clicking, submission, and acquisition remain distinct activity states.\n\n2. **Microsoft startup credits**\n   - the resource process surfaced an already-owned **$5,000 Azure credit resource**;\n   - this validates that discovery can uncover latent resources, not only new opportunities;\n   - it exposed the missing post-acquisition layer: inventory, restriction, expiration, allocation, conversion, and realized-value measurement;\n   - credits must remain typed as restricted infrastructure value, not cash/revenue.\n\n## Preserve existing implementation boundary\n\nMerged **Resource Miner PR #500** remains the broad discovery layer at `humanaios-funding-pipeline/resource-miner/`.\n\nIts current invariant must remain intact:\n\n> relevance / need alignment i",
+      "updated_at": "2026-10-11T22:51:47Z",
+      "labels": [],
+      "discovered_at": "2026-10-12T00:27:36.086227+00:00",
+      "status": "unverified",
+      "screening_evidence": {
+        "reward_amount_stated": true,
+        "acceptance_criteria_stated": true,
+        "submission_method_stated": true,
+        "payment_mechanism_stated": false
+      },
+      "screening_score": 3,
+      "screening_flags": [],
+      "payment_verified": false
+    },
+    {
+      "url": "https://github.com/oguzpoyrazyasin/poyraz/issues/1",
+      "title": "[Opportunity Router] Latest ranked opportunities",
+      "repository": "oguzpoyrazyasin/poyraz",
+      "description_excerpt": "# Opportunity Router — 2026-10-11 20:20 UTC\n\nv0.3 adds Solution Preparation after verification. Results are estimates, not guaranteed payouts. No task is automatically claimed or submitted.\n\n## Ranked opportunities\n\n| Final | Verify | Reward signal | Opportunity | Key risk |\n|---:|---|---:|---|---|\n| 74.1 | VERIFIED (75) | 138,000 | [[TASK HUNTER] Amazon Alexa+ + Open Source Hackathon — up to $30,000 cash](https://github.com/Inkh95/t3n-trusted-approval-agent/issues/9) | no immediate verification flag |\n| 71.8 | VERIFIED (65) | 1,000,000 | [[072] Risk A Lamborghini, Win $1,000,000 in GTA](https://github.com/majieddd/stokes-gaming-vision/issues/77) | no immediate verification flag |\n| 70.8 | VERIFIED (65) | 3,000 | [[Hackathon] IEEE ClimateChain Global Hackathon (AI + Blockchain)](https://github.com/Blockchains/hackathons/issues/4) | no immediate verification flag |\n| 70.4 | VERIFIED (65) | 10,000 | [Research report - numbered build order, hackathon checklist, runtime pick](https://github.com/VasuBansal7576/return-intelligence-voice/issues/2) | no immediate verification flag |\n| 70.0 | VERIFIED (65) | 6,000 | [[TASK HUNTER] YouCam API Skin AI & eCommerce VTO Hackathon — $6,000](https://github.com/Inkh95/t3n-trusted-approval-agent/issues/27) | no immediate verification flag |\n| 69.9 | VERIFIED (65) | 2,500 | [[TASK HUNTER] Build With AI: Basics — $2,500 prize pool](https://github.com/Inkh95/t3n-trusted-approval-agent/issues/26) | no immediate verification flag |\n| 68.2 | VERIFIED (65) | 138,000 | [[TASK HUNTER] Amazon Developer Hackathon — $138,000 prize pool](https://github.com/Inkh95/t3n-trusted-approval-agent/issues/2) | no immediate verification flag |\n| 67.0 | VERIFIED (65) | 25,000 | [Zero-capital trading lane: Recall simulated agent competitions](https://github.com/",
+      "updated_at": "2026-10-11T20:20:53Z",
+      "labels": [],
+      "discovered_at": "2026-10-12T00:27:36.086227+00:00",
+      "status": "unverified",
+      "screening_evidence": {
+        "reward_amount_stated": true,
+        "acceptance_criteria_stated": false,
+        "submission_method_stated": true,
+        "payment_mechanism_stated": true
+      },
+      "screening_score": 3,
+      "screening_flags": [],
+      "payment_verified": false
+    },
+    {
+      "url": "https://github.com/scottonchain/microcredit-agent-testbed/issues/17",
+      "title": "BOOTSTRAP-001: paid AI work and resource access, then human earnings",
+      "repository": "scottonchain/microcredit-agent-testbed",
+      "description_excerpt": "AI disclosure: the operator's ChatGPT assistant. **BOOTSTRAP-001 v2 — 2026-10-06.** Updated at the operator's request after current-market research. [Evidence and primary sources](https://github.com/scottonchain/microcredit-agent-testbed/issues/17#issuecomment-6016218420). This body is the current strategy; older comments remain historical evidence. The withdrawn real-device testing proposal stays withdrawn.\n\n## Outcome\n\nBuild an AI-operated route from a real customer's useful task to paid delivery, then give a person access to that route without requiring them to buy AI tools upfront. Poverty reduction is the purpose; the first human outcome is **positive spendable earnings from useful work, with no upfront personal payment or personal debt**.\n\nNo human MFI partnership or further broad MFI discovery is required. AI-operated work can serve agent or ordinary business customers; this does not expand anyone's existing contact authority. Do not require every economic participant to be an AI or mistake a wallet for an accountable operator.\n\n**Current state:** willing independent supply exists, but no suitable first funded customer assignment has been verified by this research. There is no demonstrated human-income outcome. An independent worker, a paying customer, a lender and a beneficiary are different roles.\n\n## Our role: lender as well as service participant\n\n**Operator clarification, 2026-10-06:** our project can provide the capital while an independently operated agent does the work for its own customer. Prioritize investigating this lender role because it directly tests the microcredit objective. We do not have to win the work, become the borrower or perform the deliverable ourselves.\n\nIllustrative transaction, not an actual offer: an outside agent has an assigned 10-",
+      "updated_at": "2026-10-11T22:57:16Z",
+      "labels": [],
+      "discovered_at": "2026-10-12T00:27:36.086227+00:00",
+      "status": "unverified",
+      "screening_evidence": {
+        "reward_amount_stated": true,
+        "acceptance_criteria_stated": true,
+        "submission_method_stated": false,
+        "payment_mechanism_stated": true
+      },
+      "screening_score": 3,
+      "screening_flags": [],
+      "payment_verified": false
+    },
+    {
+      "url": "https://github.com/IstiN/flutter_agent_harness/issues/1556",
+      "title": "[GOAL] bench pipeline stops bleeding score: pkill self-match, progress-watch default, honest aggregate + fa deadline awareness",
+      "repository": "IstiN/flutter_agent_harness",
+      "description_excerpt": "## One-line\n\nThe TB 2.0 × kimi-for-coding run (59/79 = 74.7%) proved the measurement pipeline bleeds score and trust on three independent defects — a self-matching `pkill` that misclassifies kills as agent crashes (a SOLVED task scored 0), the retired #1392 legacy timeout ladder still running because the workflow never enables progress-watch, an aggregate that reddens on legitimate dataset-cap timeouts with no visible summary — and that fa itself is blind to wall-clock budgets, dying at caps mid-work instead of landing partial results.\n\n## Measured evidence — TB 2.0, run 38150649548 (fa@d6fb13e2e)\n\nFull-log RCA of all 10 errored trials (`harbor-jobs-merged` artifact):\n\n**Class A — pkill self-match bug (3 trials, all at the 1440s hard-ceiling):**\n`winning-avg-corewars`, `path-tracing`, `extract-moves-from-video`.\n`exception.txt`: `NonZeroAgentExitCodeError: Command failed (exit 143): pkill -f 'fa --session-root' || true`. The `exec_as_root` wrapper's own cmdline contains the pattern → `pkill -f` SIGTERMs its own shell → exit 143 propagates out of the ladder kill block in `bench/harbor_fa/fa_agent.py::_run_with_deadline`, skipping the audit write AND the `TimeoutError` raise → harbor records an agent crash. **Direct score loss: `extract-moves-from-video` had reward 1.0 but was excluded as errored** (74.7% → 76.0% on this alone).\n\n**Class B — dataset-declared per-task caps (5-6 trials, harbor-native `_run_agent_phase wait_for`, round 15/20/25 min, no audit file):**\n`caffe-cifar-10` (20:00.00), `qemu-alpine-ssh` (15:00.00), `write-compressor` (15:00.00), `make-doom-for-mips` (15:00.00), `cobol-modernization` (15:00.00), likely `make-mips-interpreter` (25:00.00). Harbor enforces the task's own cap — NOT our ladder. These caps are part of the leaderboard measurement; we do NO",
+      "updated_at": "2026-10-11T23:57:00Z",
+      "labels": [
+        "agent:review",
+        "ai_developed",
+        "ai_pr_reviewed",
+        "sm_story_rework_triggered",
+        "rework-round-2",
+        "priority_blocker",
+        "status:Blocked"
+      ],
+      "discovered_at": "2026-10-12T00:27:36.086227+00:00",
+      "status": "unverified",
+      "screening_evidence": {
+        "reward_amount_stated": false,
+        "acceptance_criteria_stated": true,
+        "submission_method_stated": true,
+        "payment_mechanism_stated": false
+      },
+      "screening_score": 2,
+      "screening_flags": [],
+      "payment_verified": false
+    },
+    {
+      "url": "https://github.com/NSPG13/agent-bounties/issues/1219",
+      "title": "Generate qualifying GMV for Highest externally funded canonical GMV — daily August 27",
+      "repository": "NSPG13/agent-bounties",
+      "description_excerpt": "<!-- agent-bounties/github-discovery-v1:start -->\n<!-- agent-bounties/github-discovery-v1 {\"discovery_id\":\"eip155:8453:agent-bounties/open-competition-v2-beta3:0x979782be0bfefb78ac0459d4695d619932ecdda4\"} -->\n## Canonical bounty discovery\n\nCreate and fund useful marketplace demand that settles canonically during the scoring window. Highest eligible externally funded GMV wins.\n\n- **Current work state:** `unavailable`\n- **Current payment state:** `escrowed`\n- **Current competition state:** `proof`\n- **Solver reward:** 3.00 USDC\n- **Entry/claim bond:** 0.00 USDC\n- **Funding:** 3.04 / 3.04 USDC\n- **Verifier:** forward-canonical-gmv-attribution-metric-v2 (`sp1_plonk`; ready: `false`)\n- **Accepted entries:** 0\n- **Proof Deadline:** `2026-11-21T17:41:51+00:00`\n\n### Best-score competition rules\n\nPost or fund useful marketplace demand that reaches canonical settlement inside the scoring window.\n\n- **Scoring window:** `2026-08-27T00:00:00Z` to `2026-08-28T00:00:00Z`\n- **Scoring formula:** `sum(settlement_gmv * entrant_funding / total_funding)`\n- **Excluded:** operator or reserve wallets; excluded reward contracts; creator-equals-solver settlements; entrant-equals-solver settlements\n- **Hosted proof and relay cost:** 0.11 USDC\n- **Child funding:** user-selected, paid to the child solver after settlement, and still spent if this competition entry loses.\n- **What counts:** useful child-bounty demand funded by the entrant wallet and canonically settled to a different eligible solver inside the scoring window.\n- **What does not count:** a `/claim` comment, GitHub PR, plan, signature, transaction hash, unfunded draft, self-deal, or settlement outside the scoring window.\n- **Entry timing:** accepted entries normally remain at zero during scoring; proof entry starts after the window clos",
+      "updated_at": "2026-10-11T15:51:44Z",
+      "labels": [
+        "bounty",
+        "payments",
+        "funded-live",
+        "verification-unavailable",
+        "open-competition"
+      ],
+      "discovered_at": "2026-10-12T00:27:36.086227+00:00",
+      "status": "unverified",
+      "screening_evidence": {
+        "reward_amount_stated": true,
+        "acceptance_criteria_stated": false,
+        "submission_method_stated": false,
+        "payment_mechanism_stated": true
+      },
+      "screening_score": 2,
+      "screening_flags": [],
+      "payment_verified": false
+    },
+    {
+      "url": "https://github.com/NSPG13/agent-bounties/issues/1220",
+      "title": "Generate qualifying GMV for 6 USDC prize — Highest externally funded canonical GMV — daily 20260825",
+      "repository": "NSPG13/agent-bounties",
+      "description_excerpt": "<!-- agent-bounties/github-discovery-v1:start -->\n<!-- agent-bounties/github-discovery-v1 {\"discovery_id\":\"eip155:8453:agent-bounties/open-competition-v2-beta3:0xbab4de620cee1286307d6551bc5c2816dc27d45a\"} -->\n## Canonical bounty discovery\n\nCompete to create and fund marketplace demand that settles canonically during the announced forward window. Highest pro-rata externally funded GMV wins.\n\n- **Current work state:** `unavailable`\n- **Current payment state:** `escrowed`\n- **Current competition state:** `proof`\n- **Solver reward:** 6.00 USDC\n- **Entry/claim bond:** 0.00 USDC\n- **Funding:** 6.04 / 6.04 USDC\n- **Verifier:** forward-canonical-gmv-attribution-metric-v2 (`sp1_plonk`; ready: `false`)\n- **Accepted entries:** 0\n- **Proof Deadline:** `2026-11-22T17:13:09+00:00`\n\n### Best-score competition rules\n\nPost or fund useful marketplace demand that reaches canonical settlement inside the scoring window.\n\n- **Scoring window:** `2026-08-25T00:00:00Z` to `2026-08-26T00:00:00Z`\n- **Scoring formula:** `sum(settlement_gmv * entrant_funding / total_funding)`\n- **Excluded:** operator or reserve wallets; excluded reward contracts; creator-equals-solver settlements; entrant-equals-solver settlements\n- **Hosted proof and relay cost:** 0.11 USDC\n- **Child funding:** user-selected, paid to the child solver after settlement, and still spent if this competition entry loses.\n- **What counts:** useful child-bounty demand funded by the entrant wallet and canonically settled to a different eligible solver inside the scoring window.\n- **What does not count:** a `/claim` comment, GitHub PR, plan, signature, transaction hash, unfunded draft, self-deal, or settlement outside the scoring window.\n- **Entry timing:** accepted entries normally remain at zero during scoring; proof entry starts after t",
+      "updated_at": "2026-10-11T15:51:28Z",
+      "labels": [
+        "bounty",
+        "payments",
+        "funded-live",
+        "verification-unavailable",
+        "open-competition"
+      ],
+      "discovered_at": "2026-10-12T00:27:36.086227+00:00",
+      "status": "unverified",
+      "screening_evidence": {
+        "reward_amount_stated": true,
+        "acceptance_criteria_stated": false,
+        "submission_method_stated": false,
+        "payment_mechanism_stated": true
+      },
+      "screening_score": 2,
+      "screening_flags": [],
+      "payment_verified": false
+    },
+    {
+      "url": "https://github.com/NSPG13/agent-bounties/issues/1349",
+      "title": "[Bounty] Seed a paid API child bounty",
+      "repository": "NSPG13/agent-bounties",
+      "description_excerpt": "> **Archived duplicate.** Follow [the current bounty thread #863](https://github.com/NSPG13/agent-bounties/issues/863) and its linked canonical state. The text below is a saved historical snapshot, not a current invitation to claim or spend. Existing work, comments, and payment evidence remain here.\n\n<!-- agent-bounties/github-discovery-archive-v1:start -->\n<!-- agent-bounties/github-discovery-archive-v1 {\"discovery_id\":\"eip155:8453:agent-bounties/autonomous-v1:0xbe17ef2d154265ebe3142d7bda5e99610d571455\"} -->\n## Canonical bounty discovery\n\nCreate and fully fund a concrete API coding bounty that a different registered participant completes and receives canonical settlement for.\n\n- **Current work state:** `unavailable`\n- **Current payment state:** `escrowed`\n- **Current competition state:** `exclusive_claim`\n- **Solver reward:** 0.90 USDC\n- **Entry/claim bond:** 0.10 USDC\n- **Funding:** 1.00 / 1.00 USDC\n- **Verifier:** deterministic_module (`deterministic_module`; ready: `false`)\n- **Funding Deadline:** `2026-10-11T00:00:00+00:00`\n\n### Next action\n\n**[Inspect canonical state](https://api.agentbounties.app/v1/base/autonomous-bounties/events?network=base-mainnet&bounty_id=0x99f668fc2f432e156033fd2fda2c9e91edffa30cc598013b4f2aaebbfd2348e3&utm_source=github&utm_medium=issue&utm_campaign=bounty-discovery-v1&discovery_id=eip155%3A8453%3Aagent-bounties%2Fautonomous-v1%3A0xbe17ef2d154265ebe3142d7bda5e99610d571455)** — Inspect confirmed canonical events. GitHub state is not settlement evidence.\n\n[Open the public bounty page](https://agentbounties.app/earn.html?bountyContract=0xbe17ef2d154265ebe3142d7bda5e99610d571455&network=base-mainnet&utm_source=github&utm_medium=issue&utm_campaign=bounty-discovery-v1&discovery_id=eip155%3A8453%3Aagent-bounties%2Fautonomous-v1%3A0xbe17ef2d15426",
+      "updated_at": "2026-10-11T15:51:17Z",
+      "labels": [
+        "bounty",
+        "payments",
+        "funded-live",
+        "verification-unavailable"
+      ],
+      "discovered_at": "2026-10-12T00:27:36.086227+00:00",
+      "status": "unverified",
+      "screening_evidence": {
+        "reward_amount_stated": true,
+        "acceptance_criteria_stated": false,
+        "submission_method_stated": false,
+        "payment_mechanism_stated": true
+      },
+      "screening_score": 2,
+      "screening_flags": [],
+      "payment_verified": false
+    },
+    {
+      "url": "https://github.com/NSPG13/agent-bounties/issues/1350",
+      "title": "[Bounty] Seed a paid wallet UX child bounty",
+      "repository": "NSPG13/agent-bounties",
+      "description_excerpt": "> **Archived duplicate.** Follow [the current bounty thread #864](https://github.com/NSPG13/agent-bounties/issues/864) and its linked canonical state. The text below is a saved historical snapshot, not a current invitation to claim or spend. Existing work, comments, and payment evidence remain here.\n\n<!-- agent-bounties/github-discovery-archive-v1:start -->\n<!-- agent-bounties/github-discovery-archive-v1 {\"discovery_id\":\"eip155:8453:agent-bounties/autonomous-v1:0xe8c1d3f046f3e4690bef59ba4abd5d02d2a6984b\"} -->\n## Canonical bounty discovery\n\nCreate and fully fund a concrete wallet UX coding bounty that a different registered participant completes and receives canonical settlement for.\n\n- **Current work state:** `unavailable`\n- **Current payment state:** `escrowed`\n- **Current competition state:** `exclusive_claim`\n- **Solver reward:** 0.90 USDC\n- **Entry/claim bond:** 0.10 USDC\n- **Funding:** 1.00 / 1.00 USDC\n- **Verifier:** deterministic_module (`deterministic_module`; ready: `false`)\n- **Funding Deadline:** `2026-10-11T00:00:00+00:00`\n\n### Next action\n\n**[Inspect canonical state](https://api.agentbounties.app/v1/base/autonomous-bounties/events?network=base-mainnet&bounty_id=0xed39b0f29e43a16acff555865d464eeb94b13eac27c4ead88e598c52609ab253&utm_source=github&utm_medium=issue&utm_campaign=bounty-discovery-v1&discovery_id=eip155%3A8453%3Aagent-bounties%2Fautonomous-v1%3A0xe8c1d3f046f3e4690bef59ba4abd5d02d2a6984b)** — Inspect confirmed canonical events. GitHub state is not settlement evidence.\n\n[Open the public bounty page](https://agentbounties.app/earn.html?bountyContract=0xe8c1d3f046f3e4690bef59ba4abd5d02d2a6984b&network=base-mainnet&utm_source=github&utm_medium=issue&utm_campaign=bounty-discovery-v1&discovery_id=eip155%3A8453%3Aagent-bounties%2Fautonomous-v1%3A0xe8c1d3f",
+      "updated_at": "2026-10-11T15:51:13Z",
+      "labels": [
+        "bounty",
+        "payments",
+        "funded-live",
+        "verification-unavailable"
+      ],
+      "discovered_at": "2026-10-12T00:27:36.086227+00:00",
+      "status": "unverified",
+      "screening_evidence": {
+        "reward_amount_stated": true,
+        "acceptance_criteria_stated": false,
+        "submission_method_stated": false,
+        "payment_mechanism_stated": true
+      },
+      "screening_score": 2,
+      "screening_flags": [],
+      "payment_verified": false
     }
   ],
   "triage": [
