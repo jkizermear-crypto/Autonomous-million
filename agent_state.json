@@ -757,6 +757,25 @@
       },
       "verified_payment": false,
       "verified_profit_usd": 0
+    },
+    {
+      "opportunity_url": "https://github.com/Senthemodder/aquarium-of-gullibles/issues/2",
+      "created_at": "2026-10-12T00:28:07.357976+00:00",
+      "verdict": "investigate",
+      "status": "planned_not_executed",
+      "plan": {
+        "reason": "The issue requests implementing continuous collision detection and modifying codebase logic for a bounty, but requires code changes and execution of tests which exceed safe read-only analysis.",
+        "payer_evidence": "None",
+        "reward_evidence": "Mention of $850 USDC escrow locked in issue text",
+        "eligibility": "Requires code implementation and pull request merge",
+        "safe_test": "Perform static analysis and inspect test/verify.js without executing code or submitting changes",
+        "success_metric": "Successful identification of relevant codebase files and understanding of current collision logic",
+        "stop_condition": "Any requirement to execute untrusted code or submit PRs",
+        "human_dependencies": "Codebase owner review",
+        "risk": "High risk of executing untested code or interacting with untrusted repositories"
+      },
+      "verified_payment": false,
+      "verified_profit_usd": 0
     }
   ],
   "public_submissions": [],
