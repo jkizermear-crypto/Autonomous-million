@@ -1,0 +1,90 @@
+name: AutonomousMillion Payment Evidence v2
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '45 2 * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: autonomous-million-state
+  cancel-in-progress: false
+
+jobs:
+  evidence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Collect independent payment evidence candidates
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python - <<'PY'
+          import datetime, json, os, pathlib, re, urllib.request, urllib.error
+          path = pathlib.Path('agent_state.json')
+          state = json.loads(path.read_text())
+          now = datetime.datetime.now(datetime.timezone.utc).isoformat()
+          headers = {
+              'Accept': 'application/vnd.github+json',
+              'Authorization': 'Bearer ' + os.environ['GH_TOKEN'],
+              'User-Agent': 'AutonomousMillion-EvidenceCollector',
+          }
+          tx_pattern = re.compile(r'(?i)https?://(?:www\.)?(?:etherscan\.io|arbiscan\.io|basescan\.org|optimistic\.etherscan\.io)/tx/(0x[a-f0-9]{64})')
+          issue_pattern = re.compile(r'https://github\.com/([^/]+)/([^/]+)/issues/(\d+)')
+          results = []
+          for item in state.get('opportunities', [])[:25]:
+              url = item.get('url', '')
+              match = issue_pattern.fullmatch(url)
+              if not match:
+                  continue
+              owner, repo, number = match.groups()
+              result = {'url': url, 'checked_at': now, 'payment_verified': False,
+                        'status': 'no_independent_evidence', 'transaction_links': []}
+              try:
+                  api = f'https://api.github.com/repos/{owner}/{repo}/issues/{number}'
+                  req = urllib.request.Request(api, headers=headers)
+                  with urllib.request.urlopen(req, timeout=15) as response:
+                      issue = json.load(response)
+                  if issue.get('state') != 'open' or 'pull_request' in issue:
+                      result['status'] = 'not_open_issue'
+                  else:
+                      body = (issue.get('title') or '') + '\n' + (issue.get('body') or '')
+                      result['transaction_links'] = sorted(set(tx_pattern.findall(body)))[:10]
+                      if result['transaction_links']:
+                          result['status'] = 'transaction_claim_requires_independent_validation'
+              except (urllib.error.HTTPError, urllib.error.URLError, ValueError) as exc:
+                  result['status'] = 'lookup_failed_' + type(exc).__name__
+              # Never promote a transaction URL or an issuer's claim to verified funding.
+              item['payment_verified'] = False
+              item['payment_review_status'] = result['status']
+              results.append(result)
+          state['payment_evidence_v2'] = results
+          state['last_payment_evidence_v2_at'] = now
+          path.write_text(json.dumps(state, indent=2, ensure_ascii=False) + '\n')
+          report = pathlib.Path('reports/payment-evidence-v2-latest.md')
+          report.parent.mkdir(exist_ok=True)
+          lines = ['# Payment evidence v2 — candidate collection', '',
+                   f'Checked: {now}', '',
+                   'Read-only discovery. Transaction links are NOT verified escrow or guaranteed payouts.',
+                   'All opportunities remain payment_verified=false.', '']
+          for result in results:
+              lines.append(f'- {result["status"]}: {result["url"]}')
+              for tx in result['transaction_links']:
+                  lines.append(f'  - Claimed transaction hash: {tx}')
+          report.write_text('\n'.join(lines) + '\n')
+          print(f'Inspected {len(results)} opportunities; independently verified: 0')
+          PY
+      - name: Save candidate evidence
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add agent_state.json reports/payment-evidence-v2-latest.md
+          if ! git diff --cached --quiet; then
+            git commit -m 'Agent: collect payment evidence candidates'
+            git push
+          fi
