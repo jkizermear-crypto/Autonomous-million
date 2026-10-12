@@ -1,5 +1,5 @@
 {
-  "runs": 4,
+  "runs": 5,
   "ideas": [
     {
       "name": "Decentralized Indexing Subgraph Optimization",
@@ -58,7 +58,7 @@
   ],
   "verified_revenue_usd": 0,
   "verified_expenses_usd": 0,
-  "last_run_at": "2026-10-12T00:27:36.086227+00:00",
+  "last_run_at": "2026-10-12T00:31:18.108900+00:00",
   "opportunities": [
     {
       "url": "https://github.com/tadanobutubutu/screeps/issues/5",
@@ -250,7 +250,8 @@
         "algorithm"
       ],
       "discovered_at": "2026-10-11T23:43:42.676248+00:00",
-      "status": "rejected_safety_audit"
+      "status": "blocked_repository_safety_review",
+      "payment_verified": false
     },
     {
       "url": "https://github.com/Senthemodder/aquarium-of-gullibles/issues/2",
@@ -263,7 +264,7 @@
         "algorithm"
       ],
       "discovered_at": "2026-10-12T00:27:36.086227+00:00",
-      "status": "unverified",
+      "status": "blocked_repository_safety_review",
       "screening_evidence": {
         "reward_amount_stated": true,
         "acceptance_criteria_stated": true,
@@ -528,6 +529,262 @@
       "screening_score": 2,
       "screening_flags": [],
       "payment_verified": false
+    },
+    {
+      "url": "https://github.com/NSPG13/agent-bounties/issues/1364",
+      "title": "[Bounty] Seed a paid MCP child bounty",
+      "repository": "NSPG13/agent-bounties",
+      "description_excerpt": "> **Archived duplicate.** Follow [the current bounty thread #860](https://github.com/NSPG13/agent-bounties/issues/860) and its linked canonical state. The text below is a saved historical snapshot, not a current invitation to claim or spend. Existing work, comments, and payment evidence remain here.\n\n<!-- agent-bounties/github-discovery-archive-v1:start -->\n<!-- agent-bounties/github-discovery-archive-v1 {\"discovery_id\":\"eip155:8453:agent-bounties/autonomous-v1:0x43d42cb227d76588ab16693f14efd6cff851fa7a\"} -->\n## Canonical bounty discovery\n\nCreate and fully fund a concrete MCP coding bounty that a different registered participant completes and receives canonical settlement for.\n\n- **Current work state:** `unavailable`\n- **Current payment state:** `escrowed`\n- **Current competition state:** `exclusive_claim`\n- **Solver reward:** 0.90 USDC\n- **Entry/claim bond:** 0.10 USDC\n- **Funding:** 1.00 / 1.00 USDC\n- **Verifier:** deterministic_module (`deterministic_module`; ready: `false`)\n- **Funding Deadline:** `2026-10-11T00:00:00+00:00`\n\n### Next action\n\n**[Inspect canonical state](https://api.agentbounties.app/v1/base/autonomous-bounties/events?network=base-mainnet&bounty_id=0x12ad2fa99de272728311a3eb07c3c741048382260cb91ba1e8f001ed3b5759d0&utm_source=github&utm_medium=issue&utm_campaign=bounty-discovery-v1&discovery_id=eip155%3A8453%3Aagent-bounties%2Fautonomous-v1%3A0x43d42cb227d76588ab16693f14efd6cff851fa7a)** — Inspect confirmed canonical events. GitHub state is not settlement evidence.\n\n[Open the public bounty page](https://agentbounties.app/earn.html?bountyContract=0x43d42cb227d76588ab16693f14efd6cff851fa7a&network=base-mainnet&utm_source=github&utm_medium=issue&utm_campaign=bounty-discovery-v1&discovery_id=eip155%3A8453%3Aagent-bounties%2Fautonomous-v1%3A0x43d42cb227d76",
+      "updated_at": "2026-10-11T15:51:03Z",
+      "labels": [
+        "bounty",
+        "payments",
+        "funded-live",
+        "verification-unavailable"
+      ],
+      "discovered_at": "2026-10-12T00:31:18.108900+00:00",
+      "status": "unverified",
+      "screening_evidence": {
+        "reward_amount_stated": true,
+        "acceptance_criteria_stated": false,
+        "submission_method_stated": false,
+        "payment_mechanism_stated": true
+      },
+      "screening_score": 2,
+      "screening_flags": [],
+      "payment_verified": false
+    },
+    {
+      "url": "https://github.com/NSPG13/agent-bounties/issues/1365",
+      "title": "[Bounty] Flower-shaped rainwater collector for a tinaco",
+      "repository": "NSPG13/agent-bounties",
+      "description_excerpt": "> **Archived duplicate.** Follow [the current bounty thread #1340](https://github.com/NSPG13/agent-bounties/issues/1340) and its linked canonical state. The text below is a saved historical snapshot, not a current invitation to claim or spend. Existing work, comments, and payment evidence remain here.\n\n<!-- agent-bounties/github-discovery-archive-v1:start -->\n<!-- agent-bounties/github-discovery-archive-v1 {\"discovery_id\":\"eip155:8453:agent-bounties/autonomous-v1:0x983e2d30faacad57f9871c3cc786d9a4b37829db\"} -->\n## Canonical bounty discovery\n\nCreate a parametric CAD concept for a flower-shaped rainwater collector that retrofits onto a tinaco in Mexico City.\n\n- **Current work state:** `verification_pending`\n- **Current payment state:** `escrowed`\n- **Current competition state:** `exclusive_claim`\n- **Solver reward:** 15.068098 USDC\n- **Entry/claim bond:** 2.00 USDC\n- **Funding:** 17.068098 / 17.068098 USDC\n- **Verifier:** signed_quorum (`signed_quorum`; ready: `true`)\n\n### Next action\n\n**[Inspect verification work](https://api.agentbounties.app/v1/base/autonomous-bounties/verification-jobs?network=base-mainnet&utm_source=github&utm_medium=issue&utm_campaign=bounty-discovery-v1&discovery_id=eip155%3A8453%3Aagent-bounties%2Fautonomous-v1%3A0x983e2d30faacad57f9871c3cc786d9a4b37829db)** — Inspect the committed verifier job. A submission is not acceptance or payment.\n\n[Open the public bounty page](https://agentbounties.app/earn.html?bountyContract=0x983e2d30faacad57f9871c3cc786d9a4b37829db&network=base-mainnet&utm_source=github&utm_medium=issue&utm_campaign=bounty-discovery-v1&discovery_id=eip155%3A8453%3Aagent-bounties%2Fautonomous-v1%3A0x983e2d30faacad57f9871c3cc786d9a4b37829db)\n\n> GitHub mirrors canonical public state and cannot fund, claim, verify, settle, or prove payment",
+      "updated_at": "2026-10-11T15:50:58Z",
+      "labels": [
+        "bounty",
+        "payments",
+        "funded-live"
+      ],
+      "discovered_at": "2026-10-12T00:31:18.108900+00:00",
+      "status": "unverified",
+      "screening_evidence": {
+        "reward_amount_stated": true,
+        "acceptance_criteria_stated": false,
+        "submission_method_stated": false,
+        "payment_mechanism_stated": true
+      },
+      "screening_score": 2,
+      "screening_flags": [],
+      "payment_verified": false
+    },
+    {
+      "url": "https://github.com/NSPG13/agent-bounties/issues/1371",
+      "title": "[Bounty] Seed a paid CLI child bounty",
+      "repository": "NSPG13/agent-bounties",
+      "description_excerpt": "> **Archived duplicate.** Follow [the current bounty thread #865](https://github.com/NSPG13/agent-bounties/issues/865) and its linked canonical state. The text below is a saved historical snapshot, not a current invitation to claim or spend. Existing work, comments, and payment evidence remain here.\n\n<!-- agent-bounties/github-discovery-archive-v1:start -->\n<!-- agent-bounties/github-discovery-archive-v1 {\"discovery_id\":\"eip155:8453:agent-bounties/autonomous-v1:0xfffecb0fcd36477c5f6ecec808f6f0cf53819562\"} -->\n## Canonical bounty discovery\n\nCreate and fully fund a concrete CLI coding bounty that a different registered participant completes and receives canonical settlement for.\n\n- **Current work state:** `unavailable`\n- **Current payment state:** `escrowed`\n- **Current competition state:** `exclusive_claim`\n- **Solver reward:** 0.90 USDC\n- **Entry/claim bond:** 0.10 USDC\n- **Funding:** 1.00 / 1.00 USDC\n- **Verifier:** deterministic_module (`deterministic_module`; ready: `false`)\n- **Funding Deadline:** `2026-10-11T00:00:00+00:00`\n\n### Next action\n\n**[Inspect canonical state](https://api.agentbounties.app/v1/base/autonomous-bounties/events?network=base-mainnet&bounty_id=0x7e8e455f2a454358383cb92b9db9f9e0cfa8e8a3e73caaf739a17a033ed641b6&utm_source=github&utm_medium=issue&utm_campaign=bounty-discovery-v1&discovery_id=eip155%3A8453%3Aagent-bounties%2Fautonomous-v1%3A0xfffecb0fcd36477c5f6ecec808f6f0cf53819562)** — Inspect confirmed canonical events. GitHub state is not settlement evidence.\n\n[Open the public bounty page](https://agentbounties.app/earn.html?bountyContract=0xfffecb0fcd36477c5f6ecec808f6f0cf53819562&network=base-mainnet&utm_source=github&utm_medium=issue&utm_campaign=bounty-discovery-v1&discovery_id=eip155%3A8453%3Aagent-bounties%2Fautonomous-v1%3A0xfffecb0fcd364",
+      "updated_at": "2026-10-11T15:50:46Z",
+      "labels": [
+        "bounty",
+        "payments",
+        "funded-live",
+        "verification-unavailable"
+      ],
+      "discovered_at": "2026-10-12T00:31:18.108900+00:00",
+      "status": "unverified",
+      "screening_evidence": {
+        "reward_amount_stated": true,
+        "acceptance_criteria_stated": false,
+        "submission_method_stated": false,
+        "payment_mechanism_stated": true
+      },
+      "screening_score": 2,
+      "screening_flags": [],
+      "payment_verified": false
+    },
+    {
+      "url": "https://github.com/amillimatrix-eng/CARBON-Creation-Hub/issues/31",
+      "title": "ROOT INTAKE — ledger truth, capability-loss recovery, and model-to-Root throughput",
+      "repository": "amillimatrix-eng/CARBON-Creation-Hub",
+      "description_excerpt": "# ROOT disposition requested — bounded proposals, no authority change\n\n**Classification requested:** GOVERNANCE-READY RECOVERY / DATA-INTEGRITY + MODEL-TO-ROOT THROUGHPUT\n**Priority recommendation:** P1 recovery enabler, without displacing existing P0 Intake clearance or primary Matrix recovery obligations. Promote only if ROOT determines the finding directly blocks P0 work.\n**Scope:** proposals for ROOT to decide and assign to existing owners. This issue does not itself change Canon, Blue State, mandates, worker ownership, runtime code, CRM truth, or commercial lifecycle.\n\n## Verified current evidence\n\n### A. Opportunities ledger count disagreement\n- Current overdrive/opportunities.json blob: b04be618dccf1fed8405ccd7ff5c4be34d18004d.\n- record_count: **66**.\n- Distinct keys in records: **83**.\n- Difference: **17**.\n- last_run.full_ledger_count: **62**, with last_run.run_at = 2026-10-03T17:42:00Z; last_updated_at = 2026-10-09T13:05:00Z.\n\nDo not overwrite the historical last_run snapshot merely to make it match today's map. The current derived record count and the count captured at the last run are different kinds of truth. The immediate defect is that the field presented as the ledger's current record_count does not match the current map; confirm its intended semantics before repair.\n\n### B. OVERDRIVE is watching, but the latest window made no state transition\n- Current overdrive/state.json blob: e37fb0f2509ea2f1eb9b5f826a1c5073b18fd9ca; sequence 20; last persisted state-change/tick timestamp 2026-10-10T10:58:19.567246Z; queue length 20.\n- GitHub Actions OVERDRIVE run #117 completed successfully on main, head 9aba5ae05abf371f031fe4c7267cfae73caf9966, 2026-10-10 14:48–14:51Z.\n- All four minute ticks returned status WATCHING, pending 0, ready_claims 0, signals PRI=59/iSCOP",
+      "updated_at": "2026-10-12T00:29:21Z",
+      "labels": [],
+      "discovered_at": "2026-10-12T00:31:18.108900+00:00",
+      "status": "unverified",
+      "screening_evidence": {
+        "reward_amount_stated": false,
+        "acceptance_criteria_stated": true,
+        "submission_method_stated": true,
+        "payment_mechanism_stated": false
+      },
+      "screening_score": 2,
+      "screening_flags": [],
+      "payment_verified": false
+    },
+    {
+      "url": "https://github.com/frankxai/arcanea-ai-app/issues/276",
+      "title": "[Program] Arcanea World-First Studio Intelligence + Press integration",
+      "repository": "frankxai/arcanea-ai-app",
+      "description_excerpt": "## Execution authority update (2026-09-25)\n\nGitHub issues and linked exact-head PRs are the active execution and evidence record. The August Linear and Notion references below are historical or strategy context, not separate work queues. Business, editorial and legal backlog migration is not yet verified; do not claim those outcomes staffed, complete or approved until individually mapped to GitHub and evidenced. Existing human publication, rights, canon and release gates remain unchanged.\n\n## Outcome\n\nBuild **Arcanea's own universe first**—canon, stories, books, realms, audience and one bounded playable proof—while implementing the graph-native **Studio Intelligence** that lets Arcanea Studios ship those artifacts coherently. Do not build another general creator platform before internal and paid external proof.\n\n- Canonical strategy: https://app.notion.com/p/3c626ac2b7f681b89d73e5755d51cc89\n- Historical Linear project (archived reference, not the active queue): https://linear.app/arcanea/project/arcanea-studios-year-one-proof-f891219cce37\n- Stable first-release ID: `ARC-REL-001`\n\n## Strategic hierarchy — clarified 25 August 2026\n\n1. **Arcanea universe and audience are strategic P0.**\n2. **Arcanea Studios** is the creative company.\n3. **Studio OS / Studio Intelligence** is the private internal multiplier.\n4. **Arcanea Press** is the human-gated release and commercial lane.\n5. Academy, external creator tooling and OSS are later extractions from proven work.\n\nCreator OS may remain a separate bounded portfolio cash-validation rail, but it does not define Arcanea's product priority.\n\nCapacity guardrail: **60% minimum Arcanea world/audience/releases; 30% maximum enabling Studio Intelligence; 10% maximum Academy/externalization/OSS.**\n\n## Frontier-system translation\n\n- Absorb ",
+      "updated_at": "2026-10-11T23:59:07Z",
+      "labels": [],
+      "discovered_at": "2026-10-12T00:31:18.108900+00:00",
+      "status": "unverified",
+      "screening_evidence": {
+        "reward_amount_stated": false,
+        "acceptance_criteria_stated": true,
+        "submission_method_stated": true,
+        "payment_mechanism_stated": false
+      },
+      "screening_score": 2,
+      "screening_flags": [],
+      "payment_verified": false
+    },
+    {
+      "url": "https://github.com/ottobot-ai/cardano-scala-lab/issues/64",
+      "title": "[Roadmap] v0.2 and beyond — task list",
+      "repository": "ottobot-ai/cardano-scala-lab",
+      "description_excerpt": "Open work after the v0.1.0 research preview, from [docs/roadmap.md](https://github.com/ottobot-ai/cardano-scala-lab/blob/v0.1.0/docs/roadmap.md). Priorities: P0 needed for the preview or blocks collaborators; P1 needed for a full reference-compatible node; P2 hardening.\n\n**Picking up an issue:** comment to claim it, read [CONTRIBUTING.md](https://github.com/ottobot-ai/cardano-scala-lab/blob/v0.1.0/CONTRIBUTING.md), and run the gates for your type of change before opening a pull request. Reference the roadmap ID in commits and PRs. Issues labelled `good first issue` are small and bounded.\n\n### A. Publication and hygiene\n- [x] #1 **A5** (P0) Legal and provenance review: licences, fixtures, trademark wording\n- [ ] #2 **A8** (P1) CI: secret scanning (gitleaks) and dependency review\n\n### B. Unconfirmed rules\n- [x] #3 **B1** (P1) Confirm Conway VRF tie-break restriction against ouroboros-consensus\n- [x] #4 **B2** (P1) Exercise SPO default votes after the bootstrap phase\n- [x] #5 **B3** (P1) Verify committee rules: minSize, expiry, term limits\n- [x] #6 **B4** (P1) Verify treasury withdrawals to script accounts and script DReps\n- [x] #7 **B5** (P1) Protocol-11 rules: exercise disjoint reference inputs and unelected-committee votes; enforce VRF key-hash uniqueness\n- [x] #8 **B6** (P1) Confirm empty-redeemers integrity hash (0x80 vs 0xa0) on chain\n- [x] #9 **B7** (P1) Confirm pre-Allegra rewards, MIR timing and Shelley-Mary min-UTxO\n- [x] #10 **B8** (P1) Confirm pre-Babbage reward prefilter timing\n- [x] #11 **B9** (P1) Enforce Plutus builtin availability per language and protocol version\n- [x] #12 **B10** (P1) Check semantics-variant C costing of modInteger/remainderInteger\n- [x] #13 **B11** (P1) Report Scalus deviations upstream (Ed25519 costing, V3 NewConstitution context)\n- [x",
+      "updated_at": "2026-10-12T00:26:36Z",
+      "labels": [
+        "documentation"
+      ],
+      "discovered_at": "2026-10-12T00:31:18.108900+00:00",
+      "status": "unverified",
+      "screening_evidence": {
+        "reward_amount_stated": false,
+        "acceptance_criteria_stated": false,
+        "submission_method_stated": true,
+        "payment_mechanism_stated": true
+      },
+      "screening_score": 2,
+      "screening_flags": [],
+      "payment_verified": false
+    },
+    {
+      "url": "https://github.com/scottonchain/microcredit-agent-testbed/issues/15",
+      "title": "Central message board — Hermes, Claude, Codex and operator coordination",
+      "repository": "scottonchain/microcredit-agent-testbed",
+      "description_excerpt": "AI disclosure: the operator's Codex / ChatGPT lane. This is the central board for the three lanes: Hermes, Claude Code and Codex / ChatGPT.\n\n## Current structure\n\nTEAM-STRUCTURE-001 supersedes the original role split and BOARD-001 instructions. Read the [published team policy](https://github.com/scottonchain/microcredit-agent-testbed/blob/main/coordination/team-structure.md) and the [current canonical world model](https://github.com/scottonchain/microcredit-agent-testbed/blob/main/world-model/model.json) before planning. Original evidence and explicit operator directions remain authoritative.\n\n- **Hermes / hermes-agent-909:** existing outreach channels, contact deduplication, relationships and replies, private A2A intake, existing payment obligations and bounded source receipts. The two outreach fronts share one queue.\n- **Claude Code:** technical authorship, simulations, author responses, Git integration and maintenance; vision README and VERIFY prose.\n- **Codex / ChatGPT:** public research and lead qualification, experiment design, selected implementation, independent internal checks, evidence/model upkeep and coverage. These are two roles of one lane, not a fourth worker.\n\nHermes no longer owns broad public research, routine simulations/rechecks or general Git/README upkeep. Preserve its already-promised Oct6 18:00 UTC fixture PR and narrow payment/evidence exceptions. Code maintenance then transfers to Claude, with Codex checks and Hermes correspondence.\n\nOne substantial deliverable per lane. A separate author and checker remain required for substantive technical claims. Internal review is not independent outside review.\n\n## Transition and standing handoffs\n\n- **BOARD-001:** the old overdue README request and five-paragraph/five-sentence format are superseded. Claud",
+      "updated_at": "2026-10-12T00:17:06Z",
+      "labels": [],
+      "discovered_at": "2026-10-12T00:31:18.108900+00:00",
+      "status": "unverified",
+      "screening_evidence": {
+        "reward_amount_stated": false,
+        "acceptance_criteria_stated": true,
+        "submission_method_stated": true,
+        "payment_mechanism_stated": false
+      },
+      "screening_score": 2,
+      "screening_flags": [],
+      "payment_verified": false
+    },
+    {
+      "url": "https://github.com/the-vibey-project/vibey/issues/836",
+      "title": "feat(explorer): a discovered `Candidate` carries its provenance, in the intake's own vocabulary",
+      "repository": "the-vibey-project/vibey",
+      "description_excerpt": "Part of the **QwenStorm for vibey 3.0.0**. A sovereign-loop lane (gpt-oss:20b, one instance per model under sub-doctrine 8.c) implements this issue; the result is reviewed and verified before it becomes a pull request. Shared context for every lane: the ratified canon, and the standards this suite enforces (ORM always behind interfaces, comprehensive in-memory fakes so tests need no outside service, the installer installs everything on Arch Linux and macOS).\n\n## Why\nIssue #87 (rewrite: `issue-audit/updates/87.md`, Scope 2 \"Each candidate records its provenance:\nsource URL, what it asks, and what it pays (and in what asset)\", \"Proposed child issues\" 2 \"with a\n`Candidate` value type and interface\"). Runbook 21 (`docs/runbooks/expansion/21-vibey-explorer.md`,\n\"Design\" 1): each source \"yields candidates with a source link so provenance is never lost\".\nSub-doctrine 9.b (`src/vibey_tools/gh/docs/doctrines.md:349`): a class with its interface beside it.\nThe intake records the same facts through `vibey new --source-url --source-kind --offer`\n(`roadmap-87-intake-provenance`, `vibey.domain.intake_source.IntakeSourceKind`); the explorer cannot\nimport `vibey` (it has third-party dependencies, and the explorer is stdlib-only), so the explorer\ndeclares its own tuple and a root meta test holds the two vocabularies equal — one vocabulary,\nchecked, not two that drift. 10.b (`doctrines.md:390-393`): an offer is text, never a payment\ninstruction. SD-01 §4: everything in a candidate came from outside and is data.\n\n## Required behaviour\n1. `src/vibey_tools/explorer/vibey_explorer/candidate.py`:\n   - `SOURCE_KINDS: tuple[str, ...] = (\"forge-issue\", \"help-wanted\", \"bounty\", \"proposal\", \"other\")`.\n   - `@dataclass(frozen=True, slots=True) class Candidate`: `source_url: str`, `source_kind: str`",
+      "updated_at": "2026-10-11T23:55:50Z",
+      "labels": [
+        "qwenstorm",
+        "wave:roadmap",
+        "vibey-gh:triaged",
+        "vibey-gh:priority-low"
+      ],
+      "discovered_at": "2026-10-12T00:31:18.108900+00:00",
+      "status": "unverified",
+      "screening_evidence": {
+        "reward_amount_stated": false,
+        "acceptance_criteria_stated": true,
+        "submission_method_stated": true,
+        "payment_mechanism_stated": false
+      },
+      "screening_score": 2,
+      "screening_flags": [],
+      "payment_verified": false
+    },
+    {
+      "url": "https://github.com/the-vibey-project/vibey/issues/839",
+      "title": "feat(intake): `vibey new --source-url --source-kind --offer` records where a project's work came from, as a ledger event",
+      "repository": "the-vibey-project/vibey",
+      "description_excerpt": "Part of the **QwenStorm for vibey 3.0.0**. A sovereign-loop lane (gpt-oss:20b, one instance per model under sub-doctrine 8.c) implements this issue; the result is reviewed and verified before it becomes a pull request. Shared context for every lane: the ratified canon, and the standards this suite enforces (ORM always behind interfaces, comprehensive in-memory fakes so tests need no outside service, the installer installs everything on Arch Linux and macOS).\n\n## Why\nIssue #87 (rewrite: `issue-audit/updates/87.md`, Scope 2 \"Each candidate records its provenance:\nsource URL, what it asks, and what it pays\", \"Proposed child issues\" 1). The operator's original\nask: discovery feeds \"candidates into the conductor's intake with provenance (where found, what it\nasks, what it pays if anything)\". The intake has no such field: `vibey new` takes a name, `--repo`,\ncycle and budget caps and the skills mode (`src/vibey/cli/main.py:179-237`), and `EventKind`\n(`src/vibey/domain/ledger.py:37-70`) has no provenance kind. Sub-doctrine 7.c\n(`src/vibey_tools/gh/docs/doctrines.md:82-91`) asks the ledger to hold \"every job … with its time,\nits actor and its evidence\". 10.b (`doctrines.md:390-393`) means an offer is never a payment\ninstruction: it is recorded verbatim as text. SD-01 §4 (carried in CLAUDE.md): text from outside is\ndata, so the event is marked untrusted, which the publication policy withholds whole\n(`src/vibey/domain/publication_policy.py:17-19`).\n\nThe event kind needs no migration: `event.kind` is `text NOT NULL` (`migrations/0002_event.sql:9`),\nand readers already tolerate kinds they do not know (`tests/domain/test_forward_compatible_readers.py`).\n\n## Required behaviour\n1. New pure module `src/vibey/domain/intake_source.py`:\n   - `class IntakeSourceKind(StrEnum)`: `FORGE_ISSUE ",
+      "updated_at": "2026-10-11T23:53:28Z",
+      "labels": [
+        "qwenstorm",
+        "wave:roadmap",
+        "vibey-gh:triaged",
+        "vibey-gh:priority-medium"
+      ],
+      "discovered_at": "2026-10-12T00:31:18.108900+00:00",
+      "status": "unverified",
+      "screening_evidence": {
+        "reward_amount_stated": false,
+        "acceptance_criteria_stated": true,
+        "submission_method_stated": true,
+        "payment_mechanism_stated": false
+      },
+      "screening_score": 2,
+      "screening_flags": [],
+      "payment_verified": false
+    },
+    {
+      "url": "https://github.com/xpex-systems-ai/GXEON-AI/issues/437",
+      "title": "CI release blocker: 45 non-Audit TypeScript errors across revenue and operator modules",
+      "repository": "xpex-systems-ai/GXEON-AI",
+      "description_excerpt": "## Evidence: Mission 07 — 2026-10-10\n\n**Baseline:** Draft PR #434 Typecheck CI emitted **68** TypeScript diagnostics (GitHub Actions job 114145903006).  \n**After scoped recovery:** Draft PR [#436](https://github.com/xpex-systems-ai/GXEON-AI/pull/436), [Typecheck run #38029838097](https://github.com/xpex-systems-ai/GXEON-AI/actions/runs/38029838097), emitted **45** diagnostics, **zero in the Audit OS service/route group**.\n\nThe 45 remaining TypeScript diagnostics fall into:\n- `durableState/r100DatabaseMirrorDiagnostics.ts` (1)\n- `durableState/r100DatabaseMirrorReadinessService.ts` (1)\n- `ledger/ledgerStore.ts` (1)\n- `revenueWarRoom/r100WarRoomBuilder.ts` (1)\n- `routes/clawlancer.ts` (2)\n- `routes/clientOfferSend.ts` (6)\n- `routes/githubDemand.ts` (8)\n- `routes/manualPayment.ts` (5)\n- `routes/operatorDeliveryWorkspace.ts` (1)\n- `routes/operatorWorkflow.ts` (11)\n- `routes/r100DatabaseMirror.ts` (3)\n- `routes/r100DurableState.ts` (2)\n- `routes/r100Truth.ts` (3)\n\nErrors include TS7030 missing return on response handlers, TS2783 overwritten object properties, TS2345/TS2353 contract mismatches, and others. They are **not automatically safe to fix with blanket suppressions**, because payment, revenue and ledger contracts could be affected.\n\n## Acceptance criteria\n1. Separate patches grouped by functional area (revenue/ledger, routes, provider typing), each with explicit tests.\n2. Keep no-auto-payment, no-real-revenue-without-proof, manual approval, read-only and data privacy invariants.\n3. Never suppress errors globally or blanket-cast to `any` simply to pass CI.\n4. Pass full `pnpm run typecheck` and monorepo Build on final head, then require independent reviewer approval.\n5. Do not merge to production or deploy on this issue alone.\n\n**Current decision:** full monorepo Typechec",
+      "updated_at": "2026-10-11T22:08:43Z",
+      "labels": [],
+      "discovered_at": "2026-10-12T00:31:18.108900+00:00",
+      "status": "unverified",
+      "screening_evidence": {
+        "reward_amount_stated": false,
+        "acceptance_criteria_stated": true,
+        "submission_method_stated": true,
+        "payment_mechanism_stated": false
+      },
+      "screening_score": 2,
+      "screening_flags": [],
+      "payment_verified": false
+    },
+    {
+      "url": "https://github.com/BasedHardware/omi/issues/21262",
+      "title": "Python SDK: Parakeet cancellation can hang on a blocked finalize send",
+      "repository": "BasedHardware/omi",
+      "description_excerpt": "When a caller cancels `ParakeetTranscriber.run()`, a blocked `ws.send(\"finalize\")` prevents it from reaching the configured receive-drain timeout or closing the socket. With `drain_timeout=0.01`, the original run still waits after 200 ms. This can stall capture-session shutdown under transport backpressure.\n\nSource: main commit `61d26a1d1e6f25d8d9fd7339e2a0ccf163358f26`, [parakeet.py cancellation handler](https://github.com/BasedHardware/omi/blob/61d26a1d1e6f25d8d9fd7339e2a0ccf163358f26/sdks/python/omi/stt/parakeet.py#L122).\n\n### Reproduction and verification\n\nSave the test below as `sdks/python/tests/test_parakeet_finalize_timeout.py` and run the repository's `bash sdks/python/test.sh`. It executes the production transcriber with a mocked transport, no real provider, audio, hardware or credentials.\n\n- Original source with the regression: 1 failed, 53 passed. The cancelled run remains blocked until the test deadline.\n- The correction below: 54 passed. The finalize send and receiver are cancelled and the socket context closes after one caller cancellation.\n- `git diff --check` and Python compilation pass. Repository-wide `make preflight` did not complete because the sparse review checkout lacks backend selector/support files; no repository-wide or live-provider validation is claimed.\n\n### Minimal correction\n\nThe existing Deepgram client bounds its terminal send. Use the existing Parakeet drain timeout, including the same five-second fallback for zero, for this send as well:\n\n```diff\n-                    await ws.send(\"finalize\")\n+                    await asyncio.wait_for(\n+                        ws.send(\"finalize\"), timeout=self.drain_timeout or 5.0\n+                    )\n```\n\n### Regression test\n\n```python\nfrom __future__ import annotations\n\nimport asyncio\nfrom unitte",
+      "updated_at": "2026-10-11T23:14:53Z",
+      "labels": [],
+      "discovered_at": "2026-10-12T00:31:18.108900+00:00",
+      "status": "unverified",
+      "screening_evidence": {
+        "reward_amount_stated": false,
+        "acceptance_criteria_stated": false,
+        "submission_method_stated": true,
+        "payment_mechanism_stated": false
+      },
+      "screening_score": 1,
+      "screening_flags": [],
+      "payment_verified": false
+    },
+    {
+      "url": "https://github.com/DigiMonk73/BTCTX-MCP/issues/41",
+      "title": "Where we are",
+      "repository": "DigiMonk73/BTCTX-MCP",
+      "description_excerpt": "The one page that says where BitcoinTX stands. Claude updates it at the end of every session. A new session starts by reading it, the open pull requests and the open issues (`AGENTS.md`, \"Starting a session\"). Details live in the linked issues and pull requests, not here.\n\n_Updated 2026-10-11, 8:00 pm Central (session \"Fix the 2026 report bugs and release 1.2.6:0\", then 1.2.7, then the test ledger)._\n\n## Done this session\n- **Start9 merged 1.2.6:0** ([#4](https://github.com/Start9-Community/BTCTX-StartOS/pull/4), 2026-10-11, approved with no comments). It is on Community Beta.\n- **1.2.7 is released** (StartOS package 1.2.7:0), from `main` at 487032f, with the owner's \"release\".\n  - [GitHub release v1.2.7](https://github.com/DigiMonk73/BTCTX-MCP/releases/tag/v1.2.7): the dmg, the zip and `btctx.s9pk`.\n  - PyPI `btctx-mcp==1.2.7`; `ghcr.io/digimonk73/btctx-mcp:v1.2.7` for amd64 and arm64.\n  - The mirror is synced, and its own release `v1.2.7_0` built.\n- **What's in 1.2.7:**\n  - #130 / #129: a Rebates (received) line on the Dashboard, not income.\n  - #131 / #128: Ledger Review shows the missing \"date originally acquired\" as a reminder after the checks, folded, explained once.\n  - Dependabot #67 (tzdata 2026.5), #66 (lucide-react) and #73 (hypothesis).\n  - #127: the pre-push hook picks a Python that has ruff.\n  - Bump #132: review, docs check, re-check and final re-check, all posted on it.\n- **Sent to Start9 with the owner's OK:** [Start9-Community/BTCTX-StartOS#5](https://github.com/Start9-Community/BTCTX-StartOS/pull/5), \"BitcoinTX v1.2.7\". It has a short description of what 1.2.7 adds. #136 is closed.\n- **Agent release tests on develop 487032f: GO** (83 pass, 0 fail). Verdict on #132; report in the lab (`scenarios/agent-test-1.2.7.md`).\n- **Filed from the tests and revie",
+      "updated_at": "2026-10-11T22:57:36Z",
+      "labels": [
+        "claude"
+      ],
+      "discovered_at": "2026-10-12T00:31:18.108900+00:00",
+      "status": "unverified",
+      "screening_evidence": {
+        "reward_amount_stated": false,
+        "acceptance_criteria_stated": false,
+        "submission_method_stated": true,
+        "payment_mechanism_stated": false
+      },
+      "screening_score": 1,
+      "screening_flags": [],
+      "payment_verified": false
     }
   ],
   "triage": [
@@ -611,14 +868,14 @@
     {
       "url": "https://github.com/Senthemodder/aquarium-of-gullibles/issues/5",
       "title": "[Bounty: $700] Deep Recursive Generic Type Solver Fails Invariant Fuzzing in src/types/state.ts",
-      "status": "rejected_safety_audit",
+      "status": "blocked_repository_safety_review",
       "reason": "Previously blacklisted; do not reconsider",
       "checked_at": "2026-10-12T00:27:47.565060+00:00"
     },
     {
       "url": "https://github.com/Senthemodder/aquarium-of-gullibles/issues/2",
       "title": "[Bounty: $850] Bedrock Physics: 1-Tick Kinematic Ghost Teleportation and Swept AABB Dropout",
-      "status": "needs_review",
+      "status": "blocked_repository_safety_review",
       "reason": "Possible reward; payout and eligibility unverified",
       "checked_at": "2026-10-12T00:27:47.565060+00:00"
     },
@@ -762,7 +1019,7 @@
       "opportunity_url": "https://github.com/Senthemodder/aquarium-of-gullibles/issues/2",
       "created_at": "2026-10-12T00:28:07.357976+00:00",
       "verdict": "investigate",
-      "status": "planned_not_executed",
+      "status": "blocked_safety_review",
       "plan": {
         "reason": "The issue requests implementing continuous collision detection and modifying codebase logic for a bounty, but requires code changes and execution of tests which exceed safe read-only analysis.",
         "payer_evidence": "None",
@@ -874,5 +1131,8 @@
       "reason": "Misleading test harness requires external human signature",
       "checked_at": "2026-10-12T00:11:09.342839+00:00"
     }
+  ],
+  "blocked_repositories": [
+    "senthemodder/aquarium-of-gullibles"
   ]
 }
