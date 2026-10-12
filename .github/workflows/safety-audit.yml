@@ -1,0 +1,65 @@
+name: AutonomousMillion Bounty Safety Audit
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: true
+      - name: Audit known bounty for misleading verification
+        run: |
+          python - <<'PY'
+          import datetime, json, pathlib, urllib.request
+          repo = 'Senthemodder/aquarium-of-gullibles'
+          url = f'https://raw.githubusercontent.com/{repo}/main/test/verify.js'
+          req = urllib.request.Request(url, headers={'User-Agent':'AutonomousMillion-Auditor'})
+          with urllib.request.urlopen(req, timeout=20) as response:
+              script = response.read(100000).decode('utf-8', 'replace')
+          signals = {
+              'external_verification_site': 'digitaltoolsshed.com/claim' in script,
+              'human_verified_signature_required': 'HUMAN_VERIFIED_SIGNATURE' in script,
+              'unconditional_success_message': 'All invariants passed.' in script,
+          }
+          flagged = all(signals.values())
+          reports = pathlib.Path('reports')
+          reports.mkdir(exist_ok=True)
+          report = ['# Bounty safety audit', '',
+                    f'UTC: {datetime.datetime.now(datetime.timezone.utc).isoformat()}',
+                    f'Repository: https://github.com/{repo}',
+                    f'Result: {"REJECT — misleading verification harness" if flagged else "MANUAL REVIEW REQUIRED"}',
+                    '', '## Evidence',
+                    *[f'- {key}: {value}' for key,value in signals.items()],
+                    '', 'The script was inspected as text, never executed.',
+                    'Do not submit code or provide credentials to the external verification page.',
+                    'This check does not establish malicious intent or verify payout.', '']
+          (reports/'bounty-safety-latest.md').write_text('\n'.join(report))
+          state_path = pathlib.Path('agent_state.json')
+          state = json.loads(state_path.read_text())
+          state.setdefault('rejected_opportunities', [])
+          issue = 'https://github.com/Senthemodder/aquarium-of-gullibles/issues/5'
+          if flagged and not any(x.get('url') == issue for x in state['rejected_opportunities']):
+              state['rejected_opportunities'].append({'url': issue, 'reason':'Misleading test harness requires external human signature', 'checked_at':datetime.datetime.now(datetime.timezone.utc).isoformat()})
+          for entry in state.get('opportunities', []):
+              if entry.get('url') == issue:
+                  entry['status'] = 'rejected_safety_audit'
+          state_path.write_text(json.dumps(state, indent=2, ensure_ascii=False)+'\n')
+          print('Safety audit complete:', 'REJECT' if flagged else 'REVIEW')
+          PY
+      - name: Save audit results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add agent_state.json reports/bounty-safety-latest.md
+          if ! git diff --cached --quiet; then
+            git commit -m "Agent: audit suspicious bounty verification"
+            git push
+          fi
