@@ -250,7 +250,7 @@
         "algorithm"
       ],
       "discovered_at": "2026-10-11T23:43:42.676248+00:00",
-      "status": "unverified"
+      "status": "rejected_safety_audit"
     }
   ],
   "triage": [
@@ -479,6 +479,13 @@
       "compiler": "typescript@5.9.3",
       "timestamp": "2026-10-12T00:02:24.153705+00:00",
       "scope": "isolated_type_checks"
+    }
+  ],
+  "rejected_opportunities": [
+    {
+      "url": "https://github.com/Senthemodder/aquarium-of-gullibles/issues/5",
+      "reason": "Misleading test harness requires external human signature",
+      "checked_at": "2026-10-12T00:11:09.342839+00:00"
     }
   ]
 }
