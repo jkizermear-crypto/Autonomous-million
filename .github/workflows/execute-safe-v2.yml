@@ -1,0 +1,112 @@
+name: AutonomousMillion Safe Executor
+
+on:
+  workflow_dispatch:
+  workflow_run:
+    workflows: ["AutonomousMillion Experiment Engine"]
+    types: [completed]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: autonomous-million-state
+  cancel-in-progress: false
+
+jobs:
+  safe-execution:
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: true
+      - name: Enforce safety gate and inspect approved candidates
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python - <<'PY'
+          import ast, base64, datetime, json, os, pathlib, re, urllib.error, urllib.request
+          f=pathlib.Path('agent_state.json')
+          state=json.loads(f.read_text())
+          now=datetime.datetime.now(datetime.timezone.utc).isoformat()
+          state.setdefault('execution_checks',[])
+          rejected={x.get('url') for x in state.get('rejected_opportunities',[])}
+          triage={x.get('url'):x.get('status') for x in state.get('triage',[])}
+          prior={x.get('opportunity_url') for x in state['execution_checks'] if x.get('status')=='checked_no_execution'}
+          plans=state.get('experiments',[])
+          lines=['# Safe Executor v2 — enforced gate','',f'UTC: {now}','',
+                 'Read-only inspections only. No code execution, external posts, payments or wallet use.','']
+          inspected=0
+          for plan in plans:
+              url=plan.get('opportunity_url','')
+              if url in rejected or triage.get(url) in ('rejected','rejected_safety_audit','safety_review'):
+                  plan['status']='blocked_safety_review'
+                  lines.append(f'- BLOCKED (safety): {url}')
+                  continue
+              if plan.get('status')!='planned_not_executed':
+                  continue
+              if triage.get(url)!='needs_review':
+                  lines.append(f'- SKIPPED (not eligible for read-only inspection): {url}')
+                  continue
+              if url in prior or inspected>=3:
+                  continue
+              m=re.fullmatch(r'https://github\.com/([^/]+)/([^/]+)/issues/(\d+)',url)
+              if not m:
+                  lines.append(f'- SKIPPED (invalid URL): {url}')
+                  continue
+              owner,repo,num=m.groups()
+              record={'opportunity_url':url,'checked_at':now,'status':'inspection_error',
+                      'payment_verified':False,'files_inspected':[]}
+              headers={'Accept':'application/vnd.github+json',
+                       'Authorization':'Bearer '+os.environ['GH_TOKEN'],
+                       'User-Agent':'AutonomousMillion-SafeExecutor'}
+              def get(endpoint):
+                  req=urllib.request.Request(endpoint,headers=headers)
+                  with urllib.request.urlopen(req,timeout=20) as r:
+                      return json.load(r)
+              try:
+                  issue=get(f'https://api.github.com/repos/{owner}/{repo}/issues/{num}')
+                  if issue.get('state')!='open' or 'pull_request' in issue:
+                      record['status']='skipped_issue_closed'
+                  else:
+                      tree=get(f'https://api.github.com/repos/{owner}/{repo}/git/trees/HEAD?recursive=1')
+                      paths=[x['path'] for x in tree.get('tree',[]) if x.get('type')=='blob']
+                      candidates=[x for x in paths if x.endswith('.py') and
+                                  not any(t in x.lower() for t in ('vendor/','node_modules/','.github/'))]
+                      for path in candidates[:2]:
+                          from urllib.parse import quote
+                          obj=get(f'https://api.github.com/repos/{owner}/{repo}/contents/{quote(path,safe="/")}')
+                          if obj.get('encoding')!='base64' or obj.get('size',0)>50000:
+                              continue
+                          source=base64.b64decode(obj['content']).decode('utf-8','replace')
+                          try:
+                              ast.parse(source)
+                              syntax='valid'
+                          except SyntaxError:
+                              syntax='invalid'
+                          record['files_inspected'].append({'path':path,'python_syntax':syntax})
+                      record['status']='checked_no_execution'
+                  inspected+=1
+              except (urllib.error.HTTPError,urllib.error.URLError,ValueError,KeyError) as e:
+                  record['error_type']=type(e).__name__
+              state['execution_checks'].append(record)
+              lines.append(f'- {record["status"]}: {url}; files={len(record["files_inspected"])}')
+          lines+=['',f'New inspections: {inspected}',
+                  'A needs_review candidate is NOT authorized for code execution or public submission.','']
+          pathlib.Path('reports').mkdir(exist_ok=True)
+          pathlib.Path('reports/execution-latest.md').write_text('\n'.join(lines))
+          f.write_text(json.dumps(state,indent=2,ensure_ascii=False)+'\n')
+          print(f'Enforced blacklist; inspected {inspected} candidates (read-only).')
+          PY
+      - name: Save inspection results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add agent_state.json reports/execution-latest.md
+          if ! git diff --cached --quiet; then
+            git commit -m "Agent: enforce safety gate on inspections"
+            git push
+          fi
