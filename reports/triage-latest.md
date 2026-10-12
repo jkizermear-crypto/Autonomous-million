@@ -1,20 +1,20 @@
-# AutonomousMillion opportunity triage
+# AutonomousMillion safe opportunity triage
 
-Automated screening only. No bounty, payer, eligibility, or payout has been verified.
+Automated screening only. No payout is verified. Safety-review candidates are NOT approved.
 
-Total screened: 12
-Needs manual or additional independent verification: 3
-Rejected: 9
+Total: 12
+Potential candidates: 1
+Safety blocked/review: 4
 
-- **rejected** — https://github.com/tadanobutubutu/screeps/issues/5: Automated maintenance or contest, not a suitable work bounty
-- **rejected** — https://github.com/relayhop/sn-monetization-runtime/issues/1277: Automated maintenance or contest, not a suitable work bounty
-- **rejected** — https://github.com/relayhop/sn-monetization-runtime/issues/1275: Automated maintenance or contest, not a suitable work bounty
-- **rejected** — https://github.com/SPLURT-Station/S.P.L.U.R.T-tg/issues/1306: No explicit reward amount found in issue text
-- **rejected** — https://github.com/SPLURT-Station/S.P.L.U.R.T-tg/issues/1305: No explicit reward amount found in issue text
-- **rejected** — https://github.com/Element-Ventures-Canada-Ltd/openchokepoint/issues/3: No explicit reward amount found in issue text
-- **rejected** — https://github.com/tari-project/wxtm-bridge-frontend/issues/103: No explicit reward amount found in issue text
-- **rejected** — https://github.com/tari-project/universe/issues/3299: No explicit reward amount found in issue text
-- **needs_review** — https://github.com/claude-builders-bounty/claude-builders-bounty/issues/4: Reward-like language and amount found; payer and payout still unverified
-- **rejected** — https://github.com/bwipp/postscriptbarcode/issues/82: No explicit reward amount found in issue text
-- **needs_review** — https://github.com/weilixiong/TentOfTrials/issues/5: Reward-like language and amount found; payer and payout still unverified
-- **needs_review** — https://github.com/Senthemodder/aquarium-of-gullibles/issues/5: Reward-like language and amount found; payer and payout still unverified
+- **rejected** — https://github.com/tadanobutubutu/screeps/issues/5: Maintenance automation or contest
+- **rejected** — https://github.com/relayhop/sn-monetization-runtime/issues/1277: Maintenance automation or contest
+- **rejected** — https://github.com/relayhop/sn-monetization-runtime/issues/1275: Maintenance automation or contest
+- **safety_review** — https://github.com/SPLURT-Station/S.P.L.U.R.T-tg/issues/1306: Possible upfront payment requirement
+- **safety_review** — https://github.com/SPLURT-Station/S.P.L.U.R.T-tg/issues/1305: Possible upfront payment requirement
+- **rejected** — https://github.com/Element-Ventures-Canada-Ltd/openchokepoint/issues/3: No explicit monetary reward found
+- **rejected** — https://github.com/tari-project/wxtm-bridge-frontend/issues/103: No explicit monetary reward found
+- **rejected** — https://github.com/tari-project/universe/issues/3299: No explicit monetary reward found
+- **safety_review** — https://github.com/claude-builders-bounty/claude-builders-bounty/issues/4: Potential credential, wallet, or payment demand
+- **rejected** — https://github.com/bwipp/postscriptbarcode/issues/82: No explicit monetary reward found
+- **needs_review** — https://github.com/weilixiong/TentOfTrials/issues/5: Possible reward; payout and eligibility unverified
+- **rejected_safety_audit** — https://github.com/Senthemodder/aquarium-of-gullibles/issues/5: Previously blacklisted; do not reconsider
