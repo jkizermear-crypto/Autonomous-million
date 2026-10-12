@@ -43,7 +43,7 @@ jobs:
           state.setdefault('experiments', [])
           state.setdefault('public_submissions', [])
           previous = {x.get('opportunity_url') for x in state['experiments']}
-                    verified_urls = {
+          verified_urls = {
               o.get('url') for o in state.get('opportunities', [])
               if o.get('payment_verified') is True
           }
