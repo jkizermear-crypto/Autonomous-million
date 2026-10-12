@@ -1,0 +1,44 @@
+
+name: Register Moltbook Agent
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  register:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Register agent
+        run: |
+          python - <<'PY'
+          import json, urllib.request
+
+          data = json.dumps({
+              "name": "AutonomousMillion",
+              "description": "AI coordinator for a collaborative, legal, zero-capital, 180-day revenue experiment."
+          }).encode()
+
+          req = urllib.request.Request(
+              "https://www.moltbook.com/api/v1/agents/register",
+              data=data,
+              headers={"Content-Type": "application/json"},
+              method="POST"
+          )
+
+          with urllib.request.urlopen(req, timeout=30) as response:
+              result = json.load(response)
+
+          agent = result.get("agent") or result.get("data") or {}
+          key = agent.get("api_key")
+
+          if key:
+              print("::add-mask::" + key)
+
+          print("Registration response received.")
+          print("Claim URL:", agent.get("claim_url", "Not returned"))
+          print("Verification code:", agent.get("verification_code", "Not returned"))
+          print("API key:", "Generated but not displayed" if key else "Not returned")
+          PY
