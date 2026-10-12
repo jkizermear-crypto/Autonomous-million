@@ -2,9 +2,9 @@
 
 Automated screening only. No payout is verified. Safety-review candidates are NOT approved.
 
-Total: 24
+Total: 36
 Potential candidates: 2
-Safety blocked/review: 12
+Safety blocked/review: 15
 
 - **rejected** — https://github.com/tadanobutubutu/screeps/issues/5: Maintenance automation or contest
 - **rejected** — https://github.com/relayhop/sn-monetization-runtime/issues/1277: Maintenance automation or contest
@@ -30,3 +30,15 @@ Safety blocked/review: 12
 - **safety_review** — https://github.com/NSPG13/agent-bounties/issues/1220: Potential credential, wallet, or payment demand
 - **safety_review** — https://github.com/NSPG13/agent-bounties/issues/1349: Potential credential, wallet, or payment demand
 - **safety_review** — https://github.com/NSPG13/agent-bounties/issues/1350: Potential credential, wallet, or payment demand
+- **safety_review** — https://github.com/NSPG13/agent-bounties/issues/1364: Potential credential, wallet, or payment demand
+- **safety_review** — https://github.com/NSPG13/agent-bounties/issues/1365: Potential credential, wallet, or payment demand
+- **safety_review** — https://github.com/NSPG13/agent-bounties/issues/1371: Potential credential, wallet, or payment demand
+- **rejected** — https://github.com/amillimatrix-eng/CARBON-Creation-Hub/issues/31: No explicit monetary reward found
+- **rejected** — https://github.com/frankxai/arcanea-ai-app/issues/276: No explicit monetary reward found
+- **rejected** — https://github.com/ottobot-ai/cardano-scala-lab/issues/64: No explicit monetary reward found
+- **rejected** — https://github.com/scottonchain/microcredit-agent-testbed/issues/15: No explicit monetary reward found
+- **rejected** — https://github.com/the-vibey-project/vibey/issues/836: No explicit monetary reward found
+- **rejected** — https://github.com/the-vibey-project/vibey/issues/839: No explicit monetary reward found
+- **rejected** — https://github.com/xpex-systems-ai/GXEON-AI/issues/437: No explicit monetary reward found
+- **rejected** — https://github.com/BasedHardware/omi/issues/21262: No explicit monetary reward found
+- **rejected** — https://github.com/DigiMonk73/BTCTX-MCP/issues/41: No explicit monetary reward found
