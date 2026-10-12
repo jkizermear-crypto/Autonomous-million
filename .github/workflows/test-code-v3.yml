@@ -1,0 +1,99 @@
+name: AutonomousMillion Code Tester v3
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: autonomous-million-state
+  cancel-in-progress: false
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install TypeScript compiler without running package scripts
+        run: |
+          mkdir -p /tmp/autonomousmillion-ts
+          cd /tmp/autonomousmillion-ts
+          npm install --no-save --ignore-scripts --no-audit --no-fund typescript@5.9.3
+      - name: Compile proposal and run type-level regression tests
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import json, subprocess, datetime
+
+          proposal = Path('proposals/typescript-state-v1/proposed.ts')
+          if not proposal.exists():
+              raise SystemExit('Proposal missing; run Code Executor v2 first.')
+          testdir = Path('/tmp/autonomousmillion-ts/test')
+          testdir.mkdir(parents=True, exist_ok=True)
+          (testdir / 'proposed.ts').write_text(proposal.read_text())
+          (testdir / 'regression.ts').write_text('''
+          import type { DeepInfiniteResolve, StateGraphNode, SolvedState } from './proposed';
+          type Assert<T extends true> = T;
+          type IsAny<T> = 0 extends (1 & T) ? true : false;
+          type IsNever<T> = [T] extends [never] ? true : false;
+          type _A = Assert<IsAny<SolvedState> extends false ? true : false>;
+          type _B = Assert<IsNever<SolvedState> extends false ? true : false>;
+          type _C = Assert<SolvedState extends { id: string } ? true : false>;
+          type _D = Assert<DeepInfiniteResolve<string> extends string ? true : false>;
+          declare const node: SolvedState;
+          const id: string = node.id;
+          const nextId: string = node.next.id;
+          void id; void nextId;
+          ''')
+          cmd = ['/tmp/autonomousmillion-ts/node_modules/.bin/tsc', '--noEmit',
+                 '--strict', '--skipLibCheck', '--target', 'ES2022',
+                 str(testdir / 'regression.ts')]
+          proc = subprocess.run(cmd, capture_output=True, text=True, timeout=90)
+          passed = proc.returncode == 0
+          reportdir = Path('reports')
+          reportdir.mkdir(exist_ok=True)
+          report = [
+              '# Code Executor v3 — TypeScript compiler test', '',
+              f'UTC: {datetime.datetime.now(datetime.timezone.utc).isoformat()}',
+              'Compiler: TypeScript 5.9.3',
+              f'Result: {"PASS" if passed else "FAIL"}', '',
+              'Tests: strict compilation; exported types; non-any/non-never result; nested id access.',
+              'Scope: isolated generated proposal, not the original project build.',
+              'This is not proof of bounty eligibility or payout.', '',
+              '## Compiler output', '```',
+              (proc.stdout + proc.stderr).strip()[:12000] or '(no errors)', '```', ''
+          ]
+          (reportdir / 'typescript-test-latest.md').write_text('\n'.join(report))
+          statefile = Path('agent_state.json')
+          state = json.loads(statefile.read_text())
+          state.setdefault('compiler_tests', [])
+          state['compiler_tests'].append({
+              'proposal': str(proposal), 'passed': passed,
+              'compiler': 'typescript@5.9.3',
+              'timestamp': datetime.datetime.now(datetime.timezone.utc).isoformat(),
+              'scope': 'isolated_type_checks'
+          })
+          statefile.write_text(json.dumps(state, indent=2, ensure_ascii=False) + '\n')
+          print(f'Compiler test result: {"PASS" if passed else "FAIL"}')
+          print((proc.stdout + proc.stderr)[:3000])
+          PY
+      - name: Save test results even when tests fail
+        if: always()
+        run: |
+          if [ -f reports/typescript-test-latest.md ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add agent_state.json reports/typescript-test-latest.md
+            if ! git diff --cached --quiet; then
+              git commit -m "Agent: save TypeScript compiler test results"
+              git push
+            fi
+          fi
