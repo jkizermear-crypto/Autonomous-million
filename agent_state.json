@@ -1,5 +1,5 @@
 {
-  "runs": 6,
+  "runs": 7,
   "ideas": [
     {
       "name": "Decentralized Indexing Subgraph Optimization",
@@ -58,7 +58,7 @@
   ],
   "verified_revenue_usd": 0,
   "verified_expenses_usd": 0,
-  "last_run_at": "2026-10-12T00:51:19.136829+00:00",
+  "last_run_at": "2026-10-12T14:48:35.707147+00:00",
   "opportunities": [
     {
       "url": "https://github.com/tadanobutubutu/screeps/issues/5",
@@ -272,7 +272,7 @@
         "algorithm"
       ],
       "discovered_at": "2026-10-11T23:43:42.676248+00:00",
-      "status": "rejected_safety_audit",
+      "status": "blocked_repository_safety_review",
       "payment_verified": false,
       "payment_review_status": "no_independent_evidence"
     },
@@ -821,6 +821,105 @@
       "screening_score": 1,
       "screening_flags": [],
       "payment_verified": false
+    },
+    {
+      "url": "https://github.com/ZcashCommunityGrants/zcashcommunitygrants/issues/150",
+      "title": "Zcash Nigeria 2026",
+      "repository": "zcashcommunitygrants/zcashcommunitygrants",
+      "description_excerpt": "### Terms and Conditions\n\n- [x] I agree to the [Grant Agreement](https://9ba4718c-5c73-47c3-a024-4fc4e5278803.usrfiles.com/ugd/9ba471_f81ef4e4b5f040038350270590eb2e42.pdf) terms if funded\n- [x] I agree to [Provide KYC information](https://9ba4718c-5c73-47c3-a024-4fc4e5278803.usrfiles.com/ugd/9ba471_7d9e73d16b584a61bae92282b208efc4.pdf) if funded above $50,000 USD\n- [x] I agree to disclose conflicts of interest\n- [x] I agree to adhere to the [Code of Conduct](https://forum.zcashcommunity.com/t/zcg-code-of-conduct/41787) and [Communication Guidelines](https://forum.zcashcommunity.com/t/zcg-communication-guidelines/44284)\n- [x] I understand all milestone deliverables will be validated and accepted by their intended users or their representatives, who will confirm that the deliverables meet the required quality, functionality, and usability for each user story.\n- [x] I agree that for any new open-source software, I will create a `CONTRIBUTING.md` file that reflects the high standards of Zcash development, using the [`librustzcash` style guides](https://github.com/zcash/librustzcash/blob/main/CONTRIBUTING.md#styleguides) as a primary reference.\n- [x] I understand when contributing to existing Zcash code, I am required to adhere to the project specific contribution guidelines, paying close attention to any [merge](https://github.com/zcash/librustzcash/blob/main/CONTRIBUTING.md#merge-workflow), [branch](https://github.com/zcash/librustzcash/blob/main/CONTRIBUTING.md#branch-history), [pull request](https://github.com/zcash/librustzcash/blob/main/CONTRIBUTING.md#pull-request-review), and [commit](https://github.com/zcash/librustzcash/blob/main/CONTRIBUTING.md#commit-messages) guidelines as exemplified in the `librustzcash` repository.\n- [x] I agree to post request details on the",
+      "updated_at": "2026-10-12T13:29:01Z",
+      "labels": [
+        "📋 Grant Application",
+        "👀 Ready For ZCG Review",
+        "✅ Grant Approved",
+        "🎯 Milestone 1 Complete",
+        "🎯 Milestone 2 Complete",
+        "🎯 Milestone 3 Complete",
+        "🎯 Milestone 4 Complete",
+        "🎯 Milestone 5 Complete",
+        "🎯 Milestone 6 Complete",
+        "🎯 Milestone 7 Complete",
+        "🎯 Milestone 8 Complete",
+        "🎯 Milestone 9 Complete"
+      ],
+      "discovered_at": "2026-10-12T14:48:35.707147+00:00",
+      "status": "unverified",
+      "screening_evidence": {
+        "explicit_reward": true,
+        "acceptance_criteria": true,
+        "submission_method": true,
+        "escrow_or_platform_claim": false
+      },
+      "screening_score": 3,
+      "screening_flags": [],
+      "payment_verified": false
+    },
+    {
+      "url": "https://github.com/claude-builders-bounty/claude-builders-bounty/issues/2",
+      "title": "[BOUNTY $75] TEMPLATE: CLAUDE.md for a Next.js + SQLite SaaS project",
+      "repository": "claude-builders-bounty/claude-builders-bounty",
+      "description_excerpt": "## 💰 Bounty: $75 — powered by [Opire](https://opire.dev)\n\n## Description\nCreate an opinionated, production-ready `CLAUDE.md` for a typical SaaS project\nbuilt with Next.js 15 App Router and SQLite (better-sqlite3 or Turso).\n\n## Acceptance Criteria\n- [ ] Covers: project structure, naming conventions, DB migration rules\n- [ ] Includes: dev commands, patterns to follow, anti-patterns to avoid\n- [ ] Opinionated — not generic. Every rule has a reason.\n- [ ] Usable without modification on a greenfield Next.js + SQLite project\n- [ ] Tested: create a new project, paste the CLAUDE.md, confirm Claude Code\n      understands the context without asking clarifying questions\n\n## How to Claim\n1. Comment `/opire try` in this issue\n2. Submit a PR with your CLAUDE.md\n3. Payment is released automatically on merge ✅\n\n## Expected Sections\n- Stack & versions\n- Folder structure\n- SQL / migration conventions\n- Component patterns\n- What we don't do (and why)",
+      "updated_at": "2026-10-12T14:19:00Z",
+      "labels": [
+        "bounty",
+        "template"
+      ],
+      "discovered_at": "2026-10-12T14:48:35.707147+00:00",
+      "status": "unverified",
+      "screening_evidence": {
+        "explicit_reward": true,
+        "acceptance_criteria": true,
+        "submission_method": true,
+        "escrow_or_platform_claim": false
+      },
+      "screening_score": 3,
+      "screening_flags": [],
+      "payment_verified": false
+    },
+    {
+      "url": "https://github.com/claude-builders-bounty/claude-builders-bounty/issues/3",
+      "title": "[BOUNTY $100] HOOK: Pre-tool-use hook that blocks destructive bash commands",
+      "repository": "claude-builders-bounty/claude-builders-bounty",
+      "description_excerpt": "## 💰 Bounty: $100 — powered by [Opire](https://opire.dev)\n\n## Description\nCreate a Claude Code `pre-tool-use` hook in Python or bash that intercepts\ndangerous bash commands before they are executed.\n\n## Acceptance Criteria\n- [ ] Hook follows Claude Code hooks format (`~/.claude/hooks/`)\n- [ ] Blocks these patterns: `rm -rf`, `DROP TABLE`, `git push --force`,\n      `TRUNCATE`, `DELETE FROM` without a WHERE clause\n- [ ] Logs every blocked attempt to `~/.claude/hooks/blocked.log`\n      with: timestamp, attempted command, project path\n- [ ] Displays a clear message to Claude explaining why the command was blocked\n- [ ] Does not interfere with normal bash commands\n- [ ] README with installation in 2 commands or fewer\n\n## How to Claim\n1. Comment `/opire try` in this issue\n2. Submit a PR with the hook + README\n3. Payment is released automatically on merge ✅\n\n## Resources\n- Claude Code hooks docs: https://docs.anthropic.com/claude-code/hooks",
+      "updated_at": "2026-10-12T10:01:44Z",
+      "labels": [
+        "bounty",
+        "hook",
+        "security"
+      ],
+      "discovered_at": "2026-10-12T14:48:35.707147+00:00",
+      "status": "unverified",
+      "screening_evidence": {
+        "explicit_reward": true,
+        "acceptance_criteria": true,
+        "submission_method": true,
+        "escrow_or_platform_claim": false
+      },
+      "screening_score": 3,
+      "screening_flags": [],
+      "payment_verified": false
+    },
+    {
+      "url": "https://github.com/claude-builders-bounty/claude-builders-bounty/issues/5",
+      "title": "[BOUNTY $200] WORKFLOW: n8n + Claude Code — automated weekly dev summary",
+      "repository": "claude-builders-bounty/claude-builders-bounty",
+      "description_excerpt": "## 💰 Bounty: $200 — powered by [Opire](https://opire.dev)\n\n## Description\nCreate a complete n8n workflow that automatically generates a weekly narrative\nsummary of a GitHub repo's activity, using the Claude API.\n\n## Acceptance Criteria\n- [ ] Exportable n8n workflow (importable `.json` file)\n- [ ] Trigger: weekly cron (e.g., Friday at 5pm)\n- [ ] Fetches from GitHub API: commits, closed issues, merged PRs for the week\n- [ ] Calls Claude API (`claude-sonnet-4-20250514`) to generate a narrative summary\n- [ ] Delivers the summary via: email OR Discord/Slack webhook (your choice, documented)\n- [ ] Configurable variables: GitHub repo, destination channel, language (EN/FR)\n- [ ] Tested on a real n8n instance (include a screenshot of successful execution)\n- [ ] README with setup instructions in 5 steps or fewer\n\n## How to Claim\n1. Comment `/opire try` in this issue\n2. Submit a PR with the `.json` workflow + README\n3. Payment is released automatically on merge ✅\n\n## Resources\n- n8n docs: https://docs.n8n.io\n- Claude API docs: https://docs.anthropic.com",
+      "updated_at": "2026-10-12T10:46:25Z",
+      "labels": [
+        "bounty",
+        "workflow"
+      ],
+      "discovered_at": "2026-10-12T14:48:35.707147+00:00",
+      "status": "unverified",
+      "screening_evidence": {
+        "explicit_reward": true,
+        "acceptance_criteria": true,
+        "submission_method": true,
+        "escrow_or_platform_claim": false
+      },
+      "screening_score": 3,
+      "screening_flags": [],
+      "payment_verified": false
     }
   ],
   "triage": [
@@ -904,14 +1003,14 @@
     {
       "url": "https://github.com/Senthemodder/aquarium-of-gullibles/issues/5",
       "title": "[Bounty: $700] Deep Recursive Generic Type Solver Fails Invariant Fuzzing in src/types/state.ts",
-      "status": "rejected_safety_audit",
+      "status": "blocked_repository_safety_review",
       "reason": "Previously blacklisted; do not reconsider",
       "checked_at": "2026-10-12T00:51:28.622010+00:00"
     },
     {
       "url": "https://github.com/Senthemodder/aquarium-of-gullibles/issues/2",
       "title": "[Bounty: $850] Bedrock Physics: 1-Tick Kinematic Ghost Teleportation and Swept AABB Dropout",
-      "status": "needs_review",
+      "status": "blocked_repository_safety_review",
       "reason": "Possible reward; payout and eligibility unverified",
       "checked_at": "2026-10-12T00:51:28.622010+00:00"
     },
