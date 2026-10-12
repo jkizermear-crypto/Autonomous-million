@@ -101,7 +101,7 @@
       "discovered_at": "2026-10-11T23:43:42.676248+00:00",
       "status": "unverified",
       "payment_verified": false,
-      "payment_review_status": "insufficient_independent_payment_evidence"
+      "payment_review_status": "no_independent_evidence"
     },
     {
       "url": "https://github.com/relayhop/sn-monetization-runtime/issues/1277",
@@ -117,7 +117,7 @@
       "discovered_at": "2026-10-11T23:43:42.676248+00:00",
       "status": "unverified",
       "payment_verified": false,
-      "payment_review_status": "insufficient_independent_payment_evidence"
+      "payment_review_status": "no_independent_evidence"
     },
     {
       "url": "https://github.com/relayhop/sn-monetization-runtime/issues/1275",
@@ -133,7 +133,7 @@
       "discovered_at": "2026-10-11T23:43:42.676248+00:00",
       "status": "unverified",
       "payment_verified": false,
-      "payment_review_status": "insufficient_independent_payment_evidence"
+      "payment_review_status": "no_independent_evidence"
     },
     {
       "url": "https://github.com/SPLURT-Station/S.P.L.U.R.T-tg/issues/1306",
@@ -147,7 +147,7 @@
       "discovered_at": "2026-10-11T23:43:42.676248+00:00",
       "status": "safety_review",
       "payment_verified": false,
-      "payment_review_status": "insufficient_independent_payment_evidence"
+      "payment_review_status": "no_independent_evidence"
     },
     {
       "url": "https://github.com/SPLURT-Station/S.P.L.U.R.T-tg/issues/1305",
@@ -161,7 +161,7 @@
       "discovered_at": "2026-10-11T23:43:42.676248+00:00",
       "status": "safety_review",
       "payment_verified": false,
-      "payment_review_status": "insufficient_independent_payment_evidence"
+      "payment_review_status": "no_independent_evidence"
     },
     {
       "url": "https://github.com/Element-Ventures-Canada-Ltd/openchokepoint/issues/3",
@@ -178,7 +178,7 @@
       "discovered_at": "2026-10-11T23:43:42.676248+00:00",
       "status": "unverified",
       "payment_verified": false,
-      "payment_review_status": "maintainer_claim_only"
+      "payment_review_status": "no_independent_evidence"
     },
     {
       "url": "https://github.com/tari-project/wxtm-bridge-frontend/issues/103",
@@ -193,7 +193,7 @@
       "discovered_at": "2026-10-11T23:43:42.676248+00:00",
       "status": "unverified",
       "payment_verified": false,
-      "payment_review_status": "insufficient_independent_payment_evidence"
+      "payment_review_status": "no_independent_evidence"
     },
     {
       "url": "https://github.com/tari-project/universe/issues/3299",
@@ -210,7 +210,7 @@
       "discovered_at": "2026-10-11T23:43:42.676248+00:00",
       "status": "unverified",
       "payment_verified": false,
-      "payment_review_status": "insufficient_independent_payment_evidence"
+      "payment_review_status": "no_independent_evidence"
     },
     {
       "url": "https://github.com/claude-builders-bounty/claude-builders-bounty/issues/4",
@@ -225,7 +225,7 @@
       "discovered_at": "2026-10-11T23:43:42.676248+00:00",
       "status": "safety_review",
       "payment_verified": false,
-      "payment_review_status": "insufficient_independent_payment_evidence"
+      "payment_review_status": "no_independent_evidence"
     },
     {
       "url": "https://github.com/bwipp/postscriptbarcode/issues/82",
@@ -241,7 +241,7 @@
       "discovered_at": "2026-10-11T23:43:42.676248+00:00",
       "status": "unverified",
       "payment_verified": false,
-      "payment_review_status": "insufficient_independent_payment_evidence"
+      "payment_review_status": "no_independent_evidence"
     },
     {
       "url": "https://github.com/weilixiong/TentOfTrials/issues/5",
@@ -258,7 +258,7 @@
       "discovered_at": "2026-10-11T23:43:42.676248+00:00",
       "status": "unverified",
       "payment_verified": false,
-      "payment_review_status": "insufficient_independent_payment_evidence"
+      "payment_review_status": "no_independent_evidence"
     },
     {
       "url": "https://github.com/Senthemodder/aquarium-of-gullibles/issues/5",
@@ -325,7 +325,7 @@
       "screening_score": 3,
       "screening_flags": [],
       "payment_verified": false,
-      "payment_review_status": "maintainer_claim_only"
+      "payment_review_status": "no_independent_evidence"
     },
     {
       "url": "https://github.com/Saidur-droid/MergeEarn/issues/69",
@@ -349,7 +349,7 @@
       "screening_score": 3,
       "screening_flags": [],
       "payment_verified": false,
-      "payment_review_status": "insufficient_independent_payment_evidence"
+      "payment_review_status": "no_independent_evidence"
     },
     {
       "url": "https://github.com/claude-builders-bounty/claude-builders-bounty/issues/1",
@@ -373,7 +373,7 @@
       "screening_score": 3,
       "screening_flags": [],
       "payment_verified": false,
-      "payment_review_status": "insufficient_independent_payment_evidence"
+      "payment_review_status": "no_independent_evidence"
     },
     {
       "url": "https://github.com/humanaios-ui/operations/issues/588",
@@ -393,7 +393,7 @@
       "screening_score": 3,
       "screening_flags": [],
       "payment_verified": false,
-      "payment_review_status": "maintainer_claim_only"
+      "payment_review_status": "no_independent_evidence"
     },
     {
       "url": "https://github.com/oguzpoyrazyasin/poyraz/issues/1",
@@ -413,7 +413,7 @@
       "screening_score": 3,
       "screening_flags": [],
       "payment_verified": false,
-      "payment_review_status": "insufficient_independent_payment_evidence"
+      "payment_review_status": "no_independent_evidence"
     },
     {
       "url": "https://github.com/scottonchain/microcredit-agent-testbed/issues/17",
@@ -433,7 +433,7 @@
       "screening_score": 3,
       "screening_flags": [],
       "payment_verified": false,
-      "payment_review_status": "maintainer_claim_only"
+      "payment_review_status": "no_independent_evidence"
     },
     {
       "url": "https://github.com/IstiN/flutter_agent_harness/issues/1556",
@@ -461,7 +461,7 @@
       "screening_score": 2,
       "screening_flags": [],
       "payment_verified": false,
-      "payment_review_status": "issue_not_open"
+      "payment_review_status": "not_open_issue"
     },
     {
       "url": "https://github.com/NSPG13/agent-bounties/issues/1219",
@@ -487,7 +487,7 @@
       "screening_score": 2,
       "screening_flags": [],
       "payment_verified": false,
-      "payment_review_status": "insufficient_independent_payment_evidence"
+      "payment_review_status": "no_independent_evidence"
     },
     {
       "url": "https://github.com/NSPG13/agent-bounties/issues/1220",
@@ -513,7 +513,7 @@
       "screening_score": 2,
       "screening_flags": [],
       "payment_verified": false,
-      "payment_review_status": "insufficient_independent_payment_evidence"
+      "payment_review_status": "no_independent_evidence"
     },
     {
       "url": "https://github.com/NSPG13/agent-bounties/issues/1349",
@@ -538,7 +538,7 @@
       "screening_score": 2,
       "screening_flags": [],
       "payment_verified": false,
-      "payment_review_status": "insufficient_independent_payment_evidence"
+      "payment_review_status": "no_independent_evidence"
     },
     {
       "url": "https://github.com/NSPG13/agent-bounties/issues/1350",
@@ -563,7 +563,7 @@
       "screening_score": 2,
       "screening_flags": [],
       "payment_verified": false,
-      "payment_review_status": "insufficient_independent_payment_evidence"
+      "payment_review_status": "no_independent_evidence"
     },
     {
       "url": "https://github.com/NSPG13/agent-bounties/issues/1364",
@@ -588,7 +588,7 @@
       "screening_score": 2,
       "screening_flags": [],
       "payment_verified": false,
-      "payment_review_status": "insufficient_independent_payment_evidence"
+      "payment_review_status": "no_independent_evidence"
     },
     {
       "url": "https://github.com/NSPG13/agent-bounties/issues/1365",
@@ -1525,179 +1525,179 @@
   "payment_evidence_v2": [
     {
       "url": "https://github.com/tadanobutubutu/screeps/issues/5",
-      "checked_at": "2026-10-12T00:47:59.405447+00:00",
+      "checked_at": "2026-10-12T09:46:18.405613+00:00",
       "payment_verified": false,
       "status": "no_independent_evidence",
       "transaction_links": []
     },
     {
       "url": "https://github.com/relayhop/sn-monetization-runtime/issues/1277",
-      "checked_at": "2026-10-12T00:47:59.405447+00:00",
+      "checked_at": "2026-10-12T09:46:18.405613+00:00",
       "payment_verified": false,
       "status": "no_independent_evidence",
       "transaction_links": []
     },
     {
       "url": "https://github.com/relayhop/sn-monetization-runtime/issues/1275",
-      "checked_at": "2026-10-12T00:47:59.405447+00:00",
+      "checked_at": "2026-10-12T09:46:18.405613+00:00",
       "payment_verified": false,
       "status": "no_independent_evidence",
       "transaction_links": []
     },
     {
       "url": "https://github.com/SPLURT-Station/S.P.L.U.R.T-tg/issues/1306",
-      "checked_at": "2026-10-12T00:47:59.405447+00:00",
+      "checked_at": "2026-10-12T09:46:18.405613+00:00",
       "payment_verified": false,
       "status": "no_independent_evidence",
       "transaction_links": []
     },
     {
       "url": "https://github.com/SPLURT-Station/S.P.L.U.R.T-tg/issues/1305",
-      "checked_at": "2026-10-12T00:47:59.405447+00:00",
+      "checked_at": "2026-10-12T09:46:18.405613+00:00",
       "payment_verified": false,
       "status": "no_independent_evidence",
       "transaction_links": []
     },
     {
       "url": "https://github.com/Element-Ventures-Canada-Ltd/openchokepoint/issues/3",
-      "checked_at": "2026-10-12T00:47:59.405447+00:00",
+      "checked_at": "2026-10-12T09:46:18.405613+00:00",
       "payment_verified": false,
       "status": "no_independent_evidence",
       "transaction_links": []
     },
     {
       "url": "https://github.com/tari-project/wxtm-bridge-frontend/issues/103",
-      "checked_at": "2026-10-12T00:47:59.405447+00:00",
+      "checked_at": "2026-10-12T09:46:18.405613+00:00",
       "payment_verified": false,
       "status": "no_independent_evidence",
       "transaction_links": []
     },
     {
       "url": "https://github.com/tari-project/universe/issues/3299",
-      "checked_at": "2026-10-12T00:47:59.405447+00:00",
+      "checked_at": "2026-10-12T09:46:18.405613+00:00",
       "payment_verified": false,
       "status": "no_independent_evidence",
       "transaction_links": []
     },
     {
       "url": "https://github.com/claude-builders-bounty/claude-builders-bounty/issues/4",
-      "checked_at": "2026-10-12T00:47:59.405447+00:00",
+      "checked_at": "2026-10-12T09:46:18.405613+00:00",
       "payment_verified": false,
       "status": "no_independent_evidence",
       "transaction_links": []
     },
     {
       "url": "https://github.com/bwipp/postscriptbarcode/issues/82",
-      "checked_at": "2026-10-12T00:47:59.405447+00:00",
+      "checked_at": "2026-10-12T09:46:18.405613+00:00",
       "payment_verified": false,
       "status": "no_independent_evidence",
       "transaction_links": []
     },
     {
       "url": "https://github.com/weilixiong/TentOfTrials/issues/5",
-      "checked_at": "2026-10-12T00:47:59.405447+00:00",
+      "checked_at": "2026-10-12T09:46:18.405613+00:00",
       "payment_verified": false,
       "status": "no_independent_evidence",
       "transaction_links": []
     },
     {
       "url": "https://github.com/Senthemodder/aquarium-of-gullibles/issues/5",
-      "checked_at": "2026-10-12T00:47:59.405447+00:00",
+      "checked_at": "2026-10-12T09:46:18.405613+00:00",
       "payment_verified": false,
       "status": "no_independent_evidence",
       "transaction_links": []
     },
     {
       "url": "https://github.com/Senthemodder/aquarium-of-gullibles/issues/2",
-      "checked_at": "2026-10-12T00:47:59.405447+00:00",
+      "checked_at": "2026-10-12T09:46:18.405613+00:00",
       "payment_verified": false,
       "status": "no_independent_evidence",
       "transaction_links": []
     },
     {
       "url": "https://github.com/NSPG13/agent-bounties/issues/1387",
-      "checked_at": "2026-10-12T00:47:59.405447+00:00",
+      "checked_at": "2026-10-12T09:46:18.405613+00:00",
       "payment_verified": false,
       "status": "no_independent_evidence",
       "transaction_links": []
     },
     {
       "url": "https://github.com/Saidur-droid/MergeEarn/issues/69",
-      "checked_at": "2026-10-12T00:47:59.405447+00:00",
+      "checked_at": "2026-10-12T09:46:18.405613+00:00",
       "payment_verified": false,
       "status": "no_independent_evidence",
       "transaction_links": []
     },
     {
       "url": "https://github.com/claude-builders-bounty/claude-builders-bounty/issues/1",
-      "checked_at": "2026-10-12T00:47:59.405447+00:00",
+      "checked_at": "2026-10-12T09:46:18.405613+00:00",
       "payment_verified": false,
       "status": "no_independent_evidence",
       "transaction_links": []
     },
     {
       "url": "https://github.com/humanaios-ui/operations/issues/588",
-      "checked_at": "2026-10-12T00:47:59.405447+00:00",
+      "checked_at": "2026-10-12T09:46:18.405613+00:00",
       "payment_verified": false,
       "status": "no_independent_evidence",
       "transaction_links": []
     },
     {
       "url": "https://github.com/oguzpoyrazyasin/poyraz/issues/1",
-      "checked_at": "2026-10-12T00:47:59.405447+00:00",
+      "checked_at": "2026-10-12T09:46:18.405613+00:00",
       "payment_verified": false,
       "status": "no_independent_evidence",
       "transaction_links": []
     },
     {
       "url": "https://github.com/scottonchain/microcredit-agent-testbed/issues/17",
-      "checked_at": "2026-10-12T00:47:59.405447+00:00",
+      "checked_at": "2026-10-12T09:46:18.405613+00:00",
       "payment_verified": false,
       "status": "no_independent_evidence",
       "transaction_links": []
     },
     {
       "url": "https://github.com/IstiN/flutter_agent_harness/issues/1556",
-      "checked_at": "2026-10-12T00:47:59.405447+00:00",
+      "checked_at": "2026-10-12T09:46:18.405613+00:00",
       "payment_verified": false,
-      "status": "no_independent_evidence",
+      "status": "not_open_issue",
       "transaction_links": []
     },
     {
       "url": "https://github.com/NSPG13/agent-bounties/issues/1219",
-      "checked_at": "2026-10-12T00:47:59.405447+00:00",
+      "checked_at": "2026-10-12T09:46:18.405613+00:00",
       "payment_verified": false,
       "status": "no_independent_evidence",
       "transaction_links": []
     },
     {
       "url": "https://github.com/NSPG13/agent-bounties/issues/1220",
-      "checked_at": "2026-10-12T00:47:59.405447+00:00",
+      "checked_at": "2026-10-12T09:46:18.405613+00:00",
       "payment_verified": false,
       "status": "no_independent_evidence",
       "transaction_links": []
     },
     {
       "url": "https://github.com/NSPG13/agent-bounties/issues/1349",
-      "checked_at": "2026-10-12T00:47:59.405447+00:00",
+      "checked_at": "2026-10-12T09:46:18.405613+00:00",
       "payment_verified": false,
       "status": "no_independent_evidence",
       "transaction_links": []
     },
     {
       "url": "https://github.com/NSPG13/agent-bounties/issues/1350",
-      "checked_at": "2026-10-12T00:47:59.405447+00:00",
+      "checked_at": "2026-10-12T09:46:18.405613+00:00",
       "payment_verified": false,
       "status": "no_independent_evidence",
       "transaction_links": []
     },
     {
       "url": "https://github.com/NSPG13/agent-bounties/issues/1364",
-      "checked_at": "2026-10-12T00:47:59.405447+00:00",
+      "checked_at": "2026-10-12T09:46:18.405613+00:00",
       "payment_verified": false,
       "status": "no_independent_evidence",
       "transaction_links": []
     }
   ],
-  "last_payment_evidence_v2_at": "2026-10-12T00:47:59.405447+00:00"
+  "last_payment_evidence_v2_at": "2026-10-12T09:46:18.405613+00:00"
 }

@@ -1,6 +1,6 @@
 # Payment evidence v2 — candidate collection
 
-Checked: 2026-10-12T00:47:59.405447+00:00
+Checked: 2026-10-12T09:46:18.405613+00:00
 
 Read-only discovery. Transaction links are NOT verified escrow or guaranteed payouts.
 All opportunities remain payment_verified=false.
@@ -24,7 +24,7 @@ All opportunities remain payment_verified=false.
 - no_independent_evidence: https://github.com/humanaios-ui/operations/issues/588
 - no_independent_evidence: https://github.com/oguzpoyrazyasin/poyraz/issues/1
 - no_independent_evidence: https://github.com/scottonchain/microcredit-agent-testbed/issues/17
-- no_independent_evidence: https://github.com/IstiN/flutter_agent_harness/issues/1556
+- not_open_issue: https://github.com/IstiN/flutter_agent_harness/issues/1556
 - no_independent_evidence: https://github.com/NSPG13/agent-bounties/issues/1219
 - no_independent_evidence: https://github.com/NSPG13/agent-bounties/issues/1220
 - no_independent_evidence: https://github.com/NSPG13/agent-bounties/issues/1349
