@@ -11,12 +11,16 @@ jobs:
   register:
     runs-on: ubuntu-latest
     steps:
-      - name: Register and save credentials
+      - name: Register and encrypt credentials
         env:
-          GH_TOKEN: ${{ github.token }}
+          REGISTRATION_PASSWORD: ${{ secrets.MOLTBOOK_REGISTRATION_PASSWORD }}
         run: |
           python - <<'PY'
-          import json, os, urllib.request
+          import json, os, pathlib, subprocess, urllib.request
+
+          password = os.environ.get("REGISTRATION_PASSWORD")
+          if not password:
+              raise SystemExit("Missing MOLTBOOK_REGISTRATION_PASSWORD secret")
 
           data = json.dumps({
               "name": "AutonomousMillion",
@@ -37,12 +41,27 @@ jobs:
           key = agent.get("api_key")
 
           if not key:
-              raise SystemExit("No API key returned. Registration response format needs checking.")
+              raise SystemExit("Registration returned no API key")
 
           print("::add-mask::" + key)
 
-          # Save the credential as a private, encrypted artifact
-          # in a later step. Do not print the API key.
-          print("Agent registered. Credential received.")
-          print("Claim URL:", agent.get("claim_url", "Not returned"))
+          pathlib.Path("credentials.json").write_text(json.dumps(result))
+
+          subprocess.run([
+              "openssl", "enc", "-aes-256-cbc", "-pbkdf2",
+              "-salt", "-in", "credentials.json",
+              "-out", "credentials.enc",
+              "-pass", "env:REGISTRATION_PASSWORD"
+          ], check=True)
+
+          pathlib.Path("credentials.json").unlink()
+          print("Registration credentials encrypted successfully.")
           PY
+
+      - name: Upload encrypted credentials
+        uses: actions/upload-artifact@v4
+        with:
+          name: moltbook-registration-encrypted
+          path: credentials.enc
+          retention-days: 1
+          if-no-files-found: error
