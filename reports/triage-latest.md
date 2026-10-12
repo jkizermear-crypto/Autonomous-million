@@ -2,9 +2,9 @@
 
 Automated screening only. No payout is verified. Safety-review candidates are NOT approved.
 
-Total: 36
+Total: 40
 Potential candidates: 2
-Safety blocked/review: 15
+Safety blocked/review: 20
 
 - **rejected** — https://github.com/tadanobutubutu/screeps/issues/5: Maintenance automation or contest
 - **rejected** — https://github.com/relayhop/sn-monetization-runtime/issues/1277: Maintenance automation or contest
@@ -25,7 +25,7 @@ Safety blocked/review: 15
 - **rejected** — https://github.com/humanaios-ui/operations/issues/588: No explicit monetary reward found
 - **safety_review** — https://github.com/oguzpoyrazyasin/poyraz/issues/1: Possible upfront payment requirement
 - **safety_review** — https://github.com/scottonchain/microcredit-agent-testbed/issues/17: Possible upfront payment requirement
-- **rejected** — https://github.com/IstiN/flutter_agent_harness/issues/1556: No explicit monetary reward found
+- **rejected** — https://github.com/IstiN/flutter_agent_harness/issues/1556: Closed issue or pull request
 - **safety_review** — https://github.com/NSPG13/agent-bounties/issues/1219: Potential credential, wallet, or payment demand
 - **safety_review** — https://github.com/NSPG13/agent-bounties/issues/1220: Potential credential, wallet, or payment demand
 - **safety_review** — https://github.com/NSPG13/agent-bounties/issues/1349: Potential credential, wallet, or payment demand
@@ -41,4 +41,8 @@ Safety blocked/review: 15
 - **rejected** — https://github.com/the-vibey-project/vibey/issues/839: No explicit monetary reward found
 - **rejected** — https://github.com/xpex-systems-ai/GXEON-AI/issues/437: No explicit monetary reward found
 - **rejected** — https://github.com/BasedHardware/omi/issues/21262: No explicit monetary reward found
-- **rejected** — https://github.com/DigiMonk73/BTCTX-MCP/issues/41: No explicit monetary reward found
+- **safety_review** — https://github.com/DigiMonk73/BTCTX-MCP/issues/41: Possible upfront payment requirement
+- **safety_review** — https://github.com/ZcashCommunityGrants/zcashcommunitygrants/issues/150: Possible upfront payment requirement
+- **safety_review** — https://github.com/claude-builders-bounty/claude-builders-bounty/issues/2: Potential credential, wallet, or payment demand
+- **safety_review** — https://github.com/claude-builders-bounty/claude-builders-bounty/issues/3: Potential credential, wallet, or payment demand
+- **safety_review** — https://github.com/claude-builders-bounty/claude-builders-bounty/issues/5: Potential credential, wallet, or payment demand
