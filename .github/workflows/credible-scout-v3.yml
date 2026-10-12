@@ -32,6 +32,26 @@ jobs:
           state.setdefault('opportunities',[])
           known={o.get('url') for o in state['opportunities']}
           rejected={o.get('url') for o in state.get('rejected_opportunities',[])}
+          # Strong, manually evidenced repository-level block. This is not a
+          # claim that every issue in the repository is fraudulent.
+          blocked_repos={'senthemodder/aquarium-of-gullibles'}
+          blocked_repos.update(str(x).lower().strip('/') for x in state.get('blocked_repositories',[]))
+          state['blocked_repositories']=sorted(blocked_repos)
+          def repo_for_url(url):
+              m=re.match(r'https://github\.com/([^/]+)/([^/]+)/(?:issues|pull)/\d+',url or '')
+              return (m.group(1)+'/'+m.group(2)).lower() if m else ''
+          quarantined=0
+          for item in state.get('opportunities',[]):
+              if repo_for_url(item.get('url')) in blocked_repos:
+                  item['status']='blocked_repository_safety_review'
+                  item['payment_verified']=False
+                  quarantined+=1
+          for item in state.get('triage',[]):
+              if repo_for_url(item.get('url')) in blocked_repos:
+                  item['status']='blocked_repository_safety_review'
+          for item in state.get('experiments',[]):
+              if repo_for_url(item.get('opportunity_url')) in blocked_repos:
+                  item['status']='blocked_safety_review' 
           headers={'Accept':'application/vnd.github+json',
                    'Authorization':'Bearer '+os.environ['GH_TOKEN'],
                    'User-Agent':'AutonomousMillion-CredibleScout'}
@@ -56,12 +76,17 @@ jobs:
                   errors.append(f'Search unavailable: {type(exc).__name__}')
           now=datetime.datetime.now(datetime.timezone.utc).isoformat()
           added=0
-          report=['# Credible Scout — evidence-based discovery','',
+          report=['# Credible Scout v3 — repository safety enforcement','',
                   f'UTC: {now}','',
-                  'All opportunities are unverified. A high score does NOT verify payment.','']
+                  'All opportunities are unverified. A high score does NOT verify payment.',
+                  f'Blocked repositories: {len(blocked_repos)}',
+                  f'Previously saved opportunities quarantined: {quarantined}',
+                  '']
           scored=[]
           for url,item in results.items():
               if url in known or url in rejected:
+                  continue
+              if repo_for_url(url) in blocked_repos:
                   continue
               body=(item.get('body') or '')[:10000]
               title=item.get('title') or ''
@@ -111,7 +136,7 @@ jobs:
           report += [f'New opportunities stored: {added}',f'Issues retrieved: {len(results)}',
                      *errors,'','No code execution, submissions, transactions or wallet access.']
           (reports/'credible-scout-latest.md').write_text('\n'.join(report)+'\n')
-          print(f'Scouted {len(results)} public issues, stored {added}; no payment verified.')
+          print(f'Scouted {len(results)} public issues, stored {added}; quarantined {quarantined}; no payment verified.')
           PY
       - name: Save results
         run: |
