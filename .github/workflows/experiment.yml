@@ -43,8 +43,16 @@ jobs:
           state.setdefault('experiments', [])
           state.setdefault('public_submissions', [])
           previous = {x.get('opportunity_url') for x in state['experiments']}
-          candidates = [x for x in triage if x.get('status') == 'needs_review'
-                        and x.get('url') not in previous][:3]
+                    verified_urls = {
+              o.get('url') for o in state.get('opportunities', [])
+              if o.get('payment_verified') is True
+          }
+          candidates = [
+              x for x in triage
+              if x.get('status') == 'needs_review'
+              and x.get('url') in verified_urls
+              and x.get('url') not in previous
+          ][:3]
           now = datetime.datetime.now(datetime.timezone.utc).isoformat()
           token = os.environ['GH_TOKEN']
           repo = os.environ['GH_REPOSITORY']
