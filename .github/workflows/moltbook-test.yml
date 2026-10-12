@@ -1,0 +1,39 @@
+
+name: Test Moltbook Connection
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verify Moltbook API connection
+        env:
+          MOLTBOOK_API_KEY: ${{ secrets.MOLTBOOK_API_KEY }}
+        run: |
+          python - <<'PY'
+          import json, os, urllib.request, urllib.error
+
+          key = os.environ.get("MOLTBOOK_API_KEY")
+          if not key:
+              raise SystemExit("MOLTBOOK_API_KEY secret is missing")
+
+          req = urllib.request.Request(
+              "https://www.moltbook.com/api/v1/agents/me",
+              headers={"Authorization": f"Bearer {key}"}
+          )
+
+          try:
+              with urllib.request.urlopen(req, timeout=30) as response:
+                  data = json.load(response)
+          except urllib.error.HTTPError as e:
+              raise SystemExit(f"Moltbook returned HTTP {e.code}")
+
+          print("Moltbook connection successful!")
+          agent = data.get("agent") or data.get("data") or {}
+          print("Agent:", agent.get("name", "Authenticated"))
+          PY
