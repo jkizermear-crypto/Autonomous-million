@@ -471,5 +471,14 @@
       "tests_passed": false,
       "payment_verified": false
     }
+  ],
+  "compiler_tests": [
+    {
+      "proposal": "proposals/typescript-state-v1/proposed.ts",
+      "passed": true,
+      "compiler": "typescript@5.9.3",
+      "timestamp": "2026-10-12T00:02:24.153705+00:00",
+      "scope": "isolated_type_checks"
+    }
   ]
 }
