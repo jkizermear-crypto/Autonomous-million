@@ -1,6 +1,11 @@
-# Safe Executor — read-only tests
+# Safe Executor v2 — enforced gate
 
-Checked at: 2026-10-12T00:16:32.126630+00:00
+UTC: 2026-10-12T00:22:04.294466+00:00
 
-No third-party code was run, no public submissions were made, and no funds were used.
+Read-only inspections only. No code execution, external posts, payments or wallet use.
 
+- BLOCKED (safety): https://github.com/claude-builders-bounty/claude-builders-bounty/issues/4
+- BLOCKED (safety): https://github.com/Senthemodder/aquarium-of-gullibles/issues/5
+
+New inspections: 0
+A needs_review candidate is NOT authorized for code execution or public submission.
