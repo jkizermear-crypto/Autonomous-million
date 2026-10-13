@@ -5,5 +5,6 @@
   "source_sha256": "99b2eb9927d29dead12c35e5fa67007a7039d242fbf1ea08a8b59f1af0917020",
   "authorization": "User approved this exact draft with: That\u2019s fine",
   "scope": "one reply only; no standing automation approval",
-  "status": "approved"
+  "status": "attempting",
+  "run_id": "38336022271"
 }
