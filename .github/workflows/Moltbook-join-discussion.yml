@@ -15,6 +15,10 @@ on:
         type: boolean
         required: true
         default: false
+      detection_only:
+        description: 'Check replies without generating a Gemini draft (requires publishing disabled)'
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -34,6 +38,7 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           PUBLISH: ${{ inputs.publish }}
           MODE: ${{ inputs.mode }}
+          DETECTION_ONLY: ${{ inputs.detection_only }}
         run: |
           python - <<'PY'
           import datetime, json, os, pathlib, urllib.request, urllib.error, urllib.parse
@@ -43,10 +48,11 @@ jobs:
           gemini = os.environ['GEMINI_API_KEY']
           publish = os.environ.get('PUBLISH', 'false').lower() == 'true'
           mode = os.environ.get('MODE') or 'check_replies'
+          detection_only = os.environ.get('DETECTION_ONLY', 'false').lower() == 'true'
           base = 'https://www.moltbook.com/api/v1'
           headers = {'Authorization': 'Bearer ' + mb, 'Content-Type': 'application/json'}
           report = {'timestamp': datetime.datetime.now(datetime.timezone.utc).isoformat(),
-                    'mode': mode, 'publish': publish, 'action': 'none'}
+                    'mode': mode, 'publish': publish, 'detection_only': detection_only, 'action': 'none'}
           own_name = 'autonomousmillion'
           known = [
               {'post_id': 'c017caaf-c09b-4528-8871-0cd0c9ce93cc', 'comment_id': '804f1d85-5156-4d0a-b2ec-e023513a7323'},
@@ -55,6 +61,8 @@ jobs:
           def save():
               pathlib.Path('discussion-test-report.json').write_text(json.dumps(report, indent=2))
           def api(method, path, data=None):
+              if detection_only and method != 'GET':
+                  raise RuntimeError('Detection-only mode forbids Moltbook writes')
               req = urllib.request.Request(base + path, method=method, headers=headers,
                   data=json.dumps(data).encode() if data is not None else None)
               try:
@@ -75,7 +83,9 @@ jobs:
               a = item.get('author', '')
               return str(a.get('name', '') if isinstance(a, dict) else a).lower()
           def extract_comments(payload):
-              comments = payload.get('comments', [])
+              if not isinstance(payload, dict) or payload.get('success') is False or 'comments' not in payload:
+                  raise RuntimeError('Unexpected comments response; refusing to publish')
+              comments = payload['comments']
               if isinstance(comments, dict):
                   comments = comments.get('items', [])
               if not isinstance(comments, list):
@@ -91,34 +101,57 @@ jobs:
           def parent_id(c):
               return str(c.get('parent_id') or c.get('parentId') or '')
           def get_thread_comments(pid):
-              # Request successive offsets. If the server ignores pagination or a limit is
-              # reached, return incomplete=True so we never mistake missing data for no replies.
+              # Root comments use opaque cursors; each root includes its full reply tree.
+              # Only an explicit has_more=False proves the scan is exhaustive.
               limit, max_pages = 100, 20
               all_top = []
               seen_top = set()
+              seen_cursors = set()
+              cursor = None
               pages = []
               complete = False
               reason = None
               for page in range(max_pages):
-                  offset = page * limit
-                  query = urllib.parse.urlencode({'limit': limit, 'offset': offset})
+                  params = {'sort': 'old', 'limit': limit}
+                  if cursor is not None:
+                      params['cursor'] = cursor
+                  query = urllib.parse.urlencode(params)
                   payload = api('GET', '/posts/' + pid + '/comments?' + query)
                   items = extract_comments(payload)
+                  has_more = payload.get('has_more')
+                  next_cursor = payload.get('next_cursor')
                   ids = [str(c.get('id')) for c in items if isinstance(c, dict) and c.get('id')]
                   new_items = [c for c in items if isinstance(c, dict) and c.get('id') and str(c['id']) not in seen_top]
-                  pages.append({'offset': offset, 'returned': len(items), 'new_ids': len(new_items),
+                  pages.append({'cursor': cursor, 'has_more': has_more, 'next_cursor': next_cursor,
+                                'returned': len(items), 'new_ids': len(new_items),
                                 'first_id': ids[0] if ids else None, 'last_id': ids[-1] if ids else None})
+                  if any(not isinstance(c, dict) or not c.get('id') for c in items):
+                      reason = 'invalid_comment_items'
+                      break
                   if page and items and not new_items:
                       reason = 'pagination_did_not_advance'
                       break
                   for c in new_items:
-                      seen_top.add(str(c['id']))
-                      all_top.append(c)
-                  if len(items) == 0:
+                      if str(c['id']) not in seen_top:
+                          seen_top.add(str(c['id']))
+                          all_top.append(c)
+                  if has_more is False:
                       complete = True
                       break
-                  # Some APIs return a smaller page than requested because of server-side caps.
-                  # Continue until empty; this avoids treating the first page as exhaustive.
+                  if has_more is not True:
+                      reason = 'invalid_pagination_metadata'
+                      break
+                  if not items:
+                      reason = 'empty_page_with_more_results'
+                      break
+                  if not isinstance(next_cursor, str) or not next_cursor.strip():
+                      reason = 'missing_next_cursor'
+                      break
+                  if next_cursor in seen_cursors:
+                      reason = 'pagination_cursor_repeated'
+                      break
+                  seen_cursors.add(next_cursor)
+                  cursor = next_cursor
               else:
                   reason = 'page_limit_reached'
               return list(flatten(all_top)), {'pages': pages, 'complete': complete,
@@ -170,6 +203,8 @@ jobs:
               report['comment_response'] = response
               report['verification_outcome'] = verify_if_needed(response)
           try:
+              if detection_only and (publish or mode != 'check_replies'):
+                  raise RuntimeError('Detection-only mode requires check_replies and publish=false')
               if mode == 'check_replies':
                   eligible = []
                   checked = []
@@ -203,12 +238,16 @@ jobs:
                                            'reply_author': author_name(latest),
                                            'reply_text': str(latest.get('content', ''))[:1500]})
                   report['checked_threads'] = checked
+                  report['eligible_reply_count'] = len(eligible)
                   if incomplete:
                       report['action'] = 'reply_check_incomplete'
                       print('Reply check incomplete. Inspect retrieval diagnostics; nothing published.')
                   elif not eligible:
                       report['action'] = 'no_new_replies'
                       print('All tracked comments found; no eligible replies; nothing published.')
+                  elif detection_only:
+                      report['action'] = 'replies_detected'
+                      print('Eligible replies detected; drafting and publishing disabled.')
                   else:
                       ctx = eligible[0]
                       choice = ask_gemini('You are AutonomousMillion. Decide whether replying to this response '

@@ -1,0 +1,116 @@
+{
+  "timestamp": "2026-10-13T00:47:33.429552+00:00",
+  "mode": "check_replies",
+  "publish": false,
+  "detection_only": true,
+  "action": "no_new_replies",
+  "checked_threads": [
+    {
+      "post_id": "c017caaf-c09b-4528-8871-0cd0c9ce93cc",
+      "comment_id": "804f1d85-5156-4d0a-b2ec-e023513a7323",
+      "retrieval": {
+        "pages": [
+          {
+            "cursor": null,
+            "has_more": false,
+            "next_cursor": null,
+            "returned": 79,
+            "new_ids": 79,
+            "first_id": "34dc5971-3026-4ff8-b398-74b1b67207a0",
+            "last_id": "804f1d85-5156-4d0a-b2ec-e023513a7323"
+          }
+        ],
+        "complete": true,
+        "incomplete_reason": null,
+        "unique_top_level_comments": 79
+      },
+      "status": "found",
+      "replies_found": 0,
+      "own_direct_replies": 0
+    },
+    {
+      "post_id": "374b17c1-2ff5-4fe5-a372-d9b6577aefa9",
+      "comment_id": "60aeb6ba-f170-4804-8b65-d48de729af4e",
+      "retrieval": {
+        "pages": [
+          {
+            "cursor": null,
+            "has_more": true,
+            "next_cursor": "eyJjcmVhdGVkQXQiOiIyMDI2LTEwLTExVDIxOjAxOjQ0LjY4NFoiLCJpZCI6IjAwOTYzMTQzLTk4NGYtNGUyMC04MzU2LTMyN2FjYzAzM2FmMSJ9",
+            "returned": 100,
+            "new_ids": 100,
+            "first_id": "4d60b914-57eb-4370-a359-061b5c3bc22c",
+            "last_id": "00963143-984f-4e20-8356-327acc033af1"
+          },
+          {
+            "cursor": "eyJjcmVhdGVkQXQiOiIyMDI2LTEwLTExVDIxOjAxOjQ0LjY4NFoiLCJpZCI6IjAwOTYzMTQzLTk4NGYtNGUyMC04MzU2LTMyN2FjYzAzM2FmMSJ9",
+            "has_more": true,
+            "next_cursor": "eyJjcmVhdGVkQXQiOiIyMDI2LTEwLTEyVDAxOjE0OjU5LjQ4OFoiLCJpZCI6IjdmYjVmN2NmLTgzMzMtNDU2MS04Yzk1LTQ2NGJiMGIyZGI2YyJ9",
+            "returned": 100,
+            "new_ids": 99,
+            "first_id": "00963143-984f-4e20-8356-327acc033af1",
+            "last_id": "7fb5f7cf-8333-4561-8c95-464bb0b2db6c"
+          },
+          {
+            "cursor": "eyJjcmVhdGVkQXQiOiIyMDI2LTEwLTEyVDAxOjE0OjU5LjQ4OFoiLCJpZCI6IjdmYjVmN2NmLTgzMzMtNDU2MS04Yzk1LTQ2NGJiMGIyZGI2YyJ9",
+            "has_more": true,
+            "next_cursor": "eyJjcmVhdGVkQXQiOiIyMDI2LTEwLTEyVDA3OjIzOjI3LjIzOVoiLCJpZCI6IjMzZTlkMjM5LTZiOTQtNGMyZC1hZmVkLWJhODU4NzI1NWRmNyJ9",
+            "returned": 100,
+            "new_ids": 99,
+            "first_id": "7fb5f7cf-8333-4561-8c95-464bb0b2db6c",
+            "last_id": "33e9d239-6b94-4c2d-afed-ba8587255df7"
+          },
+          {
+            "cursor": "eyJjcmVhdGVkQXQiOiIyMDI2LTEwLTEyVDA3OjIzOjI3LjIzOVoiLCJpZCI6IjMzZTlkMjM5LTZiOTQtNGMyZC1hZmVkLWJhODU4NzI1NWRmNyJ9",
+            "has_more": true,
+            "next_cursor": "eyJjcmVhdGVkQXQiOiIyMDI2LTEwLTEyVDE5OjA1OjM0LjA0NFoiLCJpZCI6ImM0M2Q4MzE3LWMxY2ItNDFiNy1hMzkyLTI2MjNmNjIxYTFhOCJ9",
+            "returned": 100,
+            "new_ids": 99,
+            "first_id": "33e9d239-6b94-4c2d-afed-ba8587255df7",
+            "last_id": "c43d8317-c1cb-41b7-a392-2623f621a1a8"
+          },
+          {
+            "cursor": "eyJjcmVhdGVkQXQiOiIyMDI2LTEwLTEyVDE5OjA1OjM0LjA0NFoiLCJpZCI6ImM0M2Q4MzE3LWMxY2ItNDFiNy1hMzkyLTI2MjNmNjIxYTFhOCJ9",
+            "has_more": false,
+            "next_cursor": null,
+            "returned": 48,
+            "new_ids": 47,
+            "first_id": "c43d8317-c1cb-41b7-a392-2623f621a1a8",
+            "last_id": "aa4ede03-c342-47d9-96db-dde8beb31cb5"
+          }
+        ],
+        "complete": true,
+        "incomplete_reason": null,
+        "unique_top_level_comments": 444
+      },
+      "status": "found",
+      "replies_found": 0,
+      "own_direct_replies": 0
+    }
+  ],
+  "eligible_reply_count": 0,
+  "validation": {
+    "environment": "local execution of exact workflow Python against public Moltbook GET endpoints",
+    "credentials_used": false,
+    "gemini_calls": 0,
+    "moltbook_writes": 0,
+    "requests": [
+      "https://www.moltbook.com/api/v1/posts/c017caaf-c09b-4528-8871-0cd0c9ce93cc/comments?sort=old&limit=100",
+      "https://www.moltbook.com/api/v1/posts/374b17c1-2ff5-4fe5-a372-d9b6577aefa9/comments?sort=old&limit=100",
+      "https://www.moltbook.com/api/v1/posts/374b17c1-2ff5-4fe5-a372-d9b6577aefa9/comments?sort=old&limit=100&cursor=eyJjcmVhdGVkQXQiOiIyMDI2LTEwLTExVDIxOjAxOjQ0LjY4NFoiLCJpZCI6IjAwOTYzMTQzLTk4NGYtNGUyMC04MzU2LTMyN2FjYzAzM2FmMSJ9",
+      "https://www.moltbook.com/api/v1/posts/374b17c1-2ff5-4fe5-a372-d9b6577aefa9/comments?sort=old&limit=100&cursor=eyJjcmVhdGVkQXQiOiIyMDI2LTEwLTEyVDAxOjE0OjU5LjQ4OFoiLCJpZCI6IjdmYjVmN2NmLTgzMzMtNDU2MS04Yzk1LTQ2NGJiMGIyZGI2YyJ9",
+      "https://www.moltbook.com/api/v1/posts/374b17c1-2ff5-4fe5-a372-d9b6577aefa9/comments?sort=old&limit=100&cursor=eyJjcmVhdGVkQXQiOiIyMDI2LTEwLTEyVDA3OjIzOjI3LjIzOVoiLCJpZCI6IjMzZTlkMjM5LTZiOTQtNGMyZC1hZmVkLWJhODU4NzI1NWRmNyJ9",
+      "https://www.moltbook.com/api/v1/posts/374b17c1-2ff5-4fe5-a372-d9b6577aefa9/comments?sort=old&limit=100&cursor=eyJjcmVhdGVkQXQiOiIyMDI2LTEwLTEyVDE5OjA1OjM0LjA0NFoiLCJpZCI6ImM0M2Q4MzE3LWMxY2ItNDFiNy1hMzkyLTI2MjNmNjIxYTFhOCJ9"
+    ],
+    "regression_tests_passed": 12,
+    "preserved_functions": [
+      "ask_gemini",
+      "verify_if_needed",
+      "submit",
+      "author_name",
+      "parent_id",
+      "flatten"
+    ],
+    "yaml_and_python_syntax": "passed"
+  }
+}
