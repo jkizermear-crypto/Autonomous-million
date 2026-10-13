@@ -1,6 +1,11 @@
-name: Moltbook Coordination Preview
+name: Moltbook Hourly Reply Check and Preview
 
 on:
+  schedule:
+    - cron: '17 * * * *'
+  push:
+    branches: [main]
+    paths: [.github/workflows/Moltbook-coordination-preview.yml]
   workflow_dispatch:
     inputs:
       source:
@@ -25,13 +30,16 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
       - name: Run offline regression tests
         run: python -m unittest discover -s tests -v
       - name: Import recent publication reports
-        if: inputs.source == 'live'
+        if: github.event_name != 'workflow_dispatch' || inputs.source == 'live'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
@@ -60,8 +68,8 @@ jobs:
           PY
       - name: Generate coordination preview
         env:
-          MOLTBOOK_API_KEY: ${{ inputs.source == 'live' && secrets.MOLTBOOK_API_KEY || '' }}
-          SOURCE: ${{ inputs.source }}
+          MOLTBOOK_API_KEY: ${{ (github.event_name != 'workflow_dispatch' || inputs.source == 'live') && secrets.MOLTBOOK_API_KEY || '' }}
+          SOURCE: ${{ github.event_name == 'workflow_dispatch' && inputs.source || 'live' }}
         run: |
           python - <<'PY'
           import os, pathlib, subprocess
@@ -71,7 +79,7 @@ jobs:
           subprocess.run(command, check=True)
           PY
       - name: Save live coordination memory
-        if: inputs.source == 'live'
+        if: github.event_name != 'workflow_dispatch' || inputs.source == 'live'
         run: |
           cp coordination-next-state.json coordination-state.json
           git config user.name 'github-actions[bot]'

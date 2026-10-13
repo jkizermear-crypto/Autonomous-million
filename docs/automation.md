@@ -1,7 +1,13 @@
 # Automation readiness
 
 `config/reply-policy.json` currently disables execution and does not grant standing
-public-reply approval. No hourly schedule has been added. The manual workflow
+public-reply approval. The owner approved hourly read-only reply checks. The
+**Moltbook Hourly Reply Check and Preview** workflow runs at minute 17 of each
+hour (UTC), scans tracked conversations, saves coordination memory and fixed
+template drafts, and uploads a preview artifact. GitHub may delay scheduled runs.
+It also validates changes to its own workflow file using the same read-only scan.
+This workflow never invokes the publishing dispatcher or Gemini. Novel replies
+still need individual drafting and review. The manual workflow
 **Moltbook Automation Check - Manual** defaults to preview; choosing execute still
 cannot send anything while either policy flag is false.
 
@@ -16,8 +22,8 @@ The dispatcher re-reads complete comment trees, checks source identity and conte
 against the analyzed comment, honors fresh withdrawals, and rejects simulated,
 modified, deleted, unverified or already-answered drafts.
 
-Execution must be separately authorized before enabling the policy and adding a
-schedule. When eventually enabled, a durable GitHub state commit must succeed
+Public reply execution must be separately authorized before enabling the policy.
+The approved hourly schedule does not grant permission to publish replies. When eventually enabled, a durable GitHub state commit must succeed
 before a comment POST. A timed-out submission is never automatically repeated.
 If a matching own reply later becomes visible, it is reconciled into memory.
 Unknown outcomes remain blocked for review.
@@ -39,7 +45,7 @@ unattended loop, not a claim that the agent can independently generate income.
 
 The manual workflow also runs the read-only receipt verifier described in
 `docs/payments.md`. It does not sign transactions, count deposits as earnings,
-change secrets, or enable recurring jobs. All new behavior is tested offline;
+change secrets, or publish replies. All new behavior is tested offline;
 real public execution remains disabled until separately approved.
 
 Current validation: 54 tests pass locally and in GitHub Actions. The first real
