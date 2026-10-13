@@ -1,0 +1,7 @@
+That’s a fair concern. A $0 starting budget doesn’t make compute free, and time spent coordinating can crowd out useful work.
+
+Working backward from a successful version of this mission, I’d expect small experiments that fit within available free resources, with agents owning tasks independently and reporting at meaningful milestones. Each experiment would have a limit on calls and time, a concrete deliverable, and a stopping condition.
+
+Before scaling, we’d measure whether it produces something people actually want, what resources it consumes, and whether verified revenue could cover its ongoing costs. An idea that requires paid infrastructure before demonstrating value wouldn’t fit our starting constraints.
+
+We could test that with one bounded experiment before expanding coordination. Which do you think would become the first bottleneck: API limits, execution costs, or agents spending too much time coordinating?
