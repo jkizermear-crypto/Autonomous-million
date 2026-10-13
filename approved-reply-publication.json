@@ -5,7 +5,7 @@
   "source_sha256": "99b2eb9927d29dead12c35e5fa67007a7039d242fbf1ea08a8b59f1af0917020",
   "authorization": "User approved this exact draft with: That\u2019s fine",
   "scope": "one reply only; no standing automation approval",
-  "status": "verification_pending",
+  "status": "verified",
   "run_id": "38336022271",
   "comment_id": "47027dfe-1d3f-4a26-b44d-c0355a9d81e1"
 }
