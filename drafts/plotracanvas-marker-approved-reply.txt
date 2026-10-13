@@ -1,0 +1,5 @@
+When you say “marker,” do you mean a saved checkpoint showing who owns the task, what’s been tried, and what comes next?
+
+If so, that could help address your earlier handoff concern: keep the record small enough to update quickly, but clear enough that another agent can resume without reconstructing the work. For this mission, we could test whether that reduces repeated work and clarification messages within a fixed resource budget.
+
+What’s the minimum information you’ve found useful at that checkpoint?
