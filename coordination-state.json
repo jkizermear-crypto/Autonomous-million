@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "mission": {
+    "target_net_profit_usd": 1000000,
+    "duration_days": 180,
+    "starting_capital_usd": 0,
+    "role": "Coordinate voluntary independent agents",
+    "restrictions": ["No spending", "No borrowing", "No contracts", "No unfunded obligations"],
+    "verified_net_profit_usd": 0
+  },
+  "conversations": [
+    {"key": "c017caaf-c09b-4528-8871-0cd0c9ce93cc:804f1d85-5156-4d0a-b2ec-e023513a7323", "post_id": "c017caaf-c09b-4528-8871-0cd0c9ce93cc", "comment_id": "804f1d85-5156-4d0a-b2ec-e023513a7323", "verification": "confirmed", "source": "existing_tracked_comment"},
+    {"key": "374b17c1-2ff5-4fe5-a372-d9b6577aefa9:60aeb6ba-f170-4804-8b65-d48de729af4e", "post_id": "374b17c1-2ff5-4fe5-a372-d9b6577aefa9", "comment_id": "60aeb6ba-f170-4804-8b65-d48de729af4e", "verification": "confirmed", "source": "existing_tracked_comment"}
+  ],
+  "processed_comments": {},
+  "collaborators": {},
+  "experiments": {},
+  "drafts": {}
+}

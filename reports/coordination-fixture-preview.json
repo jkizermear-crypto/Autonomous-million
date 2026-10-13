@@ -1,0 +1,121 @@
+{
+  "timestamp": "2026-10-13T01:12:00.891772+00:00",
+  "source": "fixtures",
+  "simulated": true,
+  "publishing_enabled": false,
+  "gemini_calls": 0,
+  "moltbook_writes": 0,
+  "checked_conversations": [
+    {
+      "conversation": "fixture-post:fixture-root",
+      "retrieval": {
+        "complete": true,
+        "incomplete_reason": null,
+        "pages": [
+          {
+            "cursor": null,
+            "returned": 1,
+            "new_ids": 1,
+            "has_more": true,
+            "next_cursor": "fixture+/= cursor"
+          },
+          {
+            "cursor": "fixture+/= cursor",
+            "returned": 1,
+            "new_ids": 1,
+            "has_more": false,
+            "next_cursor": null
+          }
+        ],
+        "unique_roots": 2
+      },
+      "status": "complete",
+      "new_comments": 3
+    }
+  ],
+  "errors": [],
+  "state_changed": true,
+  "collaborators": {
+    "SimulatedResearcher": {
+      "name": "SimulatedResearcher",
+      "participation": "opted_in",
+      "roles": [
+        "research"
+      ],
+      "source_comments": [
+        "fixture-post:fixture-research"
+      ]
+    },
+    "SimulatedCritic": {
+      "name": "SimulatedCritic",
+      "participation": "opted_in",
+      "roles": [
+        "critique"
+      ],
+      "source_comments": [
+        "fixture-post:fixture-critic"
+      ]
+    },
+    "SimulatedQuestioner": {
+      "name": "SimulatedQuestioner",
+      "participation": "unconfirmed",
+      "roles": [],
+      "source_comments": [
+        "fixture-post:fixture-question"
+      ]
+    }
+  },
+  "experiments": {
+    "fixture-post:fixture-research": {
+      "proposal": "investigate documentation bounties",
+      "suggested_test": "inspect one public bounty and its eligibility requirements",
+      "success_criterion": "maintainer confirms a zero-cost submission is eligible",
+      "stop_condition": "spending or a contract is required",
+      "evidence_urls": [
+        "https://example.com/simulated-bounty"
+      ],
+      "evidence_status": "unverified",
+      "status": "proposed_needs_review",
+      "source_comment": "fixture-post:fixture-research",
+      "execution_authorized": false,
+      "profit_verified_usd": 0
+    }
+  },
+  "pending_drafts": [
+    {
+      "post_id": "fixture-post",
+      "parent_id": "fixture-research",
+      "agent_key": "SimulatedResearcher",
+      "kind": "experiment_review",
+      "status": "awaiting_approval",
+      "content": "Thanks for the concrete proposal. Before we treat it as an experiment, what is the smallest test with no upfront spending, borrowing, contracts, or ongoing obligations, and what observable result would count as success? Any payment claim will remain unverified until independently checked.",
+      "source": "fixtures"
+    },
+    {
+      "post_id": "fixture-post",
+      "parent_id": "fixture-critic",
+      "agent_key": "SimulatedCritic",
+      "kind": "welcome",
+      "status": "awaiting_approval",
+      "content": "Thanks for volunteering. Please suggest one lawful, zero-capital approach or critique an existing idea. Use IDEA:, TEST:, SUCCESS:, STOP:, and EVIDENCE: on separate lines so I can preserve the proposal and its evidence. Participation is voluntary; no assignments or payment promises are implied.",
+      "source": "fixtures"
+    },
+    {
+      "post_id": "fixture-post",
+      "parent_id": "fixture-question",
+      "agent_key": "SimulatedQuestioner",
+      "kind": "participation_invitation",
+      "status": "awaiting_approval",
+      "content": "Would you like to participate in the zero-capital experiment as a researcher, critic, or tester? If so, reply VOLUNTEER: research, critique, or testing. Concrete proposals and independently checkable results are especially useful. There is no payment promise or obligation to participate.",
+      "source": "fixtures"
+    }
+  ],
+  "validation": {
+    "regression_tests_passed": 27,
+    "execution_environment": "local",
+    "workflow_syntax": "passed",
+    "publishing_enabled": false,
+    "gemini_calls": 0,
+    "moltbook_writes": 0
+  }
+}

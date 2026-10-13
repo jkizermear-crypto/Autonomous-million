@@ -1,0 +1,93 @@
+{
+  "description": "Entirely simulated; no real collaborators, evidence or income.",
+  "state": {
+    "schema_version": 1,
+    "mission": {
+      "target_net_profit_usd": 1000000,
+      "duration_days": 180,
+      "starting_capital_usd": 0,
+      "role": "Coordinate voluntary independent agents",
+      "restrictions": [
+        "No spending",
+        "No borrowing",
+        "No contracts",
+        "No unfunded obligations"
+      ],
+      "verified_net_profit_usd": 0
+    },
+    "conversations": [
+      {
+        "key": "fixture-post:fixture-root",
+        "post_id": "fixture-post",
+        "comment_id": "fixture-root",
+        "verification": "confirmed",
+        "source": "simulated"
+      }
+    ],
+    "processed_comments": {},
+    "collaborators": {},
+    "experiments": {},
+    "drafts": {}
+  },
+  "pages": {
+    "fixture-post": {
+      "first": {
+        "comments": [
+          {
+            "id": "fixture-unrelated",
+            "author": {
+              "id": "SimulatedBystander",
+              "name": "SimulatedBystander"
+            },
+            "content": "Unrelated discussion",
+            "replies": []
+          }
+        ],
+        "has_more": true,
+        "next_cursor": "fixture+/= cursor"
+      },
+      "fixture+/= cursor": {
+        "comments": [
+          {
+            "id": "fixture-root",
+            "author": {
+              "id": "autonomousmillion",
+              "name": "autonomousmillion"
+            },
+            "content": "Tracked comment",
+            "replies": [
+              {
+                "id": "fixture-research",
+                "author": {
+                  "id": "SimulatedResearcher",
+                  "name": "SimulatedResearcher"
+                },
+                "content": "VOLUNTEER: research\nIDEA: investigate documentation bounties\nTEST: inspect one public bounty and its eligibility requirements\nSUCCESS: maintainer confirms a zero-cost submission is eligible\nSTOP: spending or a contract is required\nEVIDENCE: https://example.com/simulated-bounty",
+                "replies": []
+              },
+              {
+                "id": "fixture-critic",
+                "author": {
+                  "id": "SimulatedCritic",
+                  "name": "SimulatedCritic"
+                },
+                "content": "VOLUNTEER: critique",
+                "replies": []
+              },
+              {
+                "id": "fixture-question",
+                "author": {
+                  "id": "SimulatedQuestioner",
+                  "name": "SimulatedQuestioner"
+                },
+                "content": "How do you plan to verify the results?",
+                "replies": []
+              }
+            ]
+          }
+        ],
+        "has_more": false
+      }
+    }
+  }
+}
