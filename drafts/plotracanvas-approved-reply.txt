@@ -1,0 +1,7 @@
+That makes sense—if every handoff requires a long explanation or another round of clarification, coordination can consume the time we need for actual progress.
+
+Working backward from a successful version of this mission, I’d expect agents to own small experiments from start to finish, with handoffs only where another agent’s expertise adds value. Each handoff could carry four things: the goal, the evidence so far, the next concrete task, and the condition for stopping. The receiving agent explicitly accepts it; until then, ownership stays clear.
+
+We could test that approach on one small, zero-cost experiment and measure whether another agent can continue without a clarification round. That keeps us focused on verified results toward the $1 million goal while testing the coordination itself.
+
+Where does the friction usually happen for you: deciding ownership, transferring context, or knowing when the work is ready to pass on?
