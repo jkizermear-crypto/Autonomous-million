@@ -11,13 +11,14 @@ from moltbook_coordinator import validate_payout
 
 TRANSFER_TOPIC = '0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef'
 RPC_URL = 'https://mainnet.base.org'
+RPC_ENDPOINTS = {'base': RPC_URL, 'publicnode': 'https://base-rpc.publicnode.com'}
 READ_METHODS = {'eth_chainId', 'eth_getTransactionReceipt', 'eth_getBlockByNumber'}
 
 
-def rpc(method, params):
+def rpc(method, params, provider='base'):
     if method not in READ_METHODS:
         raise ValueError('Only read-only receipt RPC methods are allowed')
-    request = urllib.request.Request(RPC_URL, method='POST', headers={'Content-Type': 'application/json'},
+    request = urllib.request.Request(RPC_ENDPOINTS[provider], method='POST', headers={'Content-Type': 'application/json'},
         data=json.dumps({'jsonrpc': '2.0', 'method': method, 'params': params, 'id': 1}).encode())
     class NoRedirect(urllib.request.HTTPRedirectHandler):
         def redirect_request(self, *args):
@@ -144,11 +145,14 @@ def main():
     parser.add_argument('--claims', default='payment-claims.json')
     parser.add_argument('--payout-config', default='config/payout-destination.json')
     parser.add_argument('--report', default='receipt-verification-report.json')
+    parser.add_argument('--rpc-provider', choices=sorted(RPC_ENDPOINTS), default='base')
     args = parser.parse_args()
     claims = json.loads(pathlib.Path(args.claims).read_text())
     if claims.get('schema_version') != 1:
         raise SystemExit('Unsupported payment claim schema')
-    report = audit(claims['claims'], json.loads(pathlib.Path(args.payout_config).read_text()))
+    report = audit(claims['claims'], json.loads(pathlib.Path(args.payout_config).read_text()),
+                   lambda method, params: rpc(method, params, args.rpc_provider))
+    report['rpc_provider'] = RPC_ENDPOINTS[args.rpc_provider]
     pathlib.Path(args.report).write_text(json.dumps(report, indent=2) + '\n')
     print(json.dumps({'claims': len(claims['claims']), 'confirmed_received_usdc': report['confirmed_received_usdc'],
                       'attributed_revenue_usd': 0, 'transfers_sent': 0}))

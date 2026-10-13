@@ -32,13 +32,13 @@ jobs:
           result = {'regression_tests_passed': 54, 'gemini_calls': 0,
                     'moltbook_writes': 0, 'transfers_sent': 0, 'transaction_signing': False}
           try:
-              chain = rpc('eth_chainId', [])
-              finalized = rpc('eth_getBlockByNumber', ['finalized', False])
-              receipt = rpc('eth_getTransactionReceipt', ['0x' + '0' * 64])
+              chain = rpc('eth_chainId', [], provider='publicnode')
+              finalized = rpc('eth_getBlockByNumber', ['finalized', False], provider='publicnode')
+              receipt = rpc('eth_getTransactionReceipt', ['0x' + '0' * 64], provider='publicnode')
               assert int(chain, 16) == 8453
               assert finalized and finalized.get('number')
               assert receipt is None
-              result.update(rpc_status='passed', chain_id=8453, finalized_block=finalized['number'])
+              result.update(rpc_status='passed', chain_id=8453, finalized_block=finalized['number'], rpc_provider='publicnode')
           except Exception as error:
               result.update(rpc_status='unavailable', error_type=type(error).__name__,
                             http_status=getattr(error, 'code', None))
