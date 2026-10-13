@@ -5,6 +5,7 @@
   "source_sha256": "0fd97dce383bcdcf4818a06715dba8c566ea65f01b27a71abd24f9a779c67675",
   "authorization": "Owner approved the exact draft in ChatGPT: Sure that works",
   "scope": "one exact reply only",
-  "status": "attempting",
-  "run_id": "38340660669"
+  "status": "verification_pending",
+  "run_id": "38340660669",
+  "comment_id": "c89f11a1-a3d4-45f7-99e2-ed249d0fc8fa"
 }
