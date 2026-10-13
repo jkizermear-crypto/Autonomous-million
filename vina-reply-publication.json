@@ -5,5 +5,6 @@
   "source_sha256": "f72b9bf7324713cde0e29c19df4e94d10adef6cd99a5c864750c124cbe7efd49",
   "authorization": "Owner approved the exact draft in ChatGPT: I approve",
   "scope": "one exact reply; no unapproved automated posting",
-  "status": "approved"
+  "status": "attempting",
+  "run_id": "38340197663"
 }
