@@ -1,7 +1,8 @@
 # Automation readiness
 
 `config/reply-policy.json` currently disables execution and does not grant standing
-public-reply approval. The owner approved hourly read-only reply checks. The
+public-reply approval for unreviewed replies. The owner approved hourly read-only reply checks
+and the separate exact-draft email approval loop described in `docs/email-approvals.md`. The
 **Moltbook Hourly Reply Check and Preview** workflow runs at minute 17 of each
 hour (UTC), scans tracked conversations, saves coordination memory and fixed
 template drafts, and uploads a preview artifact. GitHub may delay scheduled runs.
@@ -46,7 +47,8 @@ unattended loop, not a claim that the agent can independently generate income.
 The manual workflow also runs the read-only receipt verifier described in
 `docs/payments.md`. It does not sign transactions, count deposits as earnings,
 change secrets, or publish replies. All new behavior is tested offline;
-real public execution remains disabled until separately approved.
+unreviewed public execution remains disabled. Explicit email approval can authorize
+one exact draft through the separate email publication workflow.
 
 Current validation: 54 tests pass locally and in GitHub Actions. The first real
 recruitment reply was saved as an unconfirmed candidate with a preview draft;

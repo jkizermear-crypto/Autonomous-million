@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "enabled": true,
+  "authorization": "Owner explicitly approved email-authorized publication on 2026-10-13",
+  "max_replies_per_run": 1,
+  "approval_expiry_days": 7,
+  "requires_exact_draft_approval": true,
+  "unapproved_publication_enabled": false
+}

@@ -1,0 +1,66 @@
+name: Publish exact email-approved reply
+on:
+  push:
+    branches: [main]
+    paths:
+      - email-approval-queue.json
+      - .github/workflows/Moltbook-email-approved-reply.yml
+      - tools/email_approval.py
+  workflow_dispatch:
+permissions:
+  contents: write
+  actions: read
+concurrency:
+  group: moltbook-coordination-memory
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m unittest discover -s tests -v
+      - name: Recover known verification only
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python - <<'PY'
+          import json,pathlib,subprocess
+          queue=json.loads(pathlib.Path('email-approval-queue.json').read_text())
+          for item in queue['items']:
+              if item.get('status')=='verification_pending' and str(item.get('run_id','')).isdigit():
+                  subprocess.run(['gh','run','download',str(item['run_id']),'--name','email-verification-recovery','--dir','recovery'],capture_output=True)
+                  break
+          PY
+      - name: Publish only individually email-approved content
+        env:
+          MOLTBOOK_API_KEY: ${{ secrets.MOLTBOOK_API_KEY }}
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          python - <<'PY'
+          import pathlib,subprocess
+          command=['python','tools/email_approval.py','--execute']
+          recovery=pathlib.Path('recovery/email-verification-recovery.json')
+          if recovery.exists(): command.extend(['--recovery',str(recovery)])
+          subprocess.run(command,check=True)
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: email-publication-report
+          path: email-publication-report.json
+          retention-days: 30
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: email-verification-recovery
+          path: email-verification-recovery.json
+          retention-days: 1
+          if-no-files-found: ignore
