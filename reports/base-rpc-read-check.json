@@ -1,8 +1,20 @@
 {
-  "provider": "https://mainnet.base.org",
-  "methods": [],
+  "status": "blocked_http_403",
+  "execution_environment": "GitHub Actions",
+  "providers": [
+    {
+      "url": "https://mainnet.base.org",
+      "http_status": 403,
+      "run": "https://github.com/jkizermear-crypto/Autonomous-million/actions/runs/38334895544"
+    },
+    {
+      "url": "https://base-rpc.publicnode.com",
+      "http_status": 403,
+      "run": "https://github.com/jkizermear-crypto/Autonomous-million/actions/runs/38335079279"
+    }
+  ],
   "transfers_sent": 0,
   "transaction_signing": false,
-  "status": "unavailable",
-  "error_type": "HTTPError"
+  "paid_provider_configured": false,
+  "live_payment_verified": false
 }

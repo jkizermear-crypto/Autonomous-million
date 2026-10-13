@@ -41,3 +41,9 @@ The manual workflow also runs the read-only receipt verifier described in
 `docs/payments.md`. It does not sign transactions, count deposits as earnings,
 change secrets, or enable recurring jobs. All new behavior is tested offline;
 real public execution remains disabled until separately approved.
+
+Current validation: 54 tests pass locally and in GitHub Actions. The first real
+recruitment reply was saved as an unconfirmed candidate with a preview draft;
+it did not qualify for automatic dispatch. Both live Base RPC transport checks
+returned HTTP 403, so payment receipt verification is offline-tested but blocked
+for real transactions. The temporary validation trigger was removed afterward.

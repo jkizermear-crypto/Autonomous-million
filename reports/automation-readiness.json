@@ -1,0 +1,25 @@
+{
+  "regression_tests_passed": 54,
+  "test_environments": [
+    "local",
+    "GitHub Actions"
+  ],
+  "validation_runs": [
+    "https://github.com/jkizermear-crypto/Autonomous-million/actions/runs/38334895544",
+    "https://github.com/jkizermear-crypto/Autonomous-million/actions/runs/38335079279"
+  ],
+  "reply_policy_enabled": false,
+  "standing_public_reply_approval": false,
+  "hourly_schedule_enabled": false,
+  "new_moltbook_posts_or_replies": 0,
+  "gemini_calls": 0,
+  "transfers_sent": 0,
+  "wallet_signing": false,
+  "live_recruitment_replies_detected": 1,
+  "opted_in_volunteers_detected": 0,
+  "receipt_algorithm": "offline_tests_passed",
+  "live_receipt_transport": "blocked_http_403",
+  "verified_project_revenue_usd": 0,
+  "reply_reasoning": "fixed mission templates; unstructured replies require review",
+  "temporary_validation_trigger_removed": true
+}

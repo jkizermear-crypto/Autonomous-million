@@ -29,7 +29,14 @@ It checks the chain, successful transaction status, canonical block hash,
 finalization, native USDC contract, transfer recipient, and any supplied expected
 sender/amount. Duplicate transfer event IDs are counted once. Pending, failed,
 wrong-network, wrong-token, removed or malformed receipts never count.
-RPC failures stay unverified; no paid provider is selected automatically.
+RPC failures stay unverified; no paid provider is selected automatically. A second
+documented free endpoint can be explicitly selected with `--rpc-provider publicnode`
+(https://base.publicnode.com/). No credentials are needed for these basic reads.
+
+Live transport checks from GitHub Actions returned HTTP 403 for both free endpoints.
+The receipt algorithm passes offline tests, but real receipt verification remains
+blocked until a reachable free read endpoint is available. No actual payment has
+been verified and no paid fallback or new credential has been configured.
 
 Confirmed token receipts still require independent revenue attribution, expense
 accounting, and USD valuation. An unrelated deposit, promised payout, or wallet
