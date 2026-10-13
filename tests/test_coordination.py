@@ -163,6 +163,15 @@ class CoordinationTests(unittest.TestCase):
             with self.subTest(path=path), self.assertRaises(ValueError):
                 c.MoltbookReader()(path)
 
+    def test_payout_destination_requires_receive_only_native_usdc_on_base(self):
+        payment = json.loads((ROOT / 'config/payout-destination.json').read_text())
+        self.assertEqual(c.validate_payout(payment), payment)
+        for key, value in [('network', 'ethereum'), ('chain_id', 1), ('spending_enabled', True),
+                           ('signing_enabled', True), ('receiving_address', 'bad-address'),
+                           ('token_contract', '0x' + '0' * 40)]:
+            with self.subTest(key=key), self.assertRaises(ValueError):
+                c.validate_payout({**payment, key: value})
+
     def test_cli_fixtures_do_not_modify_live_state(self):
         canonical = (ROOT / 'coordination-state.json').read_bytes()
         with tempfile.TemporaryDirectory() as directory:

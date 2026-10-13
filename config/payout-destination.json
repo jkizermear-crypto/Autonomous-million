@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "asset": "USDC",
+  "network": "base",
+  "chain_id": 8453,
+  "token_contract": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+  "receiving_address": "0xAcf7FBc3DB68a0db686FdeeE9820d48205d8B0cA",
+  "mode": "receive_only",
+  "spending_enabled": false,
+  "signing_enabled": false,
+  "owner_confirmation": "User supplied Coinbase USDC-on-Base receiving address and approved public repository storage",
+  "address_validation": "40 hexadecimal EVM address characters; ownership not independently verified"
+}

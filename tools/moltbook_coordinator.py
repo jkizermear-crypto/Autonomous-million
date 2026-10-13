@@ -159,6 +159,17 @@ def fields(content):
     return found
 
 
+def validate_payout(payment):
+    if (payment.get('asset'), payment.get('network'), payment.get('chain_id'), payment.get('mode')) != (
+            'USDC', 'base', 8453, 'receive_only') or payment.get('spending_enabled') is not False or payment.get('signing_enabled') is not False:
+        raise ValueError('Unsupported or non-receive-only payout configuration')
+    if str(payment.get('token_contract', '')).lower() != '0x833589fcd6edb6e08f4c7c32d4f71b54bda02913':
+        raise ValueError('Payout asset must be native USDC on Base')
+    if not re.fullmatch(r'0x[0-9a-fA-F]{40}', payment.get('receiving_address', '')):
+        raise ValueError('Invalid payout receiving address')
+    return payment
+
+
 def draft_text(kind, contribution):
     if kind == 'experiment_review':
         return ('Thanks for the concrete proposal. Before we treat it as an experiment, '
@@ -285,6 +296,7 @@ def main():
     parser.add_argument('--report', default='coordination-preview.json')
     parser.add_argument('--next-state', default='coordination-next-state.json')
     parser.add_argument('--publication-report', action='append', default=[])
+    parser.add_argument('--payout-config', default='config/payout-destination.json')
     args = parser.parse_args()
     if pathlib.Path(args.next_state).resolve() == pathlib.Path(args.state).resolve():
         raise SystemExit('Write proposed state to a separate path; fixture output must never replace live memory')
@@ -305,6 +317,8 @@ def main():
         for name in args.publication_report:
             import_publication(state, json.loads(pathlib.Path(name).read_text()), 'existing_workflow_report')
     next_state, report = process(state, get, args.source)
+    if args.source == 'live':
+        report['payout_destination'] = validate_payout(json.loads(pathlib.Path(args.payout_config).read_text()))
     pathlib.Path(args.next_state).write_text(json.dumps(next_state, indent=2) + '\n')
     pathlib.Path(args.report).write_text(json.dumps(report, indent=2) + '\n')
     print(json.dumps({'source': args.source, 'publishing_enabled': False,
