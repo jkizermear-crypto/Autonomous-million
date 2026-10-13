@@ -1,0 +1,96 @@
+{
+  "id": "offline-demo-001",
+  "objective": "Validate a bounded handoff and deliverable check; not a real revenue opportunity",
+  "status": "awaiting_owner_approval",
+  "turns_used": 5,
+  "ledger": [
+    {
+      "role": "planner",
+      "owner": "offline_fixture:planner",
+      "input_sha256": "07f3fc7981327488106ef308721cc6d853fde2cc1ab09615357d7d3967c96c03",
+      "output_sha256": "72c69ea95b3aa6adab2b170210a9122b0df2ea500a084834ae3d2e9f5ccb6d56",
+      "output": {
+        "hypothesis": "A bounded workflow can detect a missing deliverable requirement",
+        "deliverable": "A sample assessment",
+        "acceptance_criteria": [
+          "Includes eligibility",
+          "Includes payout"
+        ],
+        "stop_condition": "Stop on failed checks"
+      }
+    },
+    {
+      "role": "researcher",
+      "owner": "offline_fixture:researcher",
+      "input_sha256": "c38822a8baef681ad9c5488a0ea83c3a48a85a0cfb368d846e5baa0089eb691f",
+      "output_sha256": "8ba0f2b40aefcd4a05f8dfbbc0fed45b45b98ef23a8e833feaf1ea61fb1b592f",
+      "output": {
+        "evidence": [
+          {
+            "source": "fixture://synthetic-opportunity",
+            "claim": "Synthetic example only; not externally verified",
+            "retrieved_at": "2026-10-13T00:00:00Z"
+          }
+        ],
+        "eligibility": "confirmed",
+        "payment_path": "confirmed"
+      }
+    },
+    {
+      "role": "critic",
+      "owner": "offline_fixture:critic",
+      "input_sha256": "eb088aef1cc2c0a484f300db668238007684f7e1b5d70c984f34003259fb3746",
+      "output_sha256": "fcc6b69aa0ac9710e26d2097ec0be2e72cf57af68b48ddd02610b94beb62130d",
+      "output": {
+        "risks": [
+          "Synthetic evidence cannot authorize real execution"
+        ],
+        "blocking_issues": []
+      }
+    },
+    {
+      "role": "builder",
+      "owner": "offline_fixture:builder",
+      "input_sha256": "6d0b35a4035c06126c59b916e0db3a54274d1c07f3f8c08ff014932da2ce41cb",
+      "output_sha256": "8ba9a0fff0aaa9421bcf06e01233e7c4d88a90673ed611771f95a3f6a5a92215",
+      "output": {
+        "artifact": "Eligibility: fixture only. Payout: fixture only. No real submission."
+      }
+    },
+    {
+      "role": "tester",
+      "owner": "offline_fixture:tester",
+      "input_sha256": "9240160cd20ecb7232adfacf507c4da1f4dbe4646a4ec9a6bfc784818891dd44",
+      "output_sha256": "aea0a1081d8a1085826236e44e4ce585ffd351d9775f00c3847399c4fbacea97",
+      "output": {
+        "checks": [
+          {
+            "criterion": "Includes eligibility",
+            "kind": "contains",
+            "value": "Eligibility:"
+          },
+          {
+            "criterion": "Includes payout",
+            "kind": "contains",
+            "value": "Payout:"
+          }
+        ]
+      }
+    }
+  ],
+  "additional_spending_usd": 0,
+  "test_results": [
+    {
+      "criterion": "Includes eligibility",
+      "passed": true
+    },
+    {
+      "criterion": "Includes payout",
+      "passed": true
+    }
+  ],
+  "artifact_sha256": "d9bf240f9284040edade5b9864e9cc4e069121ec747feedcb2a0fae1d6ac8201",
+  "reason": "offline_checks_passed_not_submitted",
+  "revenue_status": "unverified",
+  "verified_revenue_usd": 0
+}

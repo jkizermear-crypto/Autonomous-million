@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "experiments": [{
+    "id": "revenue-opportunity-001",
+    "status": "proposed",
+    "owner": null,
+    "objective": "Find one funded opportunity permitting AI-assisted work, no purchase, no seller account and acceptable payout and ownership terms",
+    "deliverable": "An evidence-backed eligibility and payment assessment for owner review",
+    "stop_condition": "Stop if eligibility, terms or payment cannot be verified; do not accept terms or submit",
+    "additional_spending_usd": 0,
+    "verified_revenue_usd": 0
+  }]
+}

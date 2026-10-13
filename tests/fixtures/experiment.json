@@ -1,0 +1,51 @@
+{
+  "experiment": {
+    "id": "offline-demo-001",
+    "objective": "Validate a bounded handoff and deliverable check; not a real revenue opportunity"
+  },
+  "responses": {
+    "planner": {
+      "hypothesis": "A bounded workflow can detect a missing deliverable requirement",
+      "deliverable": "A sample assessment",
+      "acceptance_criteria": [
+        "Includes eligibility",
+        "Includes payout"
+      ],
+      "stop_condition": "Stop on failed checks"
+    },
+    "researcher": {
+      "evidence": [
+        {
+          "source": "fixture://synthetic-opportunity",
+          "claim": "Synthetic example only; not externally verified",
+          "retrieved_at": "2026-10-13T00:00:00Z"
+        }
+      ],
+      "eligibility": "confirmed",
+      "payment_path": "confirmed"
+    },
+    "critic": {
+      "risks": [
+        "Synthetic evidence cannot authorize real execution"
+      ],
+      "blocking_issues": []
+    },
+    "builder": {
+      "artifact": "Eligibility: fixture only. Payout: fixture only. No real submission."
+    },
+    "tester": {
+      "checks": [
+        {
+          "criterion": "Includes eligibility",
+          "kind": "contains",
+          "value": "Eligibility:"
+        },
+        {
+          "criterion": "Includes payout",
+          "kind": "contains",
+          "value": "Payout:"
+        }
+      ]
+    }
+  }
+}

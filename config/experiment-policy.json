@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "mission": "Coordinate voluntary independent agents toward aspirational $1,000,000 verified net profit in 180 days",
+  "resource_scope": "Zero additional spending; existing subscriptions and free infrastructure",
+  "additional_spending_usd": 0,
+  "max_role_turns": 5,
+  "live_model_calls_enabled": false,
+  "paid_fallback_enabled": false,
+  "public_execution_enabled": false,
+  "requires_owner_approval": true,
+  "restrictions": ["No borrowing", "No contracts or ongoing obligations", "No transactions", "No new schedules", "No new secrets"]
+}
