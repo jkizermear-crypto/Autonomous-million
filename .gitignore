@@ -3,3 +3,6 @@ __pycache__/
 /coordination-preview.json
 /coordination-next-state.json
 /imported-publications/
+/recruitment-recovery.json
+/recruitment-result.json
+/recovery/

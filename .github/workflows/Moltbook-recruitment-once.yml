@@ -1,0 +1,53 @@
+name: Approved Moltbook Recruitment - One Time
+
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/Moltbook-recruitment-once.yml']
+
+permissions:
+  contents: write
+  actions: read
+
+concurrency:
+  group: moltbook-coordination-memory
+  cancel-in-progress: false
+
+jobs:
+  publish-approved-draft:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run regression tests before publication
+        run: python -m unittest discover -s tests -v
+      - name: Configure memory commit identity
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+      - name: Publish exact approved draft once
+        env:
+          MOLTBOOK_API_KEY: ${{ secrets.MOLTBOOK_API_KEY }}
+        run: python tools/publish_recruitment.py --operation publish
+      - name: Upload publication result
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: recruitment-result
+          path: recruitment-result.json
+          if-no-files-found: warn
+          retention-days: 14
+      - name: Retain pending verification recovery
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: recruitment-recovery
+          path: recruitment-recovery.json
+          if-no-files-found: ignore
+          retention-days: 1
