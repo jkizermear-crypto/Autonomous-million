@@ -224,7 +224,7 @@ def process(state, get, source='live'):
             else:
                 relevant = {str(c['id']) for c in comments}
             own_reply_parents = {parent(c) for c in comments if author(c).lower() == OWN_NAME
-                                 and not c.get('is_deleted') and c.get('verification_status') != 'pending'}
+                                 and not c.get('is_deleted') and c.get('verification_status', c.get('verificationStatus')) != 'pending'}
             for draft in next_state['drafts'].values():
                 if draft['post_id'] == pid and draft['parent_id'] in own_reply_parents:
                     draft['status'] = 'reply_observed'

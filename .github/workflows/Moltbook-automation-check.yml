@@ -1,0 +1,94 @@
+name: Moltbook Automation Check - Manual
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'Preview only by default; execute is also blocked until standing reply policy is approved'
+        type: choice
+        options: [preview, execute]
+        default: preview
+
+permissions:
+  contents: write
+  actions: read
+
+concurrency:
+  group: moltbook-coordination-memory
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run offline regression tests
+        run: python -m unittest discover -s tests -v
+      - name: Prepare current live coordination state without publishing
+        env:
+          MOLTBOOK_API_KEY: ${{ secrets.MOLTBOOK_API_KEY }}
+        run: |
+          python tools/moltbook_coordinator.py --source live
+          cp coordination-next-state.json coordination-state.json
+      - name: Restore known pending verification if execution is enabled
+        if: inputs.mode == 'execute'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python - <<'PY'
+          import json, pathlib, subprocess
+          policy = json.loads(pathlib.Path('config/reply-policy.json').read_text())
+          if policy.get('enabled') and policy.get('standing_public_reply_approval'):
+              state = json.loads(pathlib.Path('coordination-state.json').read_text())
+              for attempt in state.get('reply_attempts', {}).values():
+                  if attempt.get('status') == 'verification_pending' and str(attempt.get('recovery_run_id', '')).isdigit():
+                      result = subprocess.run(['gh', 'run', 'download', str(attempt['recovery_run_id']),
+                          '--name', 'reply-verification-recovery', '--dir', 'recovery'], capture_output=True)
+                      if result.returncode:
+                          print('Pending verification recovery unavailable; no automatic repost.')
+                      break
+          PY
+      - name: Preview or dispatch under explicit policy
+        env:
+          MOLTBOOK_API_KEY: ${{ secrets.MOLTBOOK_API_KEY }}
+          MODE: ${{ inputs.mode }}
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          python - <<'PY'
+          import os, pathlib, subprocess
+          command = ['python', 'tools/reply_dispatcher.py']
+          if os.environ['MODE'] == 'execute':
+              command.append('--execute')
+              recovery = pathlib.Path('recovery/reply-verification-recovery.json')
+              if recovery.exists(): command.extend(['--recovery', str(recovery)])
+          subprocess.run(command, check=True)
+          PY
+      - name: Read-only payment receipt audit
+        run: python tools/verify_receipts.py
+      - name: Upload operational previews
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: automation-check
+          path: |
+            coordination-preview.json
+            reply-dispatch-preview.json
+            receipt-verification-report.json
+          retention-days: 30
+          if-no-files-found: warn
+      - name: Save verification recovery without exposing it in reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: reply-verification-recovery
+          path: reply-verification-recovery.json
+          retention-days: 1
+          if-no-files-found: ignore

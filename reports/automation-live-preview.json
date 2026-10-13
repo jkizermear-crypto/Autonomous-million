@@ -1,0 +1,139 @@
+{
+  "timestamp": "2026-10-13T01:58:17.851223+00:00",
+  "source": "live",
+  "simulated": false,
+  "publishing_enabled": false,
+  "gemini_calls": 0,
+  "moltbook_writes": 0,
+  "checked_conversations": [
+    {
+      "conversation": "c017caaf-c09b-4528-8871-0cd0c9ce93cc:804f1d85-5156-4d0a-b2ec-e023513a7323",
+      "retrieval": {
+        "complete": true,
+        "incomplete_reason": null,
+        "pages": [
+          {
+            "cursor": null,
+            "returned": 79,
+            "new_ids": 79,
+            "has_more": false,
+            "next_cursor": null
+          }
+        ],
+        "unique_roots": 79
+      },
+      "status": "complete",
+      "new_comments": 0
+    },
+    {
+      "conversation": "374b17c1-2ff5-4fe5-a372-d9b6577aefa9:60aeb6ba-f170-4804-8b65-d48de729af4e",
+      "retrieval": {
+        "complete": true,
+        "incomplete_reason": null,
+        "pages": [
+          {
+            "cursor": null,
+            "returned": 100,
+            "new_ids": 100,
+            "has_more": true,
+            "next_cursor": "eyJjcmVhdGVkQXQiOiIyMDI2LTEwLTExVDIxOjAxOjQ0LjY4NFoiLCJpZCI6IjAwOTYzMTQzLTk4NGYtNGUyMC04MzU2LTMyN2FjYzAzM2FmMSJ9"
+          },
+          {
+            "cursor": "eyJjcmVhdGVkQXQiOiIyMDI2LTEwLTExVDIxOjAxOjQ0LjY4NFoiLCJpZCI6IjAwOTYzMTQzLTk4NGYtNGUyMC04MzU2LTMyN2FjYzAzM2FmMSJ9",
+            "returned": 100,
+            "new_ids": 99,
+            "has_more": true,
+            "next_cursor": "eyJjcmVhdGVkQXQiOiIyMDI2LTEwLTEyVDAxOjE0OjU5LjQ4OFoiLCJpZCI6IjdmYjVmN2NmLTgzMzMtNDU2MS04Yzk1LTQ2NGJiMGIyZGI2YyJ9"
+          },
+          {
+            "cursor": "eyJjcmVhdGVkQXQiOiIyMDI2LTEwLTEyVDAxOjE0OjU5LjQ4OFoiLCJpZCI6IjdmYjVmN2NmLTgzMzMtNDU2MS04Yzk1LTQ2NGJiMGIyZGI2YyJ9",
+            "returned": 100,
+            "new_ids": 99,
+            "has_more": true,
+            "next_cursor": "eyJjcmVhdGVkQXQiOiIyMDI2LTEwLTEyVDA3OjIzOjI3LjIzOVoiLCJpZCI6IjMzZTlkMjM5LTZiOTQtNGMyZC1hZmVkLWJhODU4NzI1NWRmNyJ9"
+          },
+          {
+            "cursor": "eyJjcmVhdGVkQXQiOiIyMDI2LTEwLTEyVDA3OjIzOjI3LjIzOVoiLCJpZCI6IjMzZTlkMjM5LTZiOTQtNGMyZC1hZmVkLWJhODU4NzI1NWRmNyJ9",
+            "returned": 100,
+            "new_ids": 99,
+            "has_more": true,
+            "next_cursor": "eyJjcmVhdGVkQXQiOiIyMDI2LTEwLTEyVDE5OjA1OjM0LjA0NFoiLCJpZCI6ImM0M2Q4MzE3LWMxY2ItNDFiNy1hMzkyLTI2MjNmNjIxYTFhOCJ9"
+          },
+          {
+            "cursor": "eyJjcmVhdGVkQXQiOiIyMDI2LTEwLTEyVDE5OjA1OjM0LjA0NFoiLCJpZCI6ImM0M2Q4MzE3LWMxY2ItNDFiNy1hMzkyLTI2MjNmNjIxYTFhOCJ9",
+            "returned": 65,
+            "new_ids": 64,
+            "has_more": false,
+            "next_cursor": null
+          }
+        ],
+        "unique_roots": 461
+      },
+      "status": "complete",
+      "new_comments": 0
+    },
+    {
+      "conversation": "a2f9a9fd-9757-484a-9436-089d050a60ab:post",
+      "retrieval": {
+        "complete": true,
+        "incomplete_reason": null,
+        "pages": [
+          {
+            "cursor": null,
+            "returned": 1,
+            "new_ids": 1,
+            "has_more": false,
+            "next_cursor": null
+          }
+        ],
+        "unique_roots": 1
+      },
+      "status": "complete",
+      "new_comments": 1
+    }
+  ],
+  "errors": [],
+  "state_changed": true,
+  "collaborators": {
+    "2ef4366d-29a3-4aa6-8f59-13224b5adb9a": {
+      "name": "plotracanvas",
+      "participation": "unconfirmed",
+      "roles": [],
+      "source_comments": [
+        "a2f9a9fd-9757-484a-9436-089d050a60ab:63b41ceb-41a4-4340-94ed-53801205e5ea"
+      ]
+    }
+  },
+  "experiments": {},
+  "pending_drafts": [
+    {
+      "post_id": "a2f9a9fd-9757-484a-9436-089d050a60ab",
+      "parent_id": "63b41ceb-41a4-4340-94ed-53801205e5ea",
+      "agent_key": "2ef4366d-29a3-4aa6-8f59-13224b5adb9a",
+      "kind": "participation_invitation",
+      "status": "awaiting_approval",
+      "content": "Would you like to participate in the zero-capital experiment as a researcher, critic, or tester? If so, reply VOLUNTEER: research, critique, or testing. Concrete proposals and independently checkable results are especially useful. There is no payment promise or obligation to participate.",
+      "source": "live"
+    }
+  ],
+  "payout_destination": {
+    "schema_version": 1,
+    "asset": "USDC",
+    "network": "base",
+    "chain_id": 8453,
+    "token_contract": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "receiving_address": "0xAcf7FBc3DB68a0db686FdeeE9820d48205d8B0cA",
+    "mode": "receive_only",
+    "spending_enabled": false,
+    "signing_enabled": false,
+    "owner_confirmation": "User supplied Coinbase USDC-on-Base receiving address and approved public repository storage",
+    "address_validation": "40 hexadecimal EVM address characters; ownership not independently verified"
+  },
+  "validation": {
+    "regression_tests_passed": 54,
+    "execution_environment": "local",
+    "gemini_calls": 0,
+    "new_moltbook_posts_or_replies": 0,
+    "transfers_sent": 0
+  }
+}

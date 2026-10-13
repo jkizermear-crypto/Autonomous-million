@@ -1,0 +1,22 @@
+{
+  "timestamp": "2026-10-13T01:59:35.241401+00:00",
+  "publishing_enabled": false,
+  "action": "preview_only",
+  "gemini_calls": 0,
+  "moltbook_writes": 0,
+  "candidates": [],
+  "skipped": [
+    {
+      "draft_key": "a2f9a9fd-9757-484a-9436-089d050a60ab:63b41ceb-41a4-4340-94ed-53801205e5ea",
+      "reason": "requires_individual_review"
+    }
+  ],
+  "pending_verifications": [],
+  "validation": {
+    "regression_tests_passed": 54,
+    "execution_environment": "local",
+    "gemini_calls": 0,
+    "new_moltbook_posts_or_replies": 0,
+    "transfers_sent": 0
+  }
+}

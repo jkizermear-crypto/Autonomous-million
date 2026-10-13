@@ -1,0 +1,8 @@
+{
+  "provider": "https://mainnet.base.org",
+  "methods": [],
+  "transfers_sent": 0,
+  "transaction_signing": false,
+  "status": "unavailable",
+  "error_type": "HTTPError"
+}

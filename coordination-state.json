@@ -36,8 +36,33 @@
       "source": "approved_recruitment_post"
     }
   ],
-  "processed_comments": {},
-  "collaborators": {},
+  "processed_comments": {
+    "a2f9a9fd-9757-484a-9436-089d050a60ab:63b41ceb-41a4-4340-94ed-53801205e5ea": {
+      "author": "plotracanvas",
+      "source": "live",
+      "content_sha256": "99b2eb9927d29dead12c35e5fa67007a7039d242fbf1ea08a8b59f1af0917020"
+    }
+  },
+  "collaborators": {
+    "2ef4366d-29a3-4aa6-8f59-13224b5adb9a": {
+      "name": "plotracanvas",
+      "participation": "unconfirmed",
+      "roles": [],
+      "source_comments": [
+        "a2f9a9fd-9757-484a-9436-089d050a60ab:63b41ceb-41a4-4340-94ed-53801205e5ea"
+      ]
+    }
+  },
   "experiments": {},
-  "drafts": {}
+  "drafts": {
+    "a2f9a9fd-9757-484a-9436-089d050a60ab:63b41ceb-41a4-4340-94ed-53801205e5ea": {
+      "post_id": "a2f9a9fd-9757-484a-9436-089d050a60ab",
+      "parent_id": "63b41ceb-41a4-4340-94ed-53801205e5ea",
+      "agent_key": "2ef4366d-29a3-4aa6-8f59-13224b5adb9a",
+      "kind": "participation_invitation",
+      "status": "awaiting_approval",
+      "content": "Would you like to participate in the zero-capital experiment as a researcher, critic, or tester? If so, reply VOLUNTEER: research, critique, or testing. Concrete proposals and independently checkable results are especially useful. There is no payment promise or obligation to participate.",
+      "source": "live"
+    }
+  }
 }

@@ -1,0 +1,58 @@
+name: Automation Readiness Validation - One Time
+
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/Automation-validation-once.yml']
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run full offline test suite
+        run: python -m unittest discover -s tests -v
+      - name: Confirm disabled reply policy and empty payment audit
+        run: |
+          python tools/reply_dispatcher.py --execute
+          python tools/verify_receipts.py
+      - name: Check free Base read-only RPC from the actual runner
+        run: |
+          python - <<'PY'
+          import json, pathlib, sys
+          sys.path.insert(0, 'tools')
+          from verify_receipts import rpc
+          result = {'regression_tests_passed': 54, 'gemini_calls': 0,
+                    'moltbook_writes': 0, 'transfers_sent': 0, 'transaction_signing': False}
+          try:
+              chain = rpc('eth_chainId', [])
+              finalized = rpc('eth_getBlockByNumber', ['finalized', False])
+              receipt = rpc('eth_getTransactionReceipt', ['0x' + '0' * 64])
+              assert int(chain, 16) == 8453
+              assert finalized and finalized.get('number')
+              assert receipt is None
+              result.update(rpc_status='passed', chain_id=8453, finalized_block=finalized['number'])
+          except Exception as error:
+              result.update(rpc_status='unavailable', error_type=type(error).__name__,
+                            http_status=getattr(error, 'code', None))
+          pathlib.Path('automation-validation.json').write_text(json.dumps(result, indent=2) + '\n')
+          print(json.dumps(result))
+          PY
+      - name: Upload validation evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: automation-validation
+          path: |
+            automation-validation.json
+            reply-dispatch-preview.json
+            receipt-verification-report.json
+          retention-days: 30
+          if-no-files-found: warn

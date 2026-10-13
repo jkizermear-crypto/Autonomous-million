@@ -1,0 +1,18 @@
+{
+  "timestamp": "2026-10-13T01:54:56.346243+00:00",
+  "results": [],
+  "confirmed_received_usdc": "0.000000",
+  "revenue_attribution": "unverified",
+  "attributed_revenue_usd": 0,
+  "attributed_net_profit_usd": 0,
+  "transaction_signing": false,
+  "transfers_sent": 0,
+  "notes": "Confirmed receipts are not automatically attributed to project earnings or valued at USD.",
+  "validation": {
+    "regression_tests_passed": 54,
+    "execution_environment": "local",
+    "gemini_calls": 0,
+    "new_moltbook_posts_or_replies": 0,
+    "transfers_sent": 0
+  }
+}

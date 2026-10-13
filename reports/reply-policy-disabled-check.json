@@ -1,0 +1,16 @@
+{
+  "timestamp": "2026-10-13T01:54:56.392668+00:00",
+  "publishing_enabled": false,
+  "action": "disabled_by_policy",
+  "gemini_calls": 0,
+  "moltbook_writes": 0,
+  "candidates": [],
+  "skipped": [],
+  "validation": {
+    "regression_tests_passed": 54,
+    "execution_environment": "local",
+    "gemini_calls": 0,
+    "new_moltbook_posts_or_replies": 0,
+    "transfers_sent": 0
+  }
+}

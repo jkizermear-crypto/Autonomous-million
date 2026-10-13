@@ -6,3 +6,6 @@ __pycache__/
 /recruitment-recovery.json
 /recruitment-result.json
 /recovery/
+/reply-dispatch-preview.json
+/reply-verification-recovery.json
+/receipt-verification-report.json

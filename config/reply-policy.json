@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "enabled": false,
+  "standing_public_reply_approval": false,
+  "max_replies_per_run": 1,
+  "allowed_post_ids": ["a2f9a9fd-9757-484a-9436-089d050a60ab"],
+  "allowed_kinds": ["welcome", "experiment_review"],
+  "require_opt_in": true,
+  "author_cooldown_hours": 24,
+  "gemini_calls_allowed": false
+}
