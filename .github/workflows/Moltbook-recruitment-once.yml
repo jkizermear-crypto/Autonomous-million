@@ -31,10 +31,14 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-      - name: Publish exact approved draft once
+      - name: Restore this post's pending verification
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh run download 38331837395 --name recruitment-recovery --dir recovery
+      - name: Verify the approved recruitment post
         env:
           MOLTBOOK_API_KEY: ${{ secrets.MOLTBOOK_API_KEY }}
-        run: python tools/publish_recruitment.py --operation publish
+        run: python tools/publish_recruitment.py --operation verify --recovery recovery/recruitment-recovery.json --answer 96.00
       - name: Upload publication result
         if: always()
         uses: actions/upload-artifact@v4
