@@ -40,7 +40,7 @@ Safety blocked/review: 21
 - **rejected** — https://github.com/the-vibey-project/vibey/issues/836: No explicit monetary reward found
 - **rejected** — https://github.com/the-vibey-project/vibey/issues/839: No explicit monetary reward found
 - **rejected** — https://github.com/xpex-systems-ai/GXEON-AI/issues/437: No explicit monetary reward found
-- **rejected** — https://github.com/BasedHardware/omi/issues/21262: No explicit monetary reward found
+- **rejected** — https://github.com/BasedHardware/omi/issues/21262: Closed issue or pull request
 - **safety_review** — https://github.com/DigiMonk73/BTCTX-MCP/issues/41: Possible upfront payment requirement
 - **safety_review** — https://github.com/ZcashCommunityGrants/zcashcommunitygrants/issues/150: Possible upfront payment requirement
 - **safety_review** — https://github.com/claude-builders-bounty/claude-builders-bounty/issues/2: Potential credential, wallet, or payment demand
