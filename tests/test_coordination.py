@@ -16,6 +16,8 @@ spec.loader.exec_module(c)
 def empty_state():
     state = json.loads((ROOT / 'coordination-state.json').read_text())
     state['conversations'] = []
+    for key in ['processed_comments', 'collaborators', 'experiments', 'drafts']:
+        state[key] = {}
     return state
 
 
