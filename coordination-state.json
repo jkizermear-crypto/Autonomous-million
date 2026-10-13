@@ -27,6 +27,13 @@
       "comment_id": "60aeb6ba-f170-4804-8b65-d48de729af4e",
       "verification": "confirmed",
       "source": "existing_tracked_comment"
+    },
+    {
+      "key": "a2f9a9fd-9757-484a-9436-089d050a60ab:post",
+      "post_id": "a2f9a9fd-9757-484a-9436-089d050a60ab",
+      "comment_id": null,
+      "verification": "pending",
+      "source": "approved_recruitment_post"
     }
   ],
   "processed_comments": {},

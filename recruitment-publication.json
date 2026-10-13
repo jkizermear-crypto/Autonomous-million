@@ -1,7 +1,7 @@
 {
-  "status": "attempting",
+  "status": "verification_pending",
   "approved_sha256": "ef8a935f305bbc68ff9472e1b88adcaa90480cf0dde6dddd2b23cf27f2c10b11",
   "approved_draft_commit": "bedede743e3b8f64efd5c607736d5411dba9b2d8",
   "destination": "general",
-  "post_id": null
+  "post_id": "a2f9a9fd-9757-484a-9436-089d050a60ab"
 }
