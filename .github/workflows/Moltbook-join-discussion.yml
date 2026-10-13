@@ -110,7 +110,8 @@ jobs:
               report['error'] = str(e)
               print('Test failed:', str(e))
               save()
-              raise SystemExit(1 if 'error' in report else 0)
+              raise SystemExit(1)
+          save()
           PY
       - name: Upload discussion test report
         if: always()
