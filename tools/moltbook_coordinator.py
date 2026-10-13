@@ -246,7 +246,10 @@ def process(state, get, source='live'):
                     'name': name, 'participation': 'unconfirmed', 'roles': [], 'source_comments': []})
                 participant['source_comments'].append(key)
                 next_state['processed_comments'][key] = {'author': name, 'source': source,
-                                                         'content_sha256': hashlib.sha256(content.encode()).hexdigest()}
+                                                         'content_sha256': hashlib.sha256(content.encode()).hexdigest(),
+                                                         'content': content,
+                                                         'content_truncated': len(str(comment.get('content', ''))) > 8000,
+                                                         'full_content_sha256': hashlib.sha256(str(comment.get('content', '')).encode()).hexdigest()}
                 new_count += 1
                 if 'WITHDRAW' in contribution:
                     participant['participation'] = 'withdrawn'

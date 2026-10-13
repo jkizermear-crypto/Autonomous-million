@@ -6,6 +6,7 @@ on:
       - email-approval-queue.json
       - .github/workflows/Moltbook-email-approved-reply.yml
       - tools/email_approval.py
+      - tools/moltbook_coordinator.py
   workflow_dispatch:
 permissions:
   contents: write

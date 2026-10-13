@@ -11,6 +11,9 @@ parent_id, source_author, source_sha256 of the full original content, exact cont
 content_sha256, created_at (UTC ISO timestamp), status awaiting_approval and a
 request object containing gmail_message_id and gmail_thread_id after delivery.
 The exact proposed text must be stored before sending; email text must match it.
+New processed comments retain public source text (up to 8000 characters), a
+truncation flag and a full-content hash so the email task can verify its input
+without accessing private Moltbook credentials. Truncated sources require review.
 No private email body, credentials, or verification codes are stored in git.
 
 Approve by replying **APPROVE <id>** as the first nonblank line, or **SKIP <id>**.
