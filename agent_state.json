@@ -1,5 +1,5 @@
 {
-  "runs": 13,
+  "runs": 14,
   "ideas": [
     {
       "name": "Decentralized Indexing Subgraph Optimization",
@@ -58,7 +58,7 @@
   ],
   "verified_revenue_usd": 0,
   "verified_expenses_usd": 0,
-  "last_run_at": "2026-10-14T16:48:19.461184+00:00",
+  "last_run_at": "2026-10-14T21:23:13.326208+00:00",
   "opportunities": [
     {
       "url": "https://github.com/tadanobutubutu/screeps/issues/5",
@@ -272,7 +272,7 @@
         "algorithm"
       ],
       "discovered_at": "2026-10-11T23:43:42.676248+00:00",
-      "status": "rejected_safety_audit",
+      "status": "blocked_repository_safety_review",
       "payment_verified": false,
       "payment_review_status": "no_independent_evidence"
     },
@@ -973,6 +973,77 @@
       "screening_score": 3,
       "screening_flags": [],
       "payment_verified": false
+    },
+    {
+      "url": "https://github.com/vanduc2514/hackathon-circle-misthos/issues/171",
+      "title": "Bounty: Open the claim model — anyone can work an issue, and only the merge pays",
+      "repository": "vanduc2514/hackathon-circle-misthos",
+      "description_excerpt": "## Deliverable\n\nOne pull request, merged, that replaces the exclusive, time-boxed claim with an open\nmarket: any number of contributors may claim and work one issue at the same time, each\nclaim never expires and never blocks another, the platform pays only for a contributor's\nfirst review, everything after that is the contributor's to pay, and the money goes to\nthe pull request the publisher merges. Nothing else changes.\n\n## Context\n\nToday a claim is exclusive and time-boxed. `Store.claim`\n(`backend/src/misthos/store.py:2954`) only accepts an issue in `FUNDED`, `_claim`\n(`backend/src/misthos/store.py:808`) writes a single `contributor_id`, and a second\nclaimant is refused with 409. The rationale is in `docs/misthos/05-how-it-works.md`:\nthe publisher's price, first claim, and the window exists so nobody squats on desirable\nwork.\n\nThat model loses the work of everyone who arrives second, and it is slow: a single\nclaimant who goes quiet holds the whole issue for 72 hours. It makes an attractive issue\na race rather than a place to work.\n\nThree things would be better:\n\n- More than one person can try, so one slow or stuck contributor does not hold the issue.\n- Only the merged pull request is paid. The money follows the merge, not the claim.\n- Nobody works blind, nobody is punished for losing, and nobody can merge someone\n  else's patch as their own.\n\nThe mechanism that makes this cheap is that two resources are **free** and one is\n**scarce**. Claims and pull requests cost the platform nothing. A review costs\n`REVIEW_COST_PER_ISSUE` (6.31 USDC, `backend/src/misthos/domain/pricing.py:100`) against\nrevenue of `PLATFORM_FEE_BPS` (10%, `backend/src/misthos/domain/pricing.py:39`). So the\nmodel opens the free parts and prices the scarce part.\n\n## The model\n\n```mermaid\nflowchart TD\n ",
+      "updated_at": "2026-10-14T20:48:53Z",
+      "labels": [
+        "enhancement",
+        "epic",
+        "p1",
+        "area:backend",
+        "area:frontend"
+      ],
+      "discovered_at": "2026-10-14T21:23:13.326208+00:00",
+      "status": "unverified",
+      "screening_evidence": {
+        "explicit_reward": true,
+        "acceptance_criteria": true,
+        "submission_method": true,
+        "escrow_or_platform_claim": true
+      },
+      "screening_score": 4,
+      "screening_flags": [],
+      "payment_verified": false
+    },
+    {
+      "url": "https://github.com/Sorokit/ui/issues/855",
+      "title": "PortfolioRebalancer.tsx — hardcoded stub prices make USD calculations wrong in production",
+      "repository": "sorokit/ui",
+      "description_excerpt": "### Problem\n`fetchPrices()` in `PortfolioRebalancer.tsx` returns `STUB_PRICES` (XLM=$0.11, USDC=$1.00, BTC=$65000) — a constant map with no API call. USD-denominated allocation diffs and swap cost estimates shown to users are wrong. No disclaimer is shown.\n\n### Solution\nIntegrate a real price feed (Stellar Expert, CoinGecko free tier) OR add a prominent \"⚠️ Prices are simulated\" banner, add a `@todo` JSDoc on `STUB_PRICES`, and make `fetchPrices()` accept an injectable `priceProvider` for testability.\n\n### Acceptance Criteria\n- [ ] Real API integrated OR a visible disclaimer shown when stub prices are active\n- [ ] `STUB_PRICES` documented with `@todo`\n- [ ] `fetchPrices()` accepts optional `priceProvider` param\n- [ ] Tests mock `fetchPrices()` and don't rely on hardcoded values\n\n---\n> **Note for Contributors:** If you're assigned to this issue, write a clear and detailed description for your pull request. Explain what was changed, why it was needed, how it was implemented, and include any relevant testing or screenshots where applicable.",
+      "updated_at": "2026-10-14T19:11:53Z",
+      "labels": [
+        "bug",
+        "frontend",
+        "ux"
+      ],
+      "discovered_at": "2026-10-14T21:23:13.326208+00:00",
+      "status": "unverified",
+      "screening_evidence": {
+        "explicit_reward": true,
+        "acceptance_criteria": true,
+        "submission_method": true,
+        "escrow_or_platform_claim": false
+      },
+      "screening_score": 3,
+      "screening_flags": [],
+      "payment_verified": false
+    },
+    {
+      "url": "https://github.com/k-deejah/ui/issues/11",
+      "title": "PortfolioRebalancer.tsx — hardcoded stub prices make USD calculations wrong in production",
+      "repository": "k-deejah/ui",
+      "description_excerpt": "### Problem\n`fetchPrices()` in `PortfolioRebalancer.tsx` returns `STUB_PRICES` (XLM=$0.11, USDC=$1.00, BTC=$65000) — a constant map with no API call. USD-denominated allocation diffs and swap cost estimates shown to users are wrong. No disclaimer is shown.\n\n### Solution\nIntegrate a real price feed (Stellar Expert, CoinGecko free tier) OR add a prominent \"⚠️ Prices are simulated\" banner, add a `@todo` JSDoc on `STUB_PRICES`, and make `fetchPrices()` accept an injectable `priceProvider` for testability.\n\n### Acceptance Criteria\n- [ ] Real API integrated OR a visible disclaimer shown when stub prices are active\n- [ ] `STUB_PRICES` documented with `@todo`\n- [ ] `fetchPrices()` accepts optional `priceProvider` param\n- [ ] Tests mock `fetchPrices()` and don't rely on hardcoded values\n\n---\n> **Note for Contributors:** If you're assigned to this issue, write a clear and detailed description for your pull request. Explain what was changed, why it was needed, how it was implemented, and include any relevant testing or screenshots where applicable.",
+      "updated_at": "2026-10-14T19:16:49Z",
+      "labels": [
+        "bug",
+        "frontend",
+        "ux"
+      ],
+      "discovered_at": "2026-10-14T21:23:13.326208+00:00",
+      "status": "unverified",
+      "screening_evidence": {
+        "explicit_reward": true,
+        "acceptance_criteria": true,
+        "submission_method": true,
+        "escrow_or_platform_claim": false
+      },
+      "screening_score": 3,
+      "screening_flags": [],
+      "payment_verified": false
     }
   ],
   "triage": [
@@ -1056,14 +1127,14 @@
     {
       "url": "https://github.com/Senthemodder/aquarium-of-gullibles/issues/5",
       "title": "[Bounty: $700] Deep Recursive Generic Type Solver Fails Invariant Fuzzing in src/types/state.ts",
-      "status": "rejected_safety_audit",
+      "status": "blocked_repository_safety_review",
       "reason": "Previously blacklisted; do not reconsider",
       "checked_at": "2026-10-14T16:48:36.057845+00:00"
     },
     {
       "url": "https://github.com/Senthemodder/aquarium-of-gullibles/issues/2",
       "title": "[Bounty: $850] Bedrock Physics: 1-Tick Kinematic Ghost Teleportation and Swept AABB Dropout",
-      "status": "needs_review",
+      "status": "blocked_repository_safety_review",
       "reason": "Possible reward; payout and eligibility unverified",
       "checked_at": "2026-10-14T16:48:36.057845+00:00"
     },
