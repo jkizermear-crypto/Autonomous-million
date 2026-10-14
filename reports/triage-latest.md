@@ -2,9 +2,9 @@
 
 Automated screening only. No payout is verified. Safety-review candidates are NOT approved.
 
-Total: 42
+Total: 45
 Potential candidates: 3
-Safety blocked/review: 21
+Safety blocked/review: 22
 
 - **rejected** — https://github.com/tadanobutubutu/screeps/issues/5: Maintenance automation or contest
 - **rejected** — https://github.com/relayhop/sn-monetization-runtime/issues/1277: Maintenance automation or contest
@@ -48,3 +48,6 @@ Safety blocked/review: 21
 - **safety_review** — https://github.com/claude-builders-bounty/claude-builders-bounty/issues/5: Potential credential, wallet, or payment demand
 - **needs_review** — https://github.com/aLexzzz430/Cognitive-OS/issues/5: Possible reward; payout and eligibility unverified
 - **safety_review** — https://github.com/warpspeedopen-source/warpspeed-bounties/issues/4: Potential credential, wallet, or payment demand
+- **safety_review** — https://github.com/vanduc2514/hackathon-circle-misthos/issues/171: Potential credential, wallet, or payment demand
+- **rejected** — https://github.com/Sorokit/ui/issues/855: No explicit monetary reward found
+- **rejected** — https://github.com/k-deejah/ui/issues/11: No explicit monetary reward found
