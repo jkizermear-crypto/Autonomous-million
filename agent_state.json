@@ -1,5 +1,5 @@
 {
-  "runs": 15,
+  "runs": 16,
   "ideas": [
     {
       "name": "Decentralized Indexing Subgraph Optimization",
@@ -58,7 +58,7 @@
   ],
   "verified_revenue_usd": 0,
   "verified_expenses_usd": 0,
-  "last_run_at": "2026-10-15T03:48:54.625857+00:00",
+  "last_run_at": "2026-10-15T11:03:12.760846+00:00",
   "opportunities": [
     {
       "url": "https://github.com/tadanobutubutu/screeps/issues/5",
@@ -272,7 +272,7 @@
         "algorithm"
       ],
       "discovered_at": "2026-10-11T23:43:42.676248+00:00",
-      "status": "rejected_safety_audit",
+      "status": "blocked_repository_safety_review",
       "payment_verified": false,
       "payment_review_status": "no_independent_evidence"
     },
@@ -1044,6 +1044,34 @@
       "screening_score": 3,
       "screening_flags": [],
       "payment_verified": false
+    },
+    {
+      "url": "https://github.com/warpspeedopen-source/warpspeed-bounties/issues/3",
+      "title": "[PAID BOUNTY - $440] Messenger Group Chat Poll Creation & Voting UI",
+      "repository": "warpspeedopen-source/warpspeed-bounties",
+      "description_excerpt": "## Bounty Overview\n\nBuild a poll creation and voting feature for group chats in the warpSpeed app.\n\nThe feature should allow users to create polls directly from the group chat input area, send polls inline into the conversation, vote on options, view real-time results, and open a detailed “View Votes” bottom sheet.\n\nThe experience should feel smooth, intuitive, and consistent with modern messaging apps such as WhatsApp.\n\nThis bounty is part of the warpSpeed OPEN developer bounty programme.\n\n## Reward\n\n$440\n\n## Difficulty\n\nMedium\n\n## Main Skills\n\n* React Native\n* TypeScript\n* Storybook\n* UI Components\n* Mobile Interaction Design\n* Real-time UI States\n\n## Design Reference\n\nhttps://xd.adobe.com/view/0cec7f20-eb33-402e-be87-f7e02753e028-59bf/\n\n## High-Level Scope\n\nThe selected developer will build a reusable poll feature for group chats.\n\nThe implementation should include:\n\n* Poll creation from the group chat input action/arrow menu\n* Poll question input\n* Multiple answer options\n* Support for up to 12 poll options\n* Poll question limit of 255 characters\n* Single-choice or multiple-choice voting support\n* Inline poll message inside the chat conversation\n* Direct voting from the chat\n* Real-time result updates\n* Visual result bars or progress indicators\n* Vote percentage calculation based on total group participants\n* “View Votes” action\n* Bottom sheet showing detailed voting insights\n* Voter profile previews\n* Detailed voter list per option\n* Persistent poll display in chat history\n* Storybook components and composed view for the full user experience\n\nFull technical requirements, submission rules, acceptance criteria, and final design expectations are available on the official bounty page.\n\n## View Full Bounty Details & Sign Up\n\nTo see the full bounty specification and appl",
+      "updated_at": "2026-10-15T10:14:46Z",
+      "labels": [
+        "help wanted",
+        "bounty",
+        "paid",
+        "open",
+        "typescript",
+        "ui",
+        "react-native",
+        "frontend"
+      ],
+      "discovered_at": "2026-10-15T11:03:12.760846+00:00",
+      "status": "unverified",
+      "screening_evidence": {
+        "explicit_reward": true,
+        "acceptance_criteria": true,
+        "submission_method": true,
+        "escrow_or_platform_claim": false
+      },
+      "screening_score": 3,
+      "screening_flags": [],
+      "payment_verified": false
     }
   ],
   "triage": [
@@ -1127,14 +1155,14 @@
     {
       "url": "https://github.com/Senthemodder/aquarium-of-gullibles/issues/5",
       "title": "[Bounty: $700] Deep Recursive Generic Type Solver Fails Invariant Fuzzing in src/types/state.ts",
-      "status": "rejected_safety_audit",
+      "status": "blocked_repository_safety_review",
       "reason": "Previously blacklisted; do not reconsider",
       "checked_at": "2026-10-15T03:49:06.013450+00:00"
     },
     {
       "url": "https://github.com/Senthemodder/aquarium-of-gullibles/issues/2",
       "title": "[Bounty: $850] Bedrock Physics: 1-Tick Kinematic Ghost Teleportation and Swept AABB Dropout",
-      "status": "needs_review",
+      "status": "blocked_repository_safety_review",
       "reason": "Possible reward; payout and eligibility unverified",
       "checked_at": "2026-10-15T03:49:06.013450+00:00"
     },
