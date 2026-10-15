@@ -1,5 +1,5 @@
 {
-  "runs": 17,
+  "runs": 18,
   "ideas": [
     {
       "name": "Decentralized Indexing Subgraph Optimization",
@@ -58,7 +58,7 @@
   ],
   "verified_revenue_usd": 0,
   "verified_expenses_usd": 0,
-  "last_run_at": "2026-10-15T16:33:53.226796+00:00",
+  "last_run_at": "2026-10-15T21:04:45.243080+00:00",
   "opportunities": [
     {
       "url": "https://github.com/tadanobutubutu/screeps/issues/5",
@@ -272,7 +272,7 @@
         "algorithm"
       ],
       "discovered_at": "2026-10-11T23:43:42.676248+00:00",
-      "status": "rejected_safety_audit",
+      "status": "blocked_repository_safety_review",
       "payment_verified": false,
       "payment_review_status": "no_independent_evidence"
     },
@@ -1115,6 +1115,96 @@
       "screening_score": 3,
       "screening_flags": [],
       "payment_verified": false
+    },
+    {
+      "url": "https://github.com/vanduc2514/hackathon-circle-misthos/issues/182",
+      "title": "Bounty: Overview becomes the signed-in user's dashboard — a publisher's, and a contributor's",
+      "repository": "vanduc2514/hackathon-circle-misthos",
+      "description_excerpt": "## Deliverable\n\nOne pull request, merged, that replaces `/overview` with a dashboard for whoever is signed\nin: a publisher sees the issues they funded and what waits on them, a contributor sees the\nwork they claimed and what they are owed. The all-time platform funnel, the marketing\nchrome and the hard-coded signal bars come off the page, and the platform-wide numbers go\nback to the only place they belong — the landing page's community snapshot. Nothing else\nchanges.\n\n## Context\n\n`/overview` is the one app page that never mentions who is looking at it. It renders\n`MetricsOut` (`frontend/src/routes/Dashboard.tsx:10-13`, `backend/src/misthos/schemas.py:311-345`),\na platform-wide, all-time funnel, with no `useMe` anywhere in the file.\n\nWhat is on the page today, and what it is:\n\n| Block | Where | What it is |\n| --- | --- | --- |\n| \"The treasury, running itself\", and a paragraph explaining the product | `Dashboard.tsx:44-51` | The landing page's job, in the app |\n| An obols-of-Athens pull quote | `Dashboard.tsx:83-92` | Marketing copy in a dashboard |\n| North star, settled this week | `Dashboard.tsx:76-82` | Platform-wide, all time |\n| Matched volume, funded, settled, overturns | `Dashboard.tsx:101-124` | Platform-wide, all time |\n| Claim rate, acceptance, repeat publishers | `Dashboard.tsx:126-145` | Platform-wide, all time |\n| Refund rate, dispute rate, $500 share, top-10 share | `Dashboard.tsx:147-170` | Platform-wide, all time, with target thresholds |\n| \"Signals that decide the price\": six bars at fixed 25/20/15/15/15/10 | `Dashboard.tsx:186-198` | Hard-coded illustration, presented as data |\n| Where the issues are, by state | `Dashboard.tsx:173-183` | Platform-wide |\n| Recent decisions, across every issue | `Dashboard.tsx:200-224` | Platform-wide |\n| Issues needing a ",
+      "updated_at": "2026-10-15T18:56:32Z",
+      "labels": [
+        "misthos"
+      ],
+      "discovered_at": "2026-10-15T21:04:45.243080+00:00",
+      "status": "unverified",
+      "screening_evidence": {
+        "explicit_reward": true,
+        "acceptance_criteria": true,
+        "submission_method": true,
+        "escrow_or_platform_claim": true
+      },
+      "screening_score": 4,
+      "screening_flags": [],
+      "payment_verified": false
+    },
+    {
+      "url": "https://github.com/Novatip/novatip-contracts/issues/170",
+      "title": "Accept tips in any token on an admin-managed allowlist, not only USDC",
+      "repository": "novatip/novatip-contracts",
+      "description_excerpt": "## Summary\n\nThe token is fixed at deploy time: `__constructor` stores one address under\n`DataKey::Token` (lib.rs lines 141-144) and `tip` always pays through it\n(lines 311-316). The roadmap's \"Multi-Asset Support\" item promises XLM, EURC\nand \"any Stellar Asset Contract token\", and a supporter in Europe who holds\nEURC currently cannot tip at all without swapping first.\n\nAdd an allowlist the admin manages (`allow_token` / `disallow_token`, each\nrequiring the admin's authorisation, with events) and a tip entry point that\ntakes the token to pay in, rejecting any token not on the list with a new\nerror. The deploy-time token stays allowed and stays what `get_token`\nreturns, so the existing `tip` keeps working as \"tip in the default token\".\nThe `tip` event must name the token, otherwise an indexer cannot tell 10 USDC\nfrom 10 XLM.\n\nTwo existing features need a decision recorded in the PR: the per-jar minimum\nfrom `set_min_tip_amount` is a raw amount with no unit, so it should either\napply to the default token only or become per-token; and the share\ncalculation in `compute_shares` is amount-only, so it needs no change.\n\n## Acceptance criteria\n\n- [ ] The admin can add and remove allowed tokens; each change requires the\n      admin's authorisation and publishes an event.\n- [ ] A tip in an allowed token is split exactly as a USDC tip is; a tip in\n      any other token is rejected with a new error before funds move.\n- [ ] The `tip` event records which token was paid, and the change to its\n      shape is documented with a consumer-impact note.\n- [ ] A view reports whether a token is allowed.\n- [ ] Tests use two Stellar Asset Contracts and cover both tokens, a\n      disallowed token, and how the minimum tip behaves for each.\n\n## Getting started\n\nFork this repository, clone your fork, ",
+      "updated_at": "2026-10-15T20:57:26Z",
+      "labels": [
+        "enhancement",
+        "help wanted",
+        "Stellar Wave"
+      ],
+      "discovered_at": "2026-10-15T21:04:45.243080+00:00",
+      "status": "unverified",
+      "screening_evidence": {
+        "explicit_reward": true,
+        "acceptance_criteria": true,
+        "submission_method": true,
+        "escrow_or_platform_claim": false
+      },
+      "screening_score": 3,
+      "screening_flags": [],
+      "payment_verified": false
+    },
+    {
+      "url": "https://github.com/Novatip/novatip-contracts/issues/174",
+      "title": "Let a supporter set up a recurring tip to a jar",
+      "repository": "novatip/novatip-contracts",
+      "description_excerpt": "## Summary\n\nEvery tip today is a one-off: `tip` (lib.rs lines 278-361) moves funds once\nunder the supporter's signature. Regular monthly support is how most creators\nmake a living on Patreon-style platforms, and a supporter who wants to give\n5 USDC a month has to remember to come back and sign each time.\n\nThis issue adds the on-chain record, not the payment. Add\n`create_recurring(supporter, jar_id, amount, period_ledgers, message)`,\nauthorised by the supporter, that validates the jar exists and the amount\npasses the same checks `tip` applies, stores a `Recurring` entry under a new\nid, and publishes an event. Add `cancel_recurring(id)`, authorised by the\nsupporter, and a `get_recurring(id)` view. The entry records when the first\npayment is due.\n\nCollecting payments is a separate issue, because it depends on the supporter\nhaving approved the contract as a spender on the token. Keeping the two\napart lets the storage model be reviewed on its own.\n\n## Acceptance criteria\n\n- [ ] `create_recurring` stores an entry under a new id with the supporter's\n      authorisation, rejecting an unknown jar, an invalid amount and a zero\n      period.\n- [ ] `cancel_recurring` removes it and only the supporter may call it.\n- [ ] `get_recurring(id)` returns the stored entry, including the next due\n      ledger.\n- [ ] Creation and cancellation each publish a documented event.\n- [ ] Tests cover create, read, cancel and cancellation by another address.\n\n## Getting started\n\nFork this repository, clone your fork, and add this repo as `upstream`:\n\n```bash\ngit clone https://github.com/<your-username>/novatip-contracts.git\ncd novatip-contracts\ngit remote add upstream https://github.com/Novatip/novatip-contracts.git\n```\n\nCreate a branch for this issue:\n\n```bash\ngit checkout -b feat/recurring-tips\n```\n",
+      "updated_at": "2026-10-15T20:59:04Z",
+      "labels": [
+        "enhancement",
+        "Stellar Wave"
+      ],
+      "discovered_at": "2026-10-15T21:04:45.243080+00:00",
+      "status": "unverified",
+      "screening_evidence": {
+        "explicit_reward": true,
+        "acceptance_criteria": true,
+        "submission_method": true,
+        "escrow_or_platform_claim": false
+      },
+      "screening_score": 3,
+      "screening_flags": [],
+      "payment_verified": false
+    },
+    {
+      "url": "https://github.com/OracleDesk/OracleDesk-SmartContract/issues/3",
+      "title": "Support collateral of any decimals with 256-bit mul_div intermediates in market-core",
+      "repository": "oracledesk/oracledesk-smartcontract",
+      "description_excerpt": "## Overview\n\nmarket-core assumes in several places that its collateral has 7 decimals, like Stellar Classic USDC. `MIN_SEED` is `100 * 10_000_000` (100 USDC at 7 decimals). `MAX_SETS` is `1e15` (100M USDC at 7 decimals). The overflow argument at the top of `math.rs` says every product of two quantities stays below 1e30, safely inside `i128`. None of that holds if the deployer passes a SEP-41 token with a different `decimals()`. Soroban-native tokens commonly use 18 decimals, and bridged assets vary.\n\nWith 18 decimals, `MIN_SEED` would be about 1e-9 tokens, so the spam-prevention floor disappears. `MAX_SETS` would cap a market at 0.001 tokens, so realistic markets could not be created. And if `MAX_SETS` were simply raised, `mul_div_floor(a, b, c)` would overflow `i128` on the `a * b` product long before the result itself overflows. Nothing warns the deployer: `__constructor` validates only `default_fee_bps`.\n\nThis issue makes market-core decimals-aware and makes its fixed-point helpers robust. Decimals are read once at deploy, the economic bounds are derived from them, and the multiply-divide helpers move to 256-bit intermediates so correctness no longer depends on the 1e30 headroom argument. The Python and TypeScript mirrors must stay in lockstep, because agents and frontends quote off-chain.\n\n## Background & current behavior\n\nPaths are relative to `oracledesk-stellar/`.\n\n- `contracts/market-core/src/lib.rs`:\n  - `const MIN_SEED: i128 = 100 * 10_000_000;`, documented as \"100 USDC (7 decimals)\".\n  - `__constructor(admin, collateral, treasury, resolver, default_fee_bps)` stores `DataKey::Collateral` and never calls into the token.\n  - `create_market` checks `(MIN_SEED..=MAX_SETS).contains(&seed_amount)`. `buy` checks `new_sets > MAX_SETS` → `Error::MarketTooLarge` (#15).\n",
+      "updated_at": "2026-10-15T21:04:06Z",
+      "labels": [
+        "enhancement",
+        "complexity/large",
+        "contracts",
+        "Stellar Wave"
+      ],
+      "discovered_at": "2026-10-15T21:04:45.243080+00:00",
+      "status": "unverified",
+      "screening_evidence": {
+        "explicit_reward": true,
+        "acceptance_criteria": true,
+        "submission_method": true,
+        "escrow_or_platform_claim": false
+      },
+      "screening_score": 3,
+      "screening_flags": [],
+      "payment_verified": false
     }
   ],
   "triage": [
@@ -1198,14 +1288,14 @@
     {
       "url": "https://github.com/Senthemodder/aquarium-of-gullibles/issues/5",
       "title": "[Bounty: $700] Deep Recursive Generic Type Solver Fails Invariant Fuzzing in src/types/state.ts",
-      "status": "rejected_safety_audit",
+      "status": "blocked_repository_safety_review",
       "reason": "Previously blacklisted; do not reconsider",
       "checked_at": "2026-10-15T16:34:05.406795+00:00"
     },
     {
       "url": "https://github.com/Senthemodder/aquarium-of-gullibles/issues/2",
       "title": "[Bounty: $850] Bedrock Physics: 1-Tick Kinematic Ghost Teleportation and Swept AABB Dropout",
-      "status": "needs_review",
+      "status": "blocked_repository_safety_review",
       "reason": "Possible reward; payout and eligibility unverified",
       "checked_at": "2026-10-15T16:34:05.406795+00:00"
     },
