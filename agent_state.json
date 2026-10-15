@@ -1,5 +1,5 @@
 {
-  "runs": 16,
+  "runs": 17,
   "ideas": [
     {
       "name": "Decentralized Indexing Subgraph Optimization",
@@ -58,7 +58,7 @@
   ],
   "verified_revenue_usd": 0,
   "verified_expenses_usd": 0,
-  "last_run_at": "2026-10-15T11:03:12.760846+00:00",
+  "last_run_at": "2026-10-15T16:33:53.226796+00:00",
   "opportunities": [
     {
       "url": "https://github.com/tadanobutubutu/screeps/issues/5",
@@ -272,7 +272,7 @@
         "algorithm"
       ],
       "discovered_at": "2026-10-11T23:43:42.676248+00:00",
-      "status": "rejected_safety_audit",
+      "status": "blocked_repository_safety_review",
       "payment_verified": false,
       "payment_review_status": "no_independent_evidence"
     },
@@ -1072,6 +1072,49 @@
       "screening_score": 3,
       "screening_flags": [],
       "payment_verified": false
+    },
+    {
+      "url": "https://github.com/Earnly-Build/earnly/issues/17",
+      "title": "[Bounty: $60] Add CI (lint + test + build) to pull requests",
+      "repository": "earnly-build/earnly",
+      "description_excerpt": "## Description\n\n**Context**\nThere is no `.github/` directory in this repository — no workflow runs\n`npm run lint`, `npm test` or `npm run build` on PRs. All three scripts already\nexist and pass locally (`package.json`: `lint` via `eslint.config.mjs`, `test`\nvia `vitest run`, `build` via `next build --webpack`). Regressions are only\ncaught when a human remembers to run them.\n\n**Proposed Change**\nAdd `.github/workflows/ci.yml` running on push and pull_request: setup Node\n(20+; Node 20.9 is the floor per README), `npm ci`, `npm run lint`,\n`npm test`, `npm run build`. The build must not require secrets — placeholders\nare fine if Next needs env vars at build time.\n\n**Acceptance Criteria**\n\n- Workflow file exists and all three steps run on every PR.\n- `npm run build` succeeds in a clean checkout without `DATABASE_URL`,\n  `WALLET_MASTER_KEY` or `GOOGLE_CLIENT_SECRET`.\n- Workflow is ready to be marked as a required status check.\n- Verified by opening a PR and seeing green jobs.\n\n**Suggested Label**: infrastructure\n**Bounty:** $60\n**ETA:** 12 hours",
+      "updated_at": "2026-10-15T16:18:06Z",
+      "labels": [
+        "infrastructure"
+      ],
+      "discovered_at": "2026-10-15T16:33:53.226796+00:00",
+      "status": "unverified",
+      "screening_evidence": {
+        "explicit_reward": true,
+        "acceptance_criteria": true,
+        "submission_method": true,
+        "escrow_or_platform_claim": false
+      },
+      "screening_score": 3,
+      "screening_flags": [],
+      "payment_verified": false
+    },
+    {
+      "url": "https://github.com/Octo-Protocol-org/Octo-frontend/issues/503",
+      "title": "Addresses \"Total received\" adds up every asset as XLM, and rows show \"$0\"",
+      "repository": "octo-protocol-org/octo-frontend",
+      "description_excerpt": "## Summary\n`received_stroops` is summed across addresses and shown as \"… XLM\", but deposits can be XLM or USDC, so the total mixes units. Rows show \"$0\" for zero and \"… XLM\" otherwise, which contradicts itself.\n\n## Where\n`src/app/dashboard/wallets/[id]/addresses/page.tsx` (stat cards, `AddressRow`, `AddressDetail`).\n\n## Proposed approach\n- Clarify with the backend what `received_stroops` contains. If it's multi-asset, request per-asset totals.\n- Use one unit consistently, and show \"0\" rather than \"$0\".\n\n## Acceptance criteria\n- [ ] Received amounts never mix assets under one unit label.\n\n---\n\n## How to contribute\n\nAll work for this issue goes through the **`dev`** branch. Never push to or open PRs against `main`.\n\n1. Fork the repo (or clone it if you have write access) and sync `dev`:\n   ```bash\n   git fetch origin\n   git checkout dev\n   git pull origin dev\n   ```\n2. Create a feature branch **from `dev`**, named after this issue:\n   ```bash\n   git checkout -b <type>/<issue-number>-<short-description>\n   # e.g. fix/42-withdraw-amount-precision\n   ```\n3. Make your changes, then run the same checks CI runs:\n   ```bash\n   pnpm install --frozen-lockfile\n   pnpm exec tsc --noEmit\n   pnpm lint\n   pnpm test\n   pnpm build\n   ```\n4. Commit and push your feature branch:\n   ```bash\n   git push -u origin <your-branch-name>\n   ```\n5. Open a Pull Request with **base: `dev`** (not `main`) and put `Closes #<this issue number>` in the description.\n\nPlease read `AGENTS.md` first. Octo is non-custodial and moves real money, so think about security before you start, and keep comments to one line per block.\n\n",
+      "updated_at": "2026-10-15T16:25:14Z",
+      "labels": [
+        "bug",
+        "Stellar Wave"
+      ],
+      "discovered_at": "2026-10-15T16:33:53.226796+00:00",
+      "status": "unverified",
+      "screening_evidence": {
+        "explicit_reward": true,
+        "acceptance_criteria": true,
+        "submission_method": true,
+        "escrow_or_platform_claim": false
+      },
+      "screening_score": 3,
+      "screening_flags": [],
+      "payment_verified": false
     }
   ],
   "triage": [
@@ -1155,14 +1198,14 @@
     {
       "url": "https://github.com/Senthemodder/aquarium-of-gullibles/issues/5",
       "title": "[Bounty: $700] Deep Recursive Generic Type Solver Fails Invariant Fuzzing in src/types/state.ts",
-      "status": "rejected_safety_audit",
+      "status": "blocked_repository_safety_review",
       "reason": "Previously blacklisted; do not reconsider",
       "checked_at": "2026-10-15T11:03:23.847624+00:00"
     },
     {
       "url": "https://github.com/Senthemodder/aquarium-of-gullibles/issues/2",
       "title": "[Bounty: $850] Bedrock Physics: 1-Tick Kinematic Ghost Teleportation and Swept AABB Dropout",
-      "status": "needs_review",
+      "status": "blocked_repository_safety_review",
       "reason": "Possible reward; payout and eligibility unverified",
       "checked_at": "2026-10-15T11:03:23.847624+00:00"
     },
