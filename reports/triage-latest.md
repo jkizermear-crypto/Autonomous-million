@@ -2,9 +2,9 @@
 
 Automated screening only. No payout is verified. Safety-review candidates are NOT approved.
 
-Total: 46
-Potential candidates: 3
-Safety blocked/review: 23
+Total: 48
+Potential candidates: 4
+Safety blocked/review: 24
 
 - **rejected** — https://github.com/tadanobutubutu/screeps/issues/5: Maintenance automation or contest
 - **rejected** — https://github.com/relayhop/sn-monetization-runtime/issues/1277: Maintenance automation or contest
@@ -23,7 +23,7 @@ Safety blocked/review: 23
 - **rejected** — https://github.com/Saidur-droid/MergeEarn/issues/69: No explicit monetary reward found
 - **safety_review** — https://github.com/claude-builders-bounty/claude-builders-bounty/issues/1: Potential credential, wallet, or payment demand
 - **rejected** — https://github.com/humanaios-ui/operations/issues/588: No explicit monetary reward found
-- **safety_review** — https://github.com/oguzpoyrazyasin/poyraz/issues/1: Potential credential, wallet, or payment demand
+- **safety_review** — https://github.com/oguzpoyrazyasin/poyraz/issues/1: Possible upfront payment requirement
 - **safety_review** — https://github.com/scottonchain/microcredit-agent-testbed/issues/17: Possible upfront payment requirement
 - **rejected** — https://github.com/IstiN/flutter_agent_harness/issues/1556: Closed issue or pull request
 - **safety_review** — https://github.com/NSPG13/agent-bounties/issues/1219: Potential credential, wallet, or payment demand
@@ -52,3 +52,5 @@ Safety blocked/review: 23
 - **rejected** — https://github.com/Sorokit/ui/issues/855: No explicit monetary reward found
 - **rejected** — https://github.com/k-deejah/ui/issues/11: No explicit monetary reward found
 - **safety_review** — https://github.com/warpspeedopen-source/warpspeed-bounties/issues/3: Potential credential, wallet, or payment demand
+- **needs_review** — https://github.com/Earnly-Build/earnly/issues/17: Possible reward; payout and eligibility unverified
+- **safety_review** — https://github.com/Octo-Protocol-org/Octo-frontend/issues/503: Possible upfront payment requirement
