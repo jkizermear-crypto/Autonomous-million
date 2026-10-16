@@ -2,9 +2,9 @@
 
 Automated screening only. No payout is verified. Safety-review candidates are NOT approved.
 
-Total: 52
-Potential candidates: 5
-Safety blocked/review: 26
+Total: 54
+Potential candidates: 6
+Safety blocked/review: 27
 
 - **rejected** — https://github.com/tadanobutubutu/screeps/issues/5: Maintenance automation or contest
 - **rejected** — https://github.com/relayhop/sn-monetization-runtime/issues/1277: Maintenance automation or contest
@@ -58,3 +58,5 @@ Safety blocked/review: 26
 - **needs_review** — https://github.com/Novatip/novatip-contracts/issues/170: Possible reward; payout and eligibility unverified
 - **needs_review** — https://github.com/Novatip/novatip-contracts/issues/174: Possible reward; payout and eligibility unverified
 - **safety_review** — https://github.com/OracleDesk/OracleDesk-SmartContract/issues/3: Possible upfront payment requirement
+- **safety_review** — https://github.com/alston-personal/agentmanager/issues/2003: Potential credential, wallet, or payment demand
+- **needs_review** — https://github.com/Nudge-Pay/nudge-app/issues/46: Possible reward; payout and eligibility unverified
