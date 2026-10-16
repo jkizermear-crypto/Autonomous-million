@@ -1,5 +1,5 @@
 {
-  "runs": 19,
+  "runs": 20,
   "ideas": [
     {
       "name": "Decentralized Indexing Subgraph Optimization",
@@ -58,7 +58,7 @@
   ],
   "verified_revenue_usd": 0,
   "verified_expenses_usd": 0,
-  "last_run_at": "2026-10-16T03:44:43.059468+00:00",
+  "last_run_at": "2026-10-16T10:58:57.949937+00:00",
   "opportunities": [
     {
       "url": "https://github.com/tadanobutubutu/screeps/issues/5",
@@ -272,7 +272,7 @@
         "algorithm"
       ],
       "discovered_at": "2026-10-11T23:43:42.676248+00:00",
-      "status": "rejected_safety_audit",
+      "status": "blocked_repository_safety_review",
       "payment_verified": false,
       "payment_review_status": "no_independent_evidence"
     },
@@ -1243,6 +1243,54 @@
       "screening_score": 3,
       "screening_flags": [],
       "payment_verified": false
+    },
+    {
+      "url": "https://github.com/OracleDesk/OracleDesk-SmartContract/issues/23",
+      "title": "Add a refundable creation bond forfeited when a market is guardian-voided",
+      "repository": "oracledesk/oracledesk-smartcontract",
+      "description_excerpt": "## Overview\n\nCreating a market in OracleDesk costs the creator nothing beyond the seed liquidity. `create_market` requires `seed_amount ≥ MIN_SEED` (100 USDC at 7 decimals), but the creator is also the sole LP, and the seed comes back through `claim_pool_remainder` once the market is final. That includes the case where the market is **voided**. A creator can therefore commit to an unrevealable `resolution_hash`, an ambiguous question, or a resolution spec pointing at an oracle they control, attract trading, and bear no penalty when the guardian steps in with `resolver::guardian_void_market`. The only deterrent today is the guardian's attention.\n\nA creation bond is the standard remedy. The creator posts an additional amount at creation, held separately from the market's trading collateral. The bond is refunded when the market resolves normally, or is voided through a non-fault path, and forfeited to the fee recipient when the guardian voids the market for cause. That aligns creators' incentives with producing resolvable markets, and gives the guardian an economic lever rather than only a binary one.\n\nThe engineering problem crosses all three money-moving contracts. Market-core has to learn *why* a market was voided (today `void_market(market_id)` carries no reason). The resolver has to pass that reason across the vendored-wasm boundary (ADR 0002). Treasury has to fund bonds for `agent_create_market` within its risk caps. Bond accounting also has to stay strictly separate from the per-market solvency invariant (`balance == sets_minted + fees_accrued`).\n\n## Background & current behavior\n\n- `contracts/market-core/src/lib.rs`:\n  - `create_market(creator, question_hash, resolution_hash, meta_uri, category, close_time, seed_amount, initial_yes_bps)` pulls `seed_amount` via `to",
+      "updated_at": "2026-10-16T10:22:55Z",
+      "labels": [
+        "enhancement",
+        "complexity/large",
+        "contracts",
+        "Stellar Wave"
+      ],
+      "discovered_at": "2026-10-16T10:58:57.949937+00:00",
+      "status": "unverified",
+      "screening_evidence": {
+        "explicit_reward": true,
+        "acceptance_criteria": true,
+        "submission_method": true,
+        "escrow_or_platform_claim": true
+      },
+      "screening_score": 4,
+      "screening_flags": [],
+      "payment_verified": false
+    },
+    {
+      "url": "https://github.com/OracleDesk/OracleDesk-SmartContract/issues/10",
+      "title": "Add per-market circuit breakers: max price impact per trade and per-ledger price bands",
+      "repository": "oracledesk/oracledesk-smartcontract",
+      "description_excerpt": "## Overview\n\nmarket-core's FPMM pools are thin by design. The minimum seed is `MIN_SEED = 100 USDC`, and the agent-created markets on testnet are seeded with small amounts. In such a pool a single `buy` can move the YES price from 50% to 99% in one call, and nothing in the contract objects. That is a legitimate trade from the AMM's point of view, but for OracleDesk it is a real attack surface:\n\n- **LP griefing.** An attacker can push the price to an extreme right before `close_time`, leaving the LP (often the treasury) holding the losing side, then unwind after any off-chain reaction.\n- **Price-reading consumers.** `get_price` is spot. Any frontend, agent (`MarketState.yesBps`) or downstream contract that reads it can be shown a manipulated number within a single transaction.\n- **Fat-finger agent trades.** `agents/bin/trader.ts` currently submits `min_shares_out: 0n`, so a bug in sizing could move a market arbitrarily.\n\nThis issue adds two circuit breakers, both snapshotted per market so they cannot be changed after trading begins. The first is a **max price impact per trade**: one call cannot move the price more than `max_impact_bps`. The second is a **per-ledger price band**: once cumulative movement within one ledger exceeds `band_bps` from the price at the start of that ledger, further trades in that ledger revert. Both must be cheap, deterministic in both trade directions, and impossible to turn into a permanent lock by an attacker.\n\n## Background & current behavior\n\nPaths are relative to `oracledesk-stellar/`.\n\n- `contracts/market-core/src/lib.rs`:\n  - `buy` and `sell` run `assert_not_paused`, `require_auth`, `load_market`, `assert_tradable`, then `math::calc_buy` / `calc_sell`, then effects and the transfer. The only bounds are `min_shares_out` / `max_shares_in` ",
+      "updated_at": "2026-10-16T10:35:50Z",
+      "labels": [
+        "complexity/large",
+        "contracts",
+        "security",
+        "Stellar Wave"
+      ],
+      "discovered_at": "2026-10-16T10:58:57.949937+00:00",
+      "status": "unverified",
+      "screening_evidence": {
+        "explicit_reward": true,
+        "acceptance_criteria": true,
+        "submission_method": true,
+        "escrow_or_platform_claim": false
+      },
+      "screening_score": 3,
+      "screening_flags": [],
+      "payment_verified": false
     }
   ],
   "triage": [
@@ -1326,14 +1374,14 @@
     {
       "url": "https://github.com/Senthemodder/aquarium-of-gullibles/issues/5",
       "title": "[Bounty: $700] Deep Recursive Generic Type Solver Fails Invariant Fuzzing in src/types/state.ts",
-      "status": "rejected_safety_audit",
+      "status": "blocked_repository_safety_review",
       "reason": "Previously blacklisted; do not reconsider",
       "checked_at": "2026-10-16T03:44:54.980427+00:00"
     },
     {
       "url": "https://github.com/Senthemodder/aquarium-of-gullibles/issues/2",
       "title": "[Bounty: $850] Bedrock Physics: 1-Tick Kinematic Ghost Teleportation and Swept AABB Dropout",
-      "status": "needs_review",
+      "status": "blocked_repository_safety_review",
       "reason": "Possible reward; payout and eligibility unverified",
       "checked_at": "2026-10-16T03:44:54.980427+00:00"
     },
