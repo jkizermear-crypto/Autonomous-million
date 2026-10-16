@@ -1,5 +1,5 @@
 {
-  "runs": 18,
+  "runs": 19,
   "ideas": [
     {
       "name": "Decentralized Indexing Subgraph Optimization",
@@ -58,7 +58,7 @@
   ],
   "verified_revenue_usd": 0,
   "verified_expenses_usd": 0,
-  "last_run_at": "2026-10-15T21:04:45.243080+00:00",
+  "last_run_at": "2026-10-16T03:44:43.059468+00:00",
   "opportunities": [
     {
       "url": "https://github.com/tadanobutubutu/screeps/issues/5",
@@ -272,7 +272,7 @@
         "algorithm"
       ],
       "discovered_at": "2026-10-11T23:43:42.676248+00:00",
-      "status": "rejected_safety_audit",
+      "status": "blocked_repository_safety_review",
       "payment_verified": false,
       "payment_review_status": "no_independent_evidence"
     },
@@ -1205,6 +1205,44 @@
       "screening_score": 3,
       "screening_flags": [],
       "payment_verified": false
+    },
+    {
+      "url": "https://github.com/alston-personal/agentmanager/issues/2003",
+      "title": "Bounty Golden Path v1: qualified paid-issue discovery → governed execution → verified payout",
+      "repository": "alston-personal/agentmanager",
+      "description_excerpt": "## Goal\nBuild **Bounty Golden Path v1 — read-only qualification first**, using existing AgentOS ONE/IR, scheduler, node executor, receipts and work completion ledger. Do not add a parallel autonomous runtime or diverge protected branches.\n\n## Grounded observations (2026-10-15)\n- Tenstorrent tt-metal #8621 $500: open/unassigned but crowded with competing claims and internal work; not yet proven claimable.\n- tt-metal #58986 $1000 and #59732 $3000: open but formally assigned to other contributors; exclude by default.\n- Some third-party bounty indexes show closed or already awarded source issues. Platform status alone is insufficient.\n- Tenstorrent terms and each sponsor's rules must be checked before any AI-assisted contributions; no automated GitHub claim/comment if prohibited.\n- Do not claim a payout until independently evidenced as received.\n\n## Reuse before implementation\n1. Identify existing scheduler/monitor, dispatch, ONE evaluation, immutable receipt, completion-ledger, PR reconciler and cross-node interfaces, recording code paths and owners.\n2. Implement read-only candidate ingestion adapters (start GitHub issue + sponsor original terms, optionally Algora/Opire). Use source URLs, timestamps, raw evidence hashes, dedup/idempotency, throttling, and prompt-injection-resistant parsing.\n3. Qualification gates: open original issue, not assigned or already solved; actual reward provenance/escrow or sponsor payout history; rules permitting participation and AI; Taiwanese eligibility/tax/payment methods where relevant; acceptance criteria; hardware dependencies; competing PRs/comments and recency.\n4. Rank by expected **net payout**, not nominal reward: reward × empirical probability of being accepted and paid – model/compute cost – estimated human time – risk adjustment. U",
+      "updated_at": "2026-10-16T03:34:05Z",
+      "labels": [],
+      "discovered_at": "2026-10-16T03:44:43.059468+00:00",
+      "status": "unverified",
+      "screening_evidence": {
+        "explicit_reward": true,
+        "acceptance_criteria": true,
+        "submission_method": true,
+        "escrow_or_platform_claim": true
+      },
+      "screening_score": 4,
+      "screening_flags": [],
+      "payment_verified": false
+    },
+    {
+      "url": "https://github.com/Nudge-Pay/nudge-app/issues/46",
+      "title": "[Bounty: $55] Add a scheduled nightly run of the client quality gate",
+      "repository": "nudge-pay/nudge-app",
+      "description_excerpt": "**Context**\n`ci-client.yml` triggers only on `push` to `develop`/`main` and on pull requests to those branches. A dependency advisory published on a Tuesday, a `@stellar/stellar-sdk` minor release, or a Node image change on the runner will not be observed until the next PR happens to touch the repo, so `README.md`'s CI badge reflects only PR-time state.\n\n**Proposed Change**\nAdd a `schedule:` trigger (a daily or nightly `cron`) to the workflow, or a thin sibling workflow that reuses the same steps, so the full gate runs against `main` on a known cadence.\n\n**Acceptance Criteria**\n- The workflow (or a sibling) declares a `schedule:` with a valid cron expression.\n- The scheduled run executes the same typecheck, lint, format, test and build steps as the pull-request run.\n- The scheduled run targets the default branch.\n- `npm run typecheck` passes locally and in the `quality` job of `.github/workflows/ci-client.yml`.\n\n**Suggested Label**: ci\n\n**ETA:** 24 hours",
+      "updated_at": "2026-10-16T03:22:18Z",
+      "labels": [],
+      "discovered_at": "2026-10-16T03:44:43.059468+00:00",
+      "status": "unverified",
+      "screening_evidence": {
+        "explicit_reward": true,
+        "acceptance_criteria": true,
+        "submission_method": true,
+        "escrow_or_platform_claim": false
+      },
+      "screening_score": 3,
+      "screening_flags": [],
+      "payment_verified": false
     }
   ],
   "triage": [
@@ -1288,14 +1326,14 @@
     {
       "url": "https://github.com/Senthemodder/aquarium-of-gullibles/issues/5",
       "title": "[Bounty: $700] Deep Recursive Generic Type Solver Fails Invariant Fuzzing in src/types/state.ts",
-      "status": "rejected_safety_audit",
+      "status": "blocked_repository_safety_review",
       "reason": "Previously blacklisted; do not reconsider",
       "checked_at": "2026-10-15T21:04:57.434446+00:00"
     },
     {
       "url": "https://github.com/Senthemodder/aquarium-of-gullibles/issues/2",
       "title": "[Bounty: $850] Bedrock Physics: 1-Tick Kinematic Ghost Teleportation and Swept AABB Dropout",
-      "status": "needs_review",
+      "status": "blocked_repository_safety_review",
       "reason": "Possible reward; payout and eligibility unverified",
       "checked_at": "2026-10-15T21:04:57.434446+00:00"
     },
