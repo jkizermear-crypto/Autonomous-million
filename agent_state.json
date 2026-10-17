@@ -1,5 +1,5 @@
 {
-  "runs": 23,
+  "runs": 24,
   "ideas": [
     {
       "name": "Decentralized Indexing Subgraph Optimization",
@@ -58,7 +58,7 @@
   ],
   "verified_revenue_usd": 0,
   "verified_expenses_usd": 0,
-  "last_run_at": "2026-10-17T03:34:43.119468+00:00",
+  "last_run_at": "2026-10-17T10:20:24.728078+00:00",
   "opportunities": [
     {
       "url": "https://github.com/tadanobutubutu/screeps/issues/5",
@@ -272,7 +272,7 @@
         "algorithm"
       ],
       "discovered_at": "2026-10-11T23:43:42.676248+00:00",
-      "status": "rejected_safety_audit",
+      "status": "blocked_repository_safety_review",
       "payment_verified": false,
       "payment_review_status": "no_independent_evidence"
     },
@@ -1314,6 +1314,25 @@
       "screening_score": 3,
       "screening_flags": [],
       "payment_verified": false
+    },
+    {
+      "url": "https://github.com/Novatip/novatip-web/issues/247",
+      "title": "Add tests for TipForm's large tip confirmation",
+      "repository": "novatip/novatip-web",
+      "description_excerpt": "## Summary\n\nTips of 100 USDC or more route through a `confirm` step before signing, and an\namount above the 1000 ceiling is refused.\n\nThis is the guard against a typo costing someone real money, and it is not\ntested.\n\n## Acceptance criteria\n\n- [ ] A test asserts an amount under 100 goes straight to signing.\n- [ ] A test asserts an amount of 100 or more shows the confirmation first.\n- [ ] A test asserts cancelling the confirmation signs nothing.\n\n## Getting started\n\nFork this repository, clone your fork, and add this repo as `upstream`:\n\n```bash\ngit clone https://github.com/<your-username>/novatip-web.git\ncd novatip-web\ngit remote add upstream https://github.com/Novatip/novatip-web.git\nnpm install\n```\n\nCreate a branch for this issue:\n\n```bash\ngit checkout -b test/tip-form-confirm\n```\n\nSuggested commit message:\n\n```\ntest: cover the large tip confirmation step\n```\n\nRun `npm run lint`, `npm run typecheck`, and `npm test` before pushing, then open a pull request from your fork against `main` and link this issue. See the [contributing guide](https://github.com/Novatip/novatip-docs/blob/main/CONTRIBUTING.md) for the full workflow.",
+      "updated_at": "2026-10-17T09:26:34Z",
+      "labels": [],
+      "discovered_at": "2026-10-17T10:20:24.728078+00:00",
+      "status": "unverified",
+      "screening_evidence": {
+        "explicit_reward": true,
+        "acceptance_criteria": true,
+        "submission_method": true,
+        "escrow_or_platform_claim": false
+      },
+      "screening_score": 3,
+      "screening_flags": [],
+      "payment_verified": false
     }
   ],
   "triage": [
@@ -1397,14 +1416,14 @@
     {
       "url": "https://github.com/Senthemodder/aquarium-of-gullibles/issues/5",
       "title": "[Bounty: $700] Deep Recursive Generic Type Solver Fails Invariant Fuzzing in src/types/state.ts",
-      "status": "rejected_safety_audit",
+      "status": "blocked_repository_safety_review",
       "reason": "Previously blacklisted; do not reconsider",
       "checked_at": "2026-10-17T03:34:53.713471+00:00"
     },
     {
       "url": "https://github.com/Senthemodder/aquarium-of-gullibles/issues/2",
       "title": "[Bounty: $850] Bedrock Physics: 1-Tick Kinematic Ghost Teleportation and Swept AABB Dropout",
-      "status": "needs_review",
+      "status": "blocked_repository_safety_review",
       "reason": "Possible reward; payout and eligibility unverified",
       "checked_at": "2026-10-17T03:34:53.713471+00:00"
     },
