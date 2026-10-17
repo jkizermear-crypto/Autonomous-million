@@ -1,5 +1,5 @@
 {
-  "runs": 22,
+  "runs": 23,
   "ideas": [
     {
       "name": "Decentralized Indexing Subgraph Optimization",
@@ -58,7 +58,7 @@
   ],
   "verified_revenue_usd": 0,
   "verified_expenses_usd": 0,
-  "last_run_at": "2026-10-16T20:40:53.004483+00:00",
+  "last_run_at": "2026-10-17T03:34:43.119468+00:00",
   "opportunities": [
     {
       "url": "https://github.com/tadanobutubutu/screeps/issues/5",
@@ -272,7 +272,7 @@
         "algorithm"
       ],
       "discovered_at": "2026-10-11T23:43:42.676248+00:00",
-      "status": "rejected_safety_audit",
+      "status": "blocked_repository_safety_review",
       "payment_verified": false,
       "payment_review_status": "no_independent_evidence"
     },
@@ -1291,6 +1291,29 @@
       "screening_score": 3,
       "screening_flags": [],
       "payment_verified": false
+    },
+    {
+      "url": "https://github.com/oll4com/spaceapp/issues/60",
+      "title": "[$400] Test every Temporal workflow on a real time-skipping test server and gate replay determinism in CI",
+      "repository": "oll4com/spaceapp",
+      "description_excerpt": "## Context\n\nSpaceApp runs its long-lived orchestration on Temporal (`apps/worker`): Room Agent supervision, chat turns, Dot goals and memory maintenance. These workflows use signals, `condition()` timeouts, `continueAsNew`, child workflows and `patched()` branches. Their tests mock `@temporalio/workflow` (for example `apps/worker/tests/room-supervisor-continuation.test.ts`), so the real workflow sandbox, timers, signal ordering and continue-as-new are never exercised. Nothing checks replay determinism automatically either: a workflow change that breaks running executions would first show up in a user's installation.\n\nThis is finding **CORE-006** in [`docs/quality/KNOWN_LIMITATIONS.md`](https://github.com/oll4com/spaceapp/blob/main/docs/quality/KNOWN_LIMITATIONS.md): \"No TestWorkflowEnvironment or time-skipping tests\" and \"The check is manual; it is not wired into deploy or CI\".\n\nWorkflows in scope (all in `apps/worker/src`):\n\n- `workflows.ts`: `dotGoalWorkflow`, `dummyTurnWorkflow`, `codexAppServerTurnWorkflow`, `roomAgentSupervisorWorkflow` (both the current branch and the pre-patch branch behind `patched(\"room-background-continuation-v1\")`), `roomAgentActionWorkflow`\n- `memory-maintenance-workflows.ts`: `memoryMaintenanceWorkflow`, `memoryConsolidationWorkflow`\n- `memory-mutation-workflows.ts`: `memoryMutationWorkflow`\n\n## Goal\n\nRun every workflow in the real Temporal workflow sandbox on `@temporalio/testing`'s time-skipping environment with stubbed activities, and fail CI when a workflow change is not replay-compatible with recorded histories.\n\n## Acceptance criteria\n\n- [ ] `@temporalio/testing` is a devDependency of `apps/worker`, pinned to the same version as the other `@temporalio/*` packages (1.24.0 today), with `package-lock.json` updated in the same commit.\n- [",
+      "updated_at": "2026-10-17T03:32:52Z",
+      "labels": [
+        "enhancement",
+        "help wanted",
+        "💎 Bounty"
+      ],
+      "discovered_at": "2026-10-17T03:34:43.119468+00:00",
+      "status": "unverified",
+      "screening_evidence": {
+        "explicit_reward": true,
+        "acceptance_criteria": true,
+        "submission_method": true,
+        "escrow_or_platform_claim": false
+      },
+      "screening_score": 3,
+      "screening_flags": [],
+      "payment_verified": false
     }
   ],
   "triage": [
@@ -1374,14 +1397,14 @@
     {
       "url": "https://github.com/Senthemodder/aquarium-of-gullibles/issues/5",
       "title": "[Bounty: $700] Deep Recursive Generic Type Solver Fails Invariant Fuzzing in src/types/state.ts",
-      "status": "rejected_safety_audit",
+      "status": "blocked_repository_safety_review",
       "reason": "Previously blacklisted; do not reconsider",
       "checked_at": "2026-10-16T20:41:06.458939+00:00"
     },
     {
       "url": "https://github.com/Senthemodder/aquarium-of-gullibles/issues/2",
       "title": "[Bounty: $850] Bedrock Physics: 1-Tick Kinematic Ghost Teleportation and Swept AABB Dropout",
-      "status": "needs_review",
+      "status": "blocked_repository_safety_review",
       "reason": "Possible reward; payout and eligibility unverified",
       "checked_at": "2026-10-16T20:41:06.458939+00:00"
     },
