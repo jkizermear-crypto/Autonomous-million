@@ -61,6 +61,6 @@ Safety blocked/review: 28
 - **safety_review** — https://github.com/alston-personal/agentmanager/issues/2003: Potential credential, wallet, or payment demand
 - **needs_review** — https://github.com/Nudge-Pay/nudge-app/issues/46: Possible reward; payout and eligibility unverified
 - **safety_review** — https://github.com/OracleDesk/OracleDesk-SmartContract/issues/23: Possible upfront payment requirement
-- **rejected** — https://github.com/OracleDesk/OracleDesk-SmartContract/issues/10: No explicit monetary reward found
+- **rejected** — https://github.com/OracleDesk/OracleDesk-SmartContract/issues/10: Closed issue or pull request
 - **safety_review** — https://github.com/oll4com/spaceapp/issues/60: Possible upfront payment requirement
 - **rejected** — https://github.com/Novatip/novatip-web/issues/247: No explicit monetary reward found
