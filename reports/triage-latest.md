@@ -2,8 +2,8 @@
 
 Automated screening only. No payout is verified. Safety-review candidates are NOT approved.
 
-Total: 56
-Potential candidates: 6
+Total: 57
+Potential candidates: 4
 Safety blocked/review: 28
 
 - **rejected** — https://github.com/tadanobutubutu/screeps/issues/5: Maintenance automation or contest
@@ -41,7 +41,7 @@ Safety blocked/review: 28
 - **rejected** — https://github.com/the-vibey-project/vibey/issues/839: No explicit monetary reward found
 - **rejected** — https://github.com/xpex-systems-ai/GXEON-AI/issues/437: No explicit monetary reward found
 - **rejected** — https://github.com/BasedHardware/omi/issues/21262: Closed issue or pull request
-- **safety_review** — https://github.com/DigiMonk73/BTCTX-MCP/issues/41: Possible upfront payment requirement
+- **rejected** — https://github.com/DigiMonk73/BTCTX-MCP/issues/41: No explicit monetary reward found
 - **safety_review** — https://github.com/ZcashCommunityGrants/zcashcommunitygrants/issues/150: Possible upfront payment requirement
 - **safety_review** — https://github.com/claude-builders-bounty/claude-builders-bounty/issues/2: Potential credential, wallet, or payment demand
 - **safety_review** — https://github.com/claude-builders-bounty/claude-builders-bounty/issues/3: Potential credential, wallet, or payment demand
@@ -55,10 +55,11 @@ Safety blocked/review: 28
 - **rejected** — https://github.com/Earnly-Build/earnly/issues/17: Closed issue or pull request
 - **safety_review** — https://github.com/Octo-Protocol-org/Octo-frontend/issues/503: Possible upfront payment requirement
 - **safety_review** — https://github.com/vanduc2514/hackathon-circle-misthos/issues/182: Potential credential, wallet, or payment demand
-- **needs_review** — https://github.com/Novatip/novatip-contracts/issues/170: Possible reward; payout and eligibility unverified
-- **needs_review** — https://github.com/Novatip/novatip-contracts/issues/174: Possible reward; payout and eligibility unverified
+- **rejected** — https://github.com/Novatip/novatip-contracts/issues/170: Closed issue or pull request
+- **rejected** — https://github.com/Novatip/novatip-contracts/issues/174: Closed issue or pull request
 - **safety_review** — https://github.com/OracleDesk/OracleDesk-SmartContract/issues/3: Possible upfront payment requirement
 - **safety_review** — https://github.com/alston-personal/agentmanager/issues/2003: Potential credential, wallet, or payment demand
 - **needs_review** — https://github.com/Nudge-Pay/nudge-app/issues/46: Possible reward; payout and eligibility unverified
 - **safety_review** — https://github.com/OracleDesk/OracleDesk-SmartContract/issues/23: Possible upfront payment requirement
 - **rejected** — https://github.com/OracleDesk/OracleDesk-SmartContract/issues/10: No explicit monetary reward found
+- **safety_review** — https://github.com/oll4com/spaceapp/issues/60: Possible upfront payment requirement
