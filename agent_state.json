@@ -1,5 +1,5 @@
 {
-  "runs": 28,
+  "runs": 29,
   "ideas": [
     {
       "name": "Decentralized Indexing Subgraph Optimization",
@@ -58,7 +58,7 @@
   ],
   "verified_revenue_usd": 0,
   "verified_expenses_usd": 0,
-  "last_run_at": "2026-10-18T10:36:39.104043+00:00",
+  "last_run_at": "2026-10-18T15:35:00.848081+00:00",
   "opportunities": [
     {
       "url": "https://github.com/tadanobutubutu/screeps/issues/5",
@@ -272,7 +272,7 @@
         "algorithm"
       ],
       "discovered_at": "2026-10-11T23:43:42.676248+00:00",
-      "status": "rejected_safety_audit",
+      "status": "blocked_repository_safety_review",
       "payment_verified": false,
       "payment_review_status": "no_independent_evidence"
     },
@@ -1377,6 +1377,55 @@
       "screening_score": 3,
       "screening_flags": [],
       "payment_verified": false
+    },
+    {
+      "url": "https://github.com/OracleDesk/OracleDesk-Backend/issues/61",
+      "title": "Sell the daily pass through x402 payment middleware on the backend",
+      "repository": "oracledesk/oracledesk-backend",
+      "description_excerpt": "## Overview\n\nOracleDesk now has two incompatible payment flows. Per-trace unlocks use x402, the HTTP-402 standard for paid resources: the client hits the resource, receives `PaymentRequirements`, pays, and retries with an `X-PAYMENT` header, and a facilitator verifies and settles. The contracts repo's `x402/trace-api.ts` implements it with `@x402/express` `paymentMiddleware` and the `exact` Stellar scheme. The daily pass instead uses a bespoke flow. The frontend builds a raw USDC `transfer` to `PAYMENTS_RECIPIENT`, has the wallet sign and submit it, then posts the hash to `POST /traces/:id/unlock`, and the backend reverse-engineers the transaction in `verifyUsdcTransfer()`.\n\nThe bespoke flow has known weaknesses:\n\n- the user pays first and only learns afterward whether the backend accepts the payment (allowance refusals, a wrong recipient, or a stale price all become paid-but-refused);\n- the backend has to parse envelopes defensively;\n- there's a two-step window where funds move and no claim follows;\n- integrators (agents, scripts) can't use standard x402 clients to buy a pass.\n\nThis issue adds an x402-protected endpoint, `POST /api/v1/passes/daily`, using the same middleware stack as the contracts repo. Verification happens *before* settlement, so a refused purchase never moves funds. The facilitator's settlement result is recorded as the `PaymentEvent`, and the pass is granted to the JWT-authenticated user. The old unlock endpoint stays for one release.\n\n## Background & current behavior\n\n- `src/services/subscription.service.ts` `recordPayment()`: `DAILY_PASS` only. It runs `verifyUsdcTransfer`, then `enforceSpendingAllowance` (after payment), then creates the `Subscription` and `PaymentEvent` with `expiresAt = now + 24h`.\n- `src/controllers/trace.controller.ts` `unloc",
+      "updated_at": "2026-10-18T14:57:41Z",
+      "labels": [
+        "enhancement",
+        "complexity: high",
+        "api",
+        "stellar",
+        "Stellar Wave"
+      ],
+      "discovered_at": "2026-10-18T15:35:00.848081+00:00",
+      "status": "unverified",
+      "screening_evidence": {
+        "explicit_reward": true,
+        "acceptance_criteria": true,
+        "submission_method": true,
+        "escrow_or_platform_claim": false
+      },
+      "screening_score": 3,
+      "screening_flags": [],
+      "payment_verified": false
+    },
+    {
+      "url": "https://github.com/OracleDesk/OracleDesk-Backend/issues/63",
+      "title": "Discover the live x402 trace price instead of the hard-coded unlock price",
+      "repository": "oracledesk/oracledesk-backend",
+      "description_excerpt": "## Overview\n\nEvery trace preview from `GET /traces/:id` includes `unlockPriceRaw`, which the frontend shows as the per-trace price. That value comes from `PER_TRACE_PRICE_RAW = 50_000n` (0.005 USDC), a constant hard-coded in `src/services/subscription.service.ts`. The per-trace sale itself happens in the contracts repo's x402 service, which charges `TRACE_PRICE_USDC` from its own env (default `\"0.01\"` in `x402/server.ts`, i.e. `100000` base units). So today the UI shows 0.005 USDC and the wallet asks for 0.01 USDC. Users get one price in the UI and a different one at signing time, which looks like a bait-and-switch and erodes trust in a product whose selling point is verifiability.\n\nThe source of truth for what x402 charges is the x402 service itself. An unpaid request to a paid resource returns `402 Payment Required` with a `PaymentRequirements` body listing `scheme`, `network`, `asset`, `maxAmountRequired`, `payTo`, `resource`, and so on. The backend should *ask* the x402 service instead of guessing. This issue adds a small, robust x402 discovery client:\n\n- it fetches the requirements with a `HEAD` or `GET` and no payment;\n- it validates them against this deployment (the asset must be `CONTRACTS.usdc`, and the network must match `STELLAR_NETWORK_PASSPHRASE`);\n- it caches them with a TTL and stampede protection;\n- it exposes them on previews.\n\nWhen discovery fails, previews say the price is `unknown` instead of making a number up.\n\n## Background & current behavior\n\n- `src/services/subscription.service.ts`:\n  - `const PER_TRACE_PRICE_RAW = 50_000n; // 0.005 USDC, shown in previews only`.\n  - `getTracWithAccessControl()` returns `unlockPriceRaw: PER_TRACE_PRICE_RAW.toString()`, `dailyPassPriceRaw` and `dailyPassPrice`.\n- `docs/api.md` (\"`GET /traces/:id`\") documents `unl",
+      "updated_at": "2026-10-18T14:58:18Z",
+      "labels": [
+        "bug",
+        "complexity: high",
+        "api",
+        "Stellar Wave"
+      ],
+      "discovered_at": "2026-10-18T15:35:00.848081+00:00",
+      "status": "unverified",
+      "screening_evidence": {
+        "explicit_reward": true,
+        "acceptance_criteria": true,
+        "submission_method": true,
+        "escrow_or_platform_claim": false
+      },
+      "screening_score": 3,
+      "screening_flags": [],
+      "payment_verified": false
     }
   ],
   "triage": [
@@ -1460,14 +1509,14 @@
     {
       "url": "https://github.com/Senthemodder/aquarium-of-gullibles/issues/5",
       "title": "[Bounty: $700] Deep Recursive Generic Type Solver Fails Invariant Fuzzing in src/types/state.ts",
-      "status": "rejected_safety_audit",
+      "status": "blocked_repository_safety_review",
       "reason": "Previously blacklisted; do not reconsider",
       "checked_at": "2026-10-18T10:36:50.715100+00:00"
     },
     {
       "url": "https://github.com/Senthemodder/aquarium-of-gullibles/issues/2",
       "title": "[Bounty: $850] Bedrock Physics: 1-Tick Kinematic Ghost Teleportation and Swept AABB Dropout",
-      "status": "needs_review",
+      "status": "blocked_repository_safety_review",
       "reason": "Possible reward; payout and eligibility unverified",
       "checked_at": "2026-10-18T10:36:50.715100+00:00"
     },
