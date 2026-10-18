@@ -1,6 +1,6 @@
 # Payment evidence audit
 
-UTC: 2026-10-17T07:07:52.080415+00:00
+UTC: 2026-10-18T07:22:20.997850+00:00
 
 No listing was classified as payment-verified. Claims, maintainer comments, and scores are not independent payout proof.
 
@@ -22,7 +22,7 @@ No listing was classified as payment-verified. Claims, maintainer comments, and 
   Maintainer confirmation: False; verified payment: false
 - insufficient_independent_payment_evidence: https://github.com/claude-builders-bounty/claude-builders-bounty/issues/4
   Maintainer confirmation: False; verified payment: false
-- insufficient_independent_payment_evidence: https://github.com/bwipp/postscriptbarcode/issues/82
+- issue_not_open: https://github.com/bwipp/postscriptbarcode/issues/82
   Maintainer confirmation: False; verified payment: false
 - insufficient_independent_payment_evidence: https://github.com/weilixiong/TentOfTrials/issues/5
   Maintainer confirmation: False; verified payment: false
