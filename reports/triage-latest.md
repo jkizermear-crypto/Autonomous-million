@@ -2,8 +2,8 @@
 
 Automated screening only. No payout is verified. Safety-review candidates are NOT approved.
 
-Total: 58
-Potential candidates: 4
+Total: 60
+Potential candidates: 6
 Safety blocked/review: 28
 
 - **rejected** — https://github.com/tadanobutubutu/screeps/issues/5: Maintenance automation or contest
@@ -64,3 +64,5 @@ Safety blocked/review: 28
 - **rejected** — https://github.com/OracleDesk/OracleDesk-SmartContract/issues/10: Closed issue or pull request
 - **safety_review** — https://github.com/oll4com/spaceapp/issues/60: Possible upfront payment requirement
 - **rejected** — https://github.com/Novatip/novatip-web/issues/247: No explicit monetary reward found
+- **needs_review** — https://github.com/Ikalus1988/MisakaNet/issues/3430: Possible reward; payout and eligibility unverified
+- **needs_review** — https://github.com/Ikalus1988/MisakaNet/issues/3431: Possible reward; payout and eligibility unverified
