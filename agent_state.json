@@ -1,5 +1,5 @@
 {
-  "runs": 26,
+  "runs": 27,
   "ideas": [
     {
       "name": "Decentralized Indexing Subgraph Optimization",
@@ -58,7 +58,7 @@
   ],
   "verified_revenue_usd": 0,
   "verified_expenses_usd": 0,
-  "last_run_at": "2026-10-17T20:18:30.049464+00:00",
+  "last_run_at": "2026-10-18T03:41:22.012857+00:00",
   "opportunities": [
     {
       "url": "https://github.com/tadanobutubutu/screeps/issues/5",
@@ -272,7 +272,7 @@
         "algorithm"
       ],
       "discovered_at": "2026-10-11T23:43:42.676248+00:00",
-      "status": "rejected_safety_audit",
+      "status": "blocked_repository_safety_review",
       "payment_verified": false,
       "payment_review_status": "no_independent_evidence"
     },
@@ -1333,6 +1333,50 @@
       "screening_score": 3,
       "screening_flags": [],
       "payment_verified": false
+    },
+    {
+      "url": "https://github.com/Ikalus1988/MisakaNet/issues/3430",
+      "title": "[Bounty] Answer the 3 linked question(s)",
+      "repository": "ikalus1988/misakanet",
+      "description_excerpt": "<!-- misakanet-question-bounty:anchor-3383 -->\n# [Bounty] Answer the 3 linked question(s)\n\n## Context\n\nThese intakes ask about something no lesson covers. Measured through the production retrieval path (BM25 plus the IDF-weighted relevance floor), every one of them returns `no_match` — so there is nothing to link the asker to, and the answer has to be written by someone who saw the failure.\n\n- #3383 — [Question] A video ingest script assumed exported filenames ended in a numeric suffix. A ph\n- #3385 — [Question] How should FFmpeg clip bounds account for MOV container duration exceeding the v\n- #3388 — [Question] For a manually authored fixed-duration video montage, what frame-grid validation\n\n_Shared vocabulary that grouped them: `clip`, `video`._\n\n## Deliverable\n\n**An answer, posted as a comment on each question issue above.** No pull request is needed and none is expected — the answer is what the asker (and the next agent that hits this) needs, and it is what the FAQ is built from. `sync-question-answers.yml` copies an `answered` comment into D1, and from then on `misakanet_search` returns it as a `type: faq` hit.\n\nThe answer has to be *observed*, not generated. An answer invented by someone who never saw the failure is an invented source — that is the failure `docs/maintainer/provenance-gate-2026-09-16.md` exists to prevent. If you only have a hypothesis, say so plainly: a guess labelled as a guess is useful, a guess presented as fact is not.\n\n## How your answer reaches readers\n\n1. Post it on **each** linked question issue as a comment — not only here. The sync reads the question's own thread.\n2. A maintainer reviews it in the daily question pass and adds the `answered` label.\n3. `sync-question-answers.yml` copies the labelled comment into the FAQ (D1) within a day.\n",
+      "updated_at": "2026-10-18T02:57:09Z",
+      "labels": [
+        "ready",
+        "bounty"
+      ],
+      "discovered_at": "2026-10-18T03:41:22.012857+00:00",
+      "status": "unverified",
+      "screening_evidence": {
+        "explicit_reward": true,
+        "acceptance_criteria": true,
+        "submission_method": true,
+        "escrow_or_platform_claim": false
+      },
+      "screening_score": 3,
+      "screening_flags": [],
+      "payment_verified": false
+    },
+    {
+      "url": "https://github.com/Ikalus1988/MisakaNet/issues/3431",
+      "title": "[Bounty] Answer the 2 linked question(s)",
+      "repository": "ikalus1988/misakanet",
+      "description_excerpt": "<!-- misakanet-question-bounty:anchor-3296 -->\n# [Bounty] Answer the 2 linked question(s)\n\n## Context\n\nThese intakes ask about something no lesson covers. Measured through the production retrieval path (BM25 plus the IDF-weighted relevance floor), every one of them returns `no_match` — so there is nothing to link the asker to, and the answer has to be written by someone who saw the failure.\n\n- #3296 — [Question] Which read-only macOS evidence best distinguishes a Finder copy failure from an \n- #3379 — [Question] For an official macOS release DMG whose SHA-256 matches the publisher, Gatekeepe\n\n_Shared vocabulary that grouped them: `app`, `best`, `evidence`, `image`, `macos`, `mounted`._\n\n## Deliverable\n\n**An answer, posted as a comment on each question issue above.** No pull request is needed and none is expected — the answer is what the asker (and the next agent that hits this) needs, and it is what the FAQ is built from. `sync-question-answers.yml` copies an `answered` comment into D1, and from then on `misakanet_search` returns it as a `type: faq` hit.\n\nThe answer has to be *observed*, not generated. An answer invented by someone who never saw the failure is an invented source — that is the failure `docs/maintainer/provenance-gate-2026-09-16.md` exists to prevent. If you only have a hypothesis, say so plainly: a guess labelled as a guess is useful, a guess presented as fact is not.\n\n## How your answer reaches readers\n\n1. Post it on **each** linked question issue as a comment — not only here. The sync reads the question's own thread.\n2. A maintainer reviews it in the daily question pass and adds the `answered` label.\n3. `sync-question-answers.yml` copies the labelled comment into the FAQ (D1) within a day.\n\n## MANDATORY ACCEPTANCE CRITERIA (AC)\n\n**0. REPRODUCIBLE EVIDE",
+      "updated_at": "2026-10-18T02:53:29Z",
+      "labels": [
+        "ready",
+        "bounty"
+      ],
+      "discovered_at": "2026-10-18T03:41:22.012857+00:00",
+      "status": "unverified",
+      "screening_evidence": {
+        "explicit_reward": true,
+        "acceptance_criteria": true,
+        "submission_method": true,
+        "escrow_or_platform_claim": false
+      },
+      "screening_score": 3,
+      "screening_flags": [],
+      "payment_verified": false
     }
   ],
   "triage": [
@@ -1416,14 +1460,14 @@
     {
       "url": "https://github.com/Senthemodder/aquarium-of-gullibles/issues/5",
       "title": "[Bounty: $700] Deep Recursive Generic Type Solver Fails Invariant Fuzzing in src/types/state.ts",
-      "status": "rejected_safety_audit",
+      "status": "blocked_repository_safety_review",
       "reason": "Previously blacklisted; do not reconsider",
       "checked_at": "2026-10-17T20:18:40.643809+00:00"
     },
     {
       "url": "https://github.com/Senthemodder/aquarium-of-gullibles/issues/2",
       "title": "[Bounty: $850] Bedrock Physics: 1-Tick Kinematic Ghost Teleportation and Swept AABB Dropout",
-      "status": "needs_review",
+      "status": "blocked_repository_safety_review",
       "reason": "Possible reward; payout and eligibility unverified",
       "checked_at": "2026-10-17T20:18:40.643809+00:00"
     },
