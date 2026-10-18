@@ -3,7 +3,7 @@
 Automated screening only. No payout is verified. Safety-review candidates are NOT approved.
 
 Total: 60
-Potential candidates: 6
+Potential candidates: 7
 Safety blocked/review: 28
 
 - **rejected** — https://github.com/tadanobutubutu/screeps/issues/5: Maintenance automation or contest
@@ -15,7 +15,7 @@ Safety blocked/review: 28
 - **rejected** — https://github.com/tari-project/wxtm-bridge-frontend/issues/103: No explicit monetary reward found
 - **rejected** — https://github.com/tari-project/universe/issues/3299: No explicit monetary reward found
 - **safety_review** — https://github.com/claude-builders-bounty/claude-builders-bounty/issues/4: Potential credential, wallet, or payment demand
-- **rejected** — https://github.com/bwipp/postscriptbarcode/issues/82: No explicit monetary reward found
+- **rejected** — https://github.com/bwipp/postscriptbarcode/issues/82: Closed issue or pull request
 - **needs_review** — https://github.com/weilixiong/TentOfTrials/issues/5: Possible reward; payout and eligibility unverified
 - **rejected_safety_audit** — https://github.com/Senthemodder/aquarium-of-gullibles/issues/5: Previously blacklisted; do not reconsider
 - **needs_review** — https://github.com/Senthemodder/aquarium-of-gullibles/issues/2: Possible reward; payout and eligibility unverified
@@ -41,7 +41,7 @@ Safety blocked/review: 28
 - **rejected** — https://github.com/the-vibey-project/vibey/issues/839: No explicit monetary reward found
 - **rejected** — https://github.com/xpex-systems-ai/GXEON-AI/issues/437: No explicit monetary reward found
 - **rejected** — https://github.com/BasedHardware/omi/issues/21262: Closed issue or pull request
-- **rejected** — https://github.com/DigiMonk73/BTCTX-MCP/issues/41: No explicit monetary reward found
+- **needs_review** — https://github.com/DigiMonk73/BTCTX-MCP/issues/41: Possible reward; payout and eligibility unverified
 - **safety_review** — https://github.com/ZcashCommunityGrants/zcashcommunitygrants/issues/150: Possible upfront payment requirement
 - **safety_review** — https://github.com/claude-builders-bounty/claude-builders-bounty/issues/2: Potential credential, wallet, or payment demand
 - **safety_review** — https://github.com/claude-builders-bounty/claude-builders-bounty/issues/3: Potential credential, wallet, or payment demand
