@@ -1,6 +1,6 @@
 # Payment evidence v2 — candidate collection
 
-Checked: 2026-10-17T07:12:22.052426+00:00
+Checked: 2026-10-18T07:25:51.212064+00:00
 
 Read-only discovery. Transaction links are NOT verified escrow or guaranteed payouts.
 All opportunities remain payment_verified=false.
@@ -14,7 +14,7 @@ All opportunities remain payment_verified=false.
 - no_independent_evidence: https://github.com/tari-project/wxtm-bridge-frontend/issues/103
 - no_independent_evidence: https://github.com/tari-project/universe/issues/3299
 - no_independent_evidence: https://github.com/claude-builders-bounty/claude-builders-bounty/issues/4
-- no_independent_evidence: https://github.com/bwipp/postscriptbarcode/issues/82
+- not_open_issue: https://github.com/bwipp/postscriptbarcode/issues/82
 - no_independent_evidence: https://github.com/weilixiong/TentOfTrials/issues/5
 - no_independent_evidence: https://github.com/Senthemodder/aquarium-of-gullibles/issues/5
 - no_independent_evidence: https://github.com/Senthemodder/aquarium-of-gullibles/issues/2
