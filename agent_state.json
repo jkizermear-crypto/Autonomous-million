@@ -1,5 +1,5 @@
 {
-  "runs": 29,
+  "runs": 30,
   "ideas": [
     {
       "name": "Decentralized Indexing Subgraph Optimization",
@@ -58,7 +58,7 @@
   ],
   "verified_revenue_usd": 0,
   "verified_expenses_usd": 0,
-  "last_run_at": "2026-10-18T15:35:00.848081+00:00",
+  "last_run_at": "2026-10-18T20:18:02.905551+00:00",
   "opportunities": [
     {
       "url": "https://github.com/tadanobutubutu/screeps/issues/5",
@@ -272,7 +272,7 @@
         "algorithm"
       ],
       "discovered_at": "2026-10-11T23:43:42.676248+00:00",
-      "status": "rejected_safety_audit",
+      "status": "blocked_repository_safety_review",
       "payment_verified": false,
       "payment_review_status": "no_independent_evidence"
     },
@@ -1426,6 +1426,48 @@
       "screening_score": 3,
       "screening_flags": [],
       "payment_verified": false
+    },
+    {
+      "url": "https://github.com/Presago-Labs/presago/issues/158",
+      "title": "Bounty Payment Status Request — 7 Merged PRs ($535) — @penielgold-hub",
+      "repository": "presago-labs/presago",
+      "description_excerpt": "<html>\n<body>\n<!--StartFragment--><html><head></head><body><h2><span>Bounty Payment Status Request — 7 Merged PRs ($535)</span></h2><p><span>Hello @kaizercodes and Presago-Labs maintainers,</span></p><p><span>Thank you for reviewing and merging my seven pull requests on October 10, 2026.</span></p><p><span>I am respectfully requesting an update on the approval and payment processing status of the advertised bounties associated with these merged contributions.</span></p><h3><span>1. Merged Pull Requests</span></h3>\nPull Request | Related Issue | Advertised Bounty | Status\n-- | -- | -- | --\nPR #117 | #101 | $95 | Merged\nPR #118 | #93 | $85 | Merged\nPR #119 | #94 | $80 | Merged\nPR #120 | #100 | $90 | Merged\nPR #121 | #86 | $75 | Merged\nPR #125 | #104 | $45 | Merged\nPR #126 | #109 | $65 | Merged\nTotal | 7 PRs | $535 | All merged\n\n<h3><span>2. Payment Arrangement</span></h3><p><span>Each pull request includes a conditional bounty payment request.</span></p><p><span>As previously indicated in the PR descriptions, I can receive USDC through BLINK, subject to confirmation of the supported network and the project's official payment procedure.</span></p><p><span>I am prepared to provide the appropriate payment request or receiving code privately through the designated payment process once payment is authorized.</span></p><h3><span>3. Requested Payment Clarifications</span></h3><p><span>Could the maintainers kindly confirm:</span></p><ol start=\"1\"><li><p><strong><span>Bounty approval:</span></strong><span> Have all seven merged PRs been approved for their advertised bounty payments?</span></p></li><li><p><strong><span>Payment processing:</span></strong><span> Are the payments pending, approved, or already being processed?</span></p></li><li><p><strong><span>Expected timeline:</spa",
+      "updated_at": "2026-10-18T19:18:31Z",
+      "labels": [],
+      "discovered_at": "2026-10-18T20:18:02.905551+00:00",
+      "status": "unverified",
+      "screening_evidence": {
+        "explicit_reward": true,
+        "acceptance_criteria": true,
+        "submission_method": true,
+        "escrow_or_platform_claim": true
+      },
+      "screening_score": 4,
+      "screening_flags": [],
+      "payment_verified": false
+    },
+    {
+      "url": "https://github.com/oll4com/spaceapp/issues/63",
+      "title": "[$600] Support rootless Podman as a container engine in the run-spaceapp launcher",
+      "repository": "oll4com/spaceapp",
+      "description_excerpt": "## Context\n\nThe `run-spaceapp` launcher (`packages/run-spaceapp`) installs and runs SpaceApp as a Docker Compose stack (`templates/compose.yml`: core, CLI, browser, PostgreSQL/pgvector, Temporal). Docker is the only supported engine. The launcher detects Docker and installs it if missing, and every lifecycle command (`install`, `up`, `down`, `status`, `logs`, `update`, `rollback`, `backup`, `restore`, `doctor`, `repair`, `uninstall`, `factory-reset`, `provider install`, `credentials set`, `owner …`) runs `docker compose …` or `docker …` (`composeCommand` in `src/index.mjs`, `spawnTrustedCommand` in `src/cli.mjs`, probes in `src/prerequisites.mjs` and `src/storage.mjs`).\n\nMany developers cannot or will not run a root Docker daemon: Fedora, RHEL and openSUSE ship Podman, some companies do not license Docker Desktop, and rootless containers are the safer default on a shared workstation. Today these users cannot install SpaceApp at all.\n\n## Goal\n\n`run-spaceapp` runs the full stack on **rootless Podman** on Linux, and on **Podman machine** on macOS, with the same commands and the same data safety as on Docker. Docker stays the default, and nothing changes for Docker users.\n\n## Acceptance criteria\n\n- [ ] Engine selection: `--engine docker|podman` on `install`, saved in the launcher configuration and used by every later command. `install` without `--engine` keeps using Docker when it works. If only Podman is present it offers Podman (or picks it with `--non-interactive`) instead of installing Docker. The choice also works through `--answers`.\n- [ ] Compose: the launcher uses `podman compose` (state the supported compose provider and minimum versions, for example Podman ≥ 5 with docker-compose v2 as provider) and keeps all features the template uses: profiles, file-based secret",
+      "updated_at": "2026-10-18T18:11:36Z",
+      "labels": [
+        "enhancement",
+        "help wanted",
+        "💎 Bounty"
+      ],
+      "discovered_at": "2026-10-18T20:18:02.905551+00:00",
+      "status": "unverified",
+      "screening_evidence": {
+        "explicit_reward": true,
+        "acceptance_criteria": true,
+        "submission_method": true,
+        "escrow_or_platform_claim": false
+      },
+      "screening_score": 3,
+      "screening_flags": [],
+      "payment_verified": false
     }
   ],
   "triage": [
@@ -1509,14 +1551,14 @@
     {
       "url": "https://github.com/Senthemodder/aquarium-of-gullibles/issues/5",
       "title": "[Bounty: $700] Deep Recursive Generic Type Solver Fails Invariant Fuzzing in src/types/state.ts",
-      "status": "rejected_safety_audit",
+      "status": "blocked_repository_safety_review",
       "reason": "Previously blacklisted; do not reconsider",
       "checked_at": "2026-10-18T15:35:12.281548+00:00"
     },
     {
       "url": "https://github.com/Senthemodder/aquarium-of-gullibles/issues/2",
       "title": "[Bounty: $850] Bedrock Physics: 1-Tick Kinematic Ghost Teleportation and Swept AABB Dropout",
-      "status": "needs_review",
+      "status": "blocked_repository_safety_review",
       "reason": "Possible reward; payout and eligibility unverified",
       "checked_at": "2026-10-18T15:35:12.281548+00:00"
     },
