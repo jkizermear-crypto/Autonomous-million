@@ -4,7 +4,7 @@ Automated screening only. No payout is verified. Safety-review candidates are NO
 
 Total: 65
 Potential candidates: 6
-Safety blocked/review: 32
+Safety blocked/review: 31
 
 - **rejected** — https://github.com/tadanobutubutu/screeps/issues/5: Maintenance automation or contest
 - **rejected** — https://github.com/relayhop/sn-monetization-runtime/issues/1277: Maintenance automation or contest
@@ -70,4 +70,4 @@ Safety blocked/review: 32
 - **safety_review** — https://github.com/OracleDesk/OracleDesk-Backend/issues/63: Possible upfront payment requirement
 - **safety_review** — https://github.com/Presago-Labs/presago/issues/158: Possible upfront payment requirement
 - **safety_review** — https://github.com/oll4com/spaceapp/issues/63: Possible upfront payment requirement
-- **safety_review** — https://github.com/OracleDesk/OracleDesk-Frontend/issues/82: Possible upfront payment requirement
+- **rejected** — https://github.com/OracleDesk/OracleDesk-Frontend/issues/82: Closed issue or pull request
