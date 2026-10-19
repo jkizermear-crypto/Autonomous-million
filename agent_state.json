@@ -1,5 +1,5 @@
 {
-  "runs": 31,
+  "runs": 32,
   "ideas": [
     {
       "name": "Decentralized Indexing Subgraph Optimization",
@@ -58,7 +58,7 @@
   ],
   "verified_revenue_usd": 0,
   "verified_expenses_usd": 0,
-  "last_run_at": "2026-10-19T03:50:59.698680+00:00",
+  "last_run_at": "2026-10-19T12:33:30.845018+00:00",
   "opportunities": [
     {
       "url": "https://github.com/tadanobutubutu/screeps/issues/5",
@@ -272,7 +272,7 @@
         "algorithm"
       ],
       "discovered_at": "2026-10-11T23:43:42.676248+00:00",
-      "status": "rejected_safety_audit",
+      "status": "blocked_repository_safety_review",
       "payment_verified": false,
       "payment_review_status": "no_independent_evidence"
     },
@@ -1468,6 +1468,31 @@
       "screening_score": 3,
       "screening_flags": [],
       "payment_verified": false
+    },
+    {
+      "url": "https://github.com/OracleDesk/OracleDesk-Frontend/issues/82",
+      "title": "Treasury operator panel for deposits, withdrawals and fee collection",
+      "repository": "oracledesk/oracledesk-frontend",
+      "description_excerpt": "## Overview\n\nThe treasury contract holds the capital the autonomous agent trades with. Every operation that moves that capital outside the agent's own `agent_buy` / `agent_sell` path (topping it up with `deposit`, pulling funds out with `withdraw`, sweeping trading fees from markets with `collect_market_fees`, reclaiming LP remainders from markets the treasury created with `claim_pool_remainder`, redeeming resolved positions with `redeem`, and marking exposure as exited with `close_trade`) is done today from the Stellar CLI by whoever holds the right key. Nothing in the frontend reads or builds any of these calls.\n\nThat makes routine operations error-prone (amounts typed as raw `i128` base units on a command line, no view of the caps that will apply afterwards) and hides money the treasury is owed: fees accrue in each market's `fees_accrued` and LP remainders sit in resolved markets until someone remembers to collect them.\n\nThis issue adds an operator panel at `/admin/treasury` that shows the treasury's live balance and caps, finds collectable fees and claimable remainders across all markets, and builds every treasury call with simulation, a before/after review and (for destructive actions) typed confirmation. Authority comes from the contract, not from the UI allowlist: the panel must know which on-chain key each call needs and disable actions the connected wallet cannot authorize.\n\n## Background & current behavior\n\n- `lib/stellar/clients.ts` exports `treasury()` but, unlike `marketCore(signer?)`, its factory is only ever called without a signer in practice; no hook in `lib/hooks/useStellar.ts` touches the treasury at all.\n- The generated binding `lib/stellar/generated/treasury.ts` exposes: `deposit({from, amount})`, `withdraw({to, amount})`, `redeem({market_id})`, `cl",
+      "updated_at": "2026-10-19T11:44:14Z",
+      "labels": [
+        "enhancement",
+        "complexity: high",
+        "stellar",
+        "ui",
+        "Stellar Wave"
+      ],
+      "discovered_at": "2026-10-19T12:33:30.845018+00:00",
+      "status": "unverified",
+      "screening_evidence": {
+        "explicit_reward": true,
+        "acceptance_criteria": true,
+        "submission_method": true,
+        "escrow_or_platform_claim": false
+      },
+      "screening_score": 3,
+      "screening_flags": [],
+      "payment_verified": false
     }
   ],
   "triage": [
@@ -1551,14 +1576,14 @@
     {
       "url": "https://github.com/Senthemodder/aquarium-of-gullibles/issues/5",
       "title": "[Bounty: $700] Deep Recursive Generic Type Solver Fails Invariant Fuzzing in src/types/state.ts",
-      "status": "rejected_safety_audit",
+      "status": "blocked_repository_safety_review",
       "reason": "Previously blacklisted; do not reconsider",
       "checked_at": "2026-10-19T03:51:09.732419+00:00"
     },
     {
       "url": "https://github.com/Senthemodder/aquarium-of-gullibles/issues/2",
       "title": "[Bounty: $850] Bedrock Physics: 1-Tick Kinematic Ghost Teleportation and Swept AABB Dropout",
-      "status": "needs_review",
+      "status": "blocked_repository_safety_review",
       "reason": "Possible reward; payout and eligibility unverified",
       "checked_at": "2026-10-19T03:51:09.732419+00:00"
     },
