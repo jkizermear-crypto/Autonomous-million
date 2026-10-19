@@ -2,9 +2,9 @@
 
 Automated screening only. No payout is verified. Safety-review candidates are NOT approved.
 
-Total: 64
+Total: 65
 Potential candidates: 6
-Safety blocked/review: 33
+Safety blocked/review: 32
 
 - **rejected** — https://github.com/tadanobutubutu/screeps/issues/5: Maintenance automation or contest
 - **rejected** — https://github.com/relayhop/sn-monetization-runtime/issues/1277: Maintenance automation or contest
@@ -53,7 +53,7 @@ Safety blocked/review: 33
 - **rejected** — https://github.com/k-deejah/ui/issues/11: No explicit monetary reward found
 - **safety_review** — https://github.com/warpspeedopen-source/warpspeed-bounties/issues/3: Potential credential, wallet, or payment demand
 - **rejected** — https://github.com/Earnly-Build/earnly/issues/17: Closed issue or pull request
-- **safety_review** — https://github.com/Octo-Protocol-org/Octo-frontend/issues/503: Possible upfront payment requirement
+- **rejected** — https://github.com/Octo-Protocol-org/Octo-frontend/issues/503: Closed issue or pull request
 - **safety_review** — https://github.com/vanduc2514/hackathon-circle-misthos/issues/182: Potential credential, wallet, or payment demand
 - **rejected** — https://github.com/Novatip/novatip-contracts/issues/170: Closed issue or pull request
 - **rejected** — https://github.com/Novatip/novatip-contracts/issues/174: Closed issue or pull request
@@ -66,7 +66,8 @@ Safety blocked/review: 33
 - **rejected** — https://github.com/Novatip/novatip-web/issues/247: No explicit monetary reward found
 - **needs_review** — https://github.com/Ikalus1988/MisakaNet/issues/3430: Possible reward; payout and eligibility unverified
 - **needs_review** — https://github.com/Ikalus1988/MisakaNet/issues/3431: Possible reward; payout and eligibility unverified
-- **safety_review** — https://github.com/OracleDesk/OracleDesk-Backend/issues/61: Potential credential, wallet, or payment demand
+- **rejected** — https://github.com/OracleDesk/OracleDesk-Backend/issues/61: Closed issue or pull request
 - **safety_review** — https://github.com/OracleDesk/OracleDesk-Backend/issues/63: Possible upfront payment requirement
 - **safety_review** — https://github.com/Presago-Labs/presago/issues/158: Possible upfront payment requirement
 - **safety_review** — https://github.com/oll4com/spaceapp/issues/63: Possible upfront payment requirement
+- **safety_review** — https://github.com/OracleDesk/OracleDesk-Frontend/issues/82: Possible upfront payment requirement
