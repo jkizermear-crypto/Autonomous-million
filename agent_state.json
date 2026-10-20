@@ -1,5 +1,5 @@
 {
-  "runs": 36,
+  "runs": 37,
   "ideas": [
     {
       "name": "Decentralized Indexing Subgraph Optimization",
@@ -58,7 +58,7 @@
   ],
   "verified_revenue_usd": 0,
   "verified_expenses_usd": 0,
-  "last_run_at": "2026-10-20T16:33:24.856439+00:00",
+  "last_run_at": "2026-10-20T21:23:28.408063+00:00",
   "opportunities": [
     {
       "url": "https://github.com/tadanobutubutu/screeps/issues/5",
@@ -272,7 +272,7 @@
         "algorithm"
       ],
       "discovered_at": "2026-10-11T23:43:42.676248+00:00",
-      "status": "rejected_safety_audit",
+      "status": "blocked_repository_safety_review",
       "payment_verified": false,
       "payment_review_status": "no_independent_evidence"
     },
@@ -1556,6 +1556,30 @@
       "screening_score": 3,
       "screening_flags": [],
       "payment_verified": false
+    },
+    {
+      "url": "https://github.com/OracleDesk/OracleDesk-SmartContract/issues/102",
+      "title": "Add market-maker inventory management for creator seed shares and LP exposure",
+      "repository": "oracledesk/oracledesk-smartcontract",
+      "description_excerpt": "## Overview\n\nWhen the OracleDesk treasury creates a market through `agent_create_market`, it becomes the market's `creator`, which makes it both the sole liquidity provider and, whenever `initial_yes_bps != 5000`, the holder of a directional position. `math::seed_reserves` mints `seed_amount` complete sets, keeps fewer of the *likelier* outcome in the pool, and gives the leftover to the creator. A market seeded at 75% YES with 150 USDC puts about 100 USDC of YES shares into the treasury's `Position`, plus a pool whose final value depends on which side wins.\n\nThe market-maker never looks at either of these. After creating a market it forgets about it, so the treasury's real exposure (creator position plus LP pool remainder) is unmanaged. If the crowd pushes YES down from 75% to 40%, the treasury holds a large YES position bought at an implied 75%, and its pool now holds even more YES. A real market maker would rebalance by selling inventory when the price moves through its fair value, within risk limits.\n\nThis issue adds an inventory module that computes the treasury's combined, scenario-dependent exposure per market, and a policy that sells down directional inventory through `agent_sell`. It also adds the missing `agentSell` adapter path. The hard part is that LP value has no closed form under trading. The pool remainder at settlement is `settle_value(outcome, reserve_yes, reserve_no)`, so exposure must be evaluated per scenario (YES, NO, Void). Selling inventory into its own pool also moves the price *against the treasury's LP position*, so naive \"sell until flat\" can lose more on the pool than it saves on the position.\n\n## Background & current behavior\n\nPaths are relative to `oracledesk-stellar/`.\n\n- `contracts/market-core/src/math.rs`:\n  - `seed_reserves(seed, yes_bp",
+      "updated_at": "2026-10-20T21:20:09Z",
+      "labels": [
+        "enhancement",
+        "agents",
+        "complexity/large",
+        "Stellar Wave"
+      ],
+      "discovered_at": "2026-10-20T21:23:28.408063+00:00",
+      "status": "unverified",
+      "screening_evidence": {
+        "explicit_reward": true,
+        "acceptance_criteria": true,
+        "submission_method": true,
+        "escrow_or_platform_claim": false
+      },
+      "screening_score": 3,
+      "screening_flags": [],
+      "payment_verified": false
     }
   ],
   "triage": [
@@ -1639,14 +1663,14 @@
     {
       "url": "https://github.com/Senthemodder/aquarium-of-gullibles/issues/5",
       "title": "[Bounty: $700] Deep Recursive Generic Type Solver Fails Invariant Fuzzing in src/types/state.ts",
-      "status": "rejected_safety_audit",
+      "status": "blocked_repository_safety_review",
       "reason": "Previously blacklisted; do not reconsider",
       "checked_at": "2026-10-20T16:33:37.174519+00:00"
     },
     {
       "url": "https://github.com/Senthemodder/aquarium-of-gullibles/issues/2",
       "title": "[Bounty: $850] Bedrock Physics: 1-Tick Kinematic Ghost Teleportation and Swept AABB Dropout",
-      "status": "needs_review",
+      "status": "blocked_repository_safety_review",
       "reason": "Possible reward; payout and eligibility unverified",
       "checked_at": "2026-10-20T16:33:37.174519+00:00"
     },
