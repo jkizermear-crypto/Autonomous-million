@@ -1,5 +1,5 @@
 {
-  "runs": 35,
+  "runs": 36,
   "ideas": [
     {
       "name": "Decentralized Indexing Subgraph Optimization",
@@ -58,7 +58,7 @@
   ],
   "verified_revenue_usd": 0,
   "verified_expenses_usd": 0,
-  "last_run_at": "2026-10-20T11:08:10.672394+00:00",
+  "last_run_at": "2026-10-20T16:33:24.856439+00:00",
   "opportunities": [
     {
       "url": "https://github.com/tadanobutubutu/screeps/issues/5",
@@ -272,7 +272,7 @@
         "algorithm"
       ],
       "discovered_at": "2026-10-11T23:43:42.676248+00:00",
-      "status": "rejected_safety_audit",
+      "status": "blocked_repository_safety_review",
       "payment_verified": false,
       "payment_review_status": "no_independent_evidence"
     },
@@ -1516,6 +1516,46 @@
       "screening_score": 3,
       "screening_flags": [],
       "payment_verified": false
+    },
+    {
+      "url": "https://github.com/airdropia/earn-ops/issues/1",
+      "title": "bounty digest 2026-10-20",
+      "repository": "airdropia/earn-ops",
+      "description_excerpt": "Automated digest 2026-10-20T15:18:27.797Z\n\n## pool payment state\n- asi: paymentMode=disabled committed=0 cap=$1,000 chain=solana status=active\n- canonry: paymentMode=disabled committed=0 cap=$0 chain=solana status=paused\n- darling-arm64: paymentMode=disabled committed=0 cap=$0 chain=solana status=paused\n- delta-star: paymentMode=disabled committed=0 cap=$0 platform pool chain=null status=active\n- eliza: paymentMode=disabled committed=0 cap=$1,000 chain=solana status=active\n- feed: paymentMode=disabled committed=0 cap=$1,000 chain=solana status=paused\n- heir-elements-sdk: paymentMode=disabled committed=0 cap=$100 chain=solana status=paused\n- nurosos: paymentMode=disabled committed=0 cap=$0 chain=solana status=paused\n- payzcode-ai: paymentMode=disabled committed=0 cap=$0 chain=solana status=paused\n- slopdotcash: paymentMode=disabled committed=0 cap=$1,000 chain=solana status=active\n- thenetwork: paymentMode=disabled committed=0 cap=$0 chain=solana status=active\n\n## elizaOS/eliza - 17 open issues\n- #37043 Reminder and alarm requests routed to \"general\" load no reminder or alarm tool\n- #37041 BROWSER actions are offered when no browser target can act\n- #37039 plugin-openai records a rate-limited stream attempt as a successful empty call\n- #37037 Calendar create, update and delete results give the planner the same event two times\n- #37035 Eliza Cloud image descriptions get the title \"Image Analysis\" when the model writes the label in bold\n- #37033 A runtime failure on an unaddressed group message looks like a normal IGNORE\n- #37031 Discord stores other bots' status reactions as dialogue, with backslashes in the text\n- #37027 The ATTACHMENTS provider hides room attachments unless the request uses English attachment words\n- #37025 Stage 1 shows a reply's referenced message bef",
+      "updated_at": "2026-10-20T15:18:28Z",
+      "labels": [],
+      "discovered_at": "2026-10-20T16:33:24.856439+00:00",
+      "status": "unverified",
+      "screening_evidence": {
+        "explicit_reward": true,
+        "acceptance_criteria": true,
+        "submission_method": true,
+        "escrow_or_platform_claim": true
+      },
+      "screening_score": 4,
+      "screening_flags": [],
+      "payment_verified": false
+    },
+    {
+      "url": "https://github.com/Novatip/novatip-web/issues/327",
+      "title": "Document the states of the tip form",
+      "repository": "novatip/novatip-web",
+      "description_excerpt": "## Summary\n\n`TipForm` moves through `input`, `confirm`, `signing`, `success` and `error`,\nand the transitions depend on the amount (100 USDC or more asks for\nconfirmation), the wallet and the result of the transaction.\n\nThat is the most important flow in the product and its shape is only visible by\nreading about 300 lines of component.\n\n## Acceptance criteria\n\n- [ ] A diagram or table shows each state and what moves between them.\n- [ ] It names the guards that stop a transaction being signed.\n- [ ] It says where each guard lives in the source.\n\n## Getting started\n\nFork this repository, clone your fork, and add this repo as `upstream`:\n\n```bash\ngit clone https://github.com/<your-username>/novatip-web.git\ncd novatip-web\ngit remote add upstream https://github.com/Novatip/novatip-web.git\nnpm install\n```\n\nCreate a branch for this issue:\n\n```bash\ngit checkout -b docs/tip-form-states\n```\n\nSuggested commit message:\n\n```\ndocs: document the tip form state machine\n```\n\nRun `npm run lint`, `npm run typecheck`, and `npm test` before pushing, then open a pull request from your fork against `main` and link this issue. See the [contributing guide](https://github.com/Novatip/novatip-docs/blob/main/CONTRIBUTING.md) for the full workflow.",
+      "updated_at": "2026-10-20T15:52:49Z",
+      "labels": [
+        "documentation"
+      ],
+      "discovered_at": "2026-10-20T16:33:24.856439+00:00",
+      "status": "unverified",
+      "screening_evidence": {
+        "explicit_reward": true,
+        "acceptance_criteria": true,
+        "submission_method": true,
+        "escrow_or_platform_claim": false
+      },
+      "screening_score": 3,
+      "screening_flags": [],
+      "payment_verified": false
     }
   ],
   "triage": [
@@ -1599,14 +1639,14 @@
     {
       "url": "https://github.com/Senthemodder/aquarium-of-gullibles/issues/5",
       "title": "[Bounty: $700] Deep Recursive Generic Type Solver Fails Invariant Fuzzing in src/types/state.ts",
-      "status": "rejected_safety_audit",
+      "status": "blocked_repository_safety_review",
       "reason": "Previously blacklisted; do not reconsider",
       "checked_at": "2026-10-20T11:08:22.093195+00:00"
     },
     {
       "url": "https://github.com/Senthemodder/aquarium-of-gullibles/issues/2",
       "title": "[Bounty: $850] Bedrock Physics: 1-Tick Kinematic Ghost Teleportation and Swept AABB Dropout",
-      "status": "needs_review",
+      "status": "blocked_repository_safety_review",
       "reason": "Possible reward; payout and eligibility unverified",
       "checked_at": "2026-10-20T11:08:22.093195+00:00"
     },
