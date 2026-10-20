@@ -2,7 +2,7 @@
 
 Automated screening only. No payout is verified. Safety-review candidates are NOT approved.
 
-Total: 68
+Total: 69
 Potential candidates: 6
 Safety blocked/review: 33
 
@@ -74,3 +74,4 @@ Safety blocked/review: 33
 - **safety_review** — https://github.com/oll4com/spaceapp/issues/64: Possible upfront payment requirement
 - **safety_review** — https://github.com/airdropia/earn-ops/issues/1: Potential credential, wallet, or payment demand
 - **rejected** — https://github.com/Novatip/novatip-web/issues/327: No explicit monetary reward found
+- **rejected** — https://github.com/OracleDesk/OracleDesk-SmartContract/issues/102: No explicit monetary reward found
