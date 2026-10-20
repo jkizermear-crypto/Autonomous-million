@@ -2,9 +2,9 @@
 
 Automated screening only. No payout is verified. Safety-review candidates are NOT approved.
 
-Total: 65
+Total: 66
 Potential candidates: 6
-Safety blocked/review: 30
+Safety blocked/review: 32
 
 - **rejected** — https://github.com/tadanobutubutu/screeps/issues/5: Maintenance automation or contest
 - **rejected** — https://github.com/relayhop/sn-monetization-runtime/issues/1277: Maintenance automation or contest
@@ -49,10 +49,10 @@ Safety blocked/review: 30
 - **needs_review** — https://github.com/aLexzzz430/Cognitive-OS/issues/5: Possible reward; payout and eligibility unverified
 - **safety_review** — https://github.com/warpspeedopen-source/warpspeed-bounties/issues/4: Potential credential, wallet, or payment demand
 - **safety_review** — https://github.com/vanduc2514/hackathon-circle-misthos/issues/171: Potential credential, wallet, or payment demand
-- **rejected** — https://github.com/Sorokit/ui/issues/855: No explicit monetary reward found
+- **rejected** — https://github.com/Sorokit/ui/issues/855: Closed issue or pull request
 - **rejected** — https://github.com/k-deejah/ui/issues/11: No explicit monetary reward found
 - **safety_review** — https://github.com/warpspeedopen-source/warpspeed-bounties/issues/3: Potential credential, wallet, or payment demand
-- **rejected** — https://github.com/Earnly-Build/earnly/issues/17: Closed issue or pull request
+- **safety_review** — https://github.com/Earnly-Build/earnly/issues/17: Issue could not be checked: HTTPError
 - **rejected** — https://github.com/Octo-Protocol-org/Octo-frontend/issues/503: Closed issue or pull request
 - **safety_review** — https://github.com/vanduc2514/hackathon-circle-misthos/issues/182: Potential credential, wallet, or payment demand
 - **rejected** — https://github.com/Novatip/novatip-contracts/issues/170: Closed issue or pull request
@@ -71,3 +71,4 @@ Safety blocked/review: 30
 - **safety_review** — https://github.com/Presago-Labs/presago/issues/158: Possible upfront payment requirement
 - **safety_review** — https://github.com/oll4com/spaceapp/issues/63: Possible upfront payment requirement
 - **rejected** — https://github.com/OracleDesk/OracleDesk-Frontend/issues/82: Closed issue or pull request
+- **safety_review** — https://github.com/oll4com/spaceapp/issues/64: Possible upfront payment requirement
