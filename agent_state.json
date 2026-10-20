@@ -1,5 +1,5 @@
 {
-  "runs": 34,
+  "runs": 35,
   "ideas": [
     {
       "name": "Decentralized Indexing Subgraph Optimization",
@@ -58,7 +58,7 @@
   ],
   "verified_revenue_usd": 0,
   "verified_expenses_usd": 0,
-  "last_run_at": "2026-10-20T04:02:45.168661+00:00",
+  "last_run_at": "2026-10-20T11:08:10.672394+00:00",
   "opportunities": [
     {
       "url": "https://github.com/tadanobutubutu/screeps/issues/5",
@@ -272,7 +272,7 @@
         "algorithm"
       ],
       "discovered_at": "2026-10-11T23:43:42.676248+00:00",
-      "status": "rejected_safety_audit",
+      "status": "blocked_repository_safety_review",
       "payment_verified": false,
       "payment_review_status": "no_independent_evidence"
     },
@@ -1493,6 +1493,29 @@
       "screening_score": 3,
       "screening_flags": [],
       "payment_verified": false
+    },
+    {
+      "url": "https://github.com/oll4com/spaceapp/issues/64",
+      "title": "[$400] Per-service container images: ship each image only the code and dependencies it runs",
+      "repository": "oll4com/spaceapp",
+      "description_excerpt": "## Context\n\nSpaceApp publishes three images from one `Dockerfile`: `spaceapp-core` (API, web server, Temporal worker), `spaceapp-cli` (the CLI host that runs the AI coding CLIs in PTYs) and `spaceapp-browser` (Browser Host plus Chromium). All three build `FROM runtime-base`. That stage copies the **whole** monorepo output into every image: all of `node_modules` after `npm prune --omit=dev`, all of `apps/`, all of `packages/` and `agent-skills/`. So:\n\n- the CLI image ships the API, the web app, the Temporal SDK with its native core bridge, pdfjs and `@napi-rs/canvas`, though it only runs `packages/cli-host/dist/main.js`;\n- the browser image ships the CLI host, `node-pty`, the web app and the Temporal SDK, though it only runs `apps/api/dist/browser-host-main.js`;\n- the core image ships the CLI host and `node-pty`, plus native prebuilds for platforms it never runs on.\n\nSizes in the latest Container matrix run on `main` (`scripts/container-image-size-budget.mjs`):\n\n| Image | linux/amd64 | linux/arm64 | Budget |\n| --- | --- | --- | --- |\n| core | 1044.7 MiB | 1066.9 MiB | 1100 MiB |\n| browser | 1719.9 MiB | 1735.0 MiB | 1750 MiB |\n| cli | 1386.0 MiB | 1237.1 MiB | 2800 MiB |\n\nThe browser image is 15 MiB from its budget. The core budget already had to be raised for 1.1.5, and [`KNOWN_LIMITATIONS.md`](https://github.com/oll4com/spaceapp/blob/main/docs/quality/KNOWN_LIMITATIONS.md) (EXT-C-F20) names the core image size as the reason some functionality cannot be added to core. Every user downloads these images on install and on every `update`.\n\n## Goal\n\nEach image contains only what its service runs, on both architectures, with no change in behavior.\n\n## Acceptance criteria\n\n- [ ] Each target gets its own production dependency closure, for example a per-target build stage that i",
+      "updated_at": "2026-10-20T09:41:54Z",
+      "labels": [
+        "enhancement",
+        "help wanted",
+        "💎 Bounty"
+      ],
+      "discovered_at": "2026-10-20T11:08:10.672394+00:00",
+      "status": "unverified",
+      "screening_evidence": {
+        "explicit_reward": true,
+        "acceptance_criteria": true,
+        "submission_method": true,
+        "escrow_or_platform_claim": false
+      },
+      "screening_score": 3,
+      "screening_flags": [],
+      "payment_verified": false
     }
   ],
   "triage": [
@@ -1576,14 +1599,14 @@
     {
       "url": "https://github.com/Senthemodder/aquarium-of-gullibles/issues/5",
       "title": "[Bounty: $700] Deep Recursive Generic Type Solver Fails Invariant Fuzzing in src/types/state.ts",
-      "status": "rejected_safety_audit",
+      "status": "blocked_repository_safety_review",
       "reason": "Previously blacklisted; do not reconsider",
       "checked_at": "2026-10-20T04:02:55.570011+00:00"
     },
     {
       "url": "https://github.com/Senthemodder/aquarium-of-gullibles/issues/2",
       "title": "[Bounty: $850] Bedrock Physics: 1-Tick Kinematic Ghost Teleportation and Swept AABB Dropout",
-      "status": "needs_review",
+      "status": "blocked_repository_safety_review",
       "reason": "Possible reward; payout and eligibility unverified",
       "checked_at": "2026-10-20T04:02:55.570011+00:00"
     },
