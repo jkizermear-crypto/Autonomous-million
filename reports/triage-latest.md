@@ -2,9 +2,9 @@
 
 Automated screening only. No payout is verified. Safety-review candidates are NOT approved.
 
-Total: 69
+Total: 70
 Potential candidates: 6
-Safety blocked/review: 33
+Safety blocked/review: 34
 
 - **rejected** — https://github.com/tadanobutubutu/screeps/issues/5: Maintenance automation or contest
 - **rejected** — https://github.com/relayhop/sn-monetization-runtime/issues/1277: Maintenance automation or contest
@@ -75,3 +75,4 @@ Safety blocked/review: 33
 - **safety_review** — https://github.com/airdropia/earn-ops/issues/1: Potential credential, wallet, or payment demand
 - **rejected** — https://github.com/Novatip/novatip-web/issues/327: No explicit monetary reward found
 - **rejected** — https://github.com/OracleDesk/OracleDesk-SmartContract/issues/102: No explicit monetary reward found
+- **safety_review** — https://github.com/oll4com/spaceapp/issues/61: Possible upfront payment requirement
