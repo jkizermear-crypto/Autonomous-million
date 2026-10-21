@@ -1,6 +1,6 @@
 # Payment evidence v2 — candidate collection
 
-Checked: 2026-10-20T07:56:04.463873+00:00
+Checked: 2026-10-21T08:00:05.446431+00:00
 
 Read-only discovery. Transaction links are NOT verified escrow or guaranteed payouts.
 All opportunities remain payment_verified=false.
