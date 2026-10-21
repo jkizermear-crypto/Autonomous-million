@@ -1,5 +1,5 @@
 {
-  "runs": 37,
+  "runs": 38,
   "ideas": [
     {
       "name": "Decentralized Indexing Subgraph Optimization",
@@ -58,7 +58,7 @@
   ],
   "verified_revenue_usd": 0,
   "verified_expenses_usd": 0,
-  "last_run_at": "2026-10-20T21:23:28.408063+00:00",
+  "last_run_at": "2026-10-21T03:52:10.130784+00:00",
   "opportunities": [
     {
       "url": "https://github.com/tadanobutubutu/screeps/issues/5",
@@ -272,7 +272,7 @@
         "algorithm"
       ],
       "discovered_at": "2026-10-11T23:43:42.676248+00:00",
-      "status": "rejected_safety_audit",
+      "status": "blocked_repository_safety_review",
       "payment_verified": false,
       "payment_review_status": "no_independent_evidence"
     },
@@ -1580,6 +1580,29 @@
       "screening_score": 3,
       "screening_flags": [],
       "payment_verified": false
+    },
+    {
+      "url": "https://github.com/oll4com/spaceapp/issues/61",
+      "title": "[$600] Export worker and workflow spans over OTLP: one trace from API request to every Temporal activity",
+      "repository": "oll4com/spaceapp",
+      "description_excerpt": "## Context\n\nThe API can already export its request spans over OTLP/HTTP JSON. The exporter has no dependencies, is off by default and is switched on with `SPACE_OTEL_EXPORTER_OTLP_ENDPOINT` (`apps/api/src/otlp-span-exporter.ts`). When the API starts a Temporal workflow it passes a W3C `traceparent` in the workflow input and in the Temporal memo (`apps/api/src/turns.ts`, `workflowCorrelationMemo` in `apps/api/src/trace-context.ts`). The worker reads it for its structured activity logs (`apps/worker/src/activity-observability.ts`).\n\nBut the trace stops at the API. Workers emit no spans, so a slow or failing Room Agent mission, chat turn or memory repair can only be followed by joining log lines by hand. [`docs/quality/observability.md`](https://github.com/oll4com/spaceapp/blob/main/docs/quality/observability.md#not-covered) lists this under \"Not covered\": \"Span export covers API requests only\" and \"Background continuations start a new trace\". In [`KNOWN_LIMITATIONS.md`](https://github.com/oll4com/spaceapp/blob/main/docs/quality/KNOWN_LIMITATIONS.md) this is OBS-001 / OBS-007: \"worker/host spans\" are still open.\n\n## Goal\n\nWith `SPACE_OTEL_EXPORTER_OTLP_ENDPOINT` set, one API request that starts work on Temporal produces **one connected trace**: the API SERVER span, then the workflow execution, then every activity attempt. The trace shows in any OTLP backend (Jaeger, Tempo, Honeycomb, ...) without extra glue.\n\n## Acceptance criteria\n\n- [ ] Every Temporal worker process in `apps/worker` (`worker.ts`, `memory-maintenance-worker.ts`, `memory-mutation-worker.ts`) exports spans to `<endpoint>/v1/traces` when `SPACE_OTEL_EXPORTER_OTLP_ENDPOINT` is set, and does nothing when it is not.\n- [ ] The exporter has the same guarantees as the API exporter: a bounded queue that drops spans",
+      "updated_at": "2026-10-21T03:51:31Z",
+      "labels": [
+        "enhancement",
+        "help wanted",
+        "💎 Bounty"
+      ],
+      "discovered_at": "2026-10-21T03:52:10.130784+00:00",
+      "status": "unverified",
+      "screening_evidence": {
+        "explicit_reward": true,
+        "acceptance_criteria": true,
+        "submission_method": true,
+        "escrow_or_platform_claim": false
+      },
+      "screening_score": 3,
+      "screening_flags": [],
+      "payment_verified": false
     }
   ],
   "triage": [
@@ -1663,14 +1686,14 @@
     {
       "url": "https://github.com/Senthemodder/aquarium-of-gullibles/issues/5",
       "title": "[Bounty: $700] Deep Recursive Generic Type Solver Fails Invariant Fuzzing in src/types/state.ts",
-      "status": "rejected_safety_audit",
+      "status": "blocked_repository_safety_review",
       "reason": "Previously blacklisted; do not reconsider",
       "checked_at": "2026-10-20T21:23:38.785164+00:00"
     },
     {
       "url": "https://github.com/Senthemodder/aquarium-of-gullibles/issues/2",
       "title": "[Bounty: $850] Bedrock Physics: 1-Tick Kinematic Ghost Teleportation and Swept AABB Dropout",
-      "status": "needs_review",
+      "status": "blocked_repository_safety_review",
       "reason": "Possible reward; payout and eligibility unverified",
       "checked_at": "2026-10-20T21:23:38.785164+00:00"
     },
