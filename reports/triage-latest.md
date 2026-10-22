@@ -63,7 +63,7 @@ Safety blocked/review: 34
 - **safety_review** — https://github.com/OracleDesk/OracleDesk-SmartContract/issues/23: Possible upfront payment requirement
 - **rejected** — https://github.com/OracleDesk/OracleDesk-SmartContract/issues/10: Closed issue or pull request
 - **safety_review** — https://github.com/oll4com/spaceapp/issues/60: Possible upfront payment requirement
-- **rejected** — https://github.com/Novatip/novatip-web/issues/247: No explicit monetary reward found
+- **rejected** — https://github.com/Novatip/novatip-web/issues/247: Closed issue or pull request
 - **needs_review** — https://github.com/Ikalus1988/MisakaNet/issues/3430: Possible reward; payout and eligibility unverified
 - **needs_review** — https://github.com/Ikalus1988/MisakaNet/issues/3431: Possible reward; payout and eligibility unverified
 - **rejected** — https://github.com/OracleDesk/OracleDesk-Backend/issues/61: Closed issue or pull request
