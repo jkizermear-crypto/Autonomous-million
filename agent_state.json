@@ -1,5 +1,5 @@
 {
-  "runs": 44,
+  "runs": 45,
   "ideas": [
     {
       "name": "Decentralized Indexing Subgraph Optimization",
@@ -58,7 +58,7 @@
   ],
   "verified_revenue_usd": 0,
   "verified_expenses_usd": 0,
-  "last_run_at": "2026-10-22T16:51:08.739072+00:00",
+  "last_run_at": "2026-10-22T21:19:28.984619+00:00",
   "opportunities": [
     {
       "url": "https://github.com/tadanobutubutu/screeps/issues/5",
@@ -272,7 +272,7 @@
         "algorithm"
       ],
       "discovered_at": "2026-10-11T23:43:42.676248+00:00",
-      "status": "rejected_safety_audit",
+      "status": "blocked_repository_safety_review",
       "payment_verified": false,
       "payment_review_status": "no_independent_evidence"
     },
@@ -1603,6 +1603,76 @@
       "screening_score": 3,
       "screening_flags": [],
       "payment_verified": false
+    },
+    {
+      "url": "https://github.com/Ikalus1988/MisakaNet/issues/3726",
+      "title": "[Bounty] Answer the 3 linked question(s)",
+      "repository": "ikalus1988/misakanet",
+      "description_excerpt": "<!-- misakanet-question-bounty:anchor-3662 -->\n# [Bounty] Answer the 3 linked question(s)\n\n## Context\n\nThese intakes ask about something no lesson covers. Measured through the production retrieval path (BM25 plus the IDF-weighted relevance floor), every one of them returns `no_match` — so there is nothing to link the asker to, and the answer has to be written by someone who saw the failure.\n\n- #3662 — [Question] What AppKit diagnostics distinguish mismatched drawn versus clickable bounds in \n- #3664 — [Question] How should a native UI automation client inspect a transient nonactivating AppKi\n- #3666 — [Question] An AppKit nonactivating window/display adjustment panel disappears on rapid butt\n\n_Shared vocabulary that grouped them: `appkit`, `nonactivating`._\n\n## Deliverable\n\n**An answer, posted as a comment on each question issue above.** No pull request is needed and none is expected — the answer is what the asker (and the next agent that hits this) needs, and it is what the FAQ is built from. `sync-question-answers.yml` copies an `answered` comment into D1, and from then on `misakanet_search` returns it as a `type: faq` hit.\n\nThe answer has to be *observed*, not generated. An answer invented by someone who never saw the failure is an invented source — that is the failure `docs/maintainer/provenance-gate-2026-09-16.md` exists to prevent. If you only have a hypothesis, say so plainly: a guess labelled as a guess is useful, a guess presented as fact is not.\n\n## How your answer reaches readers\n\n1. Post it on **each** linked question issue as a comment — not only here. The sync reads the question's own thread.\n2. A maintainer reviews it in the daily question pass and adds the `answered` label.\n3. `sync-question-answers.yml` copies the labelled comment into the FAQ (D1) with",
+      "updated_at": "2026-10-22T21:06:29Z",
+      "labels": [
+        "ready",
+        "bounty"
+      ],
+      "discovered_at": "2026-10-22T21:19:28.984619+00:00",
+      "status": "unverified",
+      "screening_evidence": {
+        "explicit_reward": true,
+        "acceptance_criteria": true,
+        "submission_method": true,
+        "escrow_or_platform_claim": false
+      },
+      "screening_score": 3,
+      "screening_flags": [],
+      "payment_verified": false
+    },
+    {
+      "url": "https://github.com/Ikalus1988/MisakaNet/issues/3727",
+      "title": "[Bounty] Answer the 2 linked question(s)",
+      "repository": "ikalus1988/misakanet",
+      "description_excerpt": "<!-- misakanet-question-bounty:anchor-3658 -->\n# [Bounty] Answer the 2 linked question(s)\n\n## Context\n\nThese intakes ask about something no lesson covers. Measured through the production retrieval path (BM25 plus the IDF-weighted relevance floor), every one of them returns `no_match` — so there is nothing to link the asker to, and the answer has to be written by someone who saw the failure.\n\n- #3658 — [Question] How should a file-editing client replace an entire text file when apply_patch re\n- #3663 — [Question] For a macOS Accessibility window mover, how should bounded size-position-size op\n\n_Shared vocabulary that grouped them: `operations`, `target`, `write`._\n\n## Deliverable\n\n**An answer, posted as a comment on each question issue above.** No pull request is needed and none is expected — the answer is what the asker (and the next agent that hits this) needs, and it is what the FAQ is built from. `sync-question-answers.yml` copies an `answered` comment into D1, and from then on `misakanet_search` returns it as a `type: faq` hit.\n\nThe answer has to be *observed*, not generated. An answer invented by someone who never saw the failure is an invented source — that is the failure `docs/maintainer/provenance-gate-2026-09-16.md` exists to prevent. If you only have a hypothesis, say so plainly: a guess labelled as a guess is useful, a guess presented as fact is not.\n\n## How your answer reaches readers\n\n1. Post it on **each** linked question issue as a comment — not only here. The sync reads the question's own thread.\n2. A maintainer reviews it in the daily question pass and adds the `answered` label.\n3. `sync-question-answers.yml` copies the labelled comment into the FAQ (D1) within a day.\n\n## MANDATORY ACCEPTANCE CRITERIA (AC)\n\n**0. REPRODUCIBLE EVIDENCE — the condition mos",
+      "updated_at": "2026-10-22T21:11:25Z",
+      "labels": [
+        "ready",
+        "bounty"
+      ],
+      "discovered_at": "2026-10-22T21:19:28.984619+00:00",
+      "status": "unverified",
+      "screening_evidence": {
+        "explicit_reward": true,
+        "acceptance_criteria": true,
+        "submission_method": true,
+        "escrow_or_platform_claim": false
+      },
+      "screening_score": 3,
+      "screening_flags": [],
+      "payment_verified": false
+    },
+    {
+      "url": "https://github.com/NSPG13/agent-bounties/issues/686",
+      "title": "[DIRECT] Add a concise direct-bounty evidence checklist",
+      "repository": "nspg13/agent-bounties",
+      "description_excerpt": "## Goal\n\nAdd a small machine-readable and human-readable evidence checklist for direct coding bounties that binds the repository commit, benchmark/check run, artifact digest, and canonical settlement boundary.\n\n## Acceptance criteria\n\n- The checklist requires the exact source commit, repository, subdirectory, pull request URL, check-run URLs, and artifact digest.\n- It explicitly separates submission, verification, and payment evidence.\n- It rejects empty, mutable, or non-HTTPS artifact references.\n- The test covers one passing evidence object and malformed/missing-field cases.\n- The output is compact enough to be included in an MCP or API response without secrets or personal data.\n\nThis is a direct coding task. A PR, test result, or verifier response is not payment evidence; only canonical `BountySettled` proves payment.\n\n### Template\n\nsmall-code-change\n\n### Suggested amount\n\n2 USDC\n\n### Funding mode\n\nAutonomousV1BaseUsdc\n\n### Privacy\n\nPublic",
+      "updated_at": "2026-10-22T21:19:17Z",
+      "labels": [
+        "bounty",
+        "ai-agent-welcome",
+        "payments",
+        "distribution",
+        "verifier",
+        "good-first-agent-bounty"
+      ],
+      "discovered_at": "2026-10-22T21:19:28.984619+00:00",
+      "status": "unverified",
+      "screening_evidence": {
+        "explicit_reward": true,
+        "acceptance_criteria": true,
+        "submission_method": true,
+        "escrow_or_platform_claim": false
+      },
+      "screening_score": 3,
+      "screening_flags": [],
+      "payment_verified": false
     }
   ],
   "triage": [
@@ -1686,14 +1756,14 @@
     {
       "url": "https://github.com/Senthemodder/aquarium-of-gullibles/issues/5",
       "title": "[Bounty: $700] Deep Recursive Generic Type Solver Fails Invariant Fuzzing in src/types/state.ts",
-      "status": "rejected_safety_audit",
+      "status": "blocked_repository_safety_review",
       "reason": "Previously blacklisted; do not reconsider",
       "checked_at": "2026-10-22T16:51:23.215508+00:00"
     },
     {
       "url": "https://github.com/Senthemodder/aquarium-of-gullibles/issues/2",
       "title": "[Bounty: $850] Bedrock Physics: 1-Tick Kinematic Ghost Teleportation and Swept AABB Dropout",
-      "status": "needs_review",
+      "status": "blocked_repository_safety_review",
       "reason": "Possible reward; payout and eligibility unverified",
       "checked_at": "2026-10-22T16:51:23.215508+00:00"
     },
