@@ -1,6 +1,6 @@
 # Payment evidence v2 — candidate collection
 
-Checked: 2026-10-22T07:58:16.755747+00:00
+Checked: 2026-10-23T07:57:09.402468+00:00
 
 Read-only discovery. Transaction links are NOT verified escrow or guaranteed payouts.
 All opportunities remain payment_verified=false.
@@ -9,7 +9,7 @@ All opportunities remain payment_verified=false.
 - no_independent_evidence: https://github.com/relayhop/sn-monetization-runtime/issues/1277
 - no_independent_evidence: https://github.com/relayhop/sn-monetization-runtime/issues/1275
 - no_independent_evidence: https://github.com/SPLURT-Station/S.P.L.U.R.T-tg/issues/1306
-- no_independent_evidence: https://github.com/SPLURT-Station/S.P.L.U.R.T-tg/issues/1305
+- not_open_issue: https://github.com/SPLURT-Station/S.P.L.U.R.T-tg/issues/1305
 - no_independent_evidence: https://github.com/Element-Ventures-Canada-Ltd/openchokepoint/issues/3
 - no_independent_evidence: https://github.com/tari-project/wxtm-bridge-frontend/issues/103
 - no_independent_evidence: https://github.com/tari-project/universe/issues/3299
