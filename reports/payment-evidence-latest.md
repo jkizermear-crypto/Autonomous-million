@@ -1,6 +1,6 @@
 # Payment evidence audit
 
-UTC: 2026-10-22T07:51:27.459094+00:00
+UTC: 2026-10-23T07:50:24.067350+00:00
 
 No listing was classified as payment-verified. Claims, maintainer comments, and scores are not independent payout proof.
 
@@ -12,7 +12,7 @@ No listing was classified as payment-verified. Claims, maintainer comments, and 
   Maintainer confirmation: False; verified payment: false
 - insufficient_independent_payment_evidence: https://github.com/SPLURT-Station/S.P.L.U.R.T-tg/issues/1306
   Maintainer confirmation: False; verified payment: false
-- insufficient_independent_payment_evidence: https://github.com/SPLURT-Station/S.P.L.U.R.T-tg/issues/1305
+- issue_not_open: https://github.com/SPLURT-Station/S.P.L.U.R.T-tg/issues/1305
   Maintainer confirmation: False; verified payment: false
 - maintainer_claim_only: https://github.com/Element-Ventures-Canada-Ltd/openchokepoint/issues/3
   Maintainer confirmation: True; verified payment: false
