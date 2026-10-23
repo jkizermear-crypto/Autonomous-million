@@ -4,13 +4,13 @@ Automated screening only. No payout is verified. Safety-review candidates are NO
 
 Total: 73
 Potential candidates: 8
-Safety blocked/review: 35
+Safety blocked/review: 34
 
 - **rejected** — https://github.com/tadanobutubutu/screeps/issues/5: Maintenance automation or contest
 - **rejected** — https://github.com/relayhop/sn-monetization-runtime/issues/1277: Maintenance automation or contest
 - **rejected** — https://github.com/relayhop/sn-monetization-runtime/issues/1275: Maintenance automation or contest
 - **safety_review** — https://github.com/SPLURT-Station/S.P.L.U.R.T-tg/issues/1306: Possible upfront payment requirement
-- **safety_review** — https://github.com/SPLURT-Station/S.P.L.U.R.T-tg/issues/1305: Possible upfront payment requirement
+- **rejected** — https://github.com/SPLURT-Station/S.P.L.U.R.T-tg/issues/1305: Closed issue or pull request
 - **rejected** — https://github.com/Element-Ventures-Canada-Ltd/openchokepoint/issues/3: No explicit monetary reward found
 - **rejected** — https://github.com/tari-project/wxtm-bridge-frontend/issues/103: No explicit monetary reward found
 - **rejected** — https://github.com/tari-project/universe/issues/3299: No explicit monetary reward found
