@@ -2,9 +2,9 @@
 
 Automated screening only. No payout is verified. Safety-review candidates are NOT approved.
 
-Total: 74
+Total: 75
 Potential candidates: 9
-Safety blocked/review: 34
+Safety blocked/review: 35
 
 - **rejected** — https://github.com/tadanobutubutu/screeps/issues/5: Maintenance automation or contest
 - **rejected** — https://github.com/relayhop/sn-monetization-runtime/issues/1277: Maintenance automation or contest
@@ -80,3 +80,4 @@ Safety blocked/review: 34
 - **needs_review** — https://github.com/Ikalus1988/MisakaNet/issues/3727: Possible reward; payout and eligibility unverified
 - **safety_review** — https://github.com/NSPG13/agent-bounties/issues/686: Possible upfront payment requirement
 - **needs_review** — https://github.com/Ikalus1988/MisakaNet/issues/3728: Possible reward; payout and eligibility unverified
+- **safety_review** — https://github.com/oll4com/spaceapp/issues/65: Possible upfront payment requirement
