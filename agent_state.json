@@ -272,7 +272,7 @@
         "algorithm"
       ],
       "discovered_at": "2026-10-11T23:43:42.676248+00:00",
-      "status": "blocked_repository_safety_review",
+      "status": "rejected_safety_audit",
       "payment_verified": false,
       "payment_review_status": "no_independent_evidence"
     },
@@ -1703,518 +1703,518 @@
       "title": "Dependency Dashboard",
       "status": "rejected",
       "reason": "Maintenance automation or contest",
-      "checked_at": "2026-10-23T21:09:34.515485+00:00"
+      "checked_at": "2026-10-24T03:50:29.444108+00:00"
     },
     {
       "url": "https://github.com/relayhop/sn-monetization-runtime/issues/1277",
       "title": "[radar] SN open bounty 2026-10-11T20:11",
       "status": "rejected",
       "reason": "Maintenance automation or contest",
-      "checked_at": "2026-10-23T21:09:34.515485+00:00"
+      "checked_at": "2026-10-24T03:50:29.444108+00:00"
     },
     {
       "url": "https://github.com/relayhop/sn-monetization-runtime/issues/1275",
       "title": "[radar] SN open bounty 2026-10-11T15:34",
       "status": "rejected",
       "reason": "Maintenance automation or contest",
-      "checked_at": "2026-10-23T21:09:34.515485+00:00"
+      "checked_at": "2026-10-24T03:50:29.444108+00:00"
     },
     {
       "url": "https://github.com/SPLURT-Station/S.P.L.U.R.T-tg/issues/1306",
       "title": "[BOUNTY] Suggestion #1277",
       "status": "safety_review",
       "reason": "Possible upfront payment requirement",
-      "checked_at": "2026-10-23T21:09:34.515485+00:00"
+      "checked_at": "2026-10-24T03:50:29.444108+00:00"
     },
     {
       "url": "https://github.com/SPLURT-Station/S.P.L.U.R.T-tg/issues/1305",
       "title": "[BOUNTY] Suggestion #1278",
       "status": "rejected",
       "reason": "Closed issue or pull request",
-      "checked_at": "2026-10-23T21:09:34.515485+00:00"
+      "checked_at": "2026-10-24T03:50:29.444108+00:00"
     },
     {
       "url": "https://github.com/Element-Ventures-Canada-Ltd/openchokepoint/issues/3",
       "title": "[Priority] Open call: digital-thread and critical-items register schema for rocket turbopump supply chains",
       "status": "rejected",
       "reason": "No explicit monetary reward found",
-      "checked_at": "2026-10-23T21:09:34.515485+00:00"
+      "checked_at": "2026-10-24T03:50:29.444108+00:00"
     },
     {
       "url": "https://github.com/tari-project/wxtm-bridge-frontend/issues/103",
       "title": "Mitigate risks due to \"next\" known CVEs version and current versions range",
       "status": "rejected",
       "reason": "No explicit monetary reward found",
-      "checked_at": "2026-10-23T21:09:34.515485+00:00"
+      "checked_at": "2026-10-24T03:50:29.444108+00:00"
     },
     {
       "url": "https://github.com/tari-project/universe/issues/3299",
       "title": "CPU mining capped at 64 threads on Windows machines with 64+ logical cores",
       "status": "rejected",
       "reason": "No explicit monetary reward found",
-      "checked_at": "2026-10-23T21:09:34.515485+00:00"
+      "checked_at": "2026-10-24T03:50:29.444108+00:00"
     },
     {
       "url": "https://github.com/claude-builders-bounty/claude-builders-bounty/issues/4",
       "title": "[BOUNTY $150] AGENT: Claude Code sub-agent that reviews a PR and posts a structured comment",
       "status": "safety_review",
       "reason": "Potential credential, wallet, or payment demand",
-      "checked_at": "2026-10-23T21:09:34.515485+00:00"
+      "checked_at": "2026-10-24T03:50:29.444108+00:00"
     },
     {
       "url": "https://github.com/bwipp/postscriptbarcode/issues/82",
       "title": "Ultracode improvements",
       "status": "rejected",
       "reason": "Closed issue or pull request",
-      "checked_at": "2026-10-23T21:09:34.515485+00:00"
+      "checked_at": "2026-10-24T03:50:29.444108+00:00"
     },
     {
       "url": "https://github.com/weilixiong/TentOfTrials/issues/5",
       "title": "[$25 BOUNTY] [Python] Add independent log parser fixtures",
       "status": "needs_review",
       "reason": "Possible reward; payout and eligibility unverified",
-      "checked_at": "2026-10-23T21:09:34.515485+00:00"
+      "checked_at": "2026-10-24T03:50:29.444108+00:00"
     },
     {
       "url": "https://github.com/Senthemodder/aquarium-of-gullibles/issues/5",
       "title": "[Bounty: $700] Deep Recursive Generic Type Solver Fails Invariant Fuzzing in src/types/state.ts",
-      "status": "blocked_repository_safety_review",
+      "status": "rejected_safety_audit",
       "reason": "Previously blacklisted; do not reconsider",
-      "checked_at": "2026-10-23T21:09:34.515485+00:00"
+      "checked_at": "2026-10-24T03:50:29.444108+00:00"
     },
     {
       "url": "https://github.com/Senthemodder/aquarium-of-gullibles/issues/2",
       "title": "[Bounty: $850] Bedrock Physics: 1-Tick Kinematic Ghost Teleportation and Swept AABB Dropout",
-      "status": "blocked_repository_safety_review",
+      "status": "needs_review",
       "reason": "Possible reward; payout and eligibility unverified",
-      "checked_at": "2026-10-23T21:09:34.515485+00:00"
+      "checked_at": "2026-10-24T03:50:29.444108+00:00"
     },
     {
       "url": "https://github.com/NSPG13/agent-bounties/issues/1387",
       "title": "Generate qualifying GMV for 6 USDC prize — Highest externally funded canonical GMV — week 20260831",
       "status": "safety_review",
       "reason": "Potential credential, wallet, or payment demand",
-      "checked_at": "2026-10-23T21:09:34.515485+00:00"
+      "checked_at": "2026-10-24T03:50:29.444108+00:00"
     },
     {
       "url": "https://github.com/Saidur-droid/MergeEarn/issues/69",
       "title": "Add current judge-flow screenshots to README",
       "status": "rejected",
       "reason": "No explicit monetary reward found",
-      "checked_at": "2026-10-23T21:09:34.515485+00:00"
+      "checked_at": "2026-10-24T03:50:29.444108+00:00"
     },
     {
       "url": "https://github.com/claude-builders-bounty/claude-builders-bounty/issues/1",
       "title": "[BOUNTY $50] SKILL: Generate a structured CHANGELOG from git history",
       "status": "safety_review",
       "reason": "Potential credential, wallet, or payment demand",
-      "checked_at": "2026-10-23T21:09:34.515485+00:00"
+      "checked_at": "2026-10-24T03:50:29.444108+00:00"
     },
     {
       "url": "https://github.com/humanaios-ui/operations/issues/588",
       "title": "HumanAIOS Resource System — commit Miner + Manager + PII + Activity Graph as repository project",
       "status": "rejected",
       "reason": "No explicit monetary reward found",
-      "checked_at": "2026-10-23T21:09:34.515485+00:00"
+      "checked_at": "2026-10-24T03:50:29.444108+00:00"
     },
     {
       "url": "https://github.com/oguzpoyrazyasin/poyraz/issues/1",
       "title": "[Opportunity Router] Latest ranked opportunities",
       "status": "safety_review",
       "reason": "Possible upfront payment requirement",
-      "checked_at": "2026-10-23T21:09:34.515485+00:00"
+      "checked_at": "2026-10-24T03:50:29.444108+00:00"
     },
     {
       "url": "https://github.com/scottonchain/microcredit-agent-testbed/issues/17",
       "title": "BOOTSTRAP-001: paid AI work and resource access, then human earnings",
       "status": "safety_review",
       "reason": "Possible upfront payment requirement",
-      "checked_at": "2026-10-23T21:09:34.515485+00:00"
+      "checked_at": "2026-10-24T03:50:29.444108+00:00"
     },
     {
       "url": "https://github.com/IstiN/flutter_agent_harness/issues/1556",
       "title": "[GOAL] bench pipeline stops bleeding score: pkill self-match, progress-watch default, honest aggregate + fa deadline awareness",
       "status": "rejected",
       "reason": "Closed issue or pull request",
-      "checked_at": "2026-10-23T21:09:34.515485+00:00"
+      "checked_at": "2026-10-24T03:50:29.444108+00:00"
     },
     {
       "url": "https://github.com/NSPG13/agent-bounties/issues/1219",
       "title": "Generate qualifying GMV for Highest externally funded canonical GMV — daily August 27",
       "status": "safety_review",
       "reason": "Potential credential, wallet, or payment demand",
-      "checked_at": "2026-10-23T21:09:34.515485+00:00"
+      "checked_at": "2026-10-24T03:50:29.444108+00:00"
     },
     {
       "url": "https://github.com/NSPG13/agent-bounties/issues/1220",
       "title": "Generate qualifying GMV for 6 USDC prize — Highest externally funded canonical GMV — daily 20260825",
       "status": "safety_review",
       "reason": "Potential credential, wallet, or payment demand",
-      "checked_at": "2026-10-23T21:09:34.515485+00:00"
+      "checked_at": "2026-10-24T03:50:29.444108+00:00"
     },
     {
       "url": "https://github.com/NSPG13/agent-bounties/issues/1349",
       "title": "[Bounty] Seed a paid API child bounty",
       "status": "safety_review",
       "reason": "Potential credential, wallet, or payment demand",
-      "checked_at": "2026-10-23T21:09:34.515485+00:00"
+      "checked_at": "2026-10-24T03:50:29.444108+00:00"
     },
     {
       "url": "https://github.com/NSPG13/agent-bounties/issues/1350",
       "title": "[Bounty] Seed a paid wallet UX child bounty",
       "status": "safety_review",
       "reason": "Potential credential, wallet, or payment demand",
-      "checked_at": "2026-10-23T21:09:34.515485+00:00"
+      "checked_at": "2026-10-24T03:50:29.444108+00:00"
     },
     {
       "url": "https://github.com/NSPG13/agent-bounties/issues/1364",
       "title": "[Bounty] Seed a paid MCP child bounty",
       "status": "safety_review",
       "reason": "Potential credential, wallet, or payment demand",
-      "checked_at": "2026-10-23T21:09:34.515485+00:00"
+      "checked_at": "2026-10-24T03:50:29.444108+00:00"
     },
     {
       "url": "https://github.com/NSPG13/agent-bounties/issues/1365",
       "title": "[Bounty] Flower-shaped rainwater collector for a tinaco",
       "status": "safety_review",
       "reason": "Potential credential, wallet, or payment demand",
-      "checked_at": "2026-10-23T21:09:34.515485+00:00"
+      "checked_at": "2026-10-24T03:50:29.444108+00:00"
     },
     {
       "url": "https://github.com/NSPG13/agent-bounties/issues/1371",
       "title": "[Bounty] Seed a paid CLI child bounty",
       "status": "safety_review",
       "reason": "Potential credential, wallet, or payment demand",
-      "checked_at": "2026-10-23T21:09:34.515485+00:00"
+      "checked_at": "2026-10-24T03:50:29.444108+00:00"
     },
     {
       "url": "https://github.com/amillimatrix-eng/CARBON-Creation-Hub/issues/31",
       "title": "ROOT INTAKE — ledger truth, capability-loss recovery, and model-to-Root throughput",
       "status": "rejected",
       "reason": "No explicit monetary reward found",
-      "checked_at": "2026-10-23T21:09:34.515485+00:00"
+      "checked_at": "2026-10-24T03:50:29.444108+00:00"
     },
     {
       "url": "https://github.com/frankxai/arcanea-ai-app/issues/276",
       "title": "[Program] Arcanea creator platform, original worlds and release system",
       "status": "rejected",
       "reason": "No explicit monetary reward found",
-      "checked_at": "2026-10-23T21:09:34.515485+00:00"
+      "checked_at": "2026-10-24T03:50:29.444108+00:00"
     },
     {
       "url": "https://github.com/ottobot-ai/cardano-scala-lab/issues/64",
       "title": "[Roadmap] Task list (superseded by status labels, milestones and docs/process.md)",
       "status": "rejected",
       "reason": "Closed issue or pull request",
-      "checked_at": "2026-10-23T21:09:34.515485+00:00"
+      "checked_at": "2026-10-24T03:50:29.444108+00:00"
     },
     {
       "url": "https://github.com/scottonchain/microcredit-agent-testbed/issues/15",
       "title": "Central message board — Hermes, Claude, Codex and operator coordination",
       "status": "rejected",
       "reason": "No explicit monetary reward found",
-      "checked_at": "2026-10-23T21:09:34.515485+00:00"
+      "checked_at": "2026-10-24T03:50:29.444108+00:00"
     },
     {
       "url": "https://github.com/the-vibey-project/vibey/issues/836",
       "title": "feat(explorer): a discovered `Candidate` carries its provenance, in the intake's own vocabulary",
       "status": "rejected",
       "reason": "No explicit monetary reward found",
-      "checked_at": "2026-10-23T21:09:34.515485+00:00"
+      "checked_at": "2026-10-24T03:50:29.444108+00:00"
     },
     {
       "url": "https://github.com/the-vibey-project/vibey/issues/839",
       "title": "feat(intake): `vibey new --source-url --source-kind --offer` records where a project's work came from, as a ledger event",
       "status": "rejected",
       "reason": "No explicit monetary reward found",
-      "checked_at": "2026-10-23T21:09:34.515485+00:00"
+      "checked_at": "2026-10-24T03:50:29.444108+00:00"
     },
     {
       "url": "https://github.com/xpex-systems-ai/GXEON-AI/issues/437",
       "title": "CI release blocker: 45 non-Audit TypeScript errors across revenue and operator modules",
       "status": "rejected",
       "reason": "No explicit monetary reward found",
-      "checked_at": "2026-10-23T21:09:34.515485+00:00"
+      "checked_at": "2026-10-24T03:50:29.444108+00:00"
     },
     {
       "url": "https://github.com/BasedHardware/omi/issues/21262",
       "title": "Python SDK: Parakeet cancellation can hang on a blocked finalize send",
       "status": "rejected",
       "reason": "Closed issue or pull request",
-      "checked_at": "2026-10-23T21:09:34.515485+00:00"
+      "checked_at": "2026-10-24T03:50:29.444108+00:00"
     },
     {
       "url": "https://github.com/DigiMonk73/BTCTX-MCP/issues/41",
       "title": "Where we are",
       "status": "safety_review",
       "reason": "Possible upfront payment requirement",
-      "checked_at": "2026-10-23T21:09:34.515485+00:00"
+      "checked_at": "2026-10-24T03:50:29.444108+00:00"
     },
     {
       "url": "https://github.com/ZcashCommunityGrants/zcashcommunitygrants/issues/150",
       "title": "Zcash Nigeria 2026",
       "status": "safety_review",
       "reason": "Possible upfront payment requirement",
-      "checked_at": "2026-10-23T21:09:34.515485+00:00"
+      "checked_at": "2026-10-24T03:50:29.444108+00:00"
     },
     {
       "url": "https://github.com/claude-builders-bounty/claude-builders-bounty/issues/2",
       "title": "[BOUNTY $75] TEMPLATE: CLAUDE.md for a Next.js + SQLite SaaS project",
       "status": "safety_review",
       "reason": "Potential credential, wallet, or payment demand",
-      "checked_at": "2026-10-23T21:09:34.515485+00:00"
+      "checked_at": "2026-10-24T03:50:29.444108+00:00"
     },
     {
       "url": "https://github.com/claude-builders-bounty/claude-builders-bounty/issues/3",
       "title": "[BOUNTY $100] HOOK: Pre-tool-use hook that blocks destructive bash commands",
       "status": "safety_review",
       "reason": "Potential credential, wallet, or payment demand",
-      "checked_at": "2026-10-23T21:09:34.515485+00:00"
+      "checked_at": "2026-10-24T03:50:29.444108+00:00"
     },
     {
       "url": "https://github.com/claude-builders-bounty/claude-builders-bounty/issues/5",
       "title": "[BOUNTY $200] WORKFLOW: n8n + Claude Code — automated weekly dev summary",
       "status": "safety_review",
       "reason": "Potential credential, wallet, or payment demand",
-      "checked_at": "2026-10-23T21:09:34.515485+00:00"
+      "checked_at": "2026-10-24T03:50:29.444108+00:00"
     },
     {
       "url": "https://github.com/aLexzzz430/Cognitive-OS/issues/5",
       "title": "[ Bounty $3k ] [ Research ] Collect and compare AI-generated AGI architecture proposals",
       "status": "needs_review",
       "reason": "Possible reward; payout and eligibility unverified",
-      "checked_at": "2026-10-23T21:09:34.515485+00:00"
+      "checked_at": "2026-10-24T03:50:29.444108+00:00"
     },
     {
       "url": "https://github.com/warpspeedopen-source/warpspeed-bounties/issues/4",
       "title": "[PAID BOUNTY - $750] Email Threads API",
       "status": "safety_review",
       "reason": "Potential credential, wallet, or payment demand",
-      "checked_at": "2026-10-23T21:09:34.515485+00:00"
+      "checked_at": "2026-10-24T03:50:29.444108+00:00"
     },
     {
       "url": "https://github.com/vanduc2514/hackathon-circle-misthos/issues/171",
       "title": "Bounty: Open the claim model — anyone can work an issue, and only the merge pays",
       "status": "safety_review",
       "reason": "Potential credential, wallet, or payment demand",
-      "checked_at": "2026-10-23T21:09:34.515485+00:00"
+      "checked_at": "2026-10-24T03:50:29.444108+00:00"
     },
     {
       "url": "https://github.com/Sorokit/ui/issues/855",
       "title": "PortfolioRebalancer.tsx — hardcoded stub prices make USD calculations wrong in production",
       "status": "rejected",
       "reason": "Closed issue or pull request",
-      "checked_at": "2026-10-23T21:09:34.515485+00:00"
+      "checked_at": "2026-10-24T03:50:29.444108+00:00"
     },
     {
       "url": "https://github.com/k-deejah/ui/issues/11",
       "title": "PortfolioRebalancer.tsx — hardcoded stub prices make USD calculations wrong in production",
       "status": "rejected",
       "reason": "No explicit monetary reward found",
-      "checked_at": "2026-10-23T21:09:34.515485+00:00"
+      "checked_at": "2026-10-24T03:50:29.444108+00:00"
     },
     {
       "url": "https://github.com/warpspeedopen-source/warpspeed-bounties/issues/3",
       "title": "[PAID BOUNTY - $440] Messenger Group Chat Poll Creation & Voting UI",
       "status": "safety_review",
       "reason": "Potential credential, wallet, or payment demand",
-      "checked_at": "2026-10-23T21:09:34.515485+00:00"
+      "checked_at": "2026-10-24T03:50:29.444108+00:00"
     },
     {
       "url": "https://github.com/Earnly-Build/earnly/issues/17",
       "title": "[Bounty: $60] Add CI (lint + test + build) to pull requests",
       "status": "safety_review",
       "reason": "Issue could not be checked: HTTPError",
-      "checked_at": "2026-10-23T21:09:34.515485+00:00"
+      "checked_at": "2026-10-24T03:50:29.444108+00:00"
     },
     {
       "url": "https://github.com/Octo-Protocol-org/Octo-frontend/issues/503",
       "title": "Addresses \"Total received\" adds up every asset as XLM, and rows show \"$0\"",
       "status": "rejected",
       "reason": "Closed issue or pull request",
-      "checked_at": "2026-10-23T21:09:34.515485+00:00"
+      "checked_at": "2026-10-24T03:50:29.444108+00:00"
     },
     {
       "url": "https://github.com/vanduc2514/hackathon-circle-misthos/issues/182",
       "title": "Bounty: Overview becomes the signed-in user's dashboard — a publisher's, and a contributor's",
       "status": "safety_review",
       "reason": "Potential credential, wallet, or payment demand",
-      "checked_at": "2026-10-23T21:09:34.515485+00:00"
+      "checked_at": "2026-10-24T03:50:29.444108+00:00"
     },
     {
       "url": "https://github.com/Novatip/novatip-contracts/issues/170",
       "title": "Accept tips in any token on an admin-managed allowlist, not only USDC",
       "status": "rejected",
       "reason": "Closed issue or pull request",
-      "checked_at": "2026-10-23T21:09:34.515485+00:00"
+      "checked_at": "2026-10-24T03:50:29.444108+00:00"
     },
     {
       "url": "https://github.com/Novatip/novatip-contracts/issues/174",
       "title": "Let a supporter set up a recurring tip to a jar",
       "status": "rejected",
       "reason": "Closed issue or pull request",
-      "checked_at": "2026-10-23T21:09:34.515485+00:00"
+      "checked_at": "2026-10-24T03:50:29.444108+00:00"
     },
     {
       "url": "https://github.com/OracleDesk/OracleDesk-SmartContract/issues/3",
       "title": "Support collateral of any decimals with 256-bit mul_div intermediates in market-core",
       "status": "safety_review",
       "reason": "Possible upfront payment requirement",
-      "checked_at": "2026-10-23T21:09:34.515485+00:00"
+      "checked_at": "2026-10-24T03:50:29.444108+00:00"
     },
     {
       "url": "https://github.com/alston-personal/agentmanager/issues/2003",
       "title": "Bounty Golden Path v1: qualified paid-issue discovery → governed execution → verified payout",
       "status": "safety_review",
       "reason": "Potential credential, wallet, or payment demand",
-      "checked_at": "2026-10-23T21:09:34.515485+00:00"
+      "checked_at": "2026-10-24T03:50:29.444108+00:00"
     },
     {
       "url": "https://github.com/Nudge-Pay/nudge-app/issues/46",
       "title": "[Bounty: $55] Add a scheduled nightly run of the client quality gate",
       "status": "needs_review",
       "reason": "Possible reward; payout and eligibility unverified",
-      "checked_at": "2026-10-23T21:09:34.515485+00:00"
+      "checked_at": "2026-10-24T03:50:29.444108+00:00"
     },
     {
       "url": "https://github.com/OracleDesk/OracleDesk-SmartContract/issues/23",
       "title": "Add a refundable creation bond forfeited when a market is guardian-voided",
       "status": "safety_review",
       "reason": "Possible upfront payment requirement",
-      "checked_at": "2026-10-23T21:09:34.515485+00:00"
+      "checked_at": "2026-10-24T03:50:29.444108+00:00"
     },
     {
       "url": "https://github.com/OracleDesk/OracleDesk-SmartContract/issues/10",
       "title": "Add per-market circuit breakers: max price impact per trade and per-ledger price bands",
       "status": "rejected",
       "reason": "Closed issue or pull request",
-      "checked_at": "2026-10-23T21:09:34.515485+00:00"
+      "checked_at": "2026-10-24T03:50:29.444108+00:00"
     },
     {
       "url": "https://github.com/oll4com/spaceapp/issues/60",
       "title": "[$400] Test every Temporal workflow on a real time-skipping test server and gate replay determinism in CI",
       "status": "safety_review",
       "reason": "Possible upfront payment requirement",
-      "checked_at": "2026-10-23T21:09:34.515485+00:00"
+      "checked_at": "2026-10-24T03:50:29.444108+00:00"
     },
     {
       "url": "https://github.com/Novatip/novatip-web/issues/247",
       "title": "Add tests for TipForm's large tip confirmation",
       "status": "rejected",
       "reason": "Closed issue or pull request",
-      "checked_at": "2026-10-23T21:09:34.515485+00:00"
+      "checked_at": "2026-10-24T03:50:29.444108+00:00"
     },
     {
       "url": "https://github.com/Ikalus1988/MisakaNet/issues/3430",
       "title": "[Bounty] Answer the 3 linked question(s)",
       "status": "needs_review",
       "reason": "Possible reward; payout and eligibility unverified",
-      "checked_at": "2026-10-23T21:09:34.515485+00:00"
+      "checked_at": "2026-10-24T03:50:29.444108+00:00"
     },
     {
       "url": "https://github.com/Ikalus1988/MisakaNet/issues/3431",
       "title": "[Bounty] Answer the 2 linked question(s)",
       "status": "needs_review",
       "reason": "Possible reward; payout and eligibility unverified",
-      "checked_at": "2026-10-23T21:09:34.515485+00:00"
+      "checked_at": "2026-10-24T03:50:29.444108+00:00"
     },
     {
       "url": "https://github.com/OracleDesk/OracleDesk-Backend/issues/61",
       "title": "Sell the daily pass through x402 payment middleware on the backend",
       "status": "rejected",
       "reason": "Closed issue or pull request",
-      "checked_at": "2026-10-23T21:09:34.515485+00:00"
+      "checked_at": "2026-10-24T03:50:29.444108+00:00"
     },
     {
       "url": "https://github.com/OracleDesk/OracleDesk-Backend/issues/63",
       "title": "Discover the live x402 trace price instead of the hard-coded unlock price",
       "status": "rejected",
       "reason": "Closed issue or pull request",
-      "checked_at": "2026-10-23T21:09:34.515485+00:00"
+      "checked_at": "2026-10-24T03:50:29.444108+00:00"
     },
     {
       "url": "https://github.com/Presago-Labs/presago/issues/158",
       "title": "Bounty Payment Status Request — 7 Merged PRs ($535) — @penielgold-hub",
       "status": "safety_review",
       "reason": "Possible upfront payment requirement",
-      "checked_at": "2026-10-23T21:09:34.515485+00:00"
+      "checked_at": "2026-10-24T03:50:29.444108+00:00"
     },
     {
       "url": "https://github.com/oll4com/spaceapp/issues/63",
       "title": "[$600] Support rootless Podman as a container engine in the run-spaceapp launcher",
       "status": "safety_review",
       "reason": "Possible upfront payment requirement",
-      "checked_at": "2026-10-23T21:09:34.515485+00:00"
+      "checked_at": "2026-10-24T03:50:29.444108+00:00"
     },
     {
       "url": "https://github.com/OracleDesk/OracleDesk-Frontend/issues/82",
       "title": "Treasury operator panel for deposits, withdrawals and fee collection",
       "status": "rejected",
       "reason": "Closed issue or pull request",
-      "checked_at": "2026-10-23T21:09:34.515485+00:00"
+      "checked_at": "2026-10-24T03:50:29.444108+00:00"
     },
     {
       "url": "https://github.com/oll4com/spaceapp/issues/64",
       "title": "[$400] Per-service container images: ship each image only the code and dependencies it runs",
       "status": "safety_review",
       "reason": "Possible upfront payment requirement",
-      "checked_at": "2026-10-23T21:09:34.515485+00:00"
+      "checked_at": "2026-10-24T03:50:29.444108+00:00"
     },
     {
       "url": "https://github.com/airdropia/earn-ops/issues/1",
       "title": "bounty digest 2026-10-20",
       "status": "safety_review",
       "reason": "Potential credential, wallet, or payment demand",
-      "checked_at": "2026-10-23T21:09:34.515485+00:00"
+      "checked_at": "2026-10-24T03:50:29.444108+00:00"
     },
     {
       "url": "https://github.com/Novatip/novatip-web/issues/327",
       "title": "Document the states of the tip form",
       "status": "rejected",
       "reason": "Closed issue or pull request",
-      "checked_at": "2026-10-23T21:09:34.515485+00:00"
+      "checked_at": "2026-10-24T03:50:29.444108+00:00"
     },
     {
       "url": "https://github.com/OracleDesk/OracleDesk-SmartContract/issues/102",
       "title": "Add market-maker inventory management for creator seed shares and LP exposure",
       "status": "rejected",
       "reason": "No explicit monetary reward found",
-      "checked_at": "2026-10-23T21:09:34.515485+00:00"
+      "checked_at": "2026-10-24T03:50:29.444108+00:00"
     },
     {
       "url": "https://github.com/oll4com/spaceapp/issues/61",
       "title": "[$600] Export worker and workflow spans over OTLP: one trace from API request to every Temporal activity",
       "status": "safety_review",
       "reason": "Possible upfront payment requirement",
-      "checked_at": "2026-10-23T21:09:34.515485+00:00"
+      "checked_at": "2026-10-24T03:50:29.444108+00:00"
     },
     {
       "url": "https://github.com/Ikalus1988/MisakaNet/issues/3726",
       "title": "[Bounty] Answer the 3 linked question(s)",
       "status": "needs_review",
       "reason": "Possible reward; payout and eligibility unverified",
-      "checked_at": "2026-10-23T21:09:34.515485+00:00"
+      "checked_at": "2026-10-24T03:50:29.444108+00:00"
     },
     {
       "url": "https://github.com/Ikalus1988/MisakaNet/issues/3727",
       "title": "[Bounty] Answer the 2 linked question(s)",
       "status": "needs_review",
       "reason": "Possible reward; payout and eligibility unverified",
-      "checked_at": "2026-10-23T21:09:34.515485+00:00"
+      "checked_at": "2026-10-24T03:50:29.444108+00:00"
     },
     {
       "url": "https://github.com/NSPG13/agent-bounties/issues/686",
       "title": "[DIRECT] Add a concise direct-bounty evidence checklist",
       "status": "safety_review",
       "reason": "Possible upfront payment requirement",
-      "checked_at": "2026-10-23T21:09:34.515485+00:00"
+      "checked_at": "2026-10-24T03:50:29.444108+00:00"
     },
     {
       "url": "https://github.com/Ikalus1988/MisakaNet/issues/3728",
       "title": "[Bounty] Answer the 2 linked question(s)",
       "status": "needs_review",
       "reason": "Possible reward; payout and eligibility unverified",
-      "checked_at": "2026-10-23T21:09:34.515485+00:00"
+      "checked_at": "2026-10-24T03:50:29.444108+00:00"
     }
   ],
   "experiments": [
