@@ -23,7 +23,7 @@ Safety blocked/review: 35
 - **rejected** — https://github.com/Saidur-droid/MergeEarn/issues/69: No explicit monetary reward found
 - **safety_review** — https://github.com/claude-builders-bounty/claude-builders-bounty/issues/1: Potential credential, wallet, or payment demand
 - **rejected** — https://github.com/humanaios-ui/operations/issues/588: No explicit monetary reward found
-- **safety_review** — https://github.com/oguzpoyrazyasin/poyraz/issues/1: Potential credential, wallet, or payment demand
+- **safety_review** — https://github.com/oguzpoyrazyasin/poyraz/issues/1: Possible upfront payment requirement
 - **safety_review** — https://github.com/scottonchain/microcredit-agent-testbed/issues/17: Possible upfront payment requirement
 - **rejected** — https://github.com/IstiN/flutter_agent_harness/issues/1556: Closed issue or pull request
 - **safety_review** — https://github.com/NSPG13/agent-bounties/issues/1219: Potential credential, wallet, or payment demand
