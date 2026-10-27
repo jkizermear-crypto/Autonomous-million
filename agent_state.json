@@ -1,5 +1,5 @@
 {
-  "runs": 61,
+  "runs": 62,
   "ideas": [
     {
       "name": "Decentralized Indexing Subgraph Optimization",
@@ -58,7 +58,7 @@
   ],
   "verified_revenue_usd": 0,
   "verified_expenses_usd": 0,
-  "last_run_at": "2026-10-27T04:14:59.772684+00:00",
+  "last_run_at": "2026-10-27T11:48:30.816648+00:00",
   "opportunities": [
     {
       "url": "https://github.com/tadanobutubutu/screeps/issues/5",
@@ -272,7 +272,7 @@
         "algorithm"
       ],
       "discovered_at": "2026-10-11T23:43:42.676248+00:00",
-      "status": "rejected_safety_audit",
+      "status": "blocked_repository_safety_review",
       "payment_verified": false,
       "payment_review_status": "no_independent_evidence"
     },
@@ -1718,6 +1718,25 @@
       "screening_score": 3,
       "screening_flags": [],
       "payment_verified": false
+    },
+    {
+      "url": "https://github.com/attestar-labs/attestar/issues/46",
+      "title": "[Bounty: $85] Add a CodeQL code-scanning workflow",
+      "repository": "attestar-labs/attestar",
+      "description_excerpt": "**Context**\nNo static analysis runs over the repository. The TypeScript surface is non-trivial and security-relevant: `apps/web/lib/contracts.ts` builds signed transactions, `apps/web/lib/disclosure.ts` implements AES-GCM with a PBKDF2 key derivation, and `apps/web/lib/ledger.ts` persists financial rows in `localStorage`. CodeQL supports both JavaScript/TypeScript and Rust, and is free for public repositories.\n\n**Proposed Change**\nAdd `.github/workflows/codeql.yml` initialising CodeQL for `javascript-typescript` (and `rust` if the runner supports it), analysing on push, pull request and a weekly schedule, with `security-events: write` scoped to that job only.\n\n**Acceptance Criteria**\n- The workflow runs the `security-extended` query suite on pull requests.\n- Findings appear under the repository's code-scanning alerts.\n- A deliberately introduced `eval` in `apps/web/lib` produces a finding.\n- The `security` job of `ci.yml` and CodeQL both run without conflicting permissions.\n\n**Suggested Label**: ci\n**Bounty:** $85\n\n**ETA:** 24 hours",
+      "updated_at": "2026-10-27T10:37:25Z",
+      "labels": [],
+      "discovered_at": "2026-10-27T11:48:30.816648+00:00",
+      "status": "unverified",
+      "screening_evidence": {
+        "explicit_reward": true,
+        "acceptance_criteria": true,
+        "submission_method": true,
+        "escrow_or_platform_claim": false
+      },
+      "screening_score": 3,
+      "screening_flags": [],
+      "payment_verified": false
     }
   ],
   "triage": [
@@ -1801,14 +1820,14 @@
     {
       "url": "https://github.com/Senthemodder/aquarium-of-gullibles/issues/5",
       "title": "[Bounty: $700] Deep Recursive Generic Type Solver Fails Invariant Fuzzing in src/types/state.ts",
-      "status": "rejected_safety_audit",
+      "status": "blocked_repository_safety_review",
       "reason": "Previously blacklisted; do not reconsider",
       "checked_at": "2026-10-27T04:15:11.853237+00:00"
     },
     {
       "url": "https://github.com/Senthemodder/aquarium-of-gullibles/issues/2",
       "title": "[Bounty: $850] Bedrock Physics: 1-Tick Kinematic Ghost Teleportation and Swept AABB Dropout",
-      "status": "needs_review",
+      "status": "blocked_repository_safety_review",
       "reason": "Possible reward; payout and eligibility unverified",
       "checked_at": "2026-10-27T04:15:11.853237+00:00"
     },
