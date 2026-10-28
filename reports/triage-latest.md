@@ -4,7 +4,7 @@ Automated screening only. No payout is verified. Safety-review candidates are NO
 
 Total: 76
 Potential candidates: 10
-Safety blocked/review: 35
+Safety blocked/review: 36
 
 - **rejected** — https://github.com/tadanobutubutu/screeps/issues/5: Maintenance automation or contest
 - **rejected** — https://github.com/relayhop/sn-monetization-runtime/issues/1277: Maintenance automation or contest
@@ -23,7 +23,7 @@ Safety blocked/review: 35
 - **rejected** — https://github.com/Saidur-droid/MergeEarn/issues/69: No explicit monetary reward found
 - **safety_review** — https://github.com/claude-builders-bounty/claude-builders-bounty/issues/1: Potential credential, wallet, or payment demand
 - **rejected** — https://github.com/humanaios-ui/operations/issues/588: No explicit monetary reward found
-- **safety_review** — https://github.com/oguzpoyrazyasin/poyraz/issues/1: Possible upfront payment requirement
+- **safety_review** — https://github.com/oguzpoyrazyasin/poyraz/issues/1: Issue could not be checked: HTTPError
 - **safety_review** — https://github.com/scottonchain/microcredit-agent-testbed/issues/17: Possible upfront payment requirement
 - **rejected** — https://github.com/IstiN/flutter_agent_harness/issues/1556: Closed issue or pull request
 - **safety_review** — https://github.com/NSPG13/agent-bounties/issues/1219: Potential credential, wallet, or payment demand
@@ -33,7 +33,7 @@ Safety blocked/review: 35
 - **safety_review** — https://github.com/NSPG13/agent-bounties/issues/1364: Potential credential, wallet, or payment demand
 - **safety_review** — https://github.com/NSPG13/agent-bounties/issues/1365: Potential credential, wallet, or payment demand
 - **safety_review** — https://github.com/NSPG13/agent-bounties/issues/1371: Potential credential, wallet, or payment demand
-- **rejected** — https://github.com/amillimatrix-eng/CARBON-Creation-Hub/issues/31: No explicit monetary reward found
+- **safety_review** — https://github.com/amillimatrix-eng/CARBON-Creation-Hub/issues/31: Issue could not be checked: HTTPError
 - **rejected** — https://github.com/frankxai/arcanea-ai-app/issues/276: No explicit monetary reward found
 - **rejected** — https://github.com/ottobot-ai/cardano-scala-lab/issues/64: Closed issue or pull request
 - **rejected** — https://github.com/scottonchain/microcredit-agent-testbed/issues/15: No explicit monetary reward found
