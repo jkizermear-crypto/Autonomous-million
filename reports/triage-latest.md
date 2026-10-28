@@ -4,7 +4,7 @@ Automated screening only. No payout is verified. Safety-review candidates are NO
 
 Total: 76
 Potential candidates: 10
-Safety blocked/review: 36
+Safety blocked/review: 35
 
 - **rejected** — https://github.com/tadanobutubutu/screeps/issues/5: Maintenance automation or contest
 - **rejected** — https://github.com/relayhop/sn-monetization-runtime/issues/1277: Maintenance automation or contest
@@ -24,7 +24,7 @@ Safety blocked/review: 36
 - **safety_review** — https://github.com/claude-builders-bounty/claude-builders-bounty/issues/1: Potential credential, wallet, or payment demand
 - **rejected** — https://github.com/humanaios-ui/operations/issues/588: No explicit monetary reward found
 - **safety_review** — https://github.com/oguzpoyrazyasin/poyraz/issues/1: Issue could not be checked: HTTPError
-- **safety_review** — https://github.com/scottonchain/microcredit-agent-testbed/issues/17: Possible upfront payment requirement
+- **rejected** — https://github.com/scottonchain/microcredit-agent-testbed/issues/17: Closed issue or pull request
 - **rejected** — https://github.com/IstiN/flutter_agent_harness/issues/1556: Closed issue or pull request
 - **safety_review** — https://github.com/NSPG13/agent-bounties/issues/1219: Potential credential, wallet, or payment demand
 - **safety_review** — https://github.com/NSPG13/agent-bounties/issues/1220: Potential credential, wallet, or payment demand
