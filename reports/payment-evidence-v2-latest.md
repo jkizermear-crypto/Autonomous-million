@@ -1,6 +1,6 @@
 # Payment evidence v2 — candidate collection
 
-Checked: 2026-10-28T08:59:36.450762+00:00
+Checked: 2026-10-29T08:55:35.691576+00:00
 
 Read-only discovery. Transaction links are NOT verified escrow or guaranteed payouts.
 All opportunities remain payment_verified=false.
@@ -22,8 +22,8 @@ All opportunities remain payment_verified=false.
 - no_independent_evidence: https://github.com/Saidur-droid/MergeEarn/issues/69
 - no_independent_evidence: https://github.com/claude-builders-bounty/claude-builders-bounty/issues/1
 - no_independent_evidence: https://github.com/humanaios-ui/operations/issues/588
-- no_independent_evidence: https://github.com/oguzpoyrazyasin/poyraz/issues/1
-- no_independent_evidence: https://github.com/scottonchain/microcredit-agent-testbed/issues/17
+- lookup_failed_HTTPError: https://github.com/oguzpoyrazyasin/poyraz/issues/1
+- not_open_issue: https://github.com/scottonchain/microcredit-agent-testbed/issues/17
 - not_open_issue: https://github.com/IstiN/flutter_agent_harness/issues/1556
 - no_independent_evidence: https://github.com/NSPG13/agent-bounties/issues/1219
 - no_independent_evidence: https://github.com/NSPG13/agent-bounties/issues/1220
