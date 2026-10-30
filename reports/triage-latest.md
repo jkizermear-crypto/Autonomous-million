@@ -4,7 +4,7 @@ Automated screening only. No payout is verified. Safety-review candidates are NO
 
 Total: 77
 Potential candidates: 11
-Safety blocked/review: 35
+Safety blocked/review: 30
 
 - **rejected** — https://github.com/tadanobutubutu/screeps/issues/5: Maintenance automation or contest
 - **rejected** — https://github.com/relayhop/sn-monetization-runtime/issues/1277: Maintenance automation or contest
@@ -62,24 +62,24 @@ Safety blocked/review: 35
 - **needs_review** — https://github.com/Nudge-Pay/nudge-app/issues/46: Possible reward; payout and eligibility unverified
 - **safety_review** — https://github.com/OracleDesk/OracleDesk-SmartContract/issues/23: Possible upfront payment requirement
 - **rejected** — https://github.com/OracleDesk/OracleDesk-SmartContract/issues/10: Closed issue or pull request
-- **safety_review** — https://github.com/oll4com/spaceapp/issues/60: Possible upfront payment requirement
+- **rejected** — https://github.com/oll4com/spaceapp/issues/60: Closed issue or pull request
 - **rejected** — https://github.com/Novatip/novatip-web/issues/247: Closed issue or pull request
 - **needs_review** — https://github.com/Ikalus1988/MisakaNet/issues/3430: Possible reward; payout and eligibility unverified
 - **needs_review** — https://github.com/Ikalus1988/MisakaNet/issues/3431: Possible reward; payout and eligibility unverified
 - **rejected** — https://github.com/OracleDesk/OracleDesk-Backend/issues/61: Closed issue or pull request
 - **rejected** — https://github.com/OracleDesk/OracleDesk-Backend/issues/63: Closed issue or pull request
 - **safety_review** — https://github.com/Presago-Labs/presago/issues/158: Possible upfront payment requirement
-- **safety_review** — https://github.com/oll4com/spaceapp/issues/63: Possible upfront payment requirement
+- **rejected** — https://github.com/oll4com/spaceapp/issues/63: Closed issue or pull request
 - **rejected** — https://github.com/OracleDesk/OracleDesk-Frontend/issues/82: Closed issue or pull request
-- **safety_review** — https://github.com/oll4com/spaceapp/issues/64: Possible upfront payment requirement
+- **rejected** — https://github.com/oll4com/spaceapp/issues/64: Closed issue or pull request
 - **safety_review** — https://github.com/airdropia/earn-ops/issues/1: Potential credential, wallet, or payment demand
 - **rejected** — https://github.com/Novatip/novatip-web/issues/327: Closed issue or pull request
 - **rejected** — https://github.com/OracleDesk/OracleDesk-SmartContract/issues/102: Closed issue or pull request
-- **safety_review** — https://github.com/oll4com/spaceapp/issues/61: Possible upfront payment requirement
+- **rejected** — https://github.com/oll4com/spaceapp/issues/61: Closed issue or pull request
 - **needs_review** — https://github.com/Ikalus1988/MisakaNet/issues/3726: Possible reward; payout and eligibility unverified
 - **needs_review** — https://github.com/Ikalus1988/MisakaNet/issues/3727: Possible reward; payout and eligibility unverified
 - **safety_review** — https://github.com/NSPG13/agent-bounties/issues/686: Possible upfront payment requirement
 - **needs_review** — https://github.com/Ikalus1988/MisakaNet/issues/3728: Possible reward; payout and eligibility unverified
-- **safety_review** — https://github.com/oll4com/spaceapp/issues/65: Possible upfront payment requirement
+- **rejected** — https://github.com/oll4com/spaceapp/issues/65: Closed issue or pull request
 - **needs_review** — https://github.com/attestar-labs/attestar/issues/46: Possible reward; payout and eligibility unverified
 - **needs_review** — https://github.com/Ikalus1988/MisakaNet/issues/3729: Possible reward; payout and eligibility unverified
