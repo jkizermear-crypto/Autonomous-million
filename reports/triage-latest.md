@@ -2,9 +2,9 @@
 
 Automated screening only. No payout is verified. Safety-review candidates are NOT approved.
 
-Total: 78
-Potential candidates: 12
-Safety blocked/review: 30
+Total: 79
+Potential candidates: 13
+Safety blocked/review: 29
 
 - **rejected** — https://github.com/tadanobutubutu/screeps/issues/5: Maintenance automation or contest
 - **rejected** — https://github.com/relayhop/sn-monetization-runtime/issues/1277: Maintenance automation or contest
@@ -41,7 +41,7 @@ Safety blocked/review: 30
 - **rejected** — https://github.com/the-vibey-project/vibey/issues/839: No explicit monetary reward found
 - **rejected** — https://github.com/xpex-systems-ai/GXEON-AI/issues/437: No explicit monetary reward found
 - **rejected** — https://github.com/BasedHardware/omi/issues/21262: Closed issue or pull request
-- **safety_review** — https://github.com/DigiMonk73/BTCTX-MCP/issues/41: Possible upfront payment requirement
+- **rejected** — https://github.com/DigiMonk73/BTCTX-MCP/issues/41: No explicit monetary reward found
 - **safety_review** — https://github.com/ZcashCommunityGrants/zcashcommunitygrants/issues/150: Possible upfront payment requirement
 - **safety_review** — https://github.com/claude-builders-bounty/claude-builders-bounty/issues/2: Potential credential, wallet, or payment demand
 - **safety_review** — https://github.com/claude-builders-bounty/claude-builders-bounty/issues/3: Potential credential, wallet, or payment demand
@@ -84,3 +84,4 @@ Safety blocked/review: 30
 - **needs_review** — https://github.com/attestar-labs/attestar/issues/46: Possible reward; payout and eligibility unverified
 - **needs_review** — https://github.com/Ikalus1988/MisakaNet/issues/3729: Possible reward; payout and eligibility unverified
 - **needs_review** — https://github.com/Ikalus1988/MisakaNet/issues/4134: Possible reward; payout and eligibility unverified
+- **needs_review** — https://github.com/Ikalus1988/MisakaNet/issues/3730: Possible reward; payout and eligibility unverified
