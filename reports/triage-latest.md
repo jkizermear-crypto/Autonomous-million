@@ -2,8 +2,8 @@
 
 Automated screening only. No payout is verified. Safety-review candidates are NOT approved.
 
-Total: 77
-Potential candidates: 11
+Total: 78
+Potential candidates: 12
 Safety blocked/review: 30
 
 - **rejected** — https://github.com/tadanobutubutu/screeps/issues/5: Maintenance automation or contest
@@ -83,3 +83,4 @@ Safety blocked/review: 30
 - **rejected** — https://github.com/oll4com/spaceapp/issues/65: Closed issue or pull request
 - **needs_review** — https://github.com/attestar-labs/attestar/issues/46: Possible reward; payout and eligibility unverified
 - **needs_review** — https://github.com/Ikalus1988/MisakaNet/issues/3729: Possible reward; payout and eligibility unverified
+- **needs_review** — https://github.com/Ikalus1988/MisakaNet/issues/4134: Possible reward; payout and eligibility unverified
