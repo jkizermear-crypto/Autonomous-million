@@ -72,7 +72,7 @@ Safety blocked/review: 30
 - **rejected** — https://github.com/oll4com/spaceapp/issues/63: Closed issue or pull request
 - **rejected** — https://github.com/OracleDesk/OracleDesk-Frontend/issues/82: Closed issue or pull request
 - **rejected** — https://github.com/oll4com/spaceapp/issues/64: Closed issue or pull request
-- **safety_review** — https://github.com/airdropia/earn-ops/issues/1: Potential credential, wallet, or payment demand
+- **safety_review** — https://github.com/airdropia/earn-ops/issues/1: Issue could not be checked: HTTPError
 - **rejected** — https://github.com/Novatip/novatip-web/issues/327: Closed issue or pull request
 - **rejected** — https://github.com/OracleDesk/OracleDesk-SmartContract/issues/102: Closed issue or pull request
 - **rejected** — https://github.com/oll4com/spaceapp/issues/61: Closed issue or pull request
