@@ -1,5 +1,5 @@
 {
-  "runs": 95,
+  "runs": 96,
   "ideas": [
     {
       "name": "Decentralized Indexing Subgraph Optimization",
@@ -58,7 +58,7 @@
   ],
   "verified_revenue_usd": 0,
   "verified_expenses_usd": 0,
-  "last_run_at": "2026-11-07T12:40:12.586037+00:00",
+  "last_run_at": "2026-11-07T21:36:22.449780+00:00",
   "opportunities": [
     {
       "url": "https://github.com/tadanobutubutu/screeps/issues/5",
@@ -272,7 +272,7 @@
         "algorithm"
       ],
       "discovered_at": "2026-10-11T23:43:42.676248+00:00",
-      "status": "rejected_safety_audit",
+      "status": "blocked_repository_safety_review",
       "payment_verified": false,
       "payment_review_status": "no_independent_evidence"
     },
@@ -1832,6 +1832,27 @@
       "screening_score": 3,
       "screening_flags": [],
       "payment_verified": false
+    },
+    {
+      "url": "https://github.com/LiamBMX/joshymc-plugin/issues/1416",
+      "title": "Fix JoshyMC Sell Price Conflicts and Expand Farmable Resource Selling",
+      "repository": "liambmx/joshymc-plugin",
+      "description_excerpt": "@claude\n\n# Fix /sell Price Conflicts and Expand the Farmable Resource Economy\n\n## OBJECTIVE\n\nImprove the JoshyMC Survival SMP selling economy.\n\nThe current sell-price catalog contains two pricing structures:\n\n1. categories.<category>.items.<material>.sell\n2. prices.<material>\n\nSome materials have conflicting prices between these structures.\n\nAdditionally, some materials appear under prices but not categories.\n\nFor example:\n\nSUGAR_CANE:\n- Category price: $8\n- prices value: $50\n\nPUMPKIN:\n- Category price: $20\n- prices value: $80\n\nWHEAT:\n- Category price: $15\n- prices value: $35\n\nKELP:\n- Listed under prices at $2.25\n- Missing from the categorized list\n- Players report that regular Kelp cannot be sold.\n\nInvestigate and fix the underlying issue.\n\nSCOPE: SURVIVAL SMP ONLY.\n\nIMPORTANT:\n- Read CLAUDE.md.\n- Inspect the actual sell-price loading implementation.\n- Keep /shop unchanged.\n- Preserve existing player balances.\n- Do not modify Lifesteal.\n- Do not introduce inflation or duplication exploits.\n\n\n==================================================\n1. FIX THE SELL PRICE LOOKUP\n==================================================\n\nInspect:\n\n- ServerShopManager\n- /sell\n- /sellall, if implemented\n- /worth\n- Sell GUI\n- Sell price configuration\n- Any shared price lookup methods\n\nDetermine exactly which configuration currently takes priority.\n\nThe current catalog's two price structures should not\nproduce inconsistent results.\n\nImplement a single authoritative sell-price lookup.\n\nRequirements:\n\n- Every sellable material has one effective price.\n- /sell and /worth return the same effective unit price.\n- Sell GUI uses the same authoritative pricing.\n- Categories do not determine whether items are sellable.\n- Items outside categories can still be sold.\n- No duplicate entries with conflic",
+      "updated_at": "2026-11-07T21:22:56Z",
+      "labels": [
+        "🔨 in-progress"
+      ],
+      "discovered_at": "2026-11-07T21:36:22.449780+00:00",
+      "status": "unverified",
+      "screening_evidence": {
+        "explicit_reward": true,
+        "acceptance_criteria": true,
+        "submission_method": true,
+        "escrow_or_platform_claim": true
+      },
+      "screening_score": 4,
+      "screening_flags": [],
+      "payment_verified": false
     }
   ],
   "triage": [
@@ -1915,14 +1936,14 @@
     {
       "url": "https://github.com/Senthemodder/aquarium-of-gullibles/issues/5",
       "title": "[Bounty: $700] Deep Recursive Generic Type Solver Fails Invariant Fuzzing in src/types/state.ts",
-      "status": "rejected_safety_audit",
+      "status": "blocked_repository_safety_review",
       "reason": "Previously blacklisted; do not reconsider",
       "checked_at": "2026-11-07T12:40:24.387401+00:00"
     },
     {
       "url": "https://github.com/Senthemodder/aquarium-of-gullibles/issues/2",
       "title": "[Bounty: $850] Bedrock Physics: 1-Tick Kinematic Ghost Teleportation and Swept AABB Dropout",
-      "status": "needs_review",
+      "status": "blocked_repository_safety_review",
       "reason": "Possible reward; payout and eligibility unverified",
       "checked_at": "2026-11-07T12:40:24.387401+00:00"
     },
