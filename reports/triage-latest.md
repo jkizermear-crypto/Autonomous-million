@@ -3,7 +3,7 @@
 Automated screening only. No payout is verified. Safety-review candidates are NOT approved.
 
 Total: 81
-Potential candidates: 14
+Potential candidates: 13
 Safety blocked/review: 30
 
 - **rejected** — https://github.com/tadanobutubutu/screeps/issues/5: Maintenance automation or contest
@@ -86,4 +86,4 @@ Safety blocked/review: 30
 - **needs_review** — https://github.com/Ikalus1988/MisakaNet/issues/4134: Possible reward; payout and eligibility unverified
 - **needs_review** — https://github.com/Ikalus1988/MisakaNet/issues/3730: Possible reward; payout and eligibility unverified
 - **safety_review** — https://github.com/warpspeedopen-source/warpspeed-bounties/issues/1: Potential credential, wallet, or payment demand
-- **needs_review** — https://github.com/LiamBMX/joshymc-plugin/issues/1416: Possible reward; payout and eligibility unverified
+- **rejected** — https://github.com/LiamBMX/joshymc-plugin/issues/1416: Closed issue or pull request
