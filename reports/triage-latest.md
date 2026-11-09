@@ -3,7 +3,7 @@
 Automated screening only. No payout is verified. Safety-review candidates are NOT approved.
 
 Total: 82
-Potential candidates: 13
+Potential candidates: 8
 Safety blocked/review: 30
 
 - **rejected** — https://github.com/tadanobutubutu/screeps/issues/5: Maintenance automation or contest
@@ -64,8 +64,8 @@ Safety blocked/review: 30
 - **rejected** — https://github.com/OracleDesk/OracleDesk-SmartContract/issues/10: Closed issue or pull request
 - **rejected** — https://github.com/oll4com/spaceapp/issues/60: Closed issue or pull request
 - **rejected** — https://github.com/Novatip/novatip-web/issues/247: Closed issue or pull request
-- **needs_review** — https://github.com/Ikalus1988/MisakaNet/issues/3430: Possible reward; payout and eligibility unverified
-- **needs_review** — https://github.com/Ikalus1988/MisakaNet/issues/3431: Possible reward; payout and eligibility unverified
+- **rejected** — https://github.com/Ikalus1988/MisakaNet/issues/3430: Closed issue or pull request
+- **rejected** — https://github.com/Ikalus1988/MisakaNet/issues/3431: Closed issue or pull request
 - **rejected** — https://github.com/OracleDesk/OracleDesk-Backend/issues/61: Closed issue or pull request
 - **rejected** — https://github.com/OracleDesk/OracleDesk-Backend/issues/63: Closed issue or pull request
 - **safety_review** — https://github.com/Presago-Labs/presago/issues/158: Possible upfront payment requirement
@@ -82,9 +82,9 @@ Safety blocked/review: 30
 - **needs_review** — https://github.com/Ikalus1988/MisakaNet/issues/3728: Possible reward; payout and eligibility unverified
 - **rejected** — https://github.com/oll4com/spaceapp/issues/65: Closed issue or pull request
 - **needs_review** — https://github.com/attestar-labs/attestar/issues/46: Possible reward; payout and eligibility unverified
-- **needs_review** — https://github.com/Ikalus1988/MisakaNet/issues/3729: Possible reward; payout and eligibility unverified
-- **needs_review** — https://github.com/Ikalus1988/MisakaNet/issues/4134: Possible reward; payout and eligibility unverified
-- **needs_review** — https://github.com/Ikalus1988/MisakaNet/issues/3730: Possible reward; payout and eligibility unverified
+- **rejected** — https://github.com/Ikalus1988/MisakaNet/issues/3729: Closed issue or pull request
+- **rejected** — https://github.com/Ikalus1988/MisakaNet/issues/4134: Closed issue or pull request
+- **rejected** — https://github.com/Ikalus1988/MisakaNet/issues/3730: Closed issue or pull request
 - **safety_review** — https://github.com/warpspeedopen-source/warpspeed-bounties/issues/1: Potential credential, wallet, or payment demand
 - **rejected** — https://github.com/LiamBMX/joshymc-plugin/issues/1416: Closed issue or pull request
 - **rejected** — https://github.com/SprecherEast/sprecher-east-neighborhood-website/issues/685: No explicit monetary reward found
