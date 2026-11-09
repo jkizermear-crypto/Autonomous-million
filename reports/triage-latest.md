@@ -2,7 +2,7 @@
 
 Automated screening only. No payout is verified. Safety-review candidates are NOT approved.
 
-Total: 81
+Total: 82
 Potential candidates: 13
 Safety blocked/review: 30
 
@@ -87,3 +87,4 @@ Safety blocked/review: 30
 - **needs_review** — https://github.com/Ikalus1988/MisakaNet/issues/3730: Possible reward; payout and eligibility unverified
 - **safety_review** — https://github.com/warpspeedopen-source/warpspeed-bounties/issues/1: Potential credential, wallet, or payment demand
 - **rejected** — https://github.com/LiamBMX/joshymc-plugin/issues/1416: Closed issue or pull request
+- **rejected** — https://github.com/SprecherEast/sprecher-east-neighborhood-website/issues/685: No explicit monetary reward found
