@@ -1,5 +1,5 @@
 {
-  "runs": 99,
+  "runs": 100,
   "ideas": [
     {
       "name": "Decentralized Indexing Subgraph Optimization",
@@ -58,7 +58,7 @@
   ],
   "verified_revenue_usd": 0,
   "verified_expenses_usd": 0,
-  "last_run_at": "2026-11-08T21:50:02.530678+00:00",
+  "last_run_at": "2026-11-09T05:20:03.899907+00:00",
   "opportunities": [
     {
       "url": "https://github.com/tadanobutubutu/screeps/issues/5",
@@ -272,7 +272,7 @@
         "algorithm"
       ],
       "discovered_at": "2026-10-11T23:43:42.676248+00:00",
-      "status": "rejected_safety_audit",
+      "status": "blocked_repository_safety_review",
       "payment_verified": false,
       "payment_review_status": "no_independent_evidence"
     },
@@ -1853,6 +1853,30 @@
       "screening_score": 4,
       "screening_flags": [],
       "payment_verified": false
+    },
+    {
+      "url": "https://github.com/SprecherEast/sprecher-east-neighborhood-website/issues/685",
+      "title": "process: Chief of staff agent team — one agent to talk to, parallel workers, GitHub issues as the record",
+      "repository": "sprechereast/sprecher-east-neighborhood-website",
+      "description_excerpt": "### Summary\n\nThe owner wants to talk to **one agent** (a chief of staff) instead of managing many sessions. It grooms the backlog, hands issues to worker agents that run in parallel without clashing, keeps every step and decision on the issue, and asks him only what needs him. Research on 2026-11-04 says: **build on this repo's agents, skills, hooks and board, and don't adopt a template.** The new parts are a chief of staff agent, a few issue fields and labels, a daily sweep, and a weekly feedback run. Nothing here is built yet.\n\nThe full research report is in the first two comments below (written for the owner, so it says \"you\").\n\n### Update (2026-11-06): a leaner team, built after the knowledge layer\n\nSummary of the owner's direction (2026-11-06, Claude session, text), after two outside reviews and a check against published research:\n\n- **The knowledge layer (#712) is built first.** Building the team (#695 to #698) waits for it.\n- **Three kinds of session:** the chief of staff he talks to, one temporary worker per issue, and a fresh reviewer per pull request.\n- **Skills, not agents:** the twelve role guides become skills a worker loads, and the four planned helpers (planner, design lead, review lead, process analyst) become procedures in the chief of staff's skill.\n- **More agents only if this proves too thin,** shown by a comparison on real issues.\n- **No fixed number for parallel work.** Whether issues touch the same files decides.\n\nThe sections below are the research of 2026-11-04 and are kept as the record. Where they say three levels, manager helpers or a cap of 2, the update above replaces them. The change to the written plan is #721; the current plan is `docs/process/agent-operating-model.md`.\n\n### Summary of the owner's direction (2026-11-04, voice and text se",
+      "updated_at": "2026-11-09T04:59:26Z",
+      "labels": [
+        "process",
+        "tooling",
+        "priority: high",
+        "epic"
+      ],
+      "discovered_at": "2026-11-09T05:20:03.899907+00:00",
+      "status": "unverified",
+      "screening_evidence": {
+        "explicit_reward": true,
+        "acceptance_criteria": true,
+        "submission_method": true,
+        "escrow_or_platform_claim": false
+      },
+      "screening_score": 3,
+      "screening_flags": [],
+      "payment_verified": false
     }
   ],
   "triage": [
@@ -1936,14 +1960,14 @@
     {
       "url": "https://github.com/Senthemodder/aquarium-of-gullibles/issues/5",
       "title": "[Bounty: $700] Deep Recursive Generic Type Solver Fails Invariant Fuzzing in src/types/state.ts",
-      "status": "rejected_safety_audit",
+      "status": "blocked_repository_safety_review",
       "reason": "Previously blacklisted; do not reconsider",
       "checked_at": "2026-11-08T21:50:13.823948+00:00"
     },
     {
       "url": "https://github.com/Senthemodder/aquarium-of-gullibles/issues/2",
       "title": "[Bounty: $850] Bedrock Physics: 1-Tick Kinematic Ghost Teleportation and Swept AABB Dropout",
-      "status": "needs_review",
+      "status": "blocked_repository_safety_review",
       "reason": "Possible reward; payout and eligibility unverified",
       "checked_at": "2026-11-08T21:50:13.823948+00:00"
     },
