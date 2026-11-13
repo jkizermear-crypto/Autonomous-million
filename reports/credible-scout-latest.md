@@ -1,15 +1,15 @@
 # Credible Scout v4
 
-Checked: 2026-11-13T14:11:58.514108+00:00
-GitHub issues returned: 94
+Checked: 2026-11-13T23:22:24.315203+00:00
+GitHub issues returned: 90
 New candidates stored: 0
 Previously stored blocked-repository items quarantined: 2
 All saved candidates are UNVERIFIED; no payment or escrow was authenticated.
 
 ## Exclusion counts
-- already_known_or_rejected: 3
-- missing_reward_or_deliverables: 85
-- safety_flags: 6
+- already_known_or_rejected: 1
+- missing_reward_or_deliverables: 86
+- safety_flags: 3
 
 ## New candidates
 
