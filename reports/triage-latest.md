@@ -2,8 +2,8 @@
 
 Automated screening only. No payout is verified. Safety-review candidates are NOT approved.
 
-Total: 82
-Potential candidates: 8
+Total: 83
+Potential candidates: 9
 Safety blocked/review: 30
 
 - **rejected** — https://github.com/tadanobutubutu/screeps/issues/5: Maintenance automation or contest
@@ -88,3 +88,4 @@ Safety blocked/review: 30
 - **safety_review** — https://github.com/warpspeedopen-source/warpspeed-bounties/issues/1: Potential credential, wallet, or payment demand
 - **rejected** — https://github.com/LiamBMX/joshymc-plugin/issues/1416: Closed issue or pull request
 - **rejected** — https://github.com/SprecherEast/sprecher-east-neighborhood-website/issues/685: No explicit monetary reward found
+- **needs_review** — https://github.com/lablab-ai/community-content/issues/462: Possible reward; payout and eligibility unverified
