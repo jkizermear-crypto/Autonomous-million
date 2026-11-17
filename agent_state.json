@@ -1,5 +1,5 @@
 {
-  "runs": 120,
+  "runs": 121,
   "ideas": [
     {
       "name": "Decentralized Indexing Subgraph Optimization",
@@ -58,7 +58,7 @@
   ],
   "verified_revenue_usd": 0,
   "verified_expenses_usd": 0,
-  "last_run_at": "2026-11-16T15:11:40.819821+00:00",
+  "last_run_at": "2026-11-17T01:43:39.823662+00:00",
   "opportunities": [
     {
       "url": "https://github.com/tadanobutubutu/screeps/issues/5",
@@ -272,7 +272,7 @@
         "algorithm"
       ],
       "discovered_at": "2026-10-11T23:43:42.676248+00:00",
-      "status": "rejected_safety_audit",
+      "status": "blocked_repository_safety_review",
       "payment_verified": false,
       "payment_review_status": "no_independent_evidence"
     },
@@ -1877,6 +1877,27 @@
       "screening_score": 3,
       "screening_flags": [],
       "payment_verified": false
+    },
+    {
+      "url": "https://github.com/lablab-ai/community-content/issues/462",
+      "title": "Crafting a Comprehensive Tutorial for Vectara Chat",
+      "repository": "lablab-ai/community-content",
+      "description_excerpt": "We're seeking talented individual to develop a comprehensive tutorial for Vectara Chat, a cutting-edge conversational AI platform. If you're passionate about AI and love sharing knowledge, this opportunity is for you!\r\n\r\n### The Plan and Structure of the Tutorial (recommended)\r\nHere's an outline of what we're looking for in the tutorial:\r\n**Introduction to Vectara Chat**\r\n**Getting Started with Vectara Chat**\r\n**Building a Chatbot with Vectara**\r\n**Enhancing Chatbot Intelligence**\r\n**Deploying and Testing Chatbots**\r\n**Conclusion / Tips for Hackathon participants on use cases for the models**\r\n\r\nFocus on original, personalized content with descriptive details and code samples as needed. Feel free to use your personal author style, with wording \"In this tutorial I will show you...\", \"this time I want to show you...\" etc.\r\nRefer to our [Tutorial Guidelines](https://github.com/lablab-ai/community-content/blob/main/tutorials/README.md) for requirements.\r\n\r\nIf you're interested in creating this tutorial, please submit a proposal outlining your approach, including a breakdown of the topics you plan to cover and any additional resources or support you may need. We're excited to work with passionate freelancers who share our vision for empowering developers with the tools and knowledge they need to succeed in the world of AI.\r\n\r\n### Tutorials / Tech Pages To Link in the article (in the list we mention recommended keywords for links)\r\n[Vectara Beginner App Tutorial](https://lablab.ai/t/vectara-beginner-app-tutorial-showcase-the-creation-of-vectara-app-in-legal-use-case)\r\n[Vectara Advanced App Tutorial](https://lablab.ai/t/vectara-advanced-app-tutorial-showcase-the-creation-of-vectara-app-in-legal-or-customer-support-use-case)\r\n### 🔑 Tech details and access\r\nIn case you would fac",
+      "updated_at": "2026-11-16T20:51:29Z",
+      "labels": [
+        "💎 Bounty"
+      ],
+      "discovered_at": "2026-11-17T01:43:39.823662+00:00",
+      "status": "unverified",
+      "screening_evidence": {
+        "explicit_reward": true,
+        "acceptance_criteria": true,
+        "submission_method": true,
+        "escrow_or_platform_claim": false
+      },
+      "screening_score": 3,
+      "screening_flags": [],
+      "payment_verified": false
     }
   ],
   "triage": [
@@ -1960,14 +1981,14 @@
     {
       "url": "https://github.com/Senthemodder/aquarium-of-gullibles/issues/5",
       "title": "[Bounty: $700] Deep Recursive Generic Type Solver Fails Invariant Fuzzing in src/types/state.ts",
-      "status": "rejected_safety_audit",
+      "status": "blocked_repository_safety_review",
       "reason": "Previously blacklisted; do not reconsider",
       "checked_at": "2026-11-16T15:11:54.629156+00:00"
     },
     {
       "url": "https://github.com/Senthemodder/aquarium-of-gullibles/issues/2",
       "title": "[Bounty: $850] Bedrock Physics: 1-Tick Kinematic Ghost Teleportation and Swept AABB Dropout",
-      "status": "needs_review",
+      "status": "blocked_repository_safety_review",
       "reason": "Possible reward; payout and eligibility unverified",
       "checked_at": "2026-11-16T15:11:54.629156+00:00"
     },
