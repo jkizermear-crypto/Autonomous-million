@@ -1,5 +1,5 @@
 {
-  "runs": 122,
+  "runs": 123,
   "ideas": [
     {
       "name": "Decentralized Indexing Subgraph Optimization",
@@ -58,7 +58,7 @@
   ],
   "verified_revenue_usd": 0,
   "verified_expenses_usd": 0,
-  "last_run_at": "2026-11-17T15:41:10.604062+00:00",
+  "last_run_at": "2026-11-18T00:43:46.047582+00:00",
   "opportunities": [
     {
       "url": "https://github.com/tadanobutubutu/screeps/issues/5",
@@ -272,7 +272,7 @@
         "algorithm"
       ],
       "discovered_at": "2026-10-11T23:43:42.676248+00:00",
-      "status": "rejected_safety_audit",
+      "status": "blocked_repository_safety_review",
       "payment_verified": false,
       "payment_review_status": "no_independent_evidence"
     },
@@ -1898,6 +1898,44 @@
       "screening_score": 3,
       "screening_flags": [],
       "payment_verified": false
+    },
+    {
+      "url": "https://github.com/ZcashCommunityGrants/zcashcommunitygrants/issues/577",
+      "title": "Grant Application - x402-ZEC: shielded Zcash rail for HTTP 402 agent payments",
+      "repository": "zcashcommunitygrants/zcashcommunitygrants",
+      "description_excerpt": "## Terms and Conditions\n\n- [x] I agree to the [Grant Agreement](https://9ba4718c-5c73-47c3-a024-4fc4e5278803.usrfiles.com/ugd/9ba471_f81ef4e4b5f040038350270590eb2e42.pdf) terms if funded\n- [x] I agree to [Provide KYC information](https://9ba4718c-5c73-47c3-a024-4fc4e5278803.usrfiles.com/ugd/9ba471_7d9e73d16b584a61bae92282b208efc4.pdf) if funded above $50,000 USD\n- [x] I agree to disclose conflicts of interest\n- [x] I agree to adhere to the [Code of Conduct](https://forum.zcashcommunity.com/t/zcg-code-of-conduct/41787) and [Communication Guidelines](https://forum.zcashcommunity.com/t/zcg-communication-guidelines/44284)\n- [x] I understand all milestone deliverables will be validated and accepted by their intended users or their representatives, who will confirm that the deliverables meet the required quality, functionality, and usability for each user story.\n- [x] I agree that for any new open-source software, I will create a `CONTRIBUTING.md` file that reflects the high standards of Zcash development, using the [`librustzcash` style guides](https://github.com/zcash/librustzcash/blob/main/CONTRIBUTING.md#styleguides) as a primary reference.\n- [x] I understand when contributing to existing Zcash code, I am required to adhere to the project specific contribution guidelines, paying close attention to any [merge](https://github.com/zcash/librustzcash/blob/main/CONTRIBUTING.md#merge-workflow), [branch](https://github.com/zcash/librustzcash/blob/main/CONTRIBUTING.md#branch-history), [pull request](https://github.com/zcash/librustzcash/blob/main/CONTRIBUTING.md#pull-request-review), and [commit](https://github.com/zcash/librustzcash/blob/main/CONTRIBUTING.md#commit-messages) guidelines as exemplified in the librustzcash repository.\n- [x] I agree to post request details on the [C",
+      "updated_at": "2026-11-18T00:29:03Z",
+      "labels": [],
+      "discovered_at": "2026-11-18T00:43:46.047582+00:00",
+      "status": "unverified",
+      "screening_evidence": {
+        "explicit_reward": true,
+        "acceptance_criteria": true,
+        "submission_method": true,
+        "escrow_or_platform_claim": false
+      },
+      "screening_score": 3,
+      "screening_flags": [],
+      "payment_verified": false
+    },
+    {
+      "url": "https://github.com/ZcashCommunityGrants/zcashcommunitygrants/issues/578",
+      "title": "Grant Application - Retroactive: x402 Ecosystem Census + AtlasData Production Micropayments Service",
+      "repository": "zcashcommunitygrants/zcashcommunitygrants",
+      "description_excerpt": "### Terms and Conditions\n\n- [x] I agree to the [Grant Agreement](https://9ba4718c-5c73-47c3-a024-4fc4e5278803.usrfiles.com/ugd/9ba471_f81ef4e4b5f040038350270590eb2e42.pdf) terms if funded\n- [x] I agree to [Provide KYC information](https://9ba4718c-5c73-47c3-a024-4fc4e5278803.usrfiles.com/ugd/9ba471_7d9e73d16b584a61bae92282b208efc4.pdf) if funded above $50,000 USD\n- [x] I agree to disclose conflicts of interest\n- [x] I agree to adhere to the [Code of Conduct](https://forum.zcashcommunity.com/t/zcg-code-of-conduct/41787) and [Communication Guidelines](https://forum.zcashcommunity.com/t/zcg-communication-guidelines/44284)\n- [x] I understand all milestone deliverables will be validated and accepted by their intended users or their representatives, who will confirm that the deliverables meet the required quality, functionality, and usability for each user story.\n- [x] I agree that for any new open-source software, I will create a `CONTRIBUTING.md` file that reflects the high standards of Zcash development, using the [`librustzcash` style guides](https://github.com/zcash/librustzcash/blob/main/CONTRIBUTING.md#styleguides) as a primary reference.\n- [x] I understand when contributing to existing Zcash code, I am required to adhere to the project specific contribution guidelines, paying close attention to any [merge](https://github.com/zcash/librustzcash/blob/main/CONTRIBUTING.md#merge-workflow), [branch](https://github.com/zcash/librustzcash/blob/main/CONTRIBUTING.md#branch-history), [pull request](https://github.com/zcash/librustzcash/blob/main/CONTRIBUTING.md#pull-request-review), and [commit](https://github.com/zcash/librustzcash/blob/main#commit-messages) guidelines as exemplified in the `librustzcash` repository.\n- [x] I agree to post request details on the [Community Foru",
+      "updated_at": "2026-11-18T00:29:04Z",
+      "labels": [],
+      "discovered_at": "2026-11-18T00:43:46.047582+00:00",
+      "status": "unverified",
+      "screening_evidence": {
+        "explicit_reward": true,
+        "acceptance_criteria": true,
+        "submission_method": true,
+        "escrow_or_platform_claim": false
+      },
+      "screening_score": 3,
+      "screening_flags": [],
+      "payment_verified": false
     }
   ],
   "triage": [
@@ -1981,14 +2019,14 @@
     {
       "url": "https://github.com/Senthemodder/aquarium-of-gullibles/issues/5",
       "title": "[Bounty: $700] Deep Recursive Generic Type Solver Fails Invariant Fuzzing in src/types/state.ts",
-      "status": "rejected_safety_audit",
+      "status": "blocked_repository_safety_review",
       "reason": "Previously blacklisted; do not reconsider",
       "checked_at": "2026-11-17T15:41:25.274498+00:00"
     },
     {
       "url": "https://github.com/Senthemodder/aquarium-of-gullibles/issues/2",
       "title": "[Bounty: $850] Bedrock Physics: 1-Tick Kinematic Ghost Teleportation and Swept AABB Dropout",
-      "status": "needs_review",
+      "status": "blocked_repository_safety_review",
       "reason": "Possible reward; payout and eligibility unverified",
       "checked_at": "2026-11-17T15:41:25.274498+00:00"
     },
