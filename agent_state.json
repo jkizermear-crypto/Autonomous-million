@@ -1,5 +1,5 @@
 {
-  "runs": 123,
+  "runs": 124,
   "ideas": [
     {
       "name": "Decentralized Indexing Subgraph Optimization",
@@ -58,7 +58,7 @@
   ],
   "verified_revenue_usd": 0,
   "verified_expenses_usd": 0,
-  "last_run_at": "2026-11-18T00:43:46.047582+00:00",
+  "last_run_at": "2026-11-18T15:20:28.729305+00:00",
   "opportunities": [
     {
       "url": "https://github.com/tadanobutubutu/screeps/issues/5",
@@ -272,7 +272,7 @@
         "algorithm"
       ],
       "discovered_at": "2026-10-11T23:43:42.676248+00:00",
-      "status": "rejected_safety_audit",
+      "status": "blocked_repository_safety_review",
       "payment_verified": false,
       "payment_review_status": "no_independent_evidence"
     },
@@ -1936,6 +1936,30 @@
       "screening_score": 3,
       "screening_flags": [],
       "payment_verified": false
+    },
+    {
+      "url": "https://github.com/OracleDesk/OracleDesk-Backend/issues/332",
+      "title": "Price daily passes from the versioned price schedule and honour quoted prices on intents",
+      "repository": "oracledesk/oracledesk-backend",
+      "description_excerpt": "## Overview\n\nIssue #58 (\"Version prices in a pricing table and honour quoted prices during price changes\") is closed. What landed is a module nothing imports and a model with no table:\n\n- `src/services/pricing.ts` exports `getActivePriceSchedule`, `getPriceRawForType` and `formatPrice`. It constructs its **own** `new PrismaClient()` at import time, a second connection pool outside `src/lib/prisma.ts`, its context and its shutdown. It queries `price_schedules`, which no migration creates (#257). Nothing imports it.\n- The real price is a module constant. `subscription.service.ts` has `export const DAILY_PASS_PRICE_RAW = BigInt(config.DAILY_PASS_PRICE_RAW)` (default `5000000`, 0.5 USDC). It is read by:\n  - `recordPayment` (`minAmount` for the legacy unlock);\n  - `getTracWithAccessControl` (the preview's `dailyPassPriceRaw` / `dailyPassPrice`);\n  - `createPaymentIntent` (`amountRaw` and `preauthorizeSpending`);\n  - `preauthorizeAccess` in `trace.controller.ts`;\n  - `reconcile.service.ts`, which reads `config.DAILY_PASS_PRICE_RAW` directly.\n- Changing the price means changing an env var and restarting every instance. During a rolling deploy, instances disagree about the price. A user who signed a transfer at the old price can be rejected by the legacy unlock (`PAYMENT_INSUFFICIENT`), or can pay the old, lower price after an increase.\n\nIntents already partly honour a quote: `createPaymentIntent` stores `amountRaw`, and `submitPaymentIntent` verifies with `minAmount: 0n` and compares against `intent.amountRaw` (underpayment goes to `REFUND_REQUIRED`). But the quote is not tied to any price version, and reconciliation and refunds cannot tell which price applied.\n\nThis issue makes `PriceSchedule` the source of truth with effective-from windows, records the schedule version on ev",
+      "updated_at": "2026-11-18T15:20:18Z",
+      "labels": [
+        "bug",
+        "complexity: high",
+        "api",
+        "Stellar Wave"
+      ],
+      "discovered_at": "2026-11-18T15:20:28.729305+00:00",
+      "status": "unverified",
+      "screening_evidence": {
+        "explicit_reward": true,
+        "acceptance_criteria": true,
+        "submission_method": true,
+        "escrow_or_platform_claim": false
+      },
+      "screening_score": 3,
+      "screening_flags": [],
+      "payment_verified": false
     }
   ],
   "triage": [
@@ -2019,14 +2043,14 @@
     {
       "url": "https://github.com/Senthemodder/aquarium-of-gullibles/issues/5",
       "title": "[Bounty: $700] Deep Recursive Generic Type Solver Fails Invariant Fuzzing in src/types/state.ts",
-      "status": "rejected_safety_audit",
+      "status": "blocked_repository_safety_review",
       "reason": "Previously blacklisted; do not reconsider",
       "checked_at": "2026-11-18T00:43:58.467622+00:00"
     },
     {
       "url": "https://github.com/Senthemodder/aquarium-of-gullibles/issues/2",
       "title": "[Bounty: $850] Bedrock Physics: 1-Tick Kinematic Ghost Teleportation and Swept AABB Dropout",
-      "status": "needs_review",
+      "status": "blocked_repository_safety_review",
       "reason": "Possible reward; payout and eligibility unverified",
       "checked_at": "2026-11-18T00:43:58.467622+00:00"
     },
