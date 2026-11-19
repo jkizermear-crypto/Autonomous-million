@@ -1,5 +1,5 @@
 {
-  "runs": 125,
+  "runs": 126,
   "ideas": [
     {
       "name": "Decentralized Indexing Subgraph Optimization",
@@ -58,7 +58,7 @@
   ],
   "verified_revenue_usd": 0,
   "verified_expenses_usd": 0,
-  "last_run_at": "2026-11-19T00:01:00.947141+00:00",
+  "last_run_at": "2026-11-19T15:26:25.177087+00:00",
   "opportunities": [
     {
       "url": "https://github.com/tadanobutubutu/screeps/issues/5",
@@ -272,7 +272,7 @@
         "algorithm"
       ],
       "discovered_at": "2026-10-11T23:43:42.676248+00:00",
-      "status": "rejected_safety_audit",
+      "status": "blocked_repository_safety_review",
       "payment_verified": false,
       "payment_review_status": "no_independent_evidence"
     },
@@ -1960,6 +1960,30 @@
       "screening_score": 3,
       "screening_flags": [],
       "payment_verified": false
+    },
+    {
+      "url": "https://github.com/Kaycee276/Chesster/issues/675",
+      "title": "[BACKEND] feat(referral): implement automatic claim threshold batching in referralService.js",
+      "repository": "kaycee276/chesster",
+      "description_excerpt": "# [BACKEND] feat(referral): implement automatic claim threshold batching in referralService.js\n\n## Metadata\n| Field | Value |\n|---|---|\n| **Domain** | Backend |\n| **Difficulty** | Medium (3–5 Days) |\n| **Effort Estimate** | `effort: 8h` |\n| **Priority** | P2-Medium |\n| **Labels** | `difficulty: medium`, `domain: backend`, `effort: 5-12h` |\n| **Target Branch** | `dev` |\n| **Depends On** | None |\n\n## 🎯 Context & Goal\nChesster features a community referral program (`backend/services/referralService.js`) where players earn a percentage of platform protocol fees when their referred friends wager and play matches. Commissions accumulate in the `claimable_commission_ledger` table as pending rewards.\n\nCurrently, referrers must manually navigate to the referral page and trigger manual claim transactions for every single micro-reward. For active influencers and tournament organizers with hundreds of referrals, manual claims generate dozens of small Stellar transactions, each incurring network fees and coordinator processing overhead.\n\nThe objective of this issue is to implement **Automatic Claim Threshold Batching** in `backend/services/referralService.js`:\n1. Track accumulated pending commissions per referrer wallet address.\n2. When a referrer's pending balance crosses a configurable threshold (e.g. 20 XLM or 10 USDC), mark the batch as `auto_claim_eligible`.\n3. Author a scheduled worker `processAutoClaimBatch(threshold)` that aggregates pending commissions per referrer, executes a single combined payout transfer, and transitions the records to `claimed`.\n\nBatching drastically reduces blockchain transaction volume and provides a seamless passive payout experience for community advocates.\n\n## 📂 Target Files\n- `backend/services/referralService.js` → `processAutoClaimBatch`, `getPe",
+      "updated_at": "2026-11-19T15:02:31Z",
+      "labels": [
+        "difficulty: medium",
+        "domain: backend",
+        "effort: 5-12h",
+        "Stellar Wave"
+      ],
+      "discovered_at": "2026-11-19T15:26:25.177087+00:00",
+      "status": "unverified",
+      "screening_evidence": {
+        "explicit_reward": true,
+        "acceptance_criteria": true,
+        "submission_method": true,
+        "escrow_or_platform_claim": true
+      },
+      "screening_score": 4,
+      "screening_flags": [],
+      "payment_verified": false
     }
   ],
   "triage": [
@@ -2043,14 +2067,14 @@
     {
       "url": "https://github.com/Senthemodder/aquarium-of-gullibles/issues/5",
       "title": "[Bounty: $700] Deep Recursive Generic Type Solver Fails Invariant Fuzzing in src/types/state.ts",
-      "status": "rejected_safety_audit",
+      "status": "blocked_repository_safety_review",
       "reason": "Previously blacklisted; do not reconsider",
       "checked_at": "2026-11-19T00:01:13.379004+00:00"
     },
     {
       "url": "https://github.com/Senthemodder/aquarium-of-gullibles/issues/2",
       "title": "[Bounty: $850] Bedrock Physics: 1-Tick Kinematic Ghost Teleportation and Swept AABB Dropout",
-      "status": "needs_review",
+      "status": "blocked_repository_safety_review",
       "reason": "Possible reward; payout and eligibility unverified",
       "checked_at": "2026-11-19T00:01:13.379004+00:00"
     },
