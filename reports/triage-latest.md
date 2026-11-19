@@ -2,8 +2,8 @@
 
 Automated screening only. No payout is verified. Safety-review candidates are NOT approved.
 
-Total: 86
-Potential candidates: 10
+Total: 87
+Potential candidates: 11
 Safety blocked/review: 32
 
 - **rejected** — https://github.com/tadanobutubutu/screeps/issues/5: Maintenance automation or contest
@@ -92,3 +92,4 @@ Safety blocked/review: 32
 - **needs_review** — https://github.com/ZcashCommunityGrants/zcashcommunitygrants/issues/577: Possible reward; payout and eligibility unverified
 - **safety_review** — https://github.com/ZcashCommunityGrants/zcashcommunitygrants/issues/578: Potential credential, wallet, or payment demand
 - **safety_review** — https://github.com/OracleDesk/OracleDesk-Backend/issues/332: Potential credential, wallet, or payment demand
+- **needs_review** — https://github.com/Kaycee276/Chesster/issues/675: Possible reward; payout and eligibility unverified
