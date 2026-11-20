@@ -2,9 +2,9 @@
 
 Automated screening only. No payout is verified. Safety-review candidates are NOT approved.
 
-Total: 87
+Total: 88
 Potential candidates: 10
-Safety blocked/review: 32
+Safety blocked/review: 33
 
 - **rejected** — https://github.com/tadanobutubutu/screeps/issues/5: Maintenance automation or contest
 - **rejected** — https://github.com/relayhop/sn-monetization-runtime/issues/1277: Maintenance automation or contest
@@ -12,7 +12,7 @@ Safety blocked/review: 32
 - **safety_review** — https://github.com/SPLURT-Station/S.P.L.U.R.T-tg/issues/1306: Possible upfront payment requirement
 - **rejected** — https://github.com/SPLURT-Station/S.P.L.U.R.T-tg/issues/1305: Closed issue or pull request
 - **rejected** — https://github.com/Element-Ventures-Canada-Ltd/openchokepoint/issues/3: No explicit monetary reward found
-- **rejected** — https://github.com/tari-project/wxtm-bridge-frontend/issues/103: No explicit monetary reward found
+- **rejected** — https://github.com/tari-project/wxtm-bridge-frontend/issues/103: Closed issue or pull request
 - **rejected** — https://github.com/tari-project/universe/issues/3299: No explicit monetary reward found
 - **safety_review** — https://github.com/claude-builders-bounty/claude-builders-bounty/issues/4: Potential credential, wallet, or payment demand
 - **rejected** — https://github.com/bwipp/postscriptbarcode/issues/82: Closed issue or pull request
@@ -93,3 +93,4 @@ Safety blocked/review: 32
 - **safety_review** — https://github.com/ZcashCommunityGrants/zcashcommunitygrants/issues/578: Potential credential, wallet, or payment demand
 - **safety_review** — https://github.com/OracleDesk/OracleDesk-Backend/issues/332: Potential credential, wallet, or payment demand
 - **rejected** — https://github.com/Kaycee276/Chesster/issues/675: Closed issue or pull request
+- **safety_review** — https://github.com/OracleDesk/OracleDesk-Frontend/issues/288: Possible upfront payment requirement
