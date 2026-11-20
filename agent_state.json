@@ -1,5 +1,5 @@
 {
-  "runs": 128,
+  "runs": 129,
   "ideas": [
     {
       "name": "Decentralized Indexing Subgraph Optimization",
@@ -58,7 +58,7 @@
   ],
   "verified_revenue_usd": 0,
   "verified_expenses_usd": 0,
-  "last_run_at": "2026-11-20T15:03:32.592505+00:00",
+  "last_run_at": "2026-11-20T23:47:10.676135+00:00",
   "opportunities": [
     {
       "url": "https://github.com/tadanobutubutu/screeps/issues/5",
@@ -272,7 +272,7 @@
         "algorithm"
       ],
       "discovered_at": "2026-10-11T23:43:42.676248+00:00",
-      "status": "rejected_safety_audit",
+      "status": "blocked_repository_safety_review",
       "payment_verified": false,
       "payment_review_status": "no_independent_evidence"
     },
@@ -1984,6 +1984,30 @@
       "screening_score": 4,
       "screening_flags": [],
       "payment_verified": false
+    },
+    {
+      "url": "https://github.com/OracleDesk/OracleDesk-Frontend/issues/288",
+      "title": "Show the exact ledger state changes from simulation in the transaction review",
+      "repository": "oracledesk/oracledesk-frontend",
+      "description_excerpt": "## Overview\n\n`TxReview` tells the user what they are *asking* the contract to do: function, arguments and derived bounds, decoded by `describeAssembled` and checked by `assertIntentMatches` in `lib/stellar/tx-decode.ts`. It does not say what the transaction will actually *change*. Arguments are only intent. If the deployed market-core were swapped for a malicious or buggy build, or a wallet or RPC tampered with the simulation, the user could approve \"buy 10 USDC of YES\" while the transaction moves a different amount, writes someone else's position, or touches a contract that is not part of OracleDesk.\n\nSoroban RPC `simulateTransaction` returns the effects. Recent RPC versions include `stateChanges`: for every ledger entry in the read-write footprint, its type (`created`, `updated`, `deleted`) and the full `before`/`after` ledger entries. `@stellar/stellar-sdk` 16 parses these (`rpc/parsers.ts`) into `{ type, key: LedgerKey, before: LedgerEntry | null, after: LedgerEntry | null }`. The app ignores them.\n\nThis issue decodes simulated state changes into human terms (the user's USDC balance delta, market reserve deltas, the user's position deltas, treasury entries), computes them in bigint, shows them next to the intent, and fails closed when an effect contradicts the intent. It goes further than closed #18 (intent review) and #12 (auth-entry inspection), which both look at what was requested, not at the result.\n\n## Background & current behavior\n\n- `lib/hooks/useStellar.ts` `reviewPreparedWrite(initial, review, rebuild)`: builds `ReviewModel` with `describeAssembled(tx, spec, derived)`, runs `assertPreparedInvocation` (contract id and function name) and `assertIntentMatches(model, intent)`, then calls `review(...)`. If more than 20 s passed it rebuilds and re-reviews. When ",
+      "updated_at": "2026-11-20T22:51:35Z",
+      "labels": [
+        "complexity: high",
+        "security",
+        "stellar",
+        "Stellar Wave"
+      ],
+      "discovered_at": "2026-11-20T23:47:10.676135+00:00",
+      "status": "unverified",
+      "screening_evidence": {
+        "explicit_reward": true,
+        "acceptance_criteria": true,
+        "submission_method": true,
+        "escrow_or_platform_claim": false
+      },
+      "screening_score": 3,
+      "screening_flags": [],
+      "payment_verified": false
     }
   ],
   "triage": [
@@ -2067,14 +2091,14 @@
     {
       "url": "https://github.com/Senthemodder/aquarium-of-gullibles/issues/5",
       "title": "[Bounty: $700] Deep Recursive Generic Type Solver Fails Invariant Fuzzing in src/types/state.ts",
-      "status": "rejected_safety_audit",
+      "status": "blocked_repository_safety_review",
       "reason": "Previously blacklisted; do not reconsider",
       "checked_at": "2026-11-20T15:03:44.130301+00:00"
     },
     {
       "url": "https://github.com/Senthemodder/aquarium-of-gullibles/issues/2",
       "title": "[Bounty: $850] Bedrock Physics: 1-Tick Kinematic Ghost Teleportation and Swept AABB Dropout",
-      "status": "needs_review",
+      "status": "blocked_repository_safety_review",
       "reason": "Possible reward; payout and eligibility unverified",
       "checked_at": "2026-11-20T15:03:44.130301+00:00"
     },
