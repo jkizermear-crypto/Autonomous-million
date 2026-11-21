@@ -1,6 +1,6 @@
 # Payment evidence v2 — candidate collection
 
-Checked: 2026-11-20T10:31:41.254223+00:00
+Checked: 2026-11-21T10:14:24.215607+00:00
 
 Read-only discovery. Transaction links are NOT verified escrow or guaranteed payouts.
 All opportunities remain payment_verified=false.
@@ -11,7 +11,7 @@ All opportunities remain payment_verified=false.
 - no_independent_evidence: https://github.com/SPLURT-Station/S.P.L.U.R.T-tg/issues/1306
 - not_open_issue: https://github.com/SPLURT-Station/S.P.L.U.R.T-tg/issues/1305
 - no_independent_evidence: https://github.com/Element-Ventures-Canada-Ltd/openchokepoint/issues/3
-- no_independent_evidence: https://github.com/tari-project/wxtm-bridge-frontend/issues/103
+- not_open_issue: https://github.com/tari-project/wxtm-bridge-frontend/issues/103
 - no_independent_evidence: https://github.com/tari-project/universe/issues/3299
 - no_independent_evidence: https://github.com/claude-builders-bounty/claude-builders-bounty/issues/4
 - not_open_issue: https://github.com/bwipp/postscriptbarcode/issues/82
