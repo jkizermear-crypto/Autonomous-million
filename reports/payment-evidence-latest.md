@@ -1,6 +1,6 @@
 # Payment evidence audit
 
-UTC: 2026-11-20T10:19:00.512422+00:00
+UTC: 2026-11-21T10:03:43.172035+00:00
 
 No listing was classified as payment-verified. Claims, maintainer comments, and scores are not independent payout proof.
 
@@ -16,7 +16,7 @@ No listing was classified as payment-verified. Claims, maintainer comments, and 
   Maintainer confirmation: False; verified payment: false
 - maintainer_claim_only: https://github.com/Element-Ventures-Canada-Ltd/openchokepoint/issues/3
   Maintainer confirmation: True; verified payment: false
-- insufficient_independent_payment_evidence: https://github.com/tari-project/wxtm-bridge-frontend/issues/103
+- issue_not_open: https://github.com/tari-project/wxtm-bridge-frontend/issues/103
   Maintainer confirmation: False; verified payment: false
 - insufficient_independent_payment_evidence: https://github.com/tari-project/universe/issues/3299
   Maintainer confirmation: False; verified payment: false
