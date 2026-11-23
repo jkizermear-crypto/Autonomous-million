@@ -3,8 +3,8 @@
 Automated screening only. No payout is verified. Safety-review candidates are NOT approved.
 
 Total: 88
-Potential candidates: 8
-Safety blocked/review: 32
+Potential candidates: 7
+Safety blocked/review: 33
 
 - **rejected** — https://github.com/tadanobutubutu/screeps/issues/5: Maintenance automation or contest
 - **rejected** — https://github.com/relayhop/sn-monetization-runtime/issues/1277: Maintenance automation or contest
@@ -18,7 +18,7 @@ Safety blocked/review: 32
 - **rejected** — https://github.com/bwipp/postscriptbarcode/issues/82: Closed issue or pull request
 - **needs_review** — https://github.com/weilixiong/TentOfTrials/issues/5: Possible reward; payout and eligibility unverified
 - **rejected_safety_audit** — https://github.com/Senthemodder/aquarium-of-gullibles/issues/5: Previously blacklisted; do not reconsider
-- **needs_review** — https://github.com/Senthemodder/aquarium-of-gullibles/issues/2: Possible reward; payout and eligibility unverified
+- **safety_review** — https://github.com/Senthemodder/aquarium-of-gullibles/issues/2: Issue could not be checked: HTTPError
 - **safety_review** — https://github.com/NSPG13/agent-bounties/issues/1387: Potential credential, wallet, or payment demand
 - **rejected** — https://github.com/Saidur-droid/MergeEarn/issues/69: No explicit monetary reward found
 - **safety_review** — https://github.com/claude-builders-bounty/claude-builders-bounty/issues/1: Potential credential, wallet, or payment demand
