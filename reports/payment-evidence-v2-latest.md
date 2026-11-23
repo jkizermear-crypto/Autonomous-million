@@ -1,6 +1,6 @@
 # Payment evidence v2 — candidate collection
 
-Checked: 2026-11-22T10:19:49.943237+00:00
+Checked: 2026-11-23T11:17:39.339312+00:00
 
 Read-only discovery. Transaction links are NOT verified escrow or guaranteed payouts.
 All opportunities remain payment_verified=false.
@@ -16,8 +16,8 @@ All opportunities remain payment_verified=false.
 - no_independent_evidence: https://github.com/claude-builders-bounty/claude-builders-bounty/issues/4
 - not_open_issue: https://github.com/bwipp/postscriptbarcode/issues/82
 - no_independent_evidence: https://github.com/weilixiong/TentOfTrials/issues/5
-- no_independent_evidence: https://github.com/Senthemodder/aquarium-of-gullibles/issues/5
-- no_independent_evidence: https://github.com/Senthemodder/aquarium-of-gullibles/issues/2
+- lookup_failed_HTTPError: https://github.com/Senthemodder/aquarium-of-gullibles/issues/5
+- lookup_failed_HTTPError: https://github.com/Senthemodder/aquarium-of-gullibles/issues/2
 - no_independent_evidence: https://github.com/NSPG13/agent-bounties/issues/1387
 - no_independent_evidence: https://github.com/Saidur-droid/MergeEarn/issues/69
 - no_independent_evidence: https://github.com/claude-builders-bounty/claude-builders-bounty/issues/1
