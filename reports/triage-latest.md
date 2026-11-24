@@ -2,8 +2,8 @@
 
 Automated screening only. No payout is verified. Safety-review candidates are NOT approved.
 
-Total: 88
-Potential candidates: 7
+Total: 89
+Potential candidates: 8
 Safety blocked/review: 33
 
 - **rejected** — https://github.com/tadanobutubutu/screeps/issues/5: Maintenance automation or contest
@@ -94,3 +94,4 @@ Safety blocked/review: 33
 - **safety_review** — https://github.com/OracleDesk/OracleDesk-Backend/issues/332: Potential credential, wallet, or payment demand
 - **rejected** — https://github.com/Kaycee276/Chesster/issues/675: Closed issue or pull request
 - **rejected** — https://github.com/OracleDesk/OracleDesk-Frontend/issues/288: Closed issue or pull request
+- **needs_review** — https://github.com/Ikalus1988/MisakaNet/issues/5643: Possible reward; payout and eligibility unverified
