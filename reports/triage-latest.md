@@ -3,8 +3,8 @@
 Automated screening only. No payout is verified. Safety-review candidates are NOT approved.
 
 Total: 91
-Potential candidates: 8
-Safety blocked/review: 33
+Potential candidates: 7
+Safety blocked/review: 32
 
 - **rejected** — https://github.com/tadanobutubutu/screeps/issues/5: Maintenance automation or contest
 - **rejected** — https://github.com/relayhop/sn-monetization-runtime/issues/1277: Maintenance automation or contest
@@ -89,8 +89,8 @@ Safety blocked/review: 33
 - **rejected** — https://github.com/LiamBMX/joshymc-plugin/issues/1416: Closed issue or pull request
 - **rejected** — https://github.com/SprecherEast/sprecher-east-neighborhood-website/issues/685: No explicit monetary reward found
 - **needs_review** — https://github.com/lablab-ai/community-content/issues/462: Possible reward; payout and eligibility unverified
-- **needs_review** — https://github.com/ZcashCommunityGrants/zcashcommunitygrants/issues/577: Possible reward; payout and eligibility unverified
-- **safety_review** — https://github.com/ZcashCommunityGrants/zcashcommunitygrants/issues/578: Potential credential, wallet, or payment demand
+- **rejected** — https://github.com/ZcashCommunityGrants/zcashcommunitygrants/issues/577: Closed issue or pull request
+- **rejected** — https://github.com/ZcashCommunityGrants/zcashcommunitygrants/issues/578: Closed issue or pull request
 - **safety_review** — https://github.com/OracleDesk/OracleDesk-Backend/issues/332: Potential credential, wallet, or payment demand
 - **rejected** — https://github.com/Kaycee276/Chesster/issues/675: Closed issue or pull request
 - **rejected** — https://github.com/OracleDesk/OracleDesk-Frontend/issues/288: Closed issue or pull request
