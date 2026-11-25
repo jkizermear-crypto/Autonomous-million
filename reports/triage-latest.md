@@ -2,8 +2,8 @@
 
 Automated screening only. No payout is verified. Safety-review candidates are NOT approved.
 
-Total: 90
-Potential candidates: 7
+Total: 91
+Potential candidates: 8
 Safety blocked/review: 33
 
 - **rejected** — https://github.com/tadanobutubutu/screeps/issues/5: Maintenance automation or contest
@@ -96,3 +96,4 @@ Safety blocked/review: 33
 - **rejected** — https://github.com/OracleDesk/OracleDesk-Frontend/issues/288: Closed issue or pull request
 - **rejected** — https://github.com/Ikalus1988/MisakaNet/issues/5643: Closed issue or pull request
 - **rejected** — https://github.com/StellarRoute/StellarRoute/issues/1606: No explicit monetary reward found
+- **needs_review** — https://github.com/Ikalus1988/MisakaNet/issues/5545: Possible reward; payout and eligibility unverified
